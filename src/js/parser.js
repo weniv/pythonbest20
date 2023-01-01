@@ -270,14 +270,17 @@
       const res = await fetch(
         `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
       );
+      const markdown = await res.text();
+      // console.log(markdown);
+      return markdown;
     } else {
       const res = await fetch(
         `${window.location.origin}/${window.location.pathname.split('/')[0]}/src/pages/${PAGE_NAME}/article.md`
       );
+      const markdown = await res.text();
+      // console.log(markdown);
+      return markdown;
     }
-    const markdown = await res.text();
-    // console.log(markdown);
-    return markdown;
   };
 
   const renderMenu = (html) => {
