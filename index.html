@@ -72,6 +72,7 @@
                 result = multiline_eval(code)
                 result = result.replace('[', '').replace(']', '').strip().split(',')
                 pyscript.write('result', f"연산 결과 : test1 : {'통과' if result[0].strip() == '30' else '실패'}({result[0].strip()}), test2 : {'통과' if result[1].strip() == '70' else '실패'}({result[1].strip()}), test3 : {'통과' if result[2].strip() == '110' else '실패'}({result[2].strip()})")
+                pyscript.write('error', f'')
             except Exception as e:
                 # 이슈1 : \n 개행이 write안에서 먹지 않습니다
                 # 이슈2 : <br> 개행이 write안에서 먹지 않습니다
