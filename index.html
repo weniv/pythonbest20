@@ -55,17 +55,14 @@
         <div id="result">result</div>
         <py-script>
         import ast
-
+        
         #########################
         # 정답과 테스트케이스 세팅
         answer = ['30', '70', '110']
-        test1 = js.document.querySelector('#testcase1')
-        test2 = js.document.querySelector('#testcase2')
-        test3 = js.document.querySelector('#testcase3')
 
-        test1.value = '(10, 20)'
-        test2.value = '(30, 40)'
-        test3.value = '(50, 60)'
+        js.document.querySelector('#testcase1').value = '(10, 20)'
+        js.document.querySelector('#testcase2').value = '(30, 40)'
+        js.document.querySelector('#testcase3').value = '(50, 60)'
         #########################
 
         def result(*ags, **kws):
