@@ -265,6 +265,7 @@
   const fetchMarkdown = async () => {
     console.log(window.location.origin)
     console.log(window.location)
+    console.log(window.location.pathname)
     console.log(window.location.pathname.split('/'))
     if (window.location.pathname.split('/')[0] === '') {
       const res = await fetch(
