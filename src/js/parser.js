@@ -1,5 +1,5 @@
 (async function () {
-  const PAGE_NAME = window.location.pathname.split('/')[1];
+  const PAGE_NAME = 1;
 
   const normalize = (markdown) => {
     return markdown
@@ -130,7 +130,7 @@
   };
 
   const encodeCodeEntity = (token) => {
-    let keyword = ['SELECT', 'FROM', 'DISTINCT', 'WHERE', 'AND', 'ORDER BY', 'LIKE', 'INNER', 'INTO', 'INSERT', 'HAVING', 'JOIN', 'RIGHT', 'LEFT', 'FULL', 'GROUP BY', 'PRIMARY', 'CREATE', 'UPDATE', 'DELETE', 'DROP', 'NULL', 'NOT', 'OR', 'IS', 'SET', 'IN', 'ON', 'AS', 'LOWER', 'UPPER', 'SUBSTR', 'LENGTH', 'REPLACE', 'DATE', 'TIME', 'STRFTIME', 'DATETIME', 'MAX', 'MIN', 'SUM', 'COUNT', 'AVG', 'CHAR', 'CONCAT', 'ASCII', 'EXISTS', 'CASE', 'WHEN', 'END'];
+    let keyword = ['def', 'if', 'else', 'for', 'while', 'in'];
 
     keyword.sort(function (a, b) {
       return b.length - a.length;
@@ -267,7 +267,7 @@
       `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
     );
     const markdown = await res.text();
-    //console.log(markdown);
+    // console.log(markdown);
     return markdown;
   };
 
@@ -318,7 +318,7 @@
   };
 
   const renderContent = (html) => {
-    const div = document.querySelector(`main`);
+    const div = document.querySelector(`.description`);
     const innerHTML = [...html];
     // console.log(html);
     let isFirst = true;
@@ -369,7 +369,7 @@
   const render = async () => {
     const markdown = await fetchMarkdown();
     const html = parseMarkdown(markdown);
-    renderMenu(html);
+    //renderMenu(html);
     renderContent(html);
     modifyStyle();
     window.dispatchEvent(new Event('markdownParsed'));
