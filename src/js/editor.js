@@ -14,17 +14,8 @@ let editor = CodeMirror.fromTextArea(
   }
 );
 
-// let testCase1 = document.querySelector('#testcase1')
-// let testCase2 = document.querySelector('#testcase2')
-// let testCase3 = document.querySelector('#testcase3')
-
-
 editor.setValue(`def solution():
     return None`);
-
-// testCase1.value = `(10, 20)`;
-// testCase2.value = `(30, 40)`;
-// testCase3.value = `(50, 60)`;
 
 const $btnRun = document.querySelector("#btn-run");
 
