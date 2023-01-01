@@ -3,17 +3,38 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Python best 30</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+
+        <!-- codemirror -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+
+        <!-- pyscript -->
+        <link
+            rel="stylesheet"
+            href="https://pyscript.net/latest/pyscript.css"
+        />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <!--
+        <py-config type="json">
+        {
+            "packages": ["numpy", "matplotlib"]
+        }
+        </py-config>
+        -->
+        
+        <!-- custom js, css -->
         <script src="./src/js/editor.js" defer=""></script>
     </head>
 
-    <body cz-shortcut-listen="true">
+    <body>
+        <a href="/codeexec.html">실행해보기</a>
+        <p>문제 설명: a와 b를 더해주는 함수를 만드세요.</p>
         <form>
             <div class="state-area">
                 <div class="editor">
@@ -21,8 +42,52 @@
                 </div>
             </div>
         </form>
+        <input id="testcase"/>
         <div class="btn-contain">
-            <button class="btn-run" type="submit">Run Python</button>
+            <button id="btn-run" type="submit">Run Python</button>
         </div>
+        <div id="result">result</div>
+        <div id="error">애러명</div>
+        <py-script>
+        import ast
+
+
+        def result(*ags, **kws):
+            code = Element("codeeditor").element.innerText
+            testCase = Element("testcase").element.value
+            # js.console.log('-------')
+            # js.console.log(testCase)
+            # js.console.log('-------')
+            code += f'\n[solution(a, b) for a, b in {testCase}]'
+            try:
+                result = multiline_eval(code)
+                pyscript.write('result', f"연산 결과 : {result}!!")
+            except Exception as e:
+                # 이슈1 : \n 개행이 write안에서 먹지 않습니다
+                # 이슈2 : <br> 개행이 write안에서 먹지 않습니다
+                # 이슈3 : 이에대한 공식 API 문서가 없습니다. 소스코드를 보고 이해해야 합니다.
+                #elementh1 = js.document.createElement('h1')
+                #elementh1.innerText = "Hello"
+                result = f'애러입니다. 문제를 다시 풀어주세요.'
+                #result = js.document.querySelector('#result')
+                #result.innerText = elementh1
+                pyscript.write('result', result)
+                pyscript.write('error', f'애러명 : {e}')
+
+
+        def multiline_eval(expr, ctx={}):
+            results = []
+            for node in ast.parse(expr).body:
+                if isinstance(node, ast.Expr):
+                    result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
+                    results.append(result)            
+                else:
+                    module = ast.Module([node], type_ignores=[])
+                    results.append(exec(compile(module, 'string', 'exec'), ctx))
+            return '\n'.join(map(str, results))[5:]
+
+        button_run = Element("btn-run")
+        button_run.element.onclick = result
+        </py-script>
     </body>
 </html>
