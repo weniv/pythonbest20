@@ -44,11 +44,11 @@
             </div>
         </form>
         <label for="testcase1">testcase1</label>
-        <input id="testcase1"/>
+        <input disabled id="testcase1"/>
         <label for="testcase1">testcase2</label>
-        <input id="testcase2"/>
+        <input disabled id="testcase2"/>
         <label for="testcase1">testcase3</label>
-        <input id="testcase3"/>
+        <input disabled id="testcase3"/>
         <div class="btn-contain">
             <button id="btn-run" type="submit">Run Python</button>
         </div>
@@ -57,7 +57,17 @@
         <py-script>
         import ast
 
+        #########################
+        # 정답과 테스트케이스 세팅
         answer = ['30', '70', '110']
+        test1 = js.document.querySelector('#testcase1')
+        test2 = js.document.querySelector('#testcase2')
+        test3 = js.document.querySelector('#testcase3')
+
+        test1.value = '(10, 20)'
+        test2.value = '(30, 40)'
+        test3.value = '(50, 60)'
+        #########################
 
         def result(*ags, **kws):
             code = Element("codeeditor").element.innerText
