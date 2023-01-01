@@ -268,6 +268,7 @@
     console.log(window.location.pathname)
     console.log(window.location.pathname.split('/'))
     if (window.location.pathname.split('/')[0] === '') {
+      // 로컬 테스트 및 실제 배포
       const res = await fetch(
         `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
       );
@@ -275,6 +276,7 @@
       // console.log(markdown);
       return markdown;
     } else {
+      // github page url로 배포시
       const res = await fetch(
         `${window.location.origin}/${window.location.pathname.split('/')[0]}/src/pages/${PAGE_NAME}/article.md`
       );
