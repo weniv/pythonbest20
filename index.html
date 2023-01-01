@@ -43,7 +43,12 @@
                 </div>
             </div>
         </form>
-        <input id="testcase"/>
+        <label for="testcase1">testcase1</label>
+        <input id="testcase1"/>
+        <label for="testcase1">testcase2</label>
+        <input id="testcase2"/>
+        <label for="testcase1">testcase3</label>
+        <input id="testcase3"/>
         <div class="btn-contain">
             <button id="btn-run" type="submit">Run Python</button>
         </div>
@@ -55,14 +60,18 @@
 
         def result(*ags, **kws):
             code = Element("codeeditor").element.innerText
-            testCase = Element("testcase").element.value
+            testCase1 = Element("testcase1").element.value
+            testCase2 = Element("testcase2").element.value
+            testCase3 = Element("testcase3").element.value
             # js.console.log('-------')
             # js.console.log(testCase)
             # js.console.log('-------')
+            testCase = f'[{testCase1}, {testCase2}, {testCase3}]'
             code += f'\n[solution(a, b) for a, b in {testCase}]'
             try:
                 result = multiline_eval(code)
-                pyscript.write('result', f"연산 결과 : {result}!!")
+                result = result.replace('[', '').replace(']', '').strip().split(',')
+                pyscript.write('result', f"연산 결과 : test1 : {'통과' if result[0].strip() == '30' else '실패'}({result[0].strip()}), test2 : {'통과' if result[1].strip() == '70' else '실패'}({result[1].strip()}), test3 : {'통과' if result[2].strip() == '110' else '실패'}({result[2].strip()})")
             except Exception as e:
                 # 이슈1 : \n 개행이 write안에서 먹지 않습니다
                 # 이슈2 : <br> 개행이 write안에서 먹지 않습니다
