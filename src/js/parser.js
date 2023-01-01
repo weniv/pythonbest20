@@ -263,9 +263,18 @@
   };
 
   const fetchMarkdown = async () => {
-    const res = await fetch(
-      `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
-    );
+    console.log(window.location.origin)
+    console.log(window.location)
+    console.log(window.location.pathname.split('/'))
+    if (window.location.pathname.split('/')[0] === '') {
+      const res = await fetch(
+        `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
+      );
+    } else {
+      const res = await fetch(
+        `${window.location.origin}/${window.location.pathname.split('/')[0]}/src/pages/${PAGE_NAME}/article.md`
+      );
+    }
     const markdown = await res.text();
     // console.log(markdown);
     return markdown;
