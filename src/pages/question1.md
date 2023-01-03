@@ -24,6 +24,14 @@ for i in range(10):
 
 * 문제 설명: a와 b를 더해주는 함수를 만드세요.
 
+- test one
+- test two
+- test three
+
+1. test one
+2. test two
+3. test three
+
 ---
 
 ## 입출력 예
