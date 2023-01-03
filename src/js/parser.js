@@ -15,7 +15,7 @@
   const codeBlockStart = {
     regex: /^\s*`{3}(.+)/,
     replace:
-      '<pre class="tuto-sec-example-query"><code>$1',
+      '<pre class="que-pre"><code>$1',
   };
 
   const codeBlockEnd = {
@@ -25,12 +25,12 @@
 
   const unorderedListItem = {
     regex: /^\s*-\s(.+)/,
-    replace: '<li class="tuto-unordered-list-item">$1',
+    replace: '<li class="que-ul-li">$1',
   };
 
   const orderedListItem = {
     regex: /^\s*(\d+\.\s.+)/,
-    replace: '<li class="tuto-ordered-list-item">$1',
+    replace: '<li class="que-ol-li">$1',
   };
 
   const tableRow = {
@@ -55,22 +55,22 @@
       const tagName = `h${mark.length + 1}`;
 
       if (mark.length == 1) {
-        return `<${tagName} class="tuto-title" id="${group.replace(
+        return `<${tagName} class="que-tit1" id="${group.replace(
           /(\*{2})|`/g,
           ''
         )}">${group}</${tagName}>`;
       } else if (mark.length == 2) {
-        return `<${tagName} class="tuto-sec-title" id="${group.replace(
+        return `<${tagName} class="que-tit2" id="${group.replace(
           /(\*{2})|`/g,
           ''
         )}">${group}</${tagName}>`;
       } else if (mark.length == 3) {
-        return `<${tagName} class="tuto-sec-subtitle" id="${group.replace(
+        return `<${tagName} class="que-tit3" id="${group.replace(
           /(\*{2})|`/g,
           ''
         )}">${group}</${tagName}>`;
       }
-      return `<${tagName} class="" id="${group.replace(
+      return `<${tagName} class="que-tit4" id="${group.replace(
         /(\*{2})|`/g,
         ''
       )}">${group}</${tagName}>`;
@@ -81,8 +81,8 @@
     regex: /^\s*!\[(.*)\]\((.+)\)/,
     replace: (_, g1, g2) => {
       const width = g2.match(/_{2}(\d+)\..+$/)?.[1];
-      return `<figure><img src="${window.location.origin
-        }/pagetutorial/img/${PAGE_NAME}/${g2}"${width ? ` style="width: ${width}px;"` : ''
+      console.log(g2)
+      return `<figure class="que-figure"><img class="que-img" src="${window.location.origin}/src/pages/img/${g2}"${width ? ` style="width: ${width}px;"` : ''
         }>${g1 ? `<figcaption>${g1}</figcaption>` : ''}</figure>`;
     },
   };
@@ -98,12 +98,12 @@
     replace: (matched, group) =>
       /\<(\/)?(h\d|ul|ol|li|blockquote|pre|img|code)/.test(matched)
         ? matched
-        : '<p>' + group + '</p>',
+        : '<p class="que-p">' + group + '</p>',
   };
 
   const link = {
     regex: /\[(.+)\]\((.+)\)/g,
-    replace: '<a href="$2">$1</a>',
+    replace: '<a class="que-a" href="$2">$1</a>',
   };
 
   const strong = {
@@ -130,13 +130,28 @@
   };
 
   const encodeCodeEntity = (token) => {
-    let keyword = ['def', 'if', 'else', 'for', 'while', 'in'];
+    // let value1 = token.match(/"(.*?)"/)
+    // // console.log(value1)
+    // if (value1) {
+    //   token = token.replaceAll(value1[1], `<span style="color:#a31515";>"${value1[1]}"</span>`)
+    // }
 
-    keyword.sort(function (a, b) {
-      return b.length - a.length;
+    // let value2 = token.match(/'(.*?)'/)
+    // // console.log(value2)
+    // if (value2) {
+    //   token = token.replaceAll(value2[1], `<span style="color:#a31515";>'${value2[1]}'</span>`)
+    // }
+
+    let keyword_vio = ['def', 'if', 'else', 'for', 'while', 'in', 'return', 'None'];
+
+    keyword_vio.forEach(key => {
+      const re1 = new RegExp(`${key}[ ]+`);
+      token = token.replace(re1, `<span style="color:#708";>${key} </span>`)
+      const re2 = new RegExp(`${key}[:]+`);
+      token = token.replace(re2, `<span style="color:#708";>${key}:</span>`)
+      const re3 = new RegExp(`${key}[(]+`);
+      token = token.replace(re3, `<span style="color:#708";>${key}(</span>`)
     });
-
-    keyword.forEach(key => token = token.replaceAll(key, `<span style="color:#5966ec";>${key}</span>`));
 
     return token
   };
@@ -186,7 +201,7 @@
             const tagName = rule === unorderedListItem ? 'ul' : 'ol';
             const depth = listDepth(token);
             if (depth > curListDepth) {
-              tokens[i] = `<${tagName} class='tuto-list'>` + tokens[i];
+              tokens[i] = `<${tagName} class='que-list'>` + tokens[i];
               listStack.push(`</${tagName}>`);
             } else if (depth < curListDepth) {
               let depthDiff = (curListDepth - depth) / 2;
@@ -210,7 +225,7 @@
           case tableRow:
             if (tableStartIndex === -1) {
               tableStartIndex = i;
-              tokens[i] = '<table>' + tokens[i].replace(/(\<\/?)td>/g, '$1th>');
+              tokens[i] = '<table class="que-table">' + tokens[i].replace(/(\<\/?)td>/g, '$1th>');
             }
             break;
 
@@ -238,11 +253,13 @@
         }
         if (!isEditor) {
           // console.log(tokens[i]);
+          // console.log(token)
           tokens[i] = encodeCodeEntity(token);
         }
         if (codeBlockEnd.regex.test(token)) {
           tokens[i] = parse(token, codeBlockEnd);
-          // console.log(tokens[i]);
+          // console.log(token) //```
+          // console.log(tokens[i]); //</code></pre>
           codeBlockStartIndex = -1;
           isEditor = false;
         } else {
@@ -263,14 +280,14 @@
   };
 
   const fetchMarkdown = async () => {
-    console.log(window.location.origin)
-    console.log(window.location)
-    console.log(window.location.pathname)
-    console.log(window.location.pathname.split('/'))
+    // console.log(window.location.origin)
+    // console.log(window.location)
+    // console.log(window.location.pathname)
+    // console.log(window.location.pathname.split('/'))
     if (window.location.pathname.split('/')[1] === '' || window.location.pathname.split('/')[1] === 'index.html') {
       // 로컬 테스트 및 실제 배포
       const res = await fetch(
-        `${window.location.origin}/src/pages/${PAGE_NAME}/article.md`
+        `${window.location.origin}/src/pages/question${PAGE_NAME}.md`
       );
       const markdown = await res.text();
       // console.log(markdown);
@@ -278,58 +295,12 @@
     } else {
       // github page url로 배포시
       const res = await fetch(
-        `${window.location.origin}/${window.location.pathname.split('/')[1]}/src/pages/${PAGE_NAME}/article.md`
+        `${window.location.origin}/${window.location.pathname.split('/')[1]}/src/pages/question${PAGE_NAME}.md`
       );
       const markdown = await res.text();
       // console.log(markdown);
       return markdown;
     }
-  };
-
-  const renderMenu = (html) => {
-    // console.log(html);
-    const menuTitles = html
-      .filter((v) => /<h\d.+>/.test(v))
-      .map((heading) => {
-        const title = heading
-          .replace(/^<h(\d).+>(.+)<\/h\d>$/, '$1 $2')
-          .split(' ');
-        return [Number(title[0]), title.slice(1).join(' ')];
-      });
-
-    // console.log(menuTitles);
-
-    let subMenu = null;
-
-    const mainList = document.createElement('ol');
-    mainList.setAttribute('class', 'list-item');
-
-    menuTitles.forEach(([depth, title]) => {
-      if (depth === 2) {
-        const item = document.createElement('li');
-        const link = document.createElement('a');
-        link.setAttribute('href', `#${title}`);
-        link.setAttribute('class', 'tit-drawer-menu');
-        link.textContent = title;
-        const list = document.createElement('ol');
-        list.setAttribute('class', 'subtit-drawer-menu');
-        item.appendChild(link);
-        item.appendChild(list);
-        mainList.appendChild(item);
-        subMenu = list;
-      } else if (depth === 4) {
-      } else {
-        const item = document.createElement('li');
-        const link = document.createElement('a');
-        link.setAttribute('href', `#${title}`);
-        link.textContent = title;
-        item.appendChild(link);
-        subMenu.appendChild(item);
-      }
-    });
-
-    const button = document.querySelector(`.list-wrap > li`);
-    button.appendChild(mainList);
   };
 
   const renderContent = (html) => {
@@ -340,11 +311,11 @@
     innerHTML.forEach((token, index) => {
       if (/^<h\d+/.test(token) && token.match(/^<h(\d+)/)[1] === '2') {
         if (isFirst) {
-          innerHTML[index] = '<article class="tuto-title-box">' + token;
+          innerHTML[index] = '<article class="que-article">' + token;
           isFirst = false;
         } else {
           innerHTML[index - 1] += '</article>';
-          innerHTML[index] = '<article class="tuto-sec">' + token;
+          innerHTML[index] = '<article class="que-article-sec">' + token;
         }
       }
       if (index === innerHTML.length - 1) {
@@ -384,7 +355,6 @@
   const render = async () => {
     const markdown = await fetchMarkdown();
     const html = parseMarkdown(markdown);
-    //renderMenu(html);
     renderContent(html);
     modifyStyle();
     window.dispatchEvent(new Event('markdownParsed'));
