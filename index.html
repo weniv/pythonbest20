@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Python best 30</title>
+        
+        <!-- 환경파일 -->
+        <script src="./src/env.js" defer=""></script>
 
         <!-- codemirror -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
@@ -27,10 +30,6 @@
         }
         </py-config>
         -->
-        
-        <!-- custom js, css -->
-        <script src="./src/js/editor.js" defer=""></script>
-        <script src="./src/js/parser.js" defer=""></script>
     </head>
 
     <body>
@@ -53,6 +52,13 @@
             <button id="btn-run" type="submit">Run Python</button>
         </div>
         <div id="result">result</div>
+
+        
+            <div style="border: 1px solid black;">테스트 용도입니다. 나중에 지울 예정(스타일링 하실 때 혹시 이 글귀를 보신다면 지우고 하세요.)
+                <button type="button" value="1" class="btn-que">1</button>
+                <button type="button" value="2" class="btn-que">2</button> 
+                <button type="button" value="3" class="btn-que">3</button> 
+            </div>
         <py-script>
         import ast
         
@@ -102,5 +108,8 @@
         button_run = Element("btn-run")
         button_run.element.onclick = result
         </py-script>
+        <script src="./src/js/editor.js" defer=""></script>
+        <script src="./src/js/parser.js" defer=""></script>
+        <script src="./src/js/event.js" defer=""></script>
     </body>
 </html>

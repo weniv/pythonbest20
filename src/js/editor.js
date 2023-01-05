@@ -13,15 +13,3 @@ let editor = CodeMirror.fromTextArea(
     indentUnit: 4,
   }
 );
-
-editor.setValue(`def solution():
-    return None`);
-
-const $btnRun = document.querySelector("#btn-run");
-
-$btnRun.addEventListener("click", (e) => {
-  e.preventDefault();
-  let text = editor.getValue();
-  codeEditor = document.querySelector('#codeeditor')
-  codeEditor.textContent = text
-});

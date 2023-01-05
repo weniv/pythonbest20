@@ -16,6 +16,9 @@ def hello():
 
 for i in range(10):
     print(i)
+    def hello():
+        print('hello', 'world')
+        return None
 ```
 
 ---
