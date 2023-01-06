@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
+  line-height: 1.4;
+  background: #2d3848;
+  color: #fff;
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 0 0 1px 0;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  margin: 3rem 0;
+}
+
+/* 접근성을 고려한 화면감춤 */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 6rem;
+  padding: 0 2rem 0 7.2rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+header h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #2e6ff2;
+}
+header .btn-fold {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.btn-fold {
+  width: 4rem;
+  height: 4rem;
+  background: #2d3848;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.btn-fold::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #2d3848 url(../img/arrow.svg) no-repeat 50% 50%/80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.btn-exec {
+  padding: 0.5em 1em;
+  background: #2e6ff2;
+}
+
+nav {
+  flex: 0 0 32rem;
+  overflow-y: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+nav ol {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+nav ol li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+nav ol li:first-child {
+  border-top: none;
+}
+nav ol li:last-child {
+  border-bottom: none;
+}
+nav ol li a {
+  padding: 1rem;
+  display: block;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+}
+nav ol li a.active {
+  color: #498fff;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+}
+nav ol li a:not(.active):hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-on nav {
+  display: block;
+}
+.menu-on main {
+  flex-wrap: wrap;
+}
+.menu-on .btn-fold::after {
+  transform: rotate(0deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container .contents {
+  flex-grow: 1;
+  display: flex;
+}
+.container .contents main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.container .contents main section {
+  flex: 1 1 min(100%, 40rem);
+  padding: 3rem;
+}
+.container .contents main section.editor {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.85);
+}
+.description h1,
+.description h2,
+.description h3,
+.description h4 {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  color: #fff;
+}
+.description h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+.description h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.6em;
+  background: #2e6ff2;
+  margin-right: 0.6em;
+  border-top: 0.4rem solid rgba(255, 255, 255, 0.8);
+}
+.description > ul.que-list:first-child {
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  padding-bottom: 1em;
+}
+.description > ul.que-list > li, .description > ul.que-list ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.description > ul.que-list ul li {
+  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 1rem;
+  border-radius: 0.4rem;
+}
+.description .que-list:not(:first-child) {
+  margin: 0.2em 0 0.4em;
+}
+.description .que-list:not(:first-child) .que-ol-li,
+.description .que-list:not(:first-child) .que-ul-li {
+  position: relative;
+  padding-left: 1em;
+  line-height: 1.4;
+}
+.description .que-list:not(:first-child) .que-ol-li:not(:first-child),
+.description .que-list:not(:first-child) .que-ul-li:not(:first-child) {
+  margin-top: 0.3rem;
+}
+.description .que-list:not(:first-child) .que-ol-li::before,
+.description .que-list:not(:first-child) .que-ul-li::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.description .que-list:not(:first-child) .que-ol-li ul li::before,
+.description .que-list:not(:first-child) .que-ul-li ul li::before {
+  height: 0.2em;
+  border-radius: 0;
+}
+.description pre {
+  background: white;
+  color: black;
+  padding: 2em;
+}
+.description figure {
+  margin: 1rem 0;
+}
+.description figure figcaption {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.description table {
+  border-top: 2px solid black;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+.description table td,
+.description table th {
+  padding: 0.6em 1em;
+}
+.description table th {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+}
+.description table tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+.description table td {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-width: 1px 0;
+}
+
+.editor .test-case {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+.editor .test-case div {
+  flex: 1 1 30%;
+}
+.editor .test-case div:first-child {
+  padding-right: 2rem;
+}
+.editor .test-case div:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0 2rem;
+}
+.editor .test-case div:last-child {
+  padding-right: 0;
+}
+.editor .test-case label {
+  font-size: 0.95em;
+}
+.editor .test-case input {
+  margin-top: 0.2em;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  height: 3.2rem;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  text-indent: 1rem;
+}
+.editor .btn-contain {
+  text-align: right;
+}
+.editor .btn-contain #btn-run {
+  background: #2e6ff2;
+  color: #fff;
+  height: 4.4rem;
+  width: 100%;
+}
+.editor #result {
+  margin-top: 2rem;
+}
+.editor #result h3 {
+  font-weight: bold;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+.editor #py-internal-0 {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.editor pre {
+  background: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.editor .py-error {
+  color: #ff537b;
+}
+
+footer {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+footer p {
+  text-align: center;
+  font-size: 0.9em;
+}

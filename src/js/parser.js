@@ -79,6 +79,7 @@ const figure = {
   regex: /^\s*!\[(.*)\]\((.+)\)/,
   replace: (_, g1, g2) => {
     const width = g2.match(/_{2}(\d+)\..+$/)?.[1];
+    console.log(g2)
     return `<figure class="que-figure"><img class="que-img" src="${window.location.origin}/src/pages/img/${g2}"${width ? ` style="width: ${width}px;"` : ''
       }>${g1 ? `<figcaption>${g1}</figcaption>` : ''}</figure>`;
   },
@@ -171,6 +172,7 @@ const parseMarkdown = (markdown) => {
   const listStack = [];
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
+    // 코드 블럭이 아닐 때
     if (codeBlockStartIndex === -1) {
       const rule =
         blockRules.find(({ regex }) => regex.test(token)) ?? paragraph;
@@ -199,6 +201,8 @@ const parseMarkdown = (markdown) => {
             let depthDiff = (curListDepth - depth) / 2;
             while (depthDiff) {
               const tag = listStack.pop();
+              // console.log(depthDiff);
+              // console.log(tag);
               tokens[i - 1] += tag;
               if (tag === `</${tagName}>`) {
                 depthDiff--;
@@ -236,15 +240,20 @@ const parseMarkdown = (markdown) => {
             isEditor = false;
           }
       }
+      // 코드 블럭일 때
     } else {
       if (token.trim() === '') {
         tokens[i] = '\n\n';
       }
       if (!isEditor) {
+        // console.log(tokens[i]);
+        // console.log(token)
         tokens[i] = encodeCodeEntity(token);
       }
       if (codeBlockEnd.regex.test(token)) {
         tokens[i] = parse(token, codeBlockEnd);
+        // console.log(token) //```
+        // console.log(tokens[i]); //</code></pre>
         codeBlockStartIndex = -1;
         isEditor = false;
       } else {
@@ -265,17 +274,25 @@ const parseMarkdown = (markdown) => {
 };
 
 const fetchMarkdown = async () => {
+  // console.log(window.location.origin)
+  // console.log(window.location)
+  // console.log(window.location.pathname)
+  // console.log(window.location.pathname.split('/'))
   if (window.location.pathname.split('/')[1] === '' || window.location.pathname.split('/')[1] === 'index.html') {
+    // 로컬 테스트 및 실제 배포
     const res = await fetch(
       `${window.location.origin}/src/pages/question${PAGE_NAME}.md`
     );
     const markdown = await res.text();
+    // console.log(markdown);
     return markdown;
   } else {
+    // github page url로 배포시
     const res = await fetch(
       `${window.location.origin}/${window.location.pathname.split('/')[1]}/src/pages/question${PAGE_NAME}.md`
     );
     const markdown = await res.text();
+    // console.log(markdown);
     return markdown;
   }
 };
@@ -283,6 +300,7 @@ const fetchMarkdown = async () => {
 const renderContent = (html) => {
   const div = document.querySelector(`.description`);
   const innerHTML = [...html];
+  // console.log(html);
   let isFirst = true;
   innerHTML.forEach((token, index) => {
     if (/^<h\d+/.test(token) && token.match(/^<h(\d+)/)[1] === '2') {
