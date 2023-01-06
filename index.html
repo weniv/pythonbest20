@@ -1,14 +1,25 @@
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Python best 30</title>
+    
+    <!-- 환경파일 -->
+    <script src="./src/env.js" defer></script>
 
-        <title>Python best 30</title>
-        
-        <!-- 환경파일 -->
-        <script src="./src/env.js" defer=""></script>
+    <!-- JavaScript -->
+    <script src="./src/js/nav.js" defer=""></script>
+    <script src="./src/js/editor.js" defer></script>
+    <script src="./src/js/parser.js" defer></script>
+    <script src="./src/js/event.js" defer></script>
+    <script src="./src/js/testCaseAndResult.js" defer></script>
+
+    <title>Python best 30</title>
+
+    <!-- 환경파일 -->
+    <script src="./src/env.js" defer=""></script>
 
     <!-- codemirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
@@ -90,63 +101,64 @@
 
                     </div>
 
-        
-            <div style="border: 1px solid black;">테스트 용도입니다. 나중에 지울 예정(스타일링 하실 때 혹시 이 글귀를 보신다면 지우고 하세요.)
+
+                    <!-- <div style="border: 1px solid black;">테스트 용도입니다. 나중에 지울 예정(스타일링 하실 때 혹시 이 글귀를 보신다면 지우고 하세요.)
                 <button type="button" value="1" class="btn-que">1</button>
                 <button type="button" value="2" class="btn-que">2</button> 
-                <button type="button" value="3" class="btn-que">3</button> 
-            </div>
-        <py-script>
-        import ast
-        
-        #########################
-        # 정답과 테스트케이스 세팅
-        answer = ['30', '70', '110']
+                <button type="button" value="3" class="btn-que">3</button>
+                <textarea style="display: none;" id="testcaseResult"></textarea>
+            </div> -->
 
-        js.document.querySelector('#testcase1').value = '(10, 20)'
-        js.document.querySelector('#testcase2').value = '(30, 40)'
-        js.document.querySelector('#testcase3').value = '(50, 60)'
-        #########################
+                    <py-script>
+                        # 콘솔에 출력하는 방법 : js.console.log(testCase)
+                        import ast
 
-        def result(*ags, **kws):
-            code = Element("codeeditor").element.innerText
-            testCase1 = Element("testcase1").element.value
-            testCase2 = Element("testcase2").element.value
-            testCase3 = Element("testcase3").element.value
-            # js.console.log('-------')
-            # js.console.log(testCase)
-            # js.console.log('-------')
-            testCase = f'[{testCase1}, {testCase2}, {testCase3}]'
-            code += f'\n[solution(a, b) for a, b in {testCase}]'
-            try:
-                result = multiline_eval(code)
-                result = result.replace('[', '').replace(']', '').strip().split(',')
-                result1 = result[0].strip()
-                result2 = result[1].strip()
-                result3 = result[2].strip()
-                result = f"테스트케이스번호 : 통과여부(실행값==정답값)<br>test1 : {'통과' if result1 == answer[0] else '실패'}({result1}=={answer[0]})<br>test2 : {'통과' if result2 == answer[1] else '실패'}({result2}=={answer[1]})<br>test3 : {'통과' if result3 == answer[2] else '실패'}({result3}=={answer[2]})"
-                js.document.querySelector('#result').innerHTML = result
-            except Exception as e:
-                result = f'애러입니다. 문제를 다시 풀어주세요.<br>애러명 : {e}'
-                js.document.querySelector('#result').innerHTML = result
+                        def result(*ags, **kws):
+                            code = Element("codeeditor").element.innerText
+                            testCase1 = Element("testcase1").element.value
+                            testCase2 = Element("testcase2").element.value
+                            testCase3 = Element("testcase3").element.value
+
+                            answer = Element("testcaseResult").element.value
+                            answer = f'[{answer}]'
+                            answer = ast.literal_eval(answer)
+
+                            testCase = f'[[{testCase1}], [{testCase2}], [{testCase3}]]'
+                            code += f'\n[solution(i) for i in {testCase}]'
+                            try:
+                                result = multiline_eval(code)
+                                result = ast.literal_eval(result)
+                                resultString = "&lt;p class='que-result'&gt;테스트케이스번호 : 통과여부(실행값==정답값) &lt;&#47;p&gt;"
+                                passing = "&lt;span class='result-pass'&gt;통과&lt;&#47;span&gt;"
+                                fail = "&lt;span class='result-fail'&gt;실패&lt;&#47;span&gt;"
+                                for i in range(3):
+                                    resultString += f"&lt;p class='que-result-{i} checkPass'&gt;test{i} : {passing if result[i] == answer[i] else fail}&lt;span class='result-compare'&gt;({result[i]}=={answer[i]})&lt;&#47;span&gt;&lt;&#47;p&gt;"
+                                js.document.querySelector('#result').innerHTML = resultString
+                            except Exception as e:
+                                result = f"&lt;p class='que-result-error'&gt;애러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;애러명 : {e}&lt;&#47;p&gt;"
+                                js.document.querySelector('#result').innerHTML = result
 
 
                         def multiline_eval(expr, ctx={}):
-                        results = []
-                        for node in ast.parse(expr).body:
-                        if isinstance(node, ast.Expr):
-                        result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
-                        results.append(result)
-                        else:
-                        module = ast.Module([node], type_ignores=[])
-                        results.append(exec(compile(module, 'string', 'exec'), ctx))
-                        return '\n'.join(map(str, results))[5:]
+                            results = []
+                            for node in ast.parse(expr).body:
+                                if isinstance(node, ast.Expr):
+                                    result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
+                                    results.append(result)            
+                                else:
+                                    module = ast.Module([node], type_ignores=[])
+                                    results.append(exec(compile(module, 'string', 'exec'), ctx))
+                            return '\n'.join(map(str, results))[5:]
 
-        button_run = Element("btn-run")
-        button_run.element.onclick = result
-        </py-script>
-        <script src="./src/js/editor.js" defer=""></script>
-        <script src="./src/js/parser.js" defer=""></script>
-        <script src="./src/js/event.js" defer=""></script>
-    </body>
+                        button_run = Element("btn-run")
+                        button_run.element.onclick = result
+                        </py-script>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
+    </footer>
+</body>
 </html>
