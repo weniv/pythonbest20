@@ -1,0 +1,76 @@
+@import "variables";
+
+.description {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+  h2 {
+    font-size: 1.4em;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.6em;
+      background: $ColorMain;
+      margin-right: 0.6em;
+      border-top: 0.4rem solid rgba($ColorText, 0.8);
+    }
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+
+  pre {
+    background: rgba($ColorText, 1);
+    color: rgba($ColorDark, 1);
+    padding: 2em;
+  }
+
+  figure {
+    margin: 1rem 0;
+    figcaption {
+      font-size: 0.9em;
+      color: rgba($ColorText, 0.7);
+    }
+  }
+}
+
+.btn-contain {
+  background: skyblue;
+}
+#result {
+  background: seagreen;
+}
+
+// table
+table {
+  border-top: 2px solid rgba($ColorDark, 1);
+  text-align: center;
+
+  td,
+  th {
+    padding: 0.6em 1em;
+  }
+
+  th {
+    font-weight: bold;
+    background: rgba($ColorDark, 0.3);
+  }
+  tr:nth-child(odd) {
+    background: rgba($ColorText, 0.05);
+  }
+  td {
+    border: 1px solid rgba($ColorDark, 0.3);
+    border-width: 1px 0;
+  }
+}
+
+// 커스텀
+.description {
+
+}
+

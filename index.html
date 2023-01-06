@@ -1,115 +1,165 @@
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Python best 30</title>
-        
-        <!-- 환경파일 -->
-        <script src="./src/env.js" defer=""></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- codemirror -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+    <title>Python best 30</title>
 
-        <!-- pyscript -->
-        <link
-            rel="stylesheet"
-            href="https://pyscript.net/latest/pyscript.css"
-        />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-        <!--
+    <!-- 환경파일 -->
+    <script src="./src/env.js" defer=""></script>
+
+    <!-- codemirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+
+    <!-- pyscript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <!--
         <py-config type="json">
         {
             "packages": ["numpy", "matplotlib"]
         }
         </py-config>
         -->
-    </head>
 
-    <body>
-        <a href="codeexec.html">실행해보기</a>
-        <div class="description"></div>
-        <form>
-            <div class="state-area">
-                <div class="editor">
-                    <textarea id="codeeditor"></textarea>
-                </div>
-            </div>
-        </form>
-        <label for="testcase1">testcase1</label>
-        <input disabled id="testcase1"/>
-        <label for="testcase1">testcase2</label>
-        <input disabled id="testcase2"/>
-        <label for="testcase1">testcase3</label>
-        <input disabled id="testcase3"/>
-        <div class="btn-contain">
-            <button id="btn-run" type="submit">Run Python</button>
+    <!-- css -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <div class="container menu-on">
+        <header>
+            <h1>Python Algorithm Best30</h1>
+            <a class="btn-exec" href="codeexec.html">실행해보기</a>
+            <button class="btn-fold" type="button">접어두기</button>
+
+        </header>
+
+        <div class="contents">
+            <nav>
+                <ol>
+                    <li><a href="#" class="active">Q1. 두 수 더하기</a></li>
+                    <li><a href="#">Q1. 두 수 더하기</a></li>
+                    <li><a href="#">Q2. 두 수 더하기</a></li>
+                    <li><a href="#">Q3. 두 수 더하기</a></li>
+                    <li><a href="#">Q4. 두 수 더하기</a></li>
+                    <li><a href="#">Q5. 두 수 더하기</a></li>
+                    <li><a href="#">Q6. 두 수 더하기</a></li>
+                    <li><a href="#">Q7. 두 수 더하기</a></li>
+                    <li><a href="#">Q8. 두 수 더하기</a></li>
+                    <li><a href="#">Q9. 두 수 더하기</a></li>
+                </ol>
+            </nav>
+            <main>
+                <section class="description">
+                </section>
+                <section class="editor">
+                    <form>
+                        <div class="state-area">
+                            <div class="editor">
+                                <textarea id="codeeditor"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="test-case">
+                        <div>
+                            <label for="testcase1">testcase1</label>
+                            <input disabled id="testcase1" />
+                        </div>
+                        <div>
+                            <label for="testcase1">testcase2</label>
+                            <input disabled id="testcase2" />
+                        </div>
+                        <div>
+                            <label for="testcase1">testcase3</label>
+                            <input disabled id="testcase3" />
+                        </div>
+                    </div>
+                    <div class="btn-contain">
+                        <button id="btn-run" type="submit">Run Python</button>
+                    </div>
+
+                    <div id="result">
+
+                        <h3>Result</h3>
+
+                    </div>
+
+
+                    <!-- <div style="border: 1px solid black;">테스트 용도입니다. 나중에 지울 예정(스타일링 하실 때 혹시 이 글귀를 보신다면 지우고 하세요.)
+                        <button type="button" value="1" class="btn-que">1</button>
+                        <button type="button" value="2" class="btn-que">2</button>
+                        <button type="button" value="3" class="btn-que">3</button>
+                    </div> -->
+
+                    <py-script>
+                        import ast
+
+                        #########################
+                        # 정답과 테스트케이스 세팅
+                        answer = ['30', '70', '110']
+
+                        js.document.querySelector('#testcase1').value = '(10, 20)'
+                        js.document.querySelector('#testcase2').value = '(30, 40)'
+                        js.document.querySelector('#testcase3').value = '(50, 60)'
+                        #########################
+
+                        def result(*ags, **kws):
+                        code = Element("codeeditor").element.innerText
+                        testCase1 = Element("testcase1").element.value
+                        testCase2 = Element("testcase2").element.value
+                        testCase3 = Element("testcase3").element.value
+                        # js.console.log('-------')
+                        # js.console.log(testCase)
+                        # js.console.log('-------')
+                        testCase = f'[{testCase1}, {testCase2}, {testCase3}]'
+                        code += f'\n[solution(a, b) for a, b in {testCase}]'
+                        try:
+                        result = multiline_eval(code)
+                        result = result.replace('[', '').replace(']', '').strip().split(',')
+                        result1 = result[0].strip()
+                        result2 = result[1].strip()
+                        result3 = result[2].strip()
+                        result = f"테스트케이스번호 : 통과여부(실행값==정답값)<br>test1 : {'통과' if result1 == answer[0] else
+                        '실패'}({result1}=={answer[0]})<br>test2 : {'통과' if result2 == answer[1] else
+                        '실패'}({result2}=={answer[1]})<br>test3 : {'통과' if result3 == answer[2] else
+                        '실패'}({result3}=={answer[2]})"
+                        js.document.querySelector('#result').innerHTML = result
+                        except Exception as e:
+                        result = f'애러입니다. 문제를 다시 풀어주세요.<br>애러명 : {e}'
+                        js.document.querySelector('#result').innerHTML = result
+
+
+                        def multiline_eval(expr, ctx={}):
+                        results = []
+                        for node in ast.parse(expr).body:
+                        if isinstance(node, ast.Expr):
+                        result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
+                        results.append(result)
+                        else:
+                        module = ast.Module([node], type_ignores=[])
+                        results.append(exec(compile(module, 'string', 'exec'), ctx))
+                        return '\n'.join(map(str, results))[5:]
+
+                        button_run = Element("btn-run")
+                        button_run.element.onclick = result
+                    </py-script>
+                </section>
+            </main>
         </div>
-        <div id="result">result</div>
+    </div>
+    <footer>
+        <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
+    </footer>
+    <script src="./src/js/nav.js" defer=""></script>
+    <script src="./src/js/editor.js" defer=""></script>
+    <script src="./src/js/parser.js" defer=""></script>
+    <script src="./src/js/event.js" defer=""></script>
+</body>
 
-        
-            <div style="border: 1px solid black;">테스트 용도입니다. 나중에 지울 예정(스타일링 하실 때 혹시 이 글귀를 보신다면 지우고 하세요.)
-                <button type="button" value="1" class="btn-que">1</button>
-                <button type="button" value="2" class="btn-que">2</button> 
-                <button type="button" value="3" class="btn-que">3</button> 
-            </div>
-        <py-script>
-        import ast
-        
-        #########################
-        # 정답과 테스트케이스 세팅
-        answer = ['30', '70', '110']
-
-        js.document.querySelector('#testcase1').value = '(10, 20)'
-        js.document.querySelector('#testcase2').value = '(30, 40)'
-        js.document.querySelector('#testcase3').value = '(50, 60)'
-        #########################
-
-        def result(*ags, **kws):
-            code = Element("codeeditor").element.innerText
-            testCase1 = Element("testcase1").element.value
-            testCase2 = Element("testcase2").element.value
-            testCase3 = Element("testcase3").element.value
-            # js.console.log('-------')
-            # js.console.log(testCase)
-            # js.console.log('-------')
-            testCase = f'[{testCase1}, {testCase2}, {testCase3}]'
-            code += f'\n[solution(a, b) for a, b in {testCase}]'
-            try:
-                result = multiline_eval(code)
-                result = result.replace('[', '').replace(']', '').strip().split(',')
-                result1 = result[0].strip()
-                result2 = result[1].strip()
-                result3 = result[2].strip()
-                result = f"테스트케이스번호 : 통과여부(실행값==정답값)<br>test1 : {'통과' if result1 == answer[0] else '실패'}({result1}=={answer[0]})<br>test2 : {'통과' if result2 == answer[1] else '실패'}({result2}=={answer[1]})<br>test3 : {'통과' if result3 == answer[2] else '실패'}({result3}=={answer[2]})"
-                js.document.querySelector('#result').innerHTML = result
-            except Exception as e:
-                result = f'애러입니다. 문제를 다시 풀어주세요.<br>애러명 : {e}'
-                js.document.querySelector('#result').innerHTML = result
-
-
-        def multiline_eval(expr, ctx={}):
-            results = []
-            for node in ast.parse(expr).body:
-                if isinstance(node, ast.Expr):
-                    result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
-                    results.append(result)            
-                else:
-                    module = ast.Module([node], type_ignores=[])
-                    results.append(exec(compile(module, 'string', 'exec'), ctx))
-            return '\n'.join(map(str, results))[5:]
-
-        button_run = Element("btn-run")
-        button_run.element.onclick = result
-        </py-script>
-        <script src="./src/js/editor.js" defer=""></script>
-        <script src="./src/js/parser.js" defer=""></script>
-        <script src="./src/js/event.js" defer=""></script>
-    </body>
 </html>
