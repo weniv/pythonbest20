@@ -11,6 +11,6 @@ let editor = CodeMirror.fromTextArea(
     autofocus: true,
     // extraKeys: { Tab: "autocomplete" }, // hint cdn을 추가하면 자동완성 됨
     indentUnit: 4,
-		theme: "material",
+    // theme: "material",
   }
 );
