@@ -27,9 +27,9 @@ body {
 }
 
 hr {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-width: 0 0 1px 0;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-width: 1px 0;
   margin: 3rem 0;
 }
 
@@ -95,7 +95,7 @@ header .btn-fold {
 }
 
 nav {
-  flex: 0 0 32rem;
+  flex: 0 0 28rem;
   overflow-y: hidden;
   background: rgba(0, 0, 0, 0.3);
   display: none;
@@ -108,8 +108,9 @@ nav ol {
 }
 
 nav ol li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.9em;
 }
 
 nav ol li:first-child {
@@ -206,7 +207,7 @@ nav ol li a:not(.active):hover {
 
 .description>ul.que-list:first-child {
   margin-bottom: 2em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
   padding-bottom: 1em;
 }
@@ -262,8 +263,7 @@ nav ol li a:not(.active):hover {
 }
 
 .description pre {
-  background: white;
-  color: black;
+  background: rgba(0, 0, 0, 0.1);
   padding: 2em;
 }
 
@@ -274,6 +274,14 @@ nav ol li a:not(.active):hover {
 .description figure figcaption {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
+  margin: 0.4em 0.6rem;
+}
+
+.description figure figcaption::before {
+  content: "▲";
+  font-size: 0.6em;
+  margin-right: 1em;
+  vertical-align: middle;
 }
 
 .description table {
@@ -304,6 +312,14 @@ nav ol li a:not(.active):hover {
 .que-pre {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.editor {
+  width: min(100%, 100vw - 6rem);
+}
+
+.editor .CodeMirror {
+  width: 100%;
 }
 
 .editor .test-case {
@@ -367,8 +383,7 @@ nav ol li a:not(.active):hover {
 .editor #result_desc {
   display: block;
   background: rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  box-sizing: border-box;
+  overflow-x: scroll;
 }
 
 .editor pre {
@@ -376,6 +391,7 @@ nav ol li a:not(.active):hover {
   border: none;
   width: 100%;
   box-sizing: border-box;
+  padding: 2rem;
 }
 
 .editor .py-error {
@@ -406,4 +422,33 @@ footer p {
 
 .result-compare {
   color: #bbb;
+}
+
+@media (max-width: 1024px) {
+  header .btn-fold {
+    transform: rotate(90deg);
+  }
+
+  nav {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    max-height: 40rem;
+    overflow-y: scroll;
+    background: #2d3848;
+  }
+
+  nav ol {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .container .contents {
+    display: block;
+  }
+
+  .main {
+    flex-direction: column;
+  }
 }

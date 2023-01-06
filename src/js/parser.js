@@ -138,12 +138,12 @@ const encodeCodeEntity = (token) => {
 
   keyword_violet.forEach(key => {
     const re = new RegExp(`(.*?)${key}[ ?(]+(.*?)`);
-    token = token.replace(re, `$1<span style="color:#708";>${key} </span>$2`)
+    token = token.replace(re, `$1<span style="color:#ff537b";>${key} </span>$2`)
   });
 
   keyword_blue.forEach(key => {
     const re = new RegExp(`(.*?) ${key}[ (]+(.*?)`);
-    token = token.replace(re, `$1<span style="color:#30a";> ${key}(</span>$2`)
+    token = token.replace(re, `$1<span style="color:#498fff";> ${key}</span>($2`)
   });
 
   const re = new RegExp(`(.*?)'(.*?)'(.*?)`, 'g');
