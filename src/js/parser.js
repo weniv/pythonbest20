@@ -137,14 +137,18 @@ const encodeCodeEntity = (token) => {
   let keyword_blue = ['abs', 'aiter', 'all', 'any', 'anext', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
 
   keyword_violet.forEach(key => {
-    const re1 = new RegExp(`(.*?)${key}[ ?(]+(.*?)`);
-    token = token.replace(re1, `$1<span style="color:#708";>${key} </span>$2`)
+    const re = new RegExp(`(.*?)${key}[ ?(]+(.*?)`);
+    token = token.replace(re, `$1<span style="color:#708";>${key} </span>$2`)
   });
 
   keyword_blue.forEach(key => {
-    const re1 = new RegExp(`(.*?) ${key}[ (]+(.*?)`);
-    token = token.replace(re1, `$1<span style="color:#30a";> ${key}(</span>$2`)
+    const re = new RegExp(`(.*?) ${key}[ (]+(.*?)`);
+    token = token.replace(re, `$1<span style="color:#30a";> ${key}(</span>$2`)
   });
+
+  const re = new RegExp(`(.*?)'(.*?)'(.*?)`, 'g');
+  token = token.replace(re, `$1<span style="color:#a11";>'$2'</span>$3`)
+
 
   return token
 };

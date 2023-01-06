@@ -4,8 +4,10 @@ const $btnRun = document.querySelector("#btn-run");
 // 문제 로딩
 $btnQue.forEach(element => {
     element.addEventListener('click', function (e) {
-        // alert('Hello world, ' + e.target.value);
-        PAGE_NAME = e.target.value;
+        document.getElementById(PAGE_NAME).classList.remove('active')
+        PAGE_NAME = e.target.id;
+        document.getElementById(PAGE_NAME).classList.add('active')
+        history.pushState(null, PAGE_NAME, `?page=${PAGE_NAME}`);
         render();
         loadCode();
     });
