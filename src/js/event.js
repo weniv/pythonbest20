@@ -4,7 +4,6 @@ const $btnRun = document.querySelector("#btn-run");
 // 문제 로딩
 $btnQue.forEach(element => {
     element.addEventListener('click', function (e) {
-        // alert('Hello world, ' + e.target.value);
         PAGE_NAME = e.target.value;
         history.pushState(null, PAGE_NAME, `?page=${PAGE_NAME}`);
         render();
