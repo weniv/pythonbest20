@@ -158,14 +158,14 @@ nav {
     main {
       display: flex;
       flex-wrap: wrap;
+      flex-grow: 1;
 
       section {
         flex: 1 1 min(100%, 40rem);
+        padding: 3rem;
         &.description {
-          padding: 4rem 2rem 4rem 4rem;
         }
         &.editor {
-          padding: 4rem 4rem 4rem 2rem;
           background: rgba($ColorText, 0.03);
         }
       }
@@ -341,14 +341,16 @@ nav {
     display: block;
     background: rgba($ColorDark, 0.2);
     padding: 2rem;
+    box-sizing: border-box;
   }
   pre {
     background: none;
     border: none;
+    width: 100%;
+    box-sizing: border-box;
   }
   .py-error {
     color: $ColorNegative;
-    box-sizing: border-box;
   }
 }
 //footer

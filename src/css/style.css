@@ -147,15 +147,13 @@ nav ol li a:not(.active):hover {
 .container .contents main {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 .container .contents main section {
   flex: 1 1 min(100%, 40rem);
-}
-.container .contents main section.description {
-  padding: 4rem 2rem 4rem 4rem;
+  padding: 3rem;
 }
 .container .contents main section.editor {
-  padding: 4rem 4rem 4rem 2rem;
   background: rgba(255, 255, 255, 0.03);
 }
 
@@ -315,14 +313,16 @@ nav ol li a:not(.active):hover {
   display: block;
   background: rgba(0, 0, 0, 0.2);
   padding: 2rem;
+  box-sizing: border-box;
 }
 .editor pre {
   background: none;
   border: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 .editor .py-error {
   color: #ff537b;
-  box-sizing: border-box;
 }
 
 footer {
