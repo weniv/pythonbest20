@@ -13,7 +13,7 @@
     <script src="./src/js/editor.js" defer></script>
     <script src="./src/js/parser.js" defer></script>
     <script src="./src/js/event.js" defer></script>
-    <script src="./src/js/testCaseAndResult.js" defer></script>
+    <!-- <script src="./src/js/testCaseAndResult.js" defer></script> -->
     <script src="./src/js/nav.js" defer></script>
 
     <title>Python best 30</title>
@@ -26,6 +26,11 @@
     <!-- pyscript -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config>
+        [[fetch]]
+        from = "./src/py/"
+        files = ["testcase.py"]
+    </py-config>
     <!-- <py-config type="json">
         {
             "packages": ["numpy", "pandas"]
@@ -50,36 +55,36 @@
         <div class="contents">
             <nav>
                 <ol>
-                    <li><a href="#" id="1" class="btn-que">Q1. 두 수 더하기</a></li>
-                    <li><a href="#" id="2" class="btn-que">Q2. 장학금을 받는 학생</a></li>
-                    <li><a href="#" id="3" class="btn-que">Q3. 두 수 더하기</a></li>
-                    <li><a href="#" id="4" class="btn-que">Q4. 두 수 더하기</a></li>
-                    <li><a href="#" id="5" class="btn-que">Q5. 두 수 더하기</a></li>
-                    <li><a href="#" id="6" class="btn-que">Q6. 두 수 더하기</a></li>
-                    <li><a href="#" id="7" class="btn-que">Q7. 두 수 더하기</a></li>
-                    <li><a href="#" id="8" class="btn-que">Q8. 두 수 더하기</a></li>
-                    <li><a href="#" id="9" class="btn-que">Q9. 두 수 더하기</a></li>
-                    <li><a href="#" id="10" class="btn-que">Q10. 두 수 더하기</a></li>
-                    <li><a href="#" id="11" class="btn-que">Q11. 두 수 더하기</a></li>
-                    <li><a href="#" id="12" class="btn-que">Q12. 두 수 더하기</a></li>
-                    <li><a href="#" id="13" class="btn-que">Q13. 두 수 더하기</a></li>
-                    <li><a href="#" id="14" class="btn-que">Q14. 두 수 더하기</a></li>
-                    <li><a href="#" id="15" class="btn-que">Q15. 두 수 더하기</a></li>
-                    <li><a href="#" id="16" class="btn-que">Q16. 두 수 더하기</a></li>
-                    <li><a href="#" id="17" class="btn-que">Q17. 두 수 더하기</a></li>
-                    <li><a href="#" id="18" class="btn-que">Q18. 두 수 더하기</a></li>
-                    <li><a href="#" id="19" class="btn-que">Q19. 두 수 더하기</a></li>
-                    <li><a href="#" id="20" class="btn-que">Q20. 두 수 더하기</a></li>
-                    <li><a href="#" id="21" class="btn-que">Q21. 두 수 더하기</a></li>
-                    <li><a href="#" id="22" class="btn-que">Q22. 두 수 더하기</a></li>
-                    <li><a href="#" id="23" class="btn-que">Q23. 두 수 더하기</a></li>
-                    <li><a href="#" id="24" class="btn-que">Q24. 두 수 더하기</a></li>
-                    <li><a href="#" id="25" class="btn-que">Q25. 두 수 더하기</a></li>
-                    <li><a href="#" id="26" class="btn-que">Q26. 두 수 더하기</a></li>
-                    <li><a href="#" id="27" class="btn-que">Q27. 두 수 더하기</a></li>
-                    <li><a href="#" id="28" class="btn-que">Q28. 두 수 더하기</a></li>
-                    <li><a href="#" id="29" class="btn-que">Q29. 두 수 더하기</a></li>
-                    <li><a href="#" id="30" class="btn-que">Q30. 두 수 더하기</a></li>
+                    <li><a href="#" id="q1" class="btn-que">Q1. 마크다운 테스트</a></li>
+                    <li><a href="#" id="q2" class="btn-que">Q2. 장학금을 받는 학생</a></li>
+                    <li><a href="#" id="q3" class="btn-que">Q3. 두 수 더하기</a></li>
+                    <li><a href="#" id="q4" class="btn-que">Q4. 두 수 더하기</a></li>
+                    <li><a href="#" id="q5" class="btn-que">Q5. 두 수 더하기</a></li>
+                    <li><a href="#" id="q6" class="btn-que">Q6. 두 수 더하기</a></li>
+                    <li><a href="#" id="q7" class="btn-que">Q7. 두 수 더하기</a></li>
+                    <li><a href="#" id="q8" class="btn-que">Q8. 두 수 더하기</a></li>
+                    <li><a href="#" id="q9" class="btn-que">Q9. 두 수 더하기</a></li>
+                    <li><a href="#" id="q10" class="btn-que">Q10. 두 수 더하기</a></li>
+                    <li><a href="#" id="q11" class="btn-que">Q11. 두 수 더하기</a></li>
+                    <li><a href="#" id="q12" class="btn-que">Q12. 두 수 더하기</a></li>
+                    <li><a href="#" id="q13" class="btn-que">Q13. 두 수 더하기</a></li>
+                    <li><a href="#" id="q14" class="btn-que">Q14. 두 수 더하기</a></li>
+                    <li><a href="#" id="q15" class="btn-que">Q15. 두 수 더하기</a></li>
+                    <li><a href="#" id="q16" class="btn-que">Q16. 두 수 더하기</a></li>
+                    <li><a href="#" id="q17" class="btn-que">Q17. 두 수 더하기</a></li>
+                    <li><a href="#" id="q18" class="btn-que">Q18. 두 수 더하기</a></li>
+                    <li><a href="#" id="q19" class="btn-que">Q19. 두 수 더하기</a></li>
+                    <li><a href="#" id="q20" class="btn-que">Q20. 두 수 더하기</a></li>
+                    <li><a href="#" id="q21" class="btn-que">Q21. 두 수 더하기</a></li>
+                    <li><a href="#" id="q22" class="btn-que">Q22. 두 수 더하기</a></li>
+                    <li><a href="#" id="q23" class="btn-que">Q23. 두 수 더하기</a></li>
+                    <li><a href="#" id="q24" class="btn-que">Q24. 두 수 더하기</a></li>
+                    <li><a href="#" id="q25" class="btn-que">Q25. 두 수 더하기</a></li>
+                    <li><a href="#" id="q26" class="btn-que">Q26. 두 수 더하기</a></li>
+                    <li><a href="#" id="q27" class="btn-que">Q27. 두 수 더하기</a></li>
+                    <li><a href="#" id="q28" class="btn-que">Q28. 두 수 더하기</a></li>
+                    <li><a href="#" id="q29" class="btn-que">Q29. 두 수 더하기</a></li>
+                    <li><a href="#" id="q30" class="btn-que">Q30. 두 수 더하기</a></li>
                 </ol>
             </nav>
             <main>
@@ -118,24 +123,28 @@
 
                     </div>
 
-                    <textarea style="display: none;" id="testcaseResult"></textarea>
-
                     <py-script>
-                        # 콘솔에 출력하는 방법 : js.console.log(testCase)
                         import ast
+                        #from testCaseAndResult import test
+                        from testcase import testcase_and_result
+
+                        PAGE_NAME = js.document.querySelector('.active').id[1:]
+
+                        def render(*ags):
+                            PAGE_NAME = js.document.querySelector('.active').id[1:]
+                            for i in range(3):
+                                js.document.querySelector(f'#testcase{i+1}').value = str(testcase_and_result[int(PAGE_NAME)]['testcase'][i])
+                        render()
 
                         def result(*ags, **kws):
                             code = Element("codeeditor").element.innerText
-                            testCase1 = Element("testcase1").element.value
-                            testCase2 = Element("testcase2").element.value
-                            testCase3 = Element("testcase3").element.value
 
-                            answer = Element("testcaseResult").element.value
-                            answer = f'[{answer}]'
-                            answer = ast.literal_eval(answer)
+                            PAGE_NAME = js.document.querySelector('.active').id[1:]
 
-                            testCase = f'[[{testCase1}], [{testCase2}], [{testCase3}]]'
-                            code += f'\n[solution(i) for i in {testCase}]'
+                            answer = testcase_and_result[int(PAGE_NAME)]['result']
+                            testCase = testcase_and_result[int(PAGE_NAME)]['testcase']
+
+                            code += f'\n[solution(i) for i in {str(testCase)}]'
                             try:
                                 result = multiline_eval(code)
                                 result = ast.literal_eval(result)
@@ -148,8 +157,8 @@
                                     result_save_localstorage.append(result[i] == answer[i])
                                 js.document.querySelector('#result_desc').innerHTML = resultString
                                 if all(result_save_localstorage):
-                                    PAGE_NAME = js.document.querySelector('.active').id
                                     js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
+                                render()
                             except Exception as e:
                                 result = f"&lt;p class='que-result-error'&gt;애러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;애러명 : {e}&lt;&#47;p&gt;"
                                 js.document.querySelector('#result_desc').innerHTML = result
@@ -168,6 +177,10 @@
 
                         button_run = Element("btn-run")
                         button_run.element.onclick = result
+
+                        for i in range(1, 31):
+                            button_render = Element(f'q{i}')
+                            button_render.element.onclick = render
                         </py-script>
                 </section>
             </main>

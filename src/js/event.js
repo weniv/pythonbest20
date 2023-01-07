@@ -4,9 +4,9 @@ const $btnRun = document.querySelector("#btn-run");
 // 문제 로딩
 $btnQue.forEach(element => {
     element.addEventListener('click', function (e) {
-        document.getElementById(PAGE_NAME).classList.remove('active')
-        PAGE_NAME = e.target.id;
-        document.getElementById(PAGE_NAME).classList.add('active')
+        document.getElementById('q' + PAGE_NAME).classList.remove('active')
+        PAGE_NAME = e.target.id.slice(1);
+        document.getElementById('q' + PAGE_NAME).classList.add('active')
         history.pushState(null, PAGE_NAME, `?page=${PAGE_NAME}`);
         render();
         loadCode();

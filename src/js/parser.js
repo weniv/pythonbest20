@@ -79,7 +79,7 @@ const figure = {
   regex: /^\s*!\[(.*)\]\((.+)\)/,
   replace: (_, g1, g2) => {
     const width = g2.match(/_{2}(\d+)\..+$/)?.[1];
-    console.log(g2)
+    // console.log(g2)
     return `<figure class="que-figure"><img class="que-img" src="${window.location.origin}/src/pages/img/${g2}"${width ? ` style="width: ${width}px;"` : ''
       }>${g1 ? `<figcaption>${g1}</figcaption>` : ''}</figure>`;
   },
