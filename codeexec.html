@@ -13,6 +13,14 @@
     />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
+    <py-config>
+        packages = [
+            "matplotlib", "pandas", "numpy"
+        ]
+        [[fetch]]
+        files = ["./src/py/antigravity.py"]
+    </py-config>
+
     <!-- css -->
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
@@ -45,12 +53,7 @@
             <h1><a href="index.html">Python Algorithm Best30</a></h1>
             <a class="btn-exec" href="index.html">메인으로</a>
         </header>
-        <p class="info">Shift-ENTER 또는 오른쪽 플레이 버튼을 누르면 실행됩니다.</p>
-        <py-config type="json">
-            {
-                "packages": ["numpy", "pandas", "matplotlib"]
-            }
-        </py-config>
+        <p class="info">Shift-ENTER 또는 오른쪽 플레이 버튼을 누르면 실행됩니다. matplotlib은 plt.show대신 display(fig)를 사용하세요.</p>
         <py-repl id="my-repl" auto-generate="true"></py-repl>
     </div>
 </body>
