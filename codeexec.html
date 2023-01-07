@@ -5,23 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    
     <!-- pyscript -->
     <link
-    rel="stylesheet"
-    href="https://pyscript.net/latest/pyscript.css"
-/>
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <py-config>
-        [[fetch]]
-        files = ["./src/py/codeexec.py"]
-    </py-config>
+        rel="stylesheet"
+        href="https://pyscript.net/latest/pyscript.css"
+    />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <style>
+        h1{
+            margin-left: -60px;
+        }
+        py-repl {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .info{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .py-repl-run-button{
+            opacity: 0.5;
+        }
+
+        .py-repl-run-button path{
+            fill:white;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>PyScript REPL</h1>
-    <p>Shift-ENTER 누르면 실행됩니다.</p>
-    <a href="index.html">메인으로</a>
-    <div>
-        <py-repl id="my-repl" auto-generate="true"> </py-repl>
+    <div class="container menu-on">
+        <header>
+            <h1><a href="index.html">Python Algorithm Best30</a></h1>
+            <a class="btn-exec" href="index.html">메인으로</a>
+        </header>
+        <p class="info">Shift-ENTER 또는 오른쪽 플레이 버튼을 누르면 실행됩니다.</p>
+        <py-config type="json">
+            {
+                "packages": ["numpy", "pandas", "matplotlib"]
+            }
+        </py-config>
+        <py-repl id="my-repl" auto-generate="true"></py-repl>
     </div>
 </body>
 </html>
