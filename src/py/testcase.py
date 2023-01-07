@@ -9,6 +9,10 @@ testcase_and_result = [{
     'result': [30, 70, 110],
 }, {
     'que_number': 2,
+    'testcase': ['adc10bb1d9ia10c33b7u88k3j1a3c11c9', 'c1cc2ccc3ccccc4ccccccccc5', '12345c12345c90c90c90'],
+    'result': ['2월 3일', '1월 5일', '2월 8일'],
+}, {
+    'que_number': 3,
     'testcase': [
         [['A', 25, 24, 11, 12], ['B', 13, 22, 16, 14], ['C', 12, 22, 16, 14], ['D', 13, 22, 16, 14], ['E', 12, 25, 16, 19], ['F', 23, 15, 16, 14], ['G', 13, 14, 3, 5], ['H', 25, 22, 11, 14], ['I', 13, 12, 14, 23], ['J', 13, 22, 15, 14]],
         [['A', 11, 23, 17, 15], ['B', 15, 22, 17, 22], ['C', 13, 22, 16, 14], ['D', 18, 22, 16, 25], ['E', 8, 13, 23, 21]],
@@ -16,16 +20,7 @@ testcase_and_result = [{
     ],
     'result': [['H', 'E', 'A'], ['D'], []],
 }, {
-    'que_number': 3,
+    'que_number': 4,
     'testcase': [[10, 20], [30, 40], [50, 60]],
     'result': [30, 70, 110],
 }]
-
-# function testcaseSetting() {
-#     testcase = testCaseAndResult[PAGE_NAME]
-#     document.querySelector('#testcase1').value = testcase['testcase'][0]
-#     document.querySelector('#testcase2').value = testcase['testcase'][1]
-#     document.querySelector('#testcase3').value = testcase['testcase'][2]
-#     document.querySelector('#testcaseResult').value = testcase['result']
-# }
-# testcaseSetting()

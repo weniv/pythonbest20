@@ -17,3 +17,4 @@
 * CODE 블록 내 color 논의 필요(visual studio code color로?)
 * CSS 코드 직접 수정(Sass X) => result 부분, 마크다운 코드 블록, 마크다운 코드블록 마진 => Sass에 반영해서 할지, CSS로 계속 컨트롤 할지?
 * 입출력 설명 위에 간격, 1번과 2번에 앞에 있는 대쉬 크기가 다름
+* 이미지 크기 조정 필요
