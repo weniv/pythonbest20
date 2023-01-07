@@ -8,3 +8,9 @@ if (typeof (history.pushState) != "undefined") {
 }
 
 document.getElementById(PAGE_NAME).classList.add('active')
+
+for (let i = 1; i <= 30; i++) {
+    if (!!window.localStorage.getItem(`${i}_check`)) {
+        document.getElementById(i).classList.add('success')
+    }
+}

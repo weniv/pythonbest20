@@ -1,0 +1,41 @@
+/* 나중에 Sass로 통일할지, 아니면 CSS에 그냥 넣을지 판단 필요 */
+/* result */
+
+.result-pass {
+    color: #2e6ff2;
+}
+
+.result-fail {
+    color: rgb(240, 8, 8);
+}
+
+.checkPass {
+    margin-top: 7px;
+}
+
+.result-compare {
+    color: #bbb;
+}
+
+/* //result */
+
+/* 마크다운 코드블록 */
+
+.code-text {
+    color: #a11;
+}
+
+.code-syntex {
+    color: #ff537b;
+}
+
+.code-builtinfunction {
+    color: #498fff;
+}
+
+/* //마크다운 코드블록 */
+
+/* success */
+.success::after {
+    content: ' ✔️';
+}

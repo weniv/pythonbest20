@@ -133,21 +133,21 @@ const encodeEntity = (token) => {
 };
 
 const encodeCodeEntity = (token) => {
-  let keyword_violet = ['def', 'if', 'else', 'for', 'while', 'in', 'return', 'None'];
-  let keyword_blue = ['abs', 'aiter', 'all', 'any', 'anext', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+  let keyword_syntex = ['def', 'if', 'else', 'for', 'while', 'in', 'return', 'None'];
+  let keyword_builtinfunction = ['abs', 'aiter', 'all', 'any', 'anext', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
 
-  keyword_violet.forEach(key => {
+  keyword_syntex.forEach(key => {
     const re = new RegExp(`(.*?)${key}[ ?(]+(.*?)`);
-    token = token.replace(re, `$1<span style="color:#ff537b";>${key} </span>$2`)
+    token = token.replace(re, `$1<span class="code-syntex";>${key} </span>$2`)
   });
 
-  keyword_blue.forEach(key => {
+  keyword_builtinfunction.forEach(key => {
     const re = new RegExp(`(.*?) ${key}[ (]+(.*?)`);
-    token = token.replace(re, `$1<span style="color:#498fff";> ${key}</span>($2`)
+    token = token.replace(re, `$1<span class="code-builtinfunction";> ${key}</span>($2`)
   });
 
   const re = new RegExp(`(.*?)'(.*?)'(.*?)`, 'g');
-  token = token.replace(re, `$1<span style="color:#a11";>'$2'</span>$3`)
+  token = token.replace(re, `$1<span class="code-text";>'$2'</span>$3`)
 
 
   return token
@@ -278,26 +278,34 @@ const parseMarkdown = (markdown) => {
 };
 
 const fetchMarkdown = async () => {
-  // console.log(window.location.origin)
-  // console.log(window.location)
-  // console.log(window.location.pathname)
-  // console.log(window.location.pathname.split('/'))
   if (window.location.pathname.split('/')[1] === '' || window.location.pathname.split('/')[1] === 'index.html') {
     // 로컬 테스트 및 실제 배포
     const res = await fetch(
       `${window.location.origin}/src/pages/question${PAGE_NAME}.md`
     );
-    const markdown = await res.text();
-    // console.log(markdown);
-    return markdown;
+
+    if (res.status == 200) {
+      const markdown = await res.text();
+      return markdown;
+    } else {
+      const markdown = '# 알고리즘 문제가 없습니다.'
+      return markdown;
+    }
+
   } else {
-    // github page url로 배포시
+    // github page url로 배포
     const res = await fetch(
       `${window.location.origin}/${window.location.pathname.split('/')[1]}/src/pages/question${PAGE_NAME}.md`
     );
-    const markdown = await res.text();
-    // console.log(markdown);
-    return markdown;
+
+    if (res.status == 200) {
+      const markdown = await res.text();
+      return markdown;
+    } else {
+      const markdown = '# 알고리즘 문제가 없습니다.'
+      return markdown;
+    }
+
   }
 };
 

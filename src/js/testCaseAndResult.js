@@ -8,11 +8,11 @@ testCaseAndResult = [{
     testcase: [[10, 20], [30, 40], [50, 60]],
     result: [30, 70, 110],
 }, {
-    que_number: 1,
+    que_number: 2,
     testcase: [[10, 20], [30, 40], [50, 60]],
     result: [30, 70, 110],
 }, {
-    que_number: 1,
+    que_number: 3,
     testcase: [[10, 20], [30, 40], [50, 60]],
     result: [30, 70, 110],
 }]
