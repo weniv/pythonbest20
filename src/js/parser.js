@@ -47,6 +47,12 @@ const tableDivision = {
   replace: '',
 };
 
+
+const blockquote = {
+  regex: /^\s*"\s(.+)/,
+  replace: '<blockquote class="que-blockquote">$1</blockquote>',
+};
+
 const heading = {
   regex: /^\s*(#+)\s(.+)/,
   replace: (_, mark, group) => {
@@ -163,6 +169,7 @@ const blockRules = [
   figure,
   lineBreak,
   hrline,
+  blockquote,
 ];
 
 const inlineRules = [link, strong, code];

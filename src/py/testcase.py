@@ -5,8 +5,8 @@ testcase_and_result = [{
     'result': None,
 }, {
     'que_number': 1,
-    'testcase': [[10, 20], [30, 40], [50, 60]],
-    'result': [30, 70, 110],
+    'testcase': [['  + + - + -+-', '  ++--+-+  ', '++ -+ -+-', '+++- +-+'], ['++-- -++', '++-- --+', '+++- +--'], ['++-++--', '++-+--+', '++-++++', '++-+++-']],
+    'result': ['jeju', 'cat', 'lion'],
 }, {
     'que_number': 2,
     'testcase': ['adc10bb1d9ia10c33b7u88k3j1a3c11c9', 'c1cc2ccc3ccccc4ccccccccc5', '12345c12345c90c90c90'],
