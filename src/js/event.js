@@ -19,7 +19,7 @@ function loadCode() {
     if (!!localStorageValue) {
         editor.setValue(localStorageValue);
     } else {
-        editor.setValue(`def solution():
+        editor.setValue(`def solution(data):
     return None`);
     }
 }

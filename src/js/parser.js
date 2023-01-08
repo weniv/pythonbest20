@@ -1,4 +1,3 @@
-
 const normalize = (markdown) => {
   return markdown
     .replace(/\r\n?/g, '\n')
