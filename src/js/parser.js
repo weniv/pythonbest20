@@ -1,3 +1,5 @@
+// 코드가 가독성과 재사용성이 떨어져 리뉴얼이 필요함
+// https://codepen.io/kvendrik/pen/bGKeEE 코드로 리뉴얼할 예정
 const normalize = (markdown) => {
   return markdown
     .replace(/\r\n?/g, '\n')
