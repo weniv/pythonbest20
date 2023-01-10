@@ -155,6 +155,7 @@ nav ol li a:not(.active):hover {
 }
 .container .contents main section.description {
   background: rgba(255, 255, 255, 0.03);
+  height: 100%;
 }
 .container .contents main section.editor {
   position: -webkit-sticky;
@@ -164,6 +165,7 @@ nav ol li a:not(.active):hover {
 }
 
 .description {
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
 }
 .description h1,
@@ -187,6 +189,15 @@ nav ol li a:not(.active):hover {
   margin-right: 0.6em;
   border-top: 0.4rem solid rgba(255, 255, 255, 0.8);
 }
+.description a {
+  text-decoration: underline;
+  color: #498fff;
+}
+.description blockquote {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
 .description > ul.que-list:first-child {
   margin-bottom: 2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -205,17 +216,17 @@ nav ol li a:not(.active):hover {
   border-radius: 0.4rem;
 }
 .description .que-list:not(:first-child) {
-  margin: 0.2em 0 0.4em;
+  margin: 1em 0 0.4em;
 }
 .description .que-list:not(:first-child) .que-ol-li,
 .description .que-list:not(:first-child) .que-ul-li {
   position: relative;
   padding-left: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .description .que-list:not(:first-child) .que-ol-li:not(:first-child),
 .description .que-list:not(:first-child) .que-ul-li:not(:first-child) {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 .description .que-list:not(:first-child) .que-ol-li::before,
 .description .que-list:not(:first-child) .que-ul-li::before {
@@ -238,6 +249,7 @@ nav ol li a:not(.active):hover {
 .description pre {
   background: rgba(0, 0, 0, 0.1);
   padding: 2em;
+  margin: 2rem 0;
 }
 .description figure {
   margin: 1rem 0;
@@ -272,6 +284,7 @@ nav ol li a:not(.active):hover {
 .description table td {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-width: 1px 0;
+  text-align: left;
 }
 
 .editor {
@@ -326,6 +339,7 @@ nav ol li a:not(.active):hover {
   font-weight: bold;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
 }
 .editor #py-internal-0 {
   display: block;

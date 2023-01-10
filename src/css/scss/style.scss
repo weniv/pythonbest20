@@ -167,6 +167,7 @@ nav {
         padding: 3rem;
         &.description {
           background: rgba($ColorText, 0.03);
+          height: 100%;
         }
         &.editor {
           position: sticky;
@@ -179,6 +180,7 @@ nav {
 }
 
 .description {
+  line-height: 1.6;
   color: rgba($ColorText, 0.85);
 
   h1,
@@ -203,6 +205,16 @@ nav {
     }
   }
 
+  a {
+    text-decoration: underline;
+    color: $ColorMainLight;
+  }
+
+  blockquote {
+    padding: 2rem;
+    background: rgba($ColorDark, 0.1);
+    margin: 2rem 0;
+  }
   & > ul.que-list:first-child {
     margin-bottom: 2em;
     border-bottom: 1px solid rgba($ColorDark, 0.3);
@@ -224,14 +236,15 @@ nav {
     }
   }
   .que-list:not(:first-child) {
-    margin: 0.2em 0 0.4em;
+    margin: 1em 0 0.4em;
     .que-ol-li,
     .que-ul-li {
       position: relative;
       padding-left: 1em;
-      line-height: 1.4;
+      line-height: 1.5;
+
       &:not(:first-child) {
-        margin-top: 0.3rem;
+        margin-top: 0.5rem;
       }
       &::before {
         content: "";
@@ -256,6 +269,7 @@ nav {
     background: rgba($ColorDark, 0.1);
     // color: rgba($ColorDark, 1);
     padding: 2em;
+    margin: 2rem 0;
   }
 
   figure {
@@ -292,6 +306,7 @@ nav {
     td {
       border: 1px solid rgba($ColorDark, 0.3);
       border-width: 1px 0;
+      text-align: left;
     }
   }
 }
@@ -350,6 +365,7 @@ nav {
       font-weight: bold;
       padding: 1rem;
       background: rgba($ColorDark, 0.4);
+      margin-bottom: 2rem;
     }
   }
 
