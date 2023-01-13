@@ -26,7 +26,12 @@ header{
 
 
 .py-repl-run-button {
+  cursor: pointer;
   opacity: 0.5;
+  transition: all 0.3s;
+  svg{
+    transform: scale(0.8);
+  }
   path{
     fill: $ColorText;
   }
@@ -34,6 +39,31 @@ header{
 .info{
   margin-bottom: 2rem;
 
+}
+
+
+.cm-editor{
+  border:   1px solid rgba($ColorText, 0.1);
+  &.cm-focused{
+    border: 1px solid rgba($ColorText, 0.2);
+  }
+}
+.py-repl-editor{
+  border: none;
+
+  .cm-gutters{
+    background: rgba($ColorText, 0.1);
+    color: $ColorText;
+    border-right: 1px solid rgba($ColorText, 0.1);
+  }
+  .cm-activeLineGutter{
+    background: rgba($ColorText, 0.4);
+    color: $ColorDark;
+  }
+  .cm-activeLine{
+    background: rgba($ColorText, 0.2);
+
+  }
 }
 
 
