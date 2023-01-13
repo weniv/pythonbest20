@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrap main {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+header {
+  padding: 0 2rem;
+}
+
+.py-error {
+  background: none;
+  color: #ff537b;
+  border: none;
+}
+
+.py-repl-run-button {
+  opacity: 0.5;
+}
+.py-repl-run-button path {
+  fill: #fff;
+}
+
+.info {
+  margin-bottom: 2rem;
+}
+
+.py-repl-output {
+  padding: 2rem;
+  margin: 1rem 0 4rem 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ͼb {
+  color: #a76dff;
+}
+
+.ͼd {
+  color: #FFD700;
+}
+
+.ͼe {
+  color: #FFD700;
+}
+
+.ͼg {
+  color: #FFD700;
+}

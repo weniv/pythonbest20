@@ -45,7 +45,7 @@ hr {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   height: 6rem;
   padding: 0 2rem 0 7.2rem;
@@ -55,6 +55,7 @@ header h1 {
   font-weight: bold;
   font-size: 1.2em;
   color: #2e6ff2;
+  margin: auto auto auto 0;
 }
 header .btn-fold {
   position: absolute;
@@ -142,6 +143,9 @@ nav ol li a:not(.active):hover {
 .container .contents {
   display: flex;
 }
+.container .contents main {
+  flex-grow: 1;
+}
 .container .contents main section {
   box-sizing: border-box;
   width: 100%;
@@ -155,10 +159,9 @@ nav ol li a:not(.active):hover {
 }
 .container .contents main section.description {
   background: rgba(255, 255, 255, 0.03);
-  height: 100%;
+  min-height: 100%;
 }
 .container .contents main section.editor {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
@@ -194,9 +197,11 @@ nav ol li a:not(.active):hover {
   color: #498fff;
 }
 .description blockquote {
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1.2rem;
   margin: 2rem 0;
+  border-left: 3px solid #fff;
+  font-style: italic;
+  font-weight: 700;
 }
 .description > ul.que-list:first-child {
   margin-bottom: 2em;
@@ -334,12 +339,24 @@ nav ol li a:not(.active):hover {
 }
 .editor #result {
   margin-top: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
 }
 .editor #result h3 {
   font-weight: bold;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
+}
+.editor #result #result_desc p {
+  padding: 0 2rem;
+}
+.editor #result #result_desc p:first-child {
+  margin-top: 2rem;
+}
+.editor #result #result_desc p:last-child {
   margin-bottom: 2rem;
+}
+.editor #result #result_desc p.que-result-error {
+  color: #ff537b;
 }
 .editor #py-internal-0 {
   display: block;
@@ -386,4 +403,42 @@ footer p {
   .container .contents {
     display: block;
   }
+}
+.result-pass {
+  color: #2e6ff2;
+}
+
+.result-fail {
+  color: #ff537b;
+}
+
+.result-compare {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 마크다운 코드블록 */
+.code-text {
+  color: #FFD700;
+}
+
+.code-syntex {
+  color: #569CD6;
+}
+
+.code-builtinfunction {
+  color: #a76dff;
+}
+
+/* result */
+.checkPass {
+  margin-top: 7px;
+}
+
+.result-compare {
+  color: #bbb;
+}
+
+/* 문제 다 풀었을 때 */
+.success::after {
+  content: " ✔️";
 }

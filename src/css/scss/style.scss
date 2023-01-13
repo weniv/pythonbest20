@@ -51,7 +51,7 @@ hr {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   height: 6rem;
   padding: 0 2rem 0 7.2rem;
@@ -60,6 +60,7 @@ header {
     font-weight: bold;
     font-size: 1.2em;
     color: $ColorMain;
+    margin: auto auto auto 0;
   }
   .btn-fold {
     position: absolute;
@@ -146,6 +147,8 @@ nav {
     &.container .contents main section {
       width: 100%;
       float: none;
+
+
     }
   }
 }
@@ -156,6 +159,7 @@ nav {
     display: flex;
 
     main {
+      flex-grow: 1;
       section {
         box-sizing: border-box;
         width: 100%;
@@ -167,7 +171,7 @@ nav {
         padding: 3rem;
         &.description {
           background: rgba($ColorText, 0.03);
-          height: 100%;
+          min-height: 100%;
         }
         &.editor {
           position: sticky;
@@ -211,9 +215,11 @@ nav {
   }
 
   blockquote {
-    padding: 2rem;
-    background: rgba($ColorDark, 0.1);
+    padding: 0.5rem 1.2rem;
     margin: 2rem 0;
+    border-left: 3px solid $ColorText;
+    font-style: italic;
+    font-weight: 700;
   }
   & > ul.que-list:first-child {
     margin-bottom: 2em;
@@ -361,11 +367,27 @@ nav {
   #result {
     margin-top: 2rem;
 
+    border: 1px solid rgba($ColorDark, 0.4);
     h3 {
       font-weight: bold;
       padding: 1rem;
       background: rgba($ColorDark, 0.4);
-      margin-bottom: 2rem;
+
+    }
+
+    #result_desc p{
+      padding:0 2rem;
+
+      &:first-child{
+        margin-top:2rem;
+      }
+      &:last-child{
+        margin-bottom:2rem;
+      }
+
+      &.que-result-error{
+        color:$ColorNegative
+      };
     }
   }
 
@@ -417,4 +439,46 @@ footer {
   .container .contents {
     display: block;
   }
+}
+
+
+
+//color
+.result-pass{
+  color: $ColorMain;
+}
+.result-fail {
+  color: $ColorNegative;
+}
+
+.result-compare {
+  color: rgba($ColorText,0.8);
+}
+
+
+/* 마크다운 코드블록 */
+.code-text {
+  color: $codeText;
+}
+
+.code-syntex {
+  color: $codeSyntex;
+}
+
+.code-builtinfunction {
+  color: $codeBuiltinfunction;
+}
+
+/* result */
+.checkPass {
+  margin-top: 7px;
+}
+
+.result-compare {
+  color: #bbb;
+}
+
+/* 문제 다 풀었을 때 */
+.success::after {
+  content: ' ✔️';
 }
