@@ -9,7 +9,7 @@ testcase_and_result = [{
     'result': ['jeju', 'cat', 'lion'],
 }, {
     'que_number': 2,
-    'testcase': ['adc10bb1d9ia10c33b7u88k3j1a3c11c9', 'c1cc2ccc3ccccc4ccccccccc5', '12345c12345c90c90c90'],
+    'testcase': ['adr10bb1d9ia10e33b7u88k3j1a3v11v9', 'r1rr2rrr3rrrrr4rrrrrre5', '12345r12345e90v90r90'],
     'result': ['2월 3일', '1월 5일', '2월 8일'],
 }, {
     'que_number': 3,
@@ -21,8 +21,8 @@ testcase_and_result = [{
     'result': [['H', 'E', 'A'], ['D'], []],
 }, {
     'que_number': 4,
-    'testcase': [[10, 20], [30, 40], [50, 60]],
-    'result': [30, 70, 110],
+    'testcase': [['10 - A. 20 - B. 30 - A.', '1 - A. 1 - A. 1 - A. 1 - A. 2 - B. 1 - A. 1 - B'], ['10 a. 10 a. 10 a. 20 b. 30 c.', 'c -- 100, c -- 100, c -- 100'], ['100만큼 a를 훈련. 200만큼 b를 훈련. 300만큼 c를 훈련. ', '100만큼 d를 훈련, 200만큼 e를 훈련']],
+    'result': ['최종 꿈의 설계는 원래 미래 260, 바뀐 미래 14760입니다. 이 수치대로 Vision을 만듭니다.', '최종 꿈의 설계는 원래 미래 9000, 바뀐 미래 52000입니다. 이 수치대로 Vision을 만듭니다.', '미래가 보이지 않습니다.'],
 }, {
     'que_number': 5,
     'testcase': [[10, 20], [30, 40], [50, 60]],
