@@ -2,20 +2,30 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 .wrap main {
   flex-grow: 1;
   padding: 2rem;
+} 
+
+.wrap footer {
+  width:100%;
+  position:fixed;
+  bottom:0;
 }
 
 header {
   padding: 0 2rem;
 }
 
+.py-terminal   {
+  margin: 0 2rem 6.4rem;
+}
+
+
 .py-error {
   background: none;
-  color: var(--ColorNegative);
+  color: #ff537b;
   border: none;
 }
 
@@ -28,7 +38,7 @@ header {
   transform: scale(0.8);
 }
 .py-repl-run-button path {
-  fill: var(--ColorText);
+  fill: #fff;
 }
 
 .info {
@@ -47,12 +57,12 @@ header {
 }
 .py-repl-editor .cm-gutters {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--ColorText);
+  color: #fff;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .py-repl-editor .cm-activeLineGutter {
   background: rgba(255, 255, 255, 0.4);
-  color: var(--ColorDark);
+  color: #000;
 }
 .py-repl-editor .cm-activeLine {
   background: rgba(255, 255, 255, 0.2);
@@ -65,17 +75,17 @@ header {
 }
 
 .ͼb {
-  color: var(--codeBuiltinfunction);
+  color: #a76dff;
 }
 
 .ͼd {
-  color: var(--codeText);
+  color: #FFD700;
 }
 
 .ͼe {
-  color: var(--codeText);
+  color: #FFD700;
 }
 
 .ͼg {
-  color: var(--codeText);
+  color: #FFD700;
 }
