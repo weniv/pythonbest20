@@ -1,0 +1,16 @@
+:root {
+    --maxWidth: 1400px;
+    --borderRadius: 0.4rem;
+
+    /* color */
+    --ColorText: #fff;
+    --ColorBg: #2d3848;
+    --ColorDark: #000;
+    --ColorMain: #2e6ff2;
+    --ColorMainLight: #498fff;
+    --ColorNegative: #ff537b;
+
+    --codeText: #ffd700;
+    --codeSyntex: #569cd6;
+    --codeBuiltinfunction: #a76dff;
+}
