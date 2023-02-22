@@ -57,10 +57,13 @@ header {
 }
 
 header h1 {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: var(--ColorMain);
     margin: auto auto auto 0;
+    max-width: 15%;
+    min-width: 240px;
+}
+
+header h1 a {
+    display: inline;
 }
 
 header .btn-fold {
