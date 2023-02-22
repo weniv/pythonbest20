@@ -453,19 +453,19 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  margin-top: 2rem;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 .editor #ad-carousel #ad-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 2s;
 }
 
 .editor #ad-carousel #ad-inner span {
@@ -478,63 +478,63 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner span.ad_before {
-  left: 0px;
+    left: 0px;
 }
 
 .editor #ad-carousel #ad-inner span.ad_after {
-  right: 0px;
+    right: 0px;
 }
 
 .editor #ad-carousel #ad-inner input {
-  display: none;
+    display: none;
 }
 
 .editor #ad-carousel #ad-inner li.ad-img {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
 }
 
 .editor #ad-carousel #ad-inner li.ad-fes,
 .editor #ad-carousel #ad-inner li.ad-fes2 {
-  background-color: palegoldenrod;
+    background-color: palegoldenrod;
 }
 
 .editor #ad-carousel #ad-inner li.ad-nds {
-  background-color: paleturquoise;
+    background-color: paleturquoise;
 }
 
 .editor #ad-carousel #ad-inner li.ad-data {
-  background-color: palegreen;
+    background-color: palegreen;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0%;
+.editor #ad-carousel #ad-inner #radio1:checked~.ad-fes {
+    margin-left: 0%;
 }
 
-.editor #ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
+.editor #ad-carousel #ad-inner #radio2:checked~.ad-fes {
+    margin-left: -100%;
 }
 
-.editor #ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
+.editor #ad-carousel #ad-inner #radio3:checked~.ad-fes {
+    margin-left: -200%;
 }
 
-.editor #ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
+.editor #ad-carousel #ad-inner #radio4:checked~.ad-fes {
+    margin-left: -300%;
 }
 
 #ad-carousel #ad-inner #ad-nav {
-  position: absolute;
-  width: 100%;
-  bottom: 50px;  
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
@@ -545,7 +545,7 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child) {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1 {
@@ -565,10 +565,10 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
@@ -580,27 +580,27 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
   background-color: var(--ColorWhite);
 }
 
-#ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0;
+#ad-carousel #ad-inner #radio1:checked~.ad-fes {
+    margin-left: 0;
 }
 
-#ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
+#ad-carousel #ad-inner #radio2:checked~.ad-fes {
+    margin-left: -100%;
 }
 
-#ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
+#ad-carousel #ad-inner #radio3:checked~.ad-fes {
+    margin-left: -200%;
 }
 
-#ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
+#ad-carousel #ad-inner #radio4:checked~.ad-fes {
+    margin-left: -300%;
 }
 
 .editor #py-internal-0 {
@@ -696,5 +696,9 @@ footer p {
 
 /* 문제 다 풀었을 때 */
 .success::after {
-  content: " ✔️";
+    content: " ✔️";
+}
+
+pre.py-terminal {
+    display: none;
 }
