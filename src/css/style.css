@@ -1,17 +1,20 @@
 @charset "UTF-8";
 @import "./variable.css";
+
 @font-face {
     font-family: "Pretendard";
     src: url("../font/Pretendard-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Pretendard";
     src: url("../font/Pretendard-Bold.woff") format("woff");
     font-weight: 700;
     font-style: bold;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -52,11 +55,14 @@ header {
     padding: 0 2rem 0 7.2rem;
     background: rgba(0, 0, 0, 0.4);
 }
+
 header h1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ColorMain);
     margin: auto auto auto 0;
-    max-width: 15%;
-    min-width: 240px;
 }
+
 header .btn-fold {
     position: absolute;
     top: 1rem;
@@ -66,11 +72,12 @@ header .btn-fold {
 .btn-fold {
     width: 4rem;
     height: 4rem;
-    background:var(--ColorBg);
+    background: var(--ColorBg);
     overflow: hidden;
     border-radius: 0.4rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 .btn-fold::after {
     content: "";
     display: block;
@@ -95,33 +102,40 @@ nav {
     background: rgba(0, 0, 0, 0.3);
     display: none;
 }
+
 nav ol {
     width: 100%;
     padding: 1em;
     box-sizing: border-box;
 }
+
 nav ol li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     font-size: 0.9em;
 }
+
 nav ol li:first-child {
     border-top: none;
 }
+
 nav ol li:last-child {
     border-bottom: none;
 }
+
 nav ol li a {
     padding: 1rem;
     display: block;
     transition: all 0.3s;
     color: rgba(255, 255, 255, 0.6);
 }
+
 nav ol li a.active {
     color: var(--ColorMainLight);
     font-weight: bold;
     background: rgba(0, 0, 0, 0.1);
 }
+
 nav ol li a:not(.active):hover {
     color: var(--ColorText);
     background: rgba(0, 0, 0, 0.2);
@@ -130,9 +144,11 @@ nav ol li a:not(.active):hover {
 .menu-on nav {
     display: block;
 }
+
 .menu-on .btn-fold::after {
     transform: rotate(0deg);
 }
+
 @media (max-width: 1200px) {
     .menu-on.container .contents main section {
         width: 100%;
@@ -143,24 +159,29 @@ nav ol li a:not(.active):hover {
 .container .contents {
     display: flex;
 }
+
 .container .contents main {
     flex-grow: 1;
 }
+
 .container .contents main section {
     box-sizing: border-box;
     width: 100%;
     padding: 3rem;
 }
+
 @media (min-width: 1025px) {
     .container .contents main section {
         width: 50%;
         float: left;
     }
 }
+
 .container .contents main section.description {
     background: rgba(255, 255, 255, 0.03);
     min-height: 100%;
 }
+
 .container .contents main section.editor {
     position: sticky;
     top: 0;
@@ -171,6 +192,7 @@ nav ol li a:not(.active):hover {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
+
 .description h1,
 .description h2,
 .description h3,
@@ -179,10 +201,12 @@ nav ol li a:not(.active):hover {
     margin-bottom: 0.3em;
     color: var(--ColorText);
 }
+
 .description h2 {
     font-size: 1.3em;
     margin-bottom: 0.5em;
 }
+
 .description h2::before {
     content: "";
     display: inline-block;
@@ -192,10 +216,12 @@ nav ol li a:not(.active):hover {
     margin-right: 0.6em;
     border-top: 0.4rem solid rgba(255, 255, 255, 0.8);
 }
+
 .description a {
     text-decoration: underline;
     color: var(--ColorMainLight);
 }
+
 .description blockquote {
     padding: 0.5rem 1.2rem;
     margin: 2rem 0;
@@ -203,37 +229,44 @@ nav ol li a:not(.active):hover {
     font-style: italic;
     font-weight: 700;
 }
-.description > ul.que-list:first-child {
+
+.description>ul.que-list:first-child {
     margin-bottom: 2em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
     padding-bottom: 1em;
 }
-.description > ul.que-list > li,
-.description > ul.que-list ul {
+
+.description>ul.que-list>li,
+.description>ul.que-list ul {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.description > ul.que-list ul li {
+
+.description>ul.que-list ul li {
     font-size: 0.9em;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 1rem;
     border-radius: 0.4rem;
 }
+
 .description .que-list:not(:first-child) {
     margin: 1em 0 0.4em;
 }
+
 .description .que-list:not(:first-child) .que-ol-li,
 .description .que-list:not(:first-child) .que-ul-li {
     position: relative;
     padding-left: 1em;
     line-height: 1.5;
 }
+
 .description .que-list:not(:first-child) .que-ol-li:not(:first-child),
 .description .que-list:not(:first-child) .que-ul-li:not(:first-child) {
     margin-top: 0.5rem;
 }
+
 .description .que-list:not(:first-child) .que-ol-li::before,
 .description .que-list:not(:first-child) .que-ul-li::before {
     content: "";
@@ -247,47 +280,58 @@ nav ol li a:not(.active):hover {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
 }
+
 .description .que-list:not(:first-child) .que-ol-li ul li::before,
 .description .que-list:not(:first-child) .que-ul-li ul li::before {
     height: 0.2em;
     border-radius: 0;
 }
+
 .description pre {
     background: rgba(0, 0, 0, 0.1);
     padding: 2em;
     margin: 2rem 0;
     overflow-x: auto;
+    white-space: pre-wrap;
 }
+
 .description figure {
     margin: 1rem 0;
 }
+
 .description figure figcaption {
     font-size: 0.9em;
     color: rgba(255, 255, 255, 0.7);
     margin: 0.4em 0.6rem;
 }
+
 .description figure figcaption::before {
     content: "▲";
     font-size: 0.6em;
     margin-right: 1em;
     vertical-align: middle;
 }
+
 .description table {
     border-top: 2px solid var(--ColorDark);
     text-align: center;
     color: rgba(255, 255, 255, 0.85);
 }
+
 .description table td,
 .description table th {
     padding: 0.6em 1em;
 }
+
 .description table th {
     font-weight: bold;
     background: rgba(0, 0, 0, 0.3);
 }
+
 .description table tr:nth-child(odd) {
     background: rgba(255, 255, 255, 0.05);
 }
+
 .description table td {
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-width: 1px 0;
@@ -297,30 +341,38 @@ nav ol li a:not(.active):hover {
 .editor {
     width: min(100%, 100vw - 6rem);
 }
+
 .editor .CodeMirror {
     width: 100%;
 }
+
 .editor .test-case {
     display: flex;
     padding: 2rem 0;
     justify-content: space-between;
 }
+
 .editor .test-case div {
     flex: 1 1 30%;
 }
+
 .editor .test-case div:first-child {
     padding-right: 2rem;
 }
+
 .editor .test-case div:not(:first-child) {
     border-left: 1px solid rgba(0, 0, 0, 0.3);
     padding: 0 2rem;
 }
+
 .editor .test-case div:last-child {
     padding-right: 0;
 }
+
 .editor .test-case label {
     font-size: 0.95em;
 }
+
 .editor .test-case input {
     margin-top: 0.2em;
     border: none;
@@ -330,41 +382,51 @@ nav ol li a:not(.active):hover {
     color: rgba(255, 255, 255, 0.5);
     text-indent: 1rem;
 }
+
 .editor .btn-contain {
     text-align: right;
 }
+
 .editor .btn-contain #btn-run {
     background: var(--ColorMain);
     color: var(--ColorText);
     height: 4.4rem;
     width: 100%;
 }
+
 .editor #result {
     margin-top: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.4);
 }
+
 .editor #result h3 {
     font-weight: bold;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.4);
 }
+
 .editor #result #result_desc p {
     padding: 0 2rem;
 }
+
 .editor #result #result_desc p:first-child {
     margin-top: 2rem;
 }
+
 .editor #result #result_desc p:last-child {
     margin-bottom: 2rem;
 }
+
 .editor #result #result_desc p.que-result-error {
     color: var(--ColorNegative);
 }
+
 .editor #py-internal-0 {
     display: block;
     background: rgba(0, 0, 0, 0.2);
     overflow-x: scroll;
 }
+
 .editor pre {
     background: none;
     border: none;
@@ -372,6 +434,7 @@ nav ol li a:not(.active):hover {
     box-sizing: border-box;
     padding: 2rem;
 }
+
 .editor .py-error {
     color: var(--ColorNegative);
 }
@@ -380,6 +443,7 @@ footer {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.1);
 }
+
 footer p {
     text-align: center;
     font-size: 0.9em;
@@ -389,6 +453,7 @@ footer p {
     header .btn-fold {
         transform: rotate(90deg);
     }
+
     nav {
         position: absolute;
         top: 6rem;
@@ -399,13 +464,16 @@ footer p {
         overflow-y: scroll;
         background: #2d3848;
     }
+
     nav ol {
         background-color: rgba(0, 0, 0, 0.2);
     }
+
     .container .contents {
         display: block;
     }
 }
+
 .result-pass {
     color: var(--ColorMain);
 }
