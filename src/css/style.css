@@ -453,154 +453,154 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  margin-top: 2rem;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 .editor #ad-carousel #ad-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 2s;
 }
 
 .editor #ad-carousel #ad-inner span {
-  position: absolute;
-  font-size: 20px;
-  padding: 20px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 999;
+    position: absolute;
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
 }
 
 .editor #ad-carousel #ad-inner span.ad_before {
-  left: 0px;
+    left: 0px;
 }
 
 .editor #ad-carousel #ad-inner span.ad_after {
-  right: 0px;
+    right: 0px;
 }
 
 .editor #ad-carousel #ad-inner input {
-  display: none;
+    display: none;
 }
 
 .editor #ad-carousel #ad-inner li.ad-img {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
 }
 
 .editor #ad-carousel #ad-inner li.ad-fes,
 .editor #ad-carousel #ad-inner li.ad-fes2 {
-  background-color: palegoldenrod;
+    background-color: palegoldenrod;
 }
 
 .editor #ad-carousel #ad-inner li.ad-nds {
-  background-color: paleturquoise;
+    background-color: paleturquoise;
 }
 
 .editor #ad-carousel #ad-inner li.ad-data {
-  background-color: palegreen;
+    background-color: palegreen;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0%;
+.editor #ad-carousel #ad-inner #radio1:checked~.ad-fes {
+    margin-left: 0%;
 }
 
-.editor #ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
+.editor #ad-carousel #ad-inner #radio2:checked~.ad-fes {
+    margin-left: -100%;
 }
 
-.editor #ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
+.editor #ad-carousel #ad-inner #radio3:checked~.ad-fes {
+    margin-left: -200%;
 }
 
-.editor #ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
+.editor #ad-carousel #ad-inner #radio4:checked~.ad-fes {
+    margin-left: -300%;
 }
 
 #ad-carousel #ad-inner #ad-nav {
-  position: absolute;
-  width: 100%;
-  bottom: 50px;  
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-  border: 2px solid #fff;
-  padding: 2px;
-  border-radius: 10px;
-  transition: 1s;
+    border: 2px solid #fff;
+    padding: 2px;
+    border-radius: 10px;
+    transition: 1s;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child) {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
-#ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1 {
-  background-color: #fff;
+#ad-carousel #ad-inner #radio1:checked~#ad-nav #nav-auto .auto-btn1 {
+    background-color: #fff;
 }
 
-#ad-carousel #ad-inner #radio2:checked ~ #ad-nav #nav-auto .auto-btn2 {
-  background-color: #fff;
+#ad-carousel #ad-inner #radio2:checked~#ad-nav #nav-auto .auto-btn2 {
+    background-color: #fff;
 }
 
-#ad-carousel #ad-inner #radio3:checked ~ #ad-nav #nav-auto .auto-btn3 {
-  background-color: #fff;
+#ad-carousel #ad-inner #radio3:checked~#ad-nav #nav-auto .auto-btn3 {
+    background-color: #fff;
 }
 
-#ad-carousel #ad-inner #radio4:checked ~ #ad-nav #nav-auto .auto-btn1 {
-  background-color: #fff;
+#ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn1 {
+    background-color: #fff;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
-  border: 2px solid #fff;
-  padding: 2px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s;
+#ad-carousel #ad-inner #ad-nav #nav-maunal>.manual-btn {
+    border: 2px solid #fff;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-  background-color: #fff;
+    background-color: #fff;
 }
 
-#ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0;
+#ad-carousel #ad-inner #radio1:checked~.ad-fes {
+    margin-left: 0;
 }
 
-#ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
+#ad-carousel #ad-inner #radio2:checked~.ad-fes {
+    margin-left: -100%;
 }
 
-#ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
+#ad-carousel #ad-inner #radio3:checked~.ad-fes {
+    margin-left: -200%;
 }
 
-#ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
+#ad-carousel #ad-inner #radio4:checked~.ad-fes {
+    margin-left: -300%;
 }
 
 .editor #py-internal-0 {
@@ -670,7 +670,7 @@ footer p {
 
 /* 마크다운 코드블록 */
 .code-text {
-  color: #ffd700;
+    color: #ffd700;
 }
 
 .code-syntex {
@@ -696,5 +696,9 @@ footer p {
 
 /* 문제 다 풀었을 때 */
 .success::after {
-  content: " ✔️";
+    content: " ✔️";
+}
+
+pre.py-terminal {
+    display: none;
 }
