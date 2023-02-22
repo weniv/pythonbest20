@@ -40,7 +40,7 @@ header {
   transform: scale(0.8);
 }
 .py-repl-run-button path {
-  fill: var(--ColorText);
+  fill: var(--ColorWhite);
 }
 
 .info {
@@ -59,7 +59,7 @@ header {
 }
 .py-repl-editor .cm-gutters {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--ColorText);
+  color: var(--ColorWhite);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .py-repl-editor .cm-activeLineGutter {

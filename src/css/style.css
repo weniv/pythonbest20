@@ -25,7 +25,7 @@ body {
     font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
     line-height: 1.4;
     background: var(--ColorBg);
-    color: var(--ColorText);
+    color: var(--ColorWhite);
 }
 
 hr {
@@ -83,7 +83,7 @@ header .btn-fold {
     height: 4rem;
     background: var(--ColorBg);
     overflow: hidden;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -146,7 +146,7 @@ nav ol li a.active {
 }
 
 nav ol li a:not(.active):hover {
-    color: var(--ColorText);
+    color: var(--ColorWhite);
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -212,7 +212,7 @@ nav ol li a:not(.active):hover {
 .description h4 {
     font-weight: bold;
     margin-bottom: 0.3em;
-    color: var(--ColorText);
+    color: var(--ColorWhite);
 }
 
 .description h2 {
@@ -238,7 +238,7 @@ nav ol li a:not(.active):hover {
 .description blockquote {
     padding: 0.5rem 1.2rem;
     margin: 2rem 0;
-    border-left: 3px solid var(--ColorText);
+    border-left: 3px solid var(--ColorWhite);
     font-style: italic;
     font-weight: 700;
 }
@@ -261,7 +261,7 @@ nav ol li a:not(.active):hover {
     font-size: 0.9em;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
 }
 
 .description .que-list:not(:first-child) {
@@ -279,7 +279,7 @@ nav ol li a:not(.active):hover {
     font-size: 0.9em;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
 }
 
 .description .que-list:not(:first-child) {
@@ -420,7 +420,7 @@ nav ol li a:not(.active):hover {
 
 .editor .btn-contain #btn-run {
     background: var(--ColorMain);
-    color: var(--ColorText);
+    color: var(--ColorWhite);
     height: 4.4rem;
     width: 100%;
 }
@@ -469,12 +469,12 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner span {
-    position: absolute;
-    font-size: 20px;
-    padding: 20px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 999;
+  position: absolute;
+  font-size: 20px;
+  padding: 20px;
+  color: var(--ColorWhite);
+  cursor: pointer;
+  z-index: 999;
 }
 
 .editor #ad-carousel #ad-inner span.ad_before {
@@ -538,30 +538,30 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-    border: 2px solid #fff;
-    padding: 2px;
-    border-radius: 10px;
-    transition: 1s;
+  border: 2px solid var(--ColorWhite);
+  padding: 2px;
+  border-radius: 10px;
+  transition: 1s;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child) {
     margin-right: 20px;
 }
 
-#ad-carousel #ad-inner #radio1:checked~#ad-nav #nav-auto .auto-btn1 {
-    background-color: #fff;
+#ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1 {
+  background-color: var(--ColorWhite);
 }
 
-#ad-carousel #ad-inner #radio2:checked~#ad-nav #nav-auto .auto-btn2 {
-    background-color: #fff;
+#ad-carousel #ad-inner #radio2:checked ~ #ad-nav #nav-auto .auto-btn2 {
+  background-color: var(--ColorWhite);
 }
 
-#ad-carousel #ad-inner #radio3:checked~#ad-nav #nav-auto .auto-btn3 {
-    background-color: #fff;
+#ad-carousel #ad-inner #radio3:checked ~ #ad-nav #nav-auto .auto-btn3 {
+  background-color: var(--ColorWhite);
 }
 
-#ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn1 {
-    background-color: #fff;
+#ad-carousel #ad-inner #radio4:checked ~ #ad-nav #nav-auto .auto-btn1 {
+  background-color: var(--ColorWhite);
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
@@ -571,12 +571,12 @@ nav ol li a:not(.active):hover {
     justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal>.manual-btn {
-    border: 2px solid #fff;
-    padding: 2px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 1s;
+#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+  border: 2px solid var(--ColorWhite);
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
@@ -584,7 +584,7 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-    background-color: #fff;
+  background-color: var(--ColorWhite);
 }
 
 #ad-carousel #ad-inner #radio1:checked~.ad-fes {
@@ -644,7 +644,7 @@ footer p {
         z-index: 100;
         max-height: 40rem;
         overflow-y: scroll;
-        background: #2d3848;
+        background: var(--ColorBg);
     }
 
     nav ol {
@@ -670,7 +670,7 @@ footer p {
 
 /* 마크다운 코드블록 */
 .code-text {
-    color: #ffd700;
+  color: var(--codeText);
 }
 
 .code-syntex {
