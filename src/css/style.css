@@ -158,6 +158,10 @@ nav ol li a:not(.active):hover {
 }
 
 @media (max-width: 1200px) {
+    .menu-on.container .contents main {
+        height: 100%;
+    }
+
     .menu-on.container .contents main section {
         width: 100%;
         float: none;
