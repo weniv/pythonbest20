@@ -36,6 +36,7 @@
     <script src="./src/js/parser.js" defer></script>
     <script src="./src/js/event.js" defer></script>
     <script src="./src/js/nav.js" defer></script>
+    <script src="./src/js/ad.js" defer></script>
 
     <!-- codemirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
@@ -137,10 +138,38 @@
                     </div>
 
                     <div id="result">
-
                         <h3>Result</h3>
                         <div id="result_desc"></div>
+                    </div>
 
+                    <div id="ad-carousel">
+                      <ul id="ad-inner">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <!-- <span class="ad_before"><</span> -->
+                        <li class="ad-img ad-fes">프론트엔드 스쿨 광고</li>
+                        <li class="ad-img ad-nds">노드 스쿨 광고</li>
+                        <li class="ad-img ad-data">데이터분석 스쿨 광고</li>
+                        <li class="ad-img ad-fes2">프론트엔드 스쿨 광고</li>
+                       <!-- <span class="ad_after">></span> -->
+
+                        <div id="ad-nav">
+                            <div id="nav-auto">
+                              <div class="auto-btn1"></div>
+                              <div class="auto-btn2"></div>
+                              <div class="auto-btn3"></div>
+                            </div>
+                        
+                            <div id="nav-maunal">
+                              <label for="radio1" class="manual-btn"></label>
+                              <label for="radio2" class="manual-btn"></label>
+                              <label for="radio3" class="manual-btn"></label>
+                            </div>
+                        </div>
+                     </ul>
                     </div>
 
                     <py-script>
