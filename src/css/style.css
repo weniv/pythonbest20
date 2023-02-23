@@ -185,6 +185,10 @@ nav ol li a:not(.active):hover {
 }
 
 @media (min-width: 1025px) {
+    .container .contents main {
+        width: 100%;
+    }
+    
     .container .contents main section {
         width: 50%;
         float: left;
