@@ -14,10 +14,9 @@ header {
   padding: 0 2rem;
 }
 
-main {
-  padding: 2rem;
-  margin-bottom:auto;
-
+.py-terminal   {
+  display: none;
+  margin: 0 2rem 6.4rem;
 }
 
 footer {
