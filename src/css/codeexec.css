@@ -2,30 +2,31 @@
 @import './reset.css';
 @import './style.css';
 
-.wrap {
-  display: flex;
+body {
+  display:flex;
   flex-direction: column;
-}
-
-.wrap main {
-  flex-grow: 1;
-  padding: 2rem;
-}
-
-.wrap footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+  justify-content: space-between;
+  min-height:100vh;
+  
 }
 
 header {
   padding: 0 2rem;
 }
 
-.py-terminal {
-  margin: 0 2rem 6.4rem;
+main {
+  padding: 2rem;
+  margin-bottom:auto;
+
 }
 
+footer {
+  order: 3;
+}
+
+.py-terminal {
+  margin: 0 2rem 2rem;
+}
 
 .py-error {
   background: none;
