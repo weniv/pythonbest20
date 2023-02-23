@@ -698,7 +698,3 @@ footer p {
 .success::after {
     content: " ✔️";
 }
-
-.py-terminal {
-    display: none;
-}
