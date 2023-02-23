@@ -454,7 +454,6 @@ nav ol li a:not(.active):hover {
 
 .editor #ad-carousel {
   width: 100%;
-  height: 200px;
   overflow: hidden;
   margin-top: 2rem;
 }
@@ -464,17 +463,6 @@ nav ol li a:not(.active):hover {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
-  transition: 2s;
-}
-
-.editor #ad-carousel #ad-inner span {
-  position: absolute;
-  font-size: 20px;
-  padding: 20px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 999;
 }
 
 .editor #ad-carousel #ad-inner span.ad_before {
@@ -489,23 +477,10 @@ nav ol li a:not(.active):hover {
   display: none;
 }
 
-.editor #ad-carousel #ad-inner li.ad-img {
+.editor #ad-carousel #ad-inner li {
   width: 100%;
-  height: 100%;
+  height: auto;
   flex-shrink: 0;
-}
-
-.editor #ad-carousel #ad-inner li.ad-fes,
-.editor #ad-carousel #ad-inner li.ad-fes2 {
-  background-color: palegoldenrod;
-}
-
-.editor #ad-carousel #ad-inner li.ad-nds {
-  background-color: paleturquoise;
-}
-
-.editor #ad-carousel #ad-inner li.ad-data {
-  background-color: palegreen;
 }
 
 .editor #ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
@@ -524,10 +499,18 @@ nav ol li a:not(.active):hover {
   margin-left: -300%;
 }
 
+.editor #ad-carousel #ad-inner #radio5:checked ~ .ad-fes {
+  margin-left: -400%;
+}
+
+.editor #ad-carousel #ad-inner #radio6:checked ~ .ad-fes {
+  margin-left: -500%;
+}
+
 #ad-carousel #ad-inner #ad-nav {
   position: absolute;
   width: 100%;
-  bottom: 50px;  
+  bottom: 30px;  
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto {
@@ -538,30 +521,24 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-  border: 2px solid #fff;
-  padding: 2px;
-  border-radius: 10px;
-  transition: 1s;
+  border: 2px solid #bbb;
+  padding: 1px;
+  border-radius: 50%;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child) {
-  margin-right: 20px;
+#ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child),
+#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
+  margin-right: 10px;
 }
 
-#ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1 {
-  background-color: #fff;
-}
-
-#ad-carousel #ad-inner #radio2:checked ~ #ad-nav #nav-auto .auto-btn2 {
-  background-color: #fff;
-}
-
-#ad-carousel #ad-inner #radio3:checked ~ #ad-nav #nav-auto .auto-btn3 {
-  background-color: #fff;
-}
-
-#ad-carousel #ad-inner #radio4:checked ~ #ad-nav #nav-auto .auto-btn1 {
-  background-color: #fff;
+#ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1,
+#ad-carousel #ad-inner #radio2:checked ~ #ad-nav #nav-auto .auto-btn2,
+#ad-carousel #ad-inner #radio3:checked ~ #ad-nav #nav-auto .auto-btn3,
+#ad-carousel #ad-inner #radio4:checked ~ #ad-nav #nav-auto .auto-btn4,
+#ad-carousel #ad-inner #radio5:checked ~ #ad-nav #nav-auto .auto-btn5,
+#ad-carousel #ad-inner #radio6:checked ~ #ad-nav #nav-auto .auto-btn6,
+#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
+  background-color: #bbb;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
@@ -572,41 +549,14 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
-  border: 2px solid #fff;
-  padding: 2px;
+  border: 2px solid #bbb;
+  padding: 1px;
   border-radius: 50%;
   cursor: pointer;
-  transition: 1s;
-}
-
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
-  margin-right: 20px;
-}
-
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-  background-color: #fff;
-}
-
-#ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0;
-}
-
-#ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
-}
-
-#ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
-}
-
-#ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
 }
 
 .editor #py-internal-0 {
-    display: block;
-    background: rgba(0, 0, 0, 0.2);
-    overflow-x: scroll;
+    display: none;
 }
 
 .editor pre {
