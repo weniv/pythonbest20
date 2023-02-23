@@ -1,19 +1,13 @@
 @charset "UTF-8";
 @import './reset.css';
 @import './style.css';
-.wrap {
-  display: flex;
-  flex-direction: column;
-}
-.wrap main {
-  flex-grow: 1;
-  padding: 2rem;
-} 
 
-.wrap footer {
-  width:100%;
-  position:fixed;
-  bottom:0;
+body {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height:100vh;
+  
 }
 
 header {
@@ -25,6 +19,13 @@ header {
   margin: 0 2rem 6.4rem;
 }
 
+footer {
+  order: 3;
+}
+
+.py-terminal {
+  margin: 0 2rem 2rem;
+}
 
 .py-error {
   background: none;
@@ -37,11 +38,13 @@ header {
   opacity: 0.5;
   transition: all 0.3s;
 }
+
 .py-repl-run-button svg {
   transform: scale(0.8);
 }
+
 .py-repl-run-button path {
-  fill: var(--ColorText);
+  fill: var(--ColorWhite);
 }
 
 .info {
@@ -51,6 +54,7 @@ header {
 .cm-editor {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .cm-editor.cm-focused {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -58,15 +62,18 @@ header {
 .py-repl-editor {
   border: none;
 }
+
 .py-repl-editor .cm-gutters {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--ColorText);
+  color: var(--ColorWhite);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .py-repl-editor .cm-activeLineGutter {
   background: rgba(255, 255, 255, 0.4);
   color: var(--ColorDark);
 }
+
 .py-repl-editor .cm-activeLine {
   background: rgba(255, 255, 255, 0.2);
 }

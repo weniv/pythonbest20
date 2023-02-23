@@ -25,7 +25,7 @@ body {
     font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
     line-height: 1.4;
     background: var(--ColorBg);
-    color: var(--ColorText);
+    color: var(--ColorWhite);
 }
 
 hr {
@@ -83,7 +83,7 @@ header .btn-fold {
     height: 4rem;
     background: var(--ColorBg);
     overflow: hidden;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -146,7 +146,7 @@ nav ol li a.active {
 }
 
 nav ol li a:not(.active):hover {
-    color: var(--ColorText);
+    color: var(--ColorWhite);
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -212,7 +212,7 @@ nav ol li a:not(.active):hover {
 .description h4 {
     font-weight: bold;
     margin-bottom: 0.3em;
-    color: var(--ColorText);
+    color: var(--ColorWhite);
 }
 
 .description h2 {
@@ -238,7 +238,7 @@ nav ol li a:not(.active):hover {
 .description blockquote {
     padding: 0.5rem 1.2rem;
     margin: 2rem 0;
-    border-left: 3px solid var(--ColorText);
+    border-left: 3px solid var(--ColorWhite);
     font-style: italic;
     font-weight: 700;
 }
@@ -261,7 +261,7 @@ nav ol li a:not(.active):hover {
     font-size: 0.9em;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
 }
 
 .description .que-list:not(:first-child) {
@@ -279,7 +279,7 @@ nav ol li a:not(.active):hover {
     font-size: 0.9em;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: var(--borderRadius);
 }
 
 .description .que-list:not(:first-child) {
@@ -420,7 +420,7 @@ nav ol li a:not(.active):hover {
 
 .editor .btn-contain #btn-run {
     background: var(--ColorMain);
-    color: var(--ColorText);
+    color: var(--ColorWhite);
     height: 4.4rem;
     width: 100%;
 }
@@ -453,7 +453,6 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel {
-  width: 100%;
   overflow: hidden;
   margin-top: 2rem;
 }
@@ -466,15 +465,15 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner span.ad_before {
-  left: 0px;
+    left: 0px;
 }
 
 .editor #ad-carousel #ad-inner span.ad_after {
-  right: 0px;
+    right: 0px;
 }
 
 .editor #ad-carousel #ad-inner input {
-  display: none;
+    display: none;
 }
 
 .editor #ad-carousel #ad-inner li {
@@ -487,16 +486,16 @@ nav ol li a:not(.active):hover {
   margin-left: 0%;
 }
 
-.editor #ad-carousel #ad-inner #radio2:checked ~ .ad-fes {
-  margin-left: -100%;
+.editor #ad-carousel #ad-inner #radio2:checked~.ad-fes {
+    margin-left: -100%;
 }
 
-.editor #ad-carousel #ad-inner #radio3:checked ~ .ad-fes {
-  margin-left: -200%;
+.editor #ad-carousel #ad-inner #radio3:checked~.ad-fes {
+    margin-left: -200%;
 }
 
-.editor #ad-carousel #ad-inner #radio4:checked ~ .ad-fes {
-  margin-left: -300%;
+.editor #ad-carousel #ad-inner #radio4:checked~.ad-fes {
+    margin-left: -300%;
 }
 
 .editor #ad-carousel #ad-inner #radio5:checked ~ .ad-fes {
@@ -511,13 +510,14 @@ nav ol li a:not(.active):hover {
   position: absolute;
   width: 100%;
   bottom: 30px;  
+
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
@@ -542,10 +542,10 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
@@ -594,7 +594,7 @@ footer p {
         z-index: 100;
         max-height: 40rem;
         overflow-y: scroll;
-        background: #2d3848;
+        background: var(--ColorBg);
     }
 
     nav ol {
@@ -620,7 +620,7 @@ footer p {
 
 /* 마크다운 코드블록 */
 .code-text {
-  color: #ffd700;
+    color: var(--codeText);
 }
 
 .code-syntex {
@@ -646,5 +646,5 @@ footer p {
 
 /* 문제 다 풀었을 때 */
 .success::after {
-  content: " ✔️";
+    content: " ✔️";
 }
