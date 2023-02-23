@@ -171,6 +171,7 @@ nav ol li a:not(.active):hover {
 
 .container .contents {
     display: flex;
+    width: 100%;
 }
 
 .container .contents main {
@@ -184,6 +185,10 @@ nav ol li a:not(.active):hover {
 }
 
 @media (min-width: 1025px) {
+    .container .contents main {
+        width: 100%;
+    }
+    
     .container .contents main section {
         width: 50%;
         float: left;
@@ -378,44 +383,12 @@ nav ol li a:not(.active):hover {
 }
 
 .editor .test-case {
-    display: flex;
-    padding: 2rem 0;
-    justify-content: space-between;
-}
-
-.editor .test-case div {
-    flex: 1 1 30%;
-}
-
-.editor .test-case div:first-child {
-    padding-right: 2rem;
-}
-
-.editor .test-case div:not(:first-child) {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 0 2rem;
-}
-
-.editor .test-case div:last-child {
-    padding-right: 0;
-}
-
-.editor .test-case label {
-    font-size: 0.95em;
-}
-
-.editor .test-case input {
-    margin-top: 0.2em;
-    border: none;
-    background: rgba(0, 0, 0, 0.3);
-    height: 3.2rem;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.5);
-    text-indent: 1rem;
+    display: none;
 }
 
 .editor .btn-contain {
     text-align: right;
+    padding-top: 2rem;
 }
 
 .editor .btn-contain #btn-run {
