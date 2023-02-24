@@ -376,12 +376,18 @@ nav ol li a:not(.active):hover {
 
 .editor .CodeMirror {
     width: 100%;
-    max-width: 1073px;
+    max-width: 1220px;
 }
 
 @media (max-width: 1430px) {
     .editor .CodeMirror {
-        max-width: 507px;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 1580px) {
+    .editor .CodeMirror {
+        max-width: 680px;
     }
 }
 
