@@ -3,29 +3,31 @@
 @import './style.css';
 
 body {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height:100vh;
-  
+  min-height: 100vh;
+
 }
 
 header {
   padding: 0 2rem;
 }
 
-.py-terminal   {
-  display: none;
-  margin: 0 2rem 6.4rem;
+main {
+  padding: 2rem;
+  margin-bottom: auto;
 }
 
 footer {
   order: 3;
 }
 
-.py-terminal {
+py-terminal {
+  flex-grow: 1;
   margin: 0 2rem 2rem;
 }
+
 
 .py-error {
   background: none;
