@@ -2,6 +2,7 @@
 @import './reset.css';
 @import './style.css';
 
+/* layout */
 body {
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@ py-terminal {
   margin: 0 2rem 2rem;
 }
 
+/* design */
 .py-error {
   background: none;
   color: var(--ColorNegative);
@@ -101,4 +103,9 @@ py-terminal {
 
 .ͼg {
   color: var(--codeText);
+}
+
+.py-terminal {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
 }
