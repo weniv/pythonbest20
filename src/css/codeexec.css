@@ -7,7 +7,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-
 }
 
 header {
@@ -27,7 +26,6 @@ py-terminal {
   flex-grow: 1;
   margin: 0 2rem 2rem;
 }
-
 
 .py-error {
   background: none;
@@ -81,9 +79,12 @@ py-terminal {
 }
 
 .py-repl-output {
-  padding: 2rem;
   margin: 1rem 0 4rem 0;
   background: rgba(0, 0, 0, 0.2);
+}
+
+.py-repl-output div {
+  padding: 2rem;
 }
 
 .ͼb {
