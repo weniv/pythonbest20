@@ -82,11 +82,22 @@ py-terminal {
 
 .py-repl-output {
   margin: 1rem 0 4rem 0;
+  padding: 2rem;
   background: rgba(0, 0, 0, 0.2);
 }
 
-.py-repl-output div {
-  padding: 2rem;
+.py-repl-output:empty::after {
+  content: '> 터미널을 확인하세요';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+py-repl:last-child .py-repl-output {
+  padding: 0;
+}
+
+py-repl:last-child .py-repl-output::after {
+  content: none;
+
 }
 
 .ͼb {
