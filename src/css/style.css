@@ -185,10 +185,6 @@ nav ol li a:not(.active):hover {
 }
 
 @media (min-width: 1025px) {
-    .container .contents main {
-        width: 100%;
-    }
-    
     .container .contents main section {
         width: 50%;
         float: left;
@@ -380,6 +376,13 @@ nav ol li a:not(.active):hover {
 
 .editor .CodeMirror {
     width: 100%;
+    max-width: 1073px;
+}
+
+@media (max-width: 1430px) {
+    .editor .CodeMirror {
+        max-width: 507px;
+    }
 }
 
 .editor .test-case {
