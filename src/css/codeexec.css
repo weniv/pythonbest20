@@ -2,31 +2,33 @@
 @import './reset.css';
 @import './style.css';
 
+/* layout */
 body {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height:100vh;
-  
+  min-height: 100vh;
 }
 
 header {
   padding: 0 2rem;
 }
 
-.py-terminal   {
-  display: none;
-  margin: 0 2rem 6.4rem;
+main {
+  padding: 2rem;
+  margin-bottom: auto;
 }
 
 footer {
   order: 3;
 }
 
-.py-terminal {
+py-terminal {
+  flex-grow: 1;
   margin: 0 2rem 2rem;
 }
 
+/* design */
 .py-error {
   background: none;
   color: var(--ColorNegative);
@@ -79,9 +81,23 @@ footer {
 }
 
 .py-repl-output {
-  padding: 2rem;
   margin: 1rem 0 4rem 0;
+  padding: 2rem;
   background: rgba(0, 0, 0, 0.2);
+}
+
+.py-repl-output:empty::after {
+  content: '> 터미널을 확인하세요';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+py-repl:last-child .py-repl-output {
+  padding: 0;
+}
+
+py-repl:last-child .py-repl-output::after {
+  content: none;
+
 }
 
 .ͼb {
@@ -98,4 +114,9 @@ footer {
 
 .ͼg {
   color: var(--codeText);
+}
+
+.py-terminal {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
 }
