@@ -158,7 +158,13 @@ nav ol li a:not(.active):hover {
     transform: rotate(0deg);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1025px){
+    .CodeMirror {
+        max-width: 949px;
+    }
+}
+
+@media  (max-width: 1200px) {
     .menu-on.container .contents main {
         height: 100%;
     }
@@ -166,6 +172,20 @@ nav ol li a:not(.active):hover {
     .menu-on.container .contents main section {
         width: 100%;
         float: none;
+    }
+}
+
+@media  (min-width: 1026px) and (max-width: 1200px){
+    .CodeMirror {
+        max-width: min(845px, 100vw - 360px);
+    }
+
+    .menu-off-CodeMirror {
+        max-width: 563px;
+    }
+
+    .menu-on-CodeMirror {
+        width: 845px;
     }
 }
 
@@ -376,18 +396,17 @@ nav ol li a:not(.active):hover {
 
 .editor .CodeMirror {
     width: 100%;
-    max-width: 1220px;
 }
 
-@media (max-width: 1430px) {
+@media (min-width: 1201px) and (max-width: 1580px) {
     .editor .CodeMirror {
-        max-width: 650px;
+        max-width: 723px;
     }
 }
 
-@media (max-width: 1580px) {
+@media (min-width: 1581px){
     .editor .CodeMirror {
-        max-width: 680px;
+        max-width: 1212px;
     }
 }
 
