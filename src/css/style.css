@@ -466,6 +466,23 @@ nav ol li a:not(.active):hover {
   align-items: center;
 }
 
+.editor #ad-carousel #ad-inner span {
+    position: absolute;
+    z-index: 999;
+    color: #2d3848;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.editor #ad-carousel #ad-inner span:first-child {
+    left: 0px;
+}
+
+.editor #ad-carousel #ad-inner span:nth-child(8) {
+    right: 0px;
+}
+
 .editor #ad-carousel #ad-inner input {
     display: none;
 }
