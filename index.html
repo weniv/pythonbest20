@@ -221,19 +221,19 @@
                             try:
                                 result = multiline_eval(code)
                                 result = ast.literal_eval(result)
-                                resultString = "&lt;p class='que-result'&gt;테스트케이스번호 : 통과여부 (실행값==정답값) &lt;&#47;p&gt;"
+                                resultString = "&lt;p class='que-result'&gt;테스트 케이스 번호 : 통과 여부 (실행값 == 정답값) &lt;&#47;p&gt;"
                                 passing = "&lt;span class='result-pass'&gt; 통과 &lt;&#47;span&gt;"
                                 fail = "&lt;span class='result-fail'&gt; 실패 &lt;&#47;span&gt;"
                                 result_save_localstorage = []
                                 for i in range(3):
-                                    resultString += f"&lt;p class='que-result-{i} checkPass'&gt;test{i+1} : {passing if result[i] == answer[i] else fail}&lt;span class='result-compare'&gt;({result[i]}=={answer[i]})&lt;&#47;span&gt;&lt;&#47;p&gt;"
+                                    resultString += f"&lt;p class='que-result-{i} checkPass'&gt;test{i+1} : {passing if result[i] == answer[i] else fail}&lt;span class='result-compare'&gt;({result[i]} == {answer[i]})&lt;&#47;span&gt;&lt;&#47;p&gt;"
                                     result_save_localstorage.append(result[i] == answer[i])
                                 js.document.querySelector('#result_desc').innerHTML = resultString
                                 if all(result_save_localstorage):
                                     js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
                                 render()
                             except Exception as e:
-                                result = f"&lt;p class='que-result-error'&gt;애러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;애러명 : {e}&lt;&#47;p&gt;"
+                                result = f"&lt;p class='que-result-error'&gt;에러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;에러명 : {e}&lt;&#47;p&gt;"
                                 js.document.querySelector('#result_desc').innerHTML = result
 
 
