@@ -81,6 +81,7 @@ header .btn-fold {
 .btn-fold {
     width: 4rem;
     height: 4rem;
+    color: var(--ColorBg);
     background: var(--ColorBg);
     overflow: hidden;
     border-radius: var(--borderRadius);
