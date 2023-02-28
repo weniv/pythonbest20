@@ -221,6 +221,11 @@ nav ol li a:not(.active):hover {
     .CodeMirror {
         max-width: 949px;
     }
+
+    .menu-on.container {
+        border: 1px solid rd;
+        height: fit-content;
+    }
 }
 
 
