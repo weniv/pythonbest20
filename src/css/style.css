@@ -266,13 +266,11 @@ nav ol li a:not(.active):hover {
 }
 
 .container .contents main {
-    height: 100%;
     flex-grow: 1;
     margin-top: 6rem;
 }
 
 .container .contents main section {
-    position: relative;
     box-sizing: border-box;
     width: 100%;
     padding: 3rem;
