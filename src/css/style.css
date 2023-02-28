@@ -568,10 +568,12 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner button:first-child {
+    padding-left: 0;
     left: 0px;
 }
 
-.editor #ad-carousel #ad-inner button:nth-child(8) {
+.editor #ad-carousel #ad-inner button:nth-child(9) {
+    padding-right: 0;
     right: 0px;
 }
 
@@ -593,28 +595,32 @@ nav ol li a:not(.active):hover {
     width: 100%;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio1:checked~.ad-img {
     margin-left: 0%;
 }
 
-.editor #ad-carousel #ad-inner #radio2:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio2:checked~.ad-img {
     margin-left: -100%;
 }
 
-.editor #ad-carousel #ad-inner #radio3:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio3:checked~.ad-img {
     margin-left: -200%;
 }
 
-.editor #ad-carousel #ad-inner #radio4:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio4:checked~.ad-img {
     margin-left: -300%;
 }
 
-.editor #ad-carousel #ad-inner #radio5:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio5:checked~.ad-img {
     margin-left: -400%;
 }
 
-.editor #ad-carousel #ad-inner #radio6:checked~.ad-fes {
+.editor #ad-carousel #ad-inner #radio6:checked~.ad-img {
     margin-left: -500%;
+}
+
+.editor #ad-carousel #ad-inner #radio7:checked~.ad-img {
+    margin-left: -600%;
 }
 
 #ad-carousel #ad-inner #ad-nav {
@@ -652,6 +658,7 @@ nav ol li a:not(.active):hover {
 #ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn4,
 #ad-carousel #ad-inner #radio5:checked~#ad-nav #nav-auto .auto-btn5,
 #ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
+#ad-carousel #ad-inner #radio7:checked~#ad-nav #nav-auto .auto-btn7,
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
     ;
