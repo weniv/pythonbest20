@@ -1,7 +1,8 @@
-const carousel = document.querySelector("#ad-carousel");
-const beforeBtn = document.querySelector("#ad-before");
-const nextBtn = document.querySelector("#ad-next");
-
+const $carousel = document.querySelector("#ad-carousel");
+const $beforeBtn = document.querySelector("#ad-before");
+const $nextBtn = document.querySelector("#ad-next");
+const $pageRadio = document.querySelectorAll(".ad-page")
+console.log(':', $pageRadio);
 let cnt = 1;
 
 // 슬라이드 자동재생
@@ -13,15 +14,20 @@ let auto = setInterval(() => {
   }
 }, 3000);;
 
-document.getElementById("radio" + cnt).checked = true;
+$pageRadio.forEach(el =>
+  el.addEventListener('click', () => {
+    // alert(el.id.slice(-1))
+    cnt = parseInt(el.id.slice(-1))
+
+  }))
 
 // 캐러셀 mouseover되면 자동재생 중지
-carousel.addEventListener("mouseover", () => {
+$carousel.addEventListener("mouseover", () => {
   clearInterval(auto);
 });
 
 // 캐러셀 mouseout 자동재생 재시작
-carousel.addEventListener("mouseout", () => {
+$carousel.addEventListener("mouseout", () => {
   auto = setInterval(() => {
     document.getElementById("radio" + cnt).checked = true;
     cnt++;
@@ -32,8 +38,8 @@ carousel.addEventListener("mouseout", () => {
 })
 
 // beforeBtn 버튼 클릭 시
-beforeBtn.addEventListener("click", () => {
-  if(cnt < 1) {
+$beforeBtn.addEventListener("click", () => {
+  if (cnt < 1) {
     cnt = 6
     document.getElementById("radio" + cnt).checked = true;
   } else {
@@ -43,7 +49,7 @@ beforeBtn.addEventListener("click", () => {
 });
 
 // nextBtn 버튼 클릭 시
-nextBtn.addEventListener("click", async() => {
+$nextBtn.addEventListener("click", async () => {
   if (cnt > 6) {
     cnt = 1;
     document.getElementById("radio" + cnt).checked = true;
