@@ -72,7 +72,7 @@ header div {
 }
 
 
-@media  (min-width: 2000px) {
+@media (min-width: 2000px) {
     header div {
         position: relative;
         display: flex;
@@ -99,7 +99,7 @@ header .logo {
     overflow: hidden;
 }
 
-@media  (min-width: 2000px) {
+@media (min-width: 2000px) {
     header .logo {
         margin-left: 5rem;
     }
@@ -116,10 +116,10 @@ header .btn-fold {
     left: 2rem;
 }
 
-@media  (min-width: 2000px) {
+@media (min-width: 2000px) {
     header .btn-fold {
-    left: 0;
-}
+        left: 0;
+    }
 }
 
 .btn-fold {
@@ -160,16 +160,16 @@ nav {
 
 nav::-webkit-scrollbar {
     width: 10px;
-  }
-  
+}
+
 nav::-webkit-scrollbar-thumb {
     background: var(--ColorMain);
     border-radius: 5px;
-  }
-  
-  nav::-webkit-scrollbar-track {
+}
+
+nav::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.25);
-  }
+}
 
 nav ol {
     width: 100%;
@@ -217,15 +217,15 @@ nav ol li a:not(.active):hover {
     transform: rotate(0deg);
 }
 
-@media (max-width: 1025px){
+@media (max-width: 1025px) {
     .CodeMirror {
         max-width: 949px;
     }
 }
 
-@media  (max-width: 1200px) {
+
+@media (max-width: 1200px) {
     .menu-on.container .contents main {
-        border:1px soldi red;
         height: 100%;
     }
 
@@ -235,7 +235,7 @@ nav ol li a:not(.active):hover {
     }
 }
 
-@media  (min-width: 1026px) and (max-width: 1200px){
+@media (min-width: 1026px) and (max-width: 1200px) {
     .CodeMirror {
         max-width: min(845px, 100vw - 360px);
     }
@@ -254,10 +254,9 @@ nav ol li a:not(.active):hover {
     width: 100%;
 }
 
-@media  (min-width: 2000px) {
+@media (min-width: 2000px) {
     .container .contents {
         width: 65%;
-        height: 100%;
         margin: 0 auto;
     }
 }
@@ -274,12 +273,15 @@ nav ol li a:not(.active):hover {
 }
 
 @media (min-width: 1025px) {
+
+    .container .contents main {
+        min-height: Calc(100vh - 120px)
+    }
+
     .container .contents main section {
         width: 50%;
         float: left;
-        /* min-height:100%; */
-        min-height:Calc(100vh - 120px);
-
+        height: 100%;
     }
 
     nav {
@@ -293,7 +295,6 @@ nav ol li a:not(.active):hover {
 
 .container .contents main section.description {
     background: rgba(255, 255, 255, 0.03);
-    height:100%;
 }
 
 .container .contents main section.editor {
@@ -303,6 +304,11 @@ nav ol li a:not(.active):hover {
 }
 
 @media (min-width: 2000px) {
+    .container .contents main section.description {
+        height: 100%;
+    }
+
+
     .container .contents main section.editor {
         padding-right: 0;
     }
@@ -490,7 +496,7 @@ nav ol li a:not(.active):hover {
     }
 }
 
-@media (min-width: 1581px){
+@media (min-width: 1581px) {
     .editor .CodeMirror {
         max-width: 1212px;
     }
@@ -540,15 +546,15 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel {
-  overflow: hidden;
-  margin-top: 2rem;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 .editor #ad-carousel #ad-inner {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .editor #ad-carousel #ad-inner button {
@@ -573,21 +579,21 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner li {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .editor #ad-carousel #ad-inner li a {
-  width: 100%;
+    width: 100%;
 }
 
 .editor #ad-carousel #ad-inner li a img {
-  width: 100%;
+    width: 100%;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked ~ .ad-fes {
-  margin-left: 0%;
+.editor #ad-carousel #ad-inner #radio1:checked~.ad-fes {
+    margin-left: 0%;
 }
 
 .editor #ad-carousel #ad-inner #radio2:checked~.ad-fes {
@@ -602,18 +608,18 @@ nav ol li a:not(.active):hover {
     margin-left: -300%;
 }
 
-.editor #ad-carousel #ad-inner #radio5:checked ~ .ad-fes {
-  margin-left: -400%;
+.editor #ad-carousel #ad-inner #radio5:checked~.ad-fes {
+    margin-left: -400%;
 }
 
-.editor #ad-carousel #ad-inner #radio6:checked ~ .ad-fes {
-  margin-left: -500%;
+.editor #ad-carousel #ad-inner #radio6:checked~.ad-fes {
+    margin-left: -500%;
 }
 
 #ad-carousel #ad-inner #ad-nav {
-  position: absolute;
-  width: 100%;
-  bottom: 30px;  
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
 
 }
 
@@ -625,24 +631,25 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-  border: 2px solid #bbb;
-  padding: 1px;
-  border-radius: 50%;
+    border: 2px solid #bbb;
+    padding: 1px;
+    border-radius: 50%;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child),
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
-#ad-carousel #ad-inner #radio1:checked ~ #ad-nav #nav-auto .auto-btn1,
-#ad-carousel #ad-inner #radio2:checked ~ #ad-nav #nav-auto .auto-btn2,
-#ad-carousel #ad-inner #radio3:checked ~ #ad-nav #nav-auto .auto-btn3,
-#ad-carousel #ad-inner #radio4:checked ~ #ad-nav #nav-auto .auto-btn4,
-#ad-carousel #ad-inner #radio5:checked ~ #ad-nav #nav-auto .auto-btn5,
-#ad-carousel #ad-inner #radio6:checked ~ #ad-nav #nav-auto .auto-btn6,
+#ad-carousel #ad-inner #radio1:checked~#ad-nav #nav-auto .auto-btn1,
+#ad-carousel #ad-inner #radio2:checked~#ad-nav #nav-auto .auto-btn2,
+#ad-carousel #ad-inner #radio3:checked~#ad-nav #nav-auto .auto-btn3,
+#ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn4,
+#ad-carousel #ad-inner #radio5:checked~#ad-nav #nav-auto .auto-btn5,
+#ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-  background-color: var(--ColorBg);;
+    background-color: var(--ColorBg);
+    ;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
@@ -652,11 +659,12 @@ nav ol li a:not(.active):hover {
     justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
-  border: 2px solid var(--ColorBg);;
-  padding: 1px;
-  border-radius: 50%;
-  cursor: pointer;
+#ad-carousel #ad-inner #ad-nav #nav-maunal>.manual-btn {
+    border: 2px solid var(--ColorBg);
+    ;
+    padding: 1px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .editor #py-internal-0 {
