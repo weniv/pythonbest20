@@ -564,10 +564,7 @@ nav ol li a:not(.active):hover {
 .editor #ad-carousel #ad-inner button {
     position: absolute;
     z-index: 999;
-    color: var(--ColorBg);
     padding: 5px;
-    font-size: 3.5rem;
-    cursor: pointer;
 }
 
 .editor #ad-carousel #ad-inner button:first-child {
@@ -641,9 +638,13 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-    border: 2px solid #bbb;
-    padding: 1px;
-    border-radius: 50%;
+  border: 1.5px solid var(--ColorLight);
+  padding: 1px;
+  border-radius: 50%;
+  height: 3px;
+  width: 3px;
+  transition: all .1s ease-in-out;
+
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child),
@@ -659,7 +660,7 @@ nav ol li a:not(.active):hover {
 #ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
 #ad-carousel #ad-inner #radio7:checked~#ad-nav #nav-auto .auto-btn7,
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-    background-color: var(--ColorBg);
+    background-color: var(--ColorLight);
     ;
 }
 
@@ -670,12 +671,59 @@ nav ol li a:not(.active):hover {
     justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal>.manual-btn {
-    border: 2px solid var(--ColorBg);
-    ;
-    padding: 1px;
-    border-radius: 50%;
-    cursor: pointer;
+#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+  border: 1.5px solid var(--ColorLight);;
+  padding: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 3px;
+  height: 3px;
+  transition: all .1s ease-in-out;
+}
+
+#ad-inner #ad-before,
+#ad-inner #ad-next {
+    width: 6%;
+    max-width: 40px;
+}
+
+#ad-inner #ad-before {
+    margin-left: -2px;
+}
+
+#ad-inner #ad-next {
+    margin-right: -2px;
+    right: 0
+}
+
+#ad-inner #ad-before:hover,
+#ad-inner #ad-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 550px){
+    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+        width: 1px;
+        height: 1px;
+    }
+
+    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+        width: 1px;
+        height: 1px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1580px) {
+    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+        width: 2px;
+        height: 2px;
+    }
+
+    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+        width: 2px;
+        height: 2px;
+    }
+
 }
 
 .editor #py-internal-0 {

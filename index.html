@@ -50,10 +50,6 @@
     <link rel="stylesheet" href="src/pyscript/pyscript.css">
     <script defer src="src/pyscript/pyscript.js"></script>
 
-    <!-- Google Font -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
     <py-config>
         terminal = false
         [[fetch]]
@@ -144,60 +140,65 @@
                     </div>
 
                     <div id="ad-carousel">
-                        <ul id="ad-inner">
-                            <button id="ad-before" class="material-symbols-outlined">navigate_before</button>
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio1">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio3">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio2">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio4">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio5">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio6">
-                            <input type="radio" class="ad-pagenation" name="radio-btn" id="radio7">
-                            <button id="ad-next" class="material-symbols-outlined">navigate_next</button>
+                      <ul id="ad-inner">
+                        <button id="ad-before">
+                            <img src="./src/img/chevron-prev.svg" alt="광고 뒤로가기"/>
+                        </button>
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio1">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio2">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio3">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio4">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio4">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio5">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio6">
+                        <input type="radio" class="ad-pagenation" name="radio-btn" id="radio7">
+                        <button id="ad-next">
+                          <img src="./src/img/chevron-next.svg" alt="광고 넘어가기"/>
+                        </button>
 
-                            <li class="ad-img">
-                                <a href="https://scholarship.weniv.co.kr/" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/221753947-18ce167c-048e-457f-9fb0-226f06e70406.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220846944-daa18143-1ffd-4877-a359-e143f8f8eb51.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://techit.education/school/kdt-backend-4th" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220848284-b923fb6d-c1a0-4482-ada0-cc03346657bb.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220848241-57061611-1053-480b-99f1-eb011fe2b299.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220851144-9bccdd2c-2c2d-4c51-a9c6-172b92f7a999.jpg">
-                                </a>
-                            </li>
+                        <li class="ad-img">
+                              <a href="https://scholarship.weniv.co.kr/" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/221753947-18ce167c-048e-457f-9fb0-226f06e70406.jpg">
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220846944-daa18143-1ffd-4877-a359-e143f8f8eb51.jpg">
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-backend-4th" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220848284-b923fb6d-c1a0-4482-ada0-cc03346657bb.jpg">
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220848241-57061611-1053-480b-99f1-eb011fe2b299.jpg">
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220851144-9bccdd2c-2c2d-4c51-a9c6-172b92f7a999.jpg">
+                              </a>
+                          </li>
 
-                            <li>
-                                <a href="https://techit.education/school/kdt-backend-4th" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220851413-74c4c0e1-ce29-45a5-83c3-48fd7a4ed2a8.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
-                                    <img
-                                        src="https://user-images.githubusercontent.com/81654172/220851496-cc07cdda-835e-4d45-91c9-51a542d6b25d.jpg">
-                                </a>
-                            </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-backend-4th" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220851413-74c4c0e1-ce29-45a5-83c3-48fd7a4ed2a8.jpg">
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
+                                  <img
+                                      src="https://user-images.githubusercontent.com/81654172/220851496-cc07cdda-835e-4d45-91c9-51a542d6b25d.jpg">
+                              </a>
+                          </li>
 
                             <div id="ad-nav">
                                 <div id="nav-auto">
