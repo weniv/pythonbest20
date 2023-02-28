@@ -8,7 +8,7 @@ let cnt = 1;
 let auto = setInterval(() => {
   document.getElementById("radio" + cnt).checked = true;
   cnt++;
-  if (cnt > 6) {
+  if (cnt > 7) {
     cnt = 1;
   }
 }, 3000);;
@@ -25,7 +25,7 @@ carousel.addEventListener("mouseout", () => {
   auto = setInterval(() => {
     document.getElementById("radio" + cnt).checked = true;
     cnt++;
-    if (cnt > 6) {
+    if (cnt > 7) {
       cnt = 1;
     }
   }, 3000);;
@@ -34,7 +34,7 @@ carousel.addEventListener("mouseout", () => {
 // beforeBtn 버튼 클릭 시
 beforeBtn.addEventListener("click", () => {
   if(cnt < 1) {
-    cnt = 6
+    cnt = 7
     document.getElementById("radio" + cnt).checked = true;
   } else {
     cnt--;
@@ -44,7 +44,7 @@ beforeBtn.addEventListener("click", () => {
 
 // nextBtn 버튼 클릭 시
 nextBtn.addEventListener("click", async() => {
-  if (cnt > 6) {
+  if (cnt > 7) {
     cnt = 1;
     document.getElementById("radio" + cnt).checked = true;
     cnt++
