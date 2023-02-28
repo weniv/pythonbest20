@@ -632,7 +632,7 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-auto div {
-  border: 2px solid #bbb;
+  border: 1.5px solid var(--ColorLight);
   padding: 1px;
   border-radius: 50%;
   height: 3px;
@@ -653,7 +653,7 @@ nav ol li a:not(.active):hover {
 #ad-carousel #ad-inner #radio5:checked~#ad-nav #nav-auto .auto-btn5,
 #ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-    background-color: var(--ColorBg);
+    background-color: var(--ColorLight);
     ;
 }
 
@@ -665,7 +665,7 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
-  border: 2px solid var(--ColorBg);;
+  border: 1.5px solid var(--ColorLight);;
   padding: 1px;
   border-radius: 50%;
   cursor: pointer;
