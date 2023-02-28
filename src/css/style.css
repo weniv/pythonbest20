@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: "Pretendard", sans-serif;
     font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
     line-height: 1.4;
@@ -53,8 +54,29 @@ header {
     justify-content: flex-end;
     position: relative;
     height: 6rem;
-    padding: 0 2rem 0 7.2rem;
     background: rgba(0, 0, 0, 0.4);
+}
+
+header div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    padding: 0 2rem 0 7.2rem;
+    align-items: center;
+}
+
+
+@media  (min-width: 2000px) {
+    header div {
+        position: relative;
+        display: flex;
+        width: 65%;
+        height: 6rem;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+    }
 }
 
 header h1 {
@@ -72,10 +94,27 @@ header .logo {
     overflow: hidden;
 }
 
+@media  (min-width: 2000px) {
+    header .logo {
+        margin-left: 5rem;
+    }
+}
+
+.btn-fold {
+    position: absolute;
+    left: 0;
+}
+
 header .btn-fold {
     position: absolute;
     top: 1rem;
     left: 2rem;
+}
+
+@media  (min-width: 2000px) {
+    header .btn-fold {
+    left: 0;
+}
 }
 
 .btn-fold {
@@ -195,6 +234,14 @@ nav ol li a:not(.active):hover {
     width: 100%;
 }
 
+@media  (min-width: 2000px) {
+    .container .contents {
+        width: 65%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
 .container .contents main {
     flex-grow: 1;
 }
@@ -221,6 +268,12 @@ nav ol li a:not(.active):hover {
     position: sticky;
     top: 0;
     right: 0;
+}
+
+@media (min-width: 2000px) {
+    .container .contents main section.editor {
+        padding-right: 0;
+    }
 }
 
 .description {
@@ -466,20 +519,20 @@ nav ol li a:not(.active):hover {
   align-items: center;
 }
 
-.editor #ad-carousel #ad-inner span {
+.editor #ad-carousel #ad-inner button {
     position: absolute;
     z-index: 999;
-    color: #2d3848;
+    color: var(--ColorBg);
     padding: 5px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 
-.editor #ad-carousel #ad-inner span:first-child {
+.editor #ad-carousel #ad-inner button:first-child {
     left: 0px;
 }
 
-.editor #ad-carousel #ad-inner span:nth-child(8) {
+.editor #ad-carousel #ad-inner button:nth-child(8) {
     right: 0px;
 }
 
@@ -557,7 +610,7 @@ nav ol li a:not(.active):hover {
 #ad-carousel #ad-inner #radio5:checked ~ #ad-nav #nav-auto .auto-btn5,
 #ad-carousel #ad-inner #radio6:checked ~ #ad-nav #nav-auto .auto-btn6,
 #ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
-  background-color: #bbb;
+  background-color: var(--ColorBg);;
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal {
@@ -568,7 +621,7 @@ nav ol li a:not(.active):hover {
 }
 
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
-  border: 2px solid #bbb;
+  border: 2px solid var(--ColorBg);;
   padding: 1px;
   border-radius: 50%;
   cursor: pointer;
