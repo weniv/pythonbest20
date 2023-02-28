@@ -21,7 +21,6 @@ html {
 }
 
 body {
-    height: 100%;
     font-family: "Pretendard", sans-serif;
     font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
     line-height: 1.4;
