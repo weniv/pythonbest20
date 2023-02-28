@@ -51,10 +51,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     height: 6rem;
     padding: 0 2rem 0 7.2rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: #242f4d;
+    z-index: 10000000;
 }
 
 header h1 {
@@ -109,9 +114,23 @@ header .btn-fold {
 nav {
     flex: 0 0 28rem;
     overflow-y: hidden;
-    background: rgba(0, 0, 0, 0.3);
+    background: #242f4d;
     display: none;
+
 }
+
+nav::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+nav::-webkit-scrollbar-thumb {
+    background: var(--ColorMain);
+    border-radius: 5px;
+  }
+  
+  nav::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+  }
 
 nav ol {
     width: 100%;
@@ -198,6 +217,7 @@ nav ol li a:not(.active):hover {
 
 .container .contents main {
     flex-grow: 1;
+    margin-top: 6rem;
 }
 
 .container .contents main section {
@@ -211,6 +231,14 @@ nav ol li a:not(.active):hover {
         width: 50%;
         float: left;
         min-height:100%;
+    }
+
+    nav {
+        margin-top: 6rem;
+        position: sticky;
+        top: 6rem;
+        left: 0;
+        height: min(100vh, 100vh - 6rem);
     }
 }
 
