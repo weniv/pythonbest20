@@ -564,10 +564,7 @@ nav ol li a:not(.active):hover {
 .editor #ad-carousel #ad-inner button {
     position: absolute;
     z-index: 999;
-    /* color: var(--ColorBg); */
     padding: 5px;
-    /* font-size: 20px; */
-    /* cursor: pointer; */
 }
 
 .editor #ad-carousel #ad-inner button:first-child {
