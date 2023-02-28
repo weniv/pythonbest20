@@ -266,6 +266,7 @@ nav ol li a:not(.active):hover {
 }
 
 .container .contents main {
+    height: 100%;
     flex-grow: 1;
     margin-top: 6rem;
 }
