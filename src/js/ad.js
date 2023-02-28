@@ -1,7 +1,7 @@
 const $carousel = document.querySelector("#ad-carousel");
 const $beforeBtn = document.querySelector("#ad-before");
 const $nextBtn = document.querySelector("#ad-next");
-const $pageRadio = document.querySelectorAll(".ad-pagenation")
+const $pageRadio = document.querySelectorAll(".ad-pagination")
 const $adList = document.querySelector("#ad-inner").querySelectorAll("li")
 const sliderTime = 3000;
 let cnt = 1;
@@ -17,7 +17,6 @@ let auto = setInterval(() => {
 
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
-    // alert(el.id.slice(-1))
     cnt = parseInt(el.id.slice(-1))
     document.getElementById("radio" + cnt).checked = true;
 
