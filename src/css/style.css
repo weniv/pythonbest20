@@ -52,9 +52,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     height: 6rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: #242f4d;
+    z-index: 10000000;
 }
 
 header div {
