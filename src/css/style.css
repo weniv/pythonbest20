@@ -693,6 +693,7 @@ nav ol li a:not(.active):hover {
 
 #ad-inner #ad-next {
     margin-right: -2px;
+    right: 0
 }
 
 #ad-inner #ad-before:hover,
