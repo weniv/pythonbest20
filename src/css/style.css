@@ -57,7 +57,7 @@ header {
     right: 0;
     left: 0;
     height: 6rem;
-    background: #242f4d;
+    background: var(--ColorDeep);
     z-index: 10000000;
 }
 
@@ -152,7 +152,7 @@ header .btn-fold {
 nav {
     flex: 0 0 28rem;
     overflow-y: hidden;
-    background: #242f4d;
+    background: var(--ColorDeep);
     display: none;
 
 }
