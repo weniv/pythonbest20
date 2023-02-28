@@ -272,12 +272,10 @@ nav ol li a:not(.active):hover {
 
 .container .contents main section {
     box-sizing: border-box;
-    width: 100%;
     padding: 3rem;
 }
 
 @media (min-width: 1025px) {
-
     .container .contents main {
         min-height: Calc(100vh - 120px)
     }
@@ -285,7 +283,6 @@ nav ol li a:not(.active):hover {
     .container .contents main section {
         width: 50%;
         float: left;
-        height: 100%;
     }
 
     nav {
@@ -312,9 +309,14 @@ nav ol li a:not(.active):hover {
         height: 100%;
     }
 
-
     .container .contents main section.editor {
         padding-right: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container .contents main section.editor {
+        top: 6rem;
     }
 }
 
