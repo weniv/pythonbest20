@@ -277,7 +277,9 @@ nav ol li a:not(.active):hover {
     .container .contents main section {
         width: 50%;
         float: left;
-        min-height:100%;
+        /* min-height:100%; */
+        min-height:Calc(100vh - 120px);
+
     }
 
     nav {
@@ -291,6 +293,7 @@ nav ol li a:not(.active):hover {
 
 .container .contents main section.description {
     background: rgba(255, 255, 255, 0.03);
+    height:100%;
 }
 
 .container .contents main section.editor {
