@@ -570,12 +570,10 @@ nav ol li a:not(.active):hover {
 }
 
 .editor #ad-carousel #ad-inner button:first-child {
-  padding-left: 0;
   left: 0px;
 }
 
 .editor #ad-carousel #ad-inner button:nth-child(9) {
-  padding-right: 0;
   right: 0px;
 }
 
