@@ -550,10 +550,10 @@ nav ol li a:not(.active):hover {
 .editor #ad-carousel #ad-inner button {
     position: absolute;
     z-index: 999;
-    color: var(--ColorBg);
+    /* color: var(--ColorBg); */
     padding: 5px;
-    font-size: 20px;
-    cursor: pointer;
+    /* font-size: 20px; */
+    /* cursor: pointer; */
 }
 
 .editor #ad-carousel #ad-inner button:first-child {
@@ -663,7 +663,21 @@ nav ol li a:not(.active):hover {
 
 #ad-inner #ad-before,
 #ad-inner #ad-next {
-    width: 7%;
+    width: 6%;
+    max-width: 40px;
+}
+
+#ad-inner #ad-before {
+    margin-left: -2px;
+}
+
+#ad-inner #ad-next {
+    margin-right: -2px;
+}
+
+#ad-inner #ad-before:hover,
+#ad-inner #ad-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 550px){
