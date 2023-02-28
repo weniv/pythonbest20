@@ -167,6 +167,7 @@ nav ol li a:not(.active):hover {
 
 @media  (max-width: 1200px) {
     .menu-on.container .contents main {
+        border:1px soldi red;
         height: 100%;
     }
 
@@ -209,12 +210,12 @@ nav ol li a:not(.active):hover {
     .container .contents main section {
         width: 50%;
         float: left;
+        min-height:100%;
     }
 }
 
 .container .contents main section.description {
     background: rgba(255, 255, 255, 0.03);
-    min-height: 100%;
 }
 
 .container .contents main section.editor {
