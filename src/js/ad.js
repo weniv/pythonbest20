@@ -1,7 +1,8 @@
-let cnt = 1;
 const carousel = document.querySelector("#ad-carousel");
 const beforeBtn = document.querySelector("#ad-before");
 const nextBtn = document.querySelector("#ad-next");
+
+let cnt = 1;
 
 // 슬라이드 자동재생
 let auto = setInterval(() => {
@@ -10,7 +11,7 @@ let auto = setInterval(() => {
   if (cnt > 6) {
     cnt = 1;
   }
-}, 1000);;
+}, 3000);;
 
 document.getElementById("radio" + cnt).checked = true;
 
@@ -27,7 +28,7 @@ carousel.addEventListener("mouseout", () => {
     if (cnt > 6) {
       cnt = 1;
     }
-  }, 1000);;
+  }, 3000);;
 })
 
 // beforeBtn 버튼 클릭 시
@@ -47,11 +48,8 @@ nextBtn.addEventListener("click", async() => {
     cnt = 1;
     document.getElementById("radio" + cnt).checked = true;
     cnt++
-    console.log("===========");
-    console.log(cnt);
   } else {
     document.getElementById("radio" + cnt).checked = true;
     cnt++;
-    console.log(cnt);
   }
 });
