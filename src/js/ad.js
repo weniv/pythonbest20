@@ -1,63 +1,82 @@
-const $carousel = document.querySelector("#ad-carousel");
-const $beforeBtn = document.querySelector("#ad-before");
-const $nextBtn = document.querySelector("#ad-next");
-const $pageRadio = document.querySelectorAll(".ad-pagination")
-const $adList = document.querySelector("#ad-inner").querySelectorAll("li")
-const sliderTime = 3000;
-let cnt = 1;
+// const $carousel = document.querySelector("#ad-carousel");
+// const $beforeBtn = document.querySelector("#ad-before");
+// const $nextBtn = document.querySelector("#ad-next");
+// const $pageRadio = document.querySelectorAll(".ad-pagination")
+// const $adList = document.querySelector("#ad-inner").querySelectorAll("li")
+// const sliderTime = 3000;
+// let cnt = 1;
 
-// 슬라이드 자동재생
-let auto = setInterval(() => {
-  document.getElementById("radio" + cnt).checked = true;
-  cnt++;
-  if (cnt > $adList.length) {
-    cnt = 1;
-  }
-}, sliderTime);;
+// // 슬라이드 자동재생
+// let auto = setInterval(() => {
+//   document.getElementById("radio" + cnt).checked = true;
+//   cnt++;
+//   if (cnt > $adList.length) {
+//     cnt = 1;
+//   }
+// }, sliderTime);;
 
-$pageRadio.forEach(el =>
-  el.addEventListener('click', () => {
-    cnt = parseInt(el.id.slice(-1))
-    document.getElementById("radio" + cnt).checked = true;
+// $pageRadio.forEach(el =>
+//   el.addEventListener('click', () => {
+//     cnt = parseInt(el.id.slice(-1))
+//     document.getElementById("radio" + cnt).checked = true;
 
-  }))
+//   }))
 
-// 캐러셀 mouseover되면 자동재생 중지
-$carousel.addEventListener("mouseover", () => {
-  clearInterval(auto);
-});
+// // 캐러셀 mouseover되면 자동재생 중지
+// $carousel.addEventListener("mouseover", () => {
+//   clearInterval(auto);
+// });
 
-// 캐러셀 mouseout 자동재생 재시작
-$carousel.addEventListener("mouseout", () => {
-  auto = setInterval(() => {
-    document.getElementById("radio" + cnt).checked = true;
-    cnt++;
-    if (cnt > $adList.length) {
-      cnt = 1;
-    }
-  }, sliderTime);;
-})
+// // 캐러셀 mouseout 자동재생 재시작
+// $carousel.addEventListener("mouseout", () => {
+//   auto = setInterval(() => {
+//     document.getElementById("radio" + cnt).checked = true;
+//     cnt++;
+//     if (cnt > $adList.length) {
+//       cnt = 1;
+//     }
+//   }, sliderTime);;
+// })
 
-// beforeBtn 버튼 클릭 시
-$beforeBtn.addEventListener("click", () => {
-  if (cnt < 1) {
-    cnt = $adList.length
+// // beforeBtn 버튼 클릭 시
+// $beforeBtn.addEventListener("click", () => {
+//   if (cnt < 1) {
+//     cnt = $adList.length
 
-    document.getElementById("radio" + cnt).checked = true;
-  } else {
-    cnt--;
-    document.getElementById("radio" + cnt).checked = true;
-  }
-});
+//     document.getElementById("radio" + cnt).checked = true;
+//   } else {
+//     cnt--;
+//     document.getElementById("radio" + cnt).checked = true;
+//   }
+// });
 
-// nextBtn 버튼 클릭 시
-$nextBtn.addEventListener("click", async () => {
-  if (cnt > $adList.length) {
-    cnt = 1;
-    document.getElementById("radio" + cnt).checked = true;
-    cnt++
-  } else {
-    document.getElementById("radio" + cnt).checked = true;
-    cnt++;
-  }
+// // nextBtn 버튼 클릭 시
+// $nextBtn.addEventListener("click", async () => {
+//   if (cnt > $adList.length) {
+//     cnt = 1;
+//     document.getElementById("radio" + cnt).checked = true;
+//     cnt++
+//   } else {
+//     document.getElementById("radio" + cnt).checked = true;
+//     cnt++;
+//   }
+// });
+
+$(document).ready(function () {
+  $(".slick-slider").slick({
+    slide: "li", //슬라이드 되어야 할 태그
+    infinite: true, //무한 반복 옵션
+    slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
+    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+    speed: 500, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+    arrows: true, // 옆으로 이동하는 화살표 표시 여부
+    dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
+    autoplay: true, // 자동 스크롤 사용 여부
+    autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+    pauseOnHover: true, // 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정
+    vertical: false, // 세로 방향 슬라이드 옵션
+    prevArrow: $(".slick-prev"),
+    nextArrow: $(".slick-next"),
+    draggable: true, //드래그 가능 여부
+  });
 });
