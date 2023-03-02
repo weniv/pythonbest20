@@ -31,12 +31,12 @@ $pageRadio.forEach(el =>
 
 // 캐러셀 mouseover되면 자동재생 중지
 $carousel.addEventListener("mouseover", () => {
-  clearInterval(auto);
+  clearInterval(repeat);
 });
 
 // 캐러셀 mouseout 자동재생 재시작
 $carousel.addEventListener("mouseout", () => {
-  auto = setInterval(() => {
+  repeat = setInterval(() => {
     document.getElementById("radio" + cnt).checked = true;
     cnt++;
     if (cnt > $adList.length) {
