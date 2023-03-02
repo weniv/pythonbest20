@@ -401,7 +401,7 @@ nav ol li a:not(.active):hover {
 }
 
 .description .que-list:not(:first-child) {
-    margin: 1em 0 0.4em;
+    margin: 1em 0 1.2em;
 }
 
 .description>ul.que-list>li,
@@ -418,19 +418,21 @@ nav ol li a:not(.active):hover {
     border-radius: var(--borderRadius);
 }
 
-.description .que-list:not(:first-child) {
-    margin: 1em 0 0.4em;
 
-}
-
-.description .que-list:not(:first-child) .que-ol-li,
 .description .que-list:not(:first-child) .que-ul-li {
     position: relative;
     padding-left: 1em;
     line-height: 1.5;
 }
+
+.description ol.que-list {
+    list-style-type: decimal;
+    padding-left:1.4rem;
+}
 .description .que-list:not(:first-child) .que-ol-li {
+    position: relative;
     padding-left: 0;
+    line-height: 1.5;
 }
 
 .description .que-list:not(:first-child) .que-ol-li:not(:first-child),
@@ -451,7 +453,6 @@ nav ol li a:not(.active):hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.description .que-list:not(:first-child) .que-ol-li ul li::before,
 .description .que-list:not(:first-child) .que-ul-li ul li::before {
     height: 0.2em;
     border-radius: 0;
