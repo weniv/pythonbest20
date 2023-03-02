@@ -222,7 +222,6 @@ nav ol li a:not(.active):hover {
     }
 
     .menu-on.container {
-        border: 1px solid rd;
         height: fit-content;
     }
 }
@@ -251,11 +250,19 @@ nav ol li a:not(.active):hover {
     .menu-on-CodeMirror {
         width: 845px;
     }
+
+    
 }
 
 .container .contents {
     display: flex;
     width: 100%;
+}
+
+@media (min-width:1200px) and (max-width:2000px){
+    .menu-on.container .contents main section.description {
+        min-height:Calc(100vh - 60px);
+    }
 }
 
 @media (min-width: 2000px) {
@@ -284,6 +291,16 @@ nav ol li a:not(.active):hover {
         width: 50%;
         float: left;
     }
+    
+    
+    .container .contents main section.description {
+        min-height:Calc(100vh - 120px);
+    }
+
+    .menu-on.container .contents main section.description {
+        min-height:100%;
+    }
+
 
     nav {
         margin-top: 6rem;
@@ -384,7 +401,7 @@ nav ol li a:not(.active):hover {
 }
 
 .description .que-list:not(:first-child) {
-    margin: 1em 0 0.4em;
+    margin: 1em 0 1.2em;
 }
 
 .description>ul.que-list>li,
@@ -401,14 +418,20 @@ nav ol li a:not(.active):hover {
     border-radius: var(--borderRadius);
 }
 
-.description .que-list:not(:first-child) {
-    margin: 1em 0 0.4em;
-}
 
-.description .que-list:not(:first-child) .que-ol-li,
 .description .que-list:not(:first-child) .que-ul-li {
     position: relative;
     padding-left: 1em;
+    line-height: 1.5;
+}
+
+.description ol.que-list {
+    list-style-type: decimal;
+    padding-left:1.4rem;
+}
+.description .que-list:not(:first-child) .que-ol-li {
+    position: relative;
+    padding-left: 0;
     line-height: 1.5;
 }
 
@@ -417,7 +440,6 @@ nav ol li a:not(.active):hover {
     margin-top: 0.5rem;
 }
 
-.description .que-list:not(:first-child) .que-ol-li::before,
 .description .que-list:not(:first-child) .que-ul-li::before {
     content: "";
     position: absolute;
@@ -431,7 +453,6 @@ nav ol li a:not(.active):hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.description .que-list:not(:first-child) .que-ol-li ul li::before,
 .description .que-list:not(:first-child) .que-ul-li ul li::before {
     height: 0.2em;
     border-radius: 0;
