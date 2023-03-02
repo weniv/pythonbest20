@@ -1,0 +1,56 @@
+.slick-slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+  /* height: auto; */
+  margin-top: 2rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+
+  padding: 0;
+}
+
+.slick-list {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  left: 0;
+}
+
+.slick-list a img {
+  width: 100%;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
