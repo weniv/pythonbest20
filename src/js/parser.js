@@ -28,8 +28,9 @@ const unorderedListItem = {
 };
 
 const orderedListItem = {
-  regex: /^\s*(\d+\.\s.+)/,
-  replace: '<li class="que-ol-li">$1',
+  regex: /^\s*(\d+\.\s)(.+)/,
+  replace: '<li class="que-ol-li">$2',
+  // 정규표현식
 };
 
 const tableRow = {
@@ -189,7 +190,6 @@ const parseMarkdown = (markdown) => {
       const rule =
         blockRules.find(({ regex }) => regex.test(token)) ?? paragraph;
       tokens[i] = parse(encodeEntity(token), rule);
-
       switch (rule) {
         case codeBlockStart:
           codeBlockStartIndex = i;
@@ -208,6 +208,7 @@ const parseMarkdown = (markdown) => {
           const depth = listDepth(token);
           if (depth > curListDepth) {
             tokens[i] = `<${tagName} class='que-list'>` + tokens[i];
+            // console.log('tokens:',tokens[i])
             listStack.push(`</${tagName}>`);
           } else if (depth < curListDepth) {
             let depthDiff = (curListDepth - depth) / 2;
