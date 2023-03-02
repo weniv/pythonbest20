@@ -20,7 +20,9 @@ html {
     font-size: 62.5%;
 }
 
+/* 화면 최소 너비 320px로 고정 */
 body {
+    min-width: 320px;
     font-family: "Pretendard", sans-serif;
     font-size: clamp(1.4rem, 1.1428571429vw, 1.6rem);
     line-height: 1.4;
@@ -90,7 +92,6 @@ header div {
         width: 60%;
         align-items: center;
         margin: 0 auto;
-        /* background-color: aqua; */
     }
 }
 
