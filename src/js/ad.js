@@ -43,7 +43,6 @@ $beforeBtn.addEventListener("click", () => {
     cnt--;
   }
   document.getElementById("radio" + cnt).checked = true;
-  console.log('COUNT DOWN⬇ / Count: ', cnt)
 });
 
 // nextBtn 버튼 클릭 시
