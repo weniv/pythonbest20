@@ -8,64 +8,50 @@ let cnt = 1;
 let repeat = null;
 
 // 슬라이드 자동재생
-const auto = () => {
-  document.getElementById("radio" + cnt).checked = true;
-  cnt++;
-  if (cnt > $adList.length) {
+let auto = () => {
+  if (cnt === $adList.length) {
     cnt = 1;
+  } else {
+    cnt++
   }
+  document.getElementById("radio" + cnt).checked = true;
 }
 
-auto()
-
 repeat = setInterval(auto, sliderTime);
-
-
 
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
     cnt = parseInt(el.id.slice(-1))
     document.getElementById("radio" + cnt).checked = true;
-
   }))
 
 // 캐러셀 mouseover되면 자동재생 중지
-$carousel.addEventListener("mouseover", () => {
+$carousel.addEventListener("mouseenter", () => {
   clearInterval(repeat);
 });
 
 // 캐러셀 mouseout 자동재생 재시작
-$carousel.addEventListener("mouseout", () => {
-  repeat = setInterval(() => {
-    document.getElementById("radio" + cnt).checked = true;
-    cnt++;
-    if (cnt > $adList.length) {
-      cnt = 1;
-    }
-  }, sliderTime);;
+$carousel.addEventListener("mouseleave", () => {
+  repeat = setInterval(auto, sliderTime);
 })
 
 // beforeBtn 버튼 클릭 시
 $beforeBtn.addEventListener("click", () => {
-  if (cnt < 1) {
+  if (cnt === 1) {
     cnt = $adList.length
-
-    document.getElementById("radio" + cnt).checked = true;
   } else {
     cnt--;
-    document.getElementById("radio" + cnt).checked = true;
   }
+  document.getElementById("radio" + cnt).checked = true;
+  console.log('COUNT DOWN⬇ / Count: ', cnt)
 });
 
 // nextBtn 버튼 클릭 시
 $nextBtn.addEventListener("click", async () => {
-  if (cnt > $adList.length) {
+  if (cnt === $adList.length) {
     cnt = 1;
-    document.getElementById("radio" + cnt).checked = true;
-    cnt++
   } else {
-    document.getElementById("radio" + cnt).checked = true;
     cnt++;
   }
+  document.getElementById("radio" + cnt).checked = true;
 });
-
