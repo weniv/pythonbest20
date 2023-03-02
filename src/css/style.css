@@ -487,6 +487,7 @@ nav ol li a:not(.active):hover {
     border-top: 2px solid var(--ColorDark);
     text-align: center;
     color: rgba(255, 255, 255, 0.85);
+    margin: 0.8rem 0;
 }
 
 .description table td,
