@@ -47,7 +47,7 @@ $beforeBtn.addEventListener("click", () => {
 });
 
 // nextBtn 버튼 클릭 시
-$nextBtn.addEventListener("click", async () => {
+$nextBtn.addEventListener("click", () => {
   if (cnt === $adList.length) {
     cnt = 1;
   } else {
