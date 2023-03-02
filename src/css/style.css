@@ -222,7 +222,6 @@ nav ol li a:not(.active):hover {
     }
 
     .menu-on.container {
-        border: 1px solid rd;
         height: fit-content;
     }
 }
@@ -251,11 +250,19 @@ nav ol li a:not(.active):hover {
     .menu-on-CodeMirror {
         width: 845px;
     }
+
+    
 }
 
 .container .contents {
     display: flex;
     width: 100%;
+}
+
+@media (min-width:1200px) and (max-width:2000px){
+    .menu-on.container .contents main section.description {
+        min-height:Calc(100vh - 60px);
+    }
 }
 
 @media (min-width: 2000px) {
@@ -284,6 +291,16 @@ nav ol li a:not(.active):hover {
         width: 50%;
         float: left;
     }
+    
+    
+    .container .contents main section.description {
+        min-height:Calc(100vh - 120px);
+    }
+
+    .menu-on.container .contents main section.description {
+        min-height:100%;
+    }
+
 
     nav {
         margin-top: 6rem;
