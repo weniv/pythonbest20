@@ -5,15 +5,22 @@ const $pageRadio = document.querySelectorAll(".ad-pagination")
 const $adList = document.querySelector("#ad-inner").querySelectorAll("li")
 const sliderTime = 3000;
 let cnt = 1;
+let repeat = null;
 
 // 슬라이드 자동재생
-let auto = setInterval(() => {
+const auto = () => {
   document.getElementById("radio" + cnt).checked = true;
   cnt++;
   if (cnt > $adList.length) {
     cnt = 1;
   }
-}, sliderTime);;
+}
+
+auto()
+
+repeat = setInterval(auto, sliderTime);
+
+
 
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
@@ -61,3 +68,4 @@ $nextBtn.addEventListener("click", async () => {
     cnt++;
   }
 });
+
