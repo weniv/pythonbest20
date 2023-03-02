@@ -1,10 +1,7 @@
 .slick-slider {
   position: relative;
-  width: 100%;
+  width: 660px;
   height: 200px;
-  overflow: hidden;
-
-  /* height: auto; */
   margin-top: 2rem;
 
   -webkit-user-select: none;
@@ -31,10 +28,6 @@
   padding: 0;
 
   left: 0;
-}
-
-.slick-list a img {
-  width: 100%;
 }
 
 .slick-list.dragging {
