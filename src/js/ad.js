@@ -7,7 +7,7 @@ const sliderTime = 3000;
 let cnt = 1;
 let repeat = null;
 
-// 슬라이드 자동재생
+// 슬라이드 자동 재생
 let auto = () => {
   if (cnt === $adList.length) {
     cnt = 1;
@@ -19,21 +19,22 @@ let auto = () => {
 
 repeat = setInterval(auto, sliderTime);
 
+// 캐러셀 mouseenter 시 자동재생 중지
+$carousel.addEventListener("mouseenter", () => {
+  clearInterval(repeat);
+});
+
+// 캐러셀 mouseleave 시 자동재생 재시작
+$carousel.addEventListener("mouseleave", () => {
+  repeat = setInterval(auto, sliderTime);
+})
+
+// 슬라이드 수동 조작
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
     cnt = parseInt(el.id.slice(-1))
     document.getElementById("radio" + cnt).checked = true;
   }))
-
-// 캐러셀 mouseover되면 자동재생 중지
-$carousel.addEventListener("mouseenter", () => {
-  clearInterval(repeat);
-});
-
-// 캐러셀 mouseout 자동재생 재시작
-$carousel.addEventListener("mouseleave", () => {
-  repeat = setInterval(auto, sliderTime);
-})
 
 // beforeBtn 버튼 클릭 시
 $beforeBtn.addEventListener("click", () => {
