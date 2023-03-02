@@ -403,6 +403,7 @@ nav ol li a:not(.active):hover {
 
 .description .que-list:not(:first-child) {
     margin: 1em 0 0.4em;
+
 }
 
 .description .que-list:not(:first-child) .que-ol-li,
@@ -411,13 +412,15 @@ nav ol li a:not(.active):hover {
     padding-left: 1em;
     line-height: 1.5;
 }
+.description .que-list:not(:first-child) .que-ol-li {
+    padding-left: 0;
+}
 
 .description .que-list:not(:first-child) .que-ol-li:not(:first-child),
 .description .que-list:not(:first-child) .que-ul-li:not(:first-child) {
     margin-top: 0.5rem;
 }
 
-.description .que-list:not(:first-child) .que-ol-li::before,
 .description .que-list:not(:first-child) .que-ul-li::before {
     content: "";
     position: absolute;
