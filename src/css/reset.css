@@ -160,9 +160,3 @@ img {
 a {
 	display: inline-block;
 }
-
-code:not(pre code) {
-	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 2px;
-	padding: 0 0.3em;
-} 

@@ -35,6 +35,15 @@ hr {
     margin: 3rem 0;
 }
 
+code:not(pre code) {
+	color: var(--ColorWhite);
+	background-color: rgba(0, 0, 0, 0.25);
+	font-size: 0.95em;
+	padding: 0.1em 0.3em;
+	margin: 0 0.1em;
+	border-radius: 3px;
+} 
+
 /* 접근성을 고려한 화면감춤 */
 .sr-only {
     overflow: hidden;
