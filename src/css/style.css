@@ -718,6 +718,14 @@ nav ol li a:not(.active):hover {
     justify-content: center;
 }
 
+/* 모바일 기기에서 페이지네이션 도트 삭제 */
+@media (max-width: 768px) {
+    #ad-inner #ad-before,
+    #ad-inner #ad-next {
+        height: 100%;
+    }
+}
+
 #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
   border: 1.5px solid var(--ColorLight);;
   padding: 1px;
@@ -732,6 +740,16 @@ nav ol li a:not(.active):hover {
 #ad-inner #ad-next {
     width: 6%;
     max-width: 40px;
+}
+
+@media (max-width: 768px) {
+    #ad-carousel #ad-inner #ad-nav #nav-auto {
+        display: none;
+    }
+
+    #ad-carousel #ad-inner #ad-nav #nav-maunal {
+        display: none;
+    }
 }
 
 #ad-inner #ad-before {
