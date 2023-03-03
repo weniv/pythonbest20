@@ -12,11 +12,28 @@ body {
 
 header {
   padding: 0 2rem;
+  display:flex;
+  align-items: center;
+}
+
+.btn-exec {
+  height:fit-content;
+  margin: auto 0;
+}
+
+@media (max-width:390px) {
+
+  header img {
+    width:80%;
+  }
+  .btn-exec {
+    margin: auto 20px;
+  }
 }
 
 main {
   padding: 2rem;
-  margin-bottom: auto;
+  margin: 60px 0 auto;
 }
 
 footer {

@@ -19298,7 +19298,7 @@ var pyscript = (function (exports) {
   ];
   const defaultConfig = {
     placeholderDOM: null,
-    placeholderText: "��"
+    placeholderText: "…"
   };
   const foldConfig = /*@__PURE__*/Facet.define({
     combine(values) { return combineConfig(values, defaultConfig); }
@@ -19336,8 +19336,8 @@ var pyscript = (function (exports) {
     }
   });
   const foldGutterDefaults = {
-    openText: "��",
-    closedText: "��",
+    openText: "⌄", 
+    closedText: "›",
     markerDOM: null,
     domEventHandlers: {},
     foldingChanged: () => false
@@ -23489,6 +23489,7 @@ var pyscript = (function (exports) {
       paddingRight: ".6em",
       opacity: "0.6"
     },
+    /* 수정필요 */
     ".cm-completionIcon-function, .cm-completionIcon-method": {
       "&:after": { content: "'�'" }
     },
