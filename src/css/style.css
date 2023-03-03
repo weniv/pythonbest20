@@ -186,7 +186,7 @@ nav {
     flex: 0 0 28rem;
     background: var(--ColorDeep);
     display: none;
-
+    overflow-y: scroll;
 }
 
 nav::-webkit-scrollbar {
@@ -199,7 +199,7 @@ nav::-webkit-scrollbar-thumb {
 }
 
 nav::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--ColorDeep);
 }
 
 nav ol {
