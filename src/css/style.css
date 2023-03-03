@@ -407,6 +407,9 @@ nav ol li a:not(.active):hover {
     border-top: 0.4rem solid rgba(255, 255, 255, 0.8);
 }
 
+.description p {
+    margin: 2rem 0 1.4rem;
+}
 .description a {
     text-decoration: underline;
     color: var(--ColorMainLight);
