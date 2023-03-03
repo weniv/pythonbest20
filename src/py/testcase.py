@@ -111,8 +111,8 @@ testcase_and_result = [{
     'result': [30, 70, 110],
 }, {
     'que_number': 19,
-    'testcase': [[10, 20], [30, 40], [50, 60]],
-    'result': [30, 70, 110],
+    'testcase': [[[45, 5, 3, 15],100], [[6, 2, 4, 8, 32], 50], [[7, 2, 14, 28], 74]],
+    'result': [4, 4, 5],
 }, {
     'que_number': 20,
     'testcase': [
