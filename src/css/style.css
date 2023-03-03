@@ -59,12 +59,10 @@ code:not(pre code) {
 }
 
 header {
+    min-width: 320px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
     position: fixed;
     top: 0;
-    bottom: 0;
     right: 0;
     left: 0;
     height: 6rem;
@@ -84,11 +82,7 @@ header div {
 
 @media (min-width: 2000px) {
     header div {
-        position: relative;
-        display: flex;
         width: 65%;
-        height: 6rem;
-        align-items: center;
         margin: 0 auto;
         padding: 0;
     }
@@ -110,14 +104,6 @@ header h1 {
     min-width: 240px;
 }
 
-header h1 a {
-    display: inline;
-}
-
-header .logo {
-    height: 100%;
-    overflow: hidden;
-}
 
 @media (min-width: 2000px) {
     header .logo {
@@ -140,21 +126,6 @@ header .logo {
 header .btn-fold {
     position: absolute;
     left: 2rem;
-}
-
-@media (min-width: 2000px) {
-    header .btn-fold {
-        left: 0;
-    }
-}
-
-@media (max-width: 390px) {
-    header .btn-fold {
-        left: 0;
-    }
-}
-
-.btn-fold {
     width: 4rem;
     height: 4rem;
     color: var(--ColorBg);
@@ -169,12 +140,24 @@ header .btn-fold {
     display: block;
     width: 100%;
     height: 100%;
-    background: var(--ColorBg) url(../img/arrow.svg) no-repeat 50% 50%/80%;
+    background: url(../img/arrow.svg) no-repeat 50% 50%/80%;
     position: absolute;
     top: 0;
     left: 0;
     transform: rotate(180deg);
     transition: all 0.3s;
+}
+
+@media (min-width: 2000px) {
+    header .btn-fold {
+        left: 0;
+    }
+}
+
+@media (max-width: 390px) {
+    header .btn-fold {
+        left: 0;
+    }
 }
 
 .btn-exec {
@@ -201,7 +184,6 @@ header .btn-fold {
 
 nav {
     flex: 0 0 28rem;
-    overflow-y: hidden;
     background: var(--ColorDeep);
     display: none;
 
@@ -266,13 +248,9 @@ nav ol li a:not(.active):hover {
     transform: rotate(0deg);
 }
 
-@media (max-width: 1025px) {
-    .CodeMirror {
-        max-width: 949px;
-    }
-
-    .menu-on.container {
-        height: fit-content;
+@media (max-width: 1024px) {
+    .editor {
+        width: 100% !important;
     }
 }
 
@@ -341,11 +319,6 @@ nav ol li a:not(.active):hover {
         width: 50%;
         float: left;
     }
-    
-    
-    .container .contents main section.description {
-        min-height:Calc(100vh - 120px);
-    }
 
     .menu-on.container .contents main section.description {
         min-height:100%;
@@ -357,7 +330,7 @@ nav ol li a:not(.active):hover {
         position: sticky;
         top: 6rem;
         left: 0;
-        height: min(100vh, 100vh - 6rem);
+        height: Calc(100vh - 6rem);
     }
 }
 
@@ -588,7 +561,6 @@ nav ol li a:not(.active):hover {
 }
 
 .editor .btn-contain {
-    text-align: right;
     padding-top: 2rem;
 }
 
