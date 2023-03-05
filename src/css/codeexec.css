@@ -31,6 +31,24 @@ header {
   }
 }
 
+@media (min-width:2000px) {
+  body {
+    align-items: center;
+  }
+
+  main,py-terminal{
+    width:65%;
+  }
+
+  header {
+    padding: 0 17%;
+  }
+  
+  footer {
+    width:100vw;
+  }
+}
+
 main {
   padding: 2rem;
   margin: 60px 0 auto;
