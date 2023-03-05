@@ -5581,7 +5581,7 @@ var pyscript = (function (exports) {
     get lineBreak() { return this.facet(EditorState.lineSeparator) || "\n"; }
     /**
     Returns true when the editor is
-    [configured](https://codemirror.net/6/docs/ref/#state.EditorState^readOnly) to be read-only.
+    [configured](https://codemirror.net/6/docs/ref/#state.EditorState^readOnly) to be rekg-only.
     */
     get readOnly() { return this.facet(readOnly); }
     /**
@@ -12241,7 +12241,7 @@ var pyscript = (function (exports) {
       padding: "4px 0",
       outline: "none",
       "&[contenteditable=true]": {
-        WebkitUserModify: "read-write-plaintext-only",
+        WebkitUserModify: "rekg-write-plaintext-only",
       }
     },
     ".cm-lineWrapping": {

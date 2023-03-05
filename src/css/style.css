@@ -598,93 +598,100 @@ nav ol li a:not(.active):hover {
     color: var(--ColorNegative);
 }
 
-.editor #ad-carousel {
+.editor #kg-carousel {
     overflow: hidden;
     margin-top: 2rem;
+    position: relative;
 }
 
-.editor #ad-carousel #ad-inner {
+.editor #kg-carousel #kg-inner {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.editor #ad-carousel #ad-inner button {
+.editor #kg-carousel button {
     position: absolute;
+    top:50%;
+    transform:translateY(-50%);
     z-index: 999;
     padding: 5px;
 }
 
-.editor #ad-carousel #ad-inner button:first-child {
+.editor #kg-inner li.active {
+    outline:3px solid red;
+}
+
+.editor #kg-carousel button:first-child {
     left: 0px;
 }
 
-.editor #ad-carousel #ad-inner button:nth-child(9) {
+.editor #kg-carousel button:nth-child(9) {
     right: 0px;
 }
 
-.editor #ad-carousel #ad-inner input {
+.editor #kg-carousel input {
     display: none;
 }
 
-.editor #ad-carousel #ad-inner li {
+.editor #kg-carousel #kg-inner li {
     width: 100%;
     height: auto;
     flex-shrink: 0;
 }
 
-.editor #ad-carousel #ad-inner li a {
+.editor #kg-carousel #kg-inner li a {
     width: 100%;
 }
 
-.editor #ad-carousel #ad-inner li a img {
+.editor #kg-carousel #kg-inner li a img {
     width: 100%;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked~.ad-img {
+.editor #kg-carousel #radio1:checked~.kg-img {
     margin-left: 0%;
 }
 
-.editor #ad-carousel #ad-inner #radio2:checked~.ad-img {
+.editor #kg-carousel  #radio2:checked~.kg-img {
     margin-left: -100%;
 }
 
-.editor #ad-carousel #ad-inner #radio3:checked~.ad-img {
+.editor #kg-carousel #radio3:checked~.kg-img {
     margin-left: -200%;
 }
 
-.editor #ad-carousel #ad-inner #radio4:checked~.ad-img {
+.editor #kg-carousel #radio4:checked~.kg-img {
     margin-left: -300%;
 }
 
-.editor #ad-carousel #ad-inner #radio5:checked~.ad-img {
+.editor #kg-carousel  #radio5:checked~.kg-img {
     margin-left: -400%;
 }
 
-.editor #ad-carousel #ad-inner #radio6:checked~.ad-img {
+.editor #kg-carousel  #radio6:checked~.kg-img {
     margin-left: -500%;
 }
 
-.editor #ad-carousel #ad-inner #radio7:checked~.ad-img {
+.editor #kg-carousel #radio7:checked~.kg-img {
     margin-left: -600%;
 }
 
-#ad-carousel #ad-inner #ad-nav {
+#kg-carousel #kg-nav {
     position: absolute;
     width: 100%;
     bottom: 30px;
 
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto {
+#kg-carousel #kg-nav #nav-auto {
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto div {
+#kg-carousel #kg-nav #nav-auto div {
   border: 1.5px solid var(--ColorLight);
   padding: 1px;
   border-radius: 50%;
@@ -694,24 +701,24 @@ nav ol li a:not(.active):hover {
 
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child),
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
+#kg-carousel #kg-nav #nav-auto div:not(:last-child),
+#kg-carousel #kg-nav #nav-maunal .manual-btn:not(:last-child) {
     margin-right: 10px;
 }
 
-#ad-carousel #ad-inner #radio1:checked~#ad-nav #nav-auto .auto-btn1,
-#ad-carousel #ad-inner #radio2:checked~#ad-nav #nav-auto .auto-btn2,
-#ad-carousel #ad-inner #radio3:checked~#ad-nav #nav-auto .auto-btn3,
-#ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn4,
-#ad-carousel #ad-inner #radio5:checked~#ad-nav #nav-auto .auto-btn5,
-#ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
-#ad-carousel #ad-inner #radio7:checked~#ad-nav #nav-auto .auto-btn7,
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
+#kg-carousel #radio1:checked~#kg-nav #nav-auto .auto-btn1,
+#kg-carouse #radio2:checked~#kg-nav #nav-auto .auto-btn2,
+#kg-carousel #radio3:checked~#kg-nav #nav-auto .auto-btn3,
+#kg-carousel #radio4:checked~#kg-nav #nav-auto .auto-btn4,
+#kg-carousel #radio5:checked~#kg-nav #nav-auto .auto-btn5,
+#kg-carousel #radio6:checked~#kg-nav #nav-auto .auto-btn6,
+#kg-carousel #radio7:checked~#kg-nav #nav-auto .auto-btn7,
+#kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
     ;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal {
+#kg-carousel #kg-nav #nav-maunal {
     position: absolute;
     width: 100%;
     display: flex;
@@ -720,13 +727,13 @@ nav ol li a:not(.active):hover {
 
 /* 모바일 기기에서 페이지네이션 도트 삭제 */
 @media (max-width: 768px) {
-    #ad-inner #ad-before,
-    #ad-inner #ad-next {
+    #kg-inner #kg-before,
+    #kg-inner #kg-next {
         height: 100%;
     }
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+#kg-carousel #kg-nav #nav-maunal > .manual-btn {
   border: 1.5px solid var(--ColorLight);;
   padding: 1px;
   border-radius: 50%;
@@ -736,55 +743,56 @@ nav ol li a:not(.active):hover {
   transition: all .1s ease-in-out;
 }
 
-#ad-inner #ad-before,
-#ad-inner #ad-next {
+#kg-before,
+#kg-next {
+    position:absolute;
     width: 6%;
     max-width: 40px;
 }
 
 @media (max-width: 768px) {
-    #ad-carousel #ad-inner #ad-nav #nav-auto {
+    #kg-carousel #kg-nav #nav-auto {
         display: none;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal {
+    #kg-carousel  #kg-nav #nav-maunal {
         display: none;
     }
 }
 
-#ad-inner #ad-before {
+#kg-before {
     margin-left: -2px;
 }
 
-#ad-inner #ad-next {
+#kg-next {
     margin-right: -2px;
     right: 0;
 }
 
-#ad-inner #ad-before:hover,
-#ad-inner #ad-next:hover {
+#kg-before:hover,
+#kg-next:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 550px){
-    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+    #kg-carousel #kg-nav #nav-auto div {
         width: 1px;
         height: 1px;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-nav #nav-maunal > .manual-btn {
         width: 1px;
         height: 1px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1580px) {
-    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+    #kg-carouselr #kg-nav #nav-auto div {
         width: 2px;
         height: 2px;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-nav #nav-maunal > .manual-btn {
         width: 2px;
         height: 2px;
     }
