@@ -1,9 +1,10 @@
-const $carousel = document.querySelector("#ad-carousel");
-const $beforeBtn = document.querySelector("#ad-before");
-const $nextBtn = document.querySelector("#ad-next");
-const $pageRadio = document.querySelectorAll(".ad-pagination")
-const $adList = document.querySelector("#ad-inner").querySelectorAll("li")
-const sliderTime = 3000;
+const $carousel = document.querySelector("#kg-carousel");
+const $beforeBtn = document.querySelector("#kg-before");
+const $nextBtn = document.querySelector("#kg-next");
+const $pageRadio = document.querySelectorAll(".kg-pagination")
+const $adList = document.querySelector("#kg-inner").querySelectorAll("li")
+const $kgImg = document.querySelector('.kg-img');
+const sliderTime = 1000;
 let cnt = 1;
 let repeat = null;
 
@@ -11,8 +12,10 @@ let repeat = null;
 let auto = () => {
   if (cnt === $adList.length) {
     cnt = 1;
+    slide(cnt);
   } else {
     cnt++
+    slide(cnt);
   }
   document.getElementById("radio" + cnt).checked = true;
 }
@@ -33,15 +36,18 @@ $carousel.addEventListener("mouseleave", () => {
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
     cnt = parseInt(el.id.slice(-1))
+    slide(cnt);
     document.getElementById("radio" + cnt).checked = true;
-  }))
+}))
 
 // beforeBtn 버튼 클릭 시
 $beforeBtn.addEventListener("click", () => {
   if (cnt === 1) {
     cnt = $adList.length
+    slide(cnt);
   } else {
     cnt--;
+    slide(cnt);
   }
   document.getElementById("radio" + cnt).checked = true;
 });
@@ -50,8 +56,14 @@ $beforeBtn.addEventListener("click", () => {
 $nextBtn.addEventListener("click", () => {
   if (cnt === $adList.length) {
     cnt = 1;
+    slide(cnt);
   } else {
     cnt++;
+    slide(cnt);
   }
   document.getElementById("radio" + cnt).checked = true;
 });
+
+const slide = (cnt) => {
+  $kgImg.style.marginLeft = `-${100 * cnt - 100}%`;
+}
