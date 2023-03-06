@@ -190,11 +190,11 @@ nav {
 }
 
 nav::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 nav::-webkit-scrollbar-thumb {
-    background: var(--ColorMain);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
 
