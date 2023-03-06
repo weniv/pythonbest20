@@ -252,6 +252,9 @@ nav ol li a:not(.active):hover {
     .editor {
         width: 100% !important;
     }
+    nav {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    }
 }
 
 
