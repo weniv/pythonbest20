@@ -1,9 +1,9 @@
 const $carousel = document.querySelector("#kg-carousel");
-const $adv = document.querySelector('#kg-inner')
+const $adv = document.querySelectorAll('#kg-inner li')
 const $beforeBtn = document.querySelector("#kg-before");
 const $nextBtn = document.querySelector("#kg-next");
 const $pageRadio = document.querySelectorAll(".kg-pagination")
-const $adList = document.querySelector("#kg-inner").querySelectorAll("li")
+const advsLength = $adv.length
 const sliderTime = 3000;
 let cnt = 1;
 let repeat = null;
@@ -11,7 +11,7 @@ let repeat = null;
 // 슬라이드 자동 재생
 let auto = () => {
   show(cnt)
-  if (cnt === $adList.length) {
+  if (cnt === advsLength) {
     cnt = 1;
   } else {
     cnt++
@@ -30,11 +30,10 @@ $carousel.addEventListener("mouseleave", () => {
   repeat = setInterval(auto, sliderTime);
 })
 
-// 슬라이드 수동 조작
+// 페이지네이션 클릭 시 해당 광고를 띄워줌
 $pageRadio.forEach(el =>
   el.addEventListener('click', () => {
     cnt = parseInt(el.id.slice(-1))
-    // console.log('click cnt',cnt)
     show(cnt)
     document.getElementById("radio" + cnt).checked = true;
   }))
@@ -42,7 +41,7 @@ $pageRadio.forEach(el =>
 // beforeBtn 버튼 클릭 시
 $beforeBtn.addEventListener("click", () => {
   if (cnt === 1) {
-    cnt = $adList.length
+    cnt = advsLength
   } else {
     cnt--;
   }
@@ -52,7 +51,7 @@ $beforeBtn.addEventListener("click", () => {
 
 // nextBtn 버튼 클릭 시
 $nextBtn.addEventListener("click", () => {
-  if (cnt === $adList.length) {
+  if (cnt === advsLength) {
     cnt = 1;
   } else {
     cnt++;
@@ -63,5 +62,5 @@ $nextBtn.addEventListener("click", () => {
 
 const show = (index) => {
   // 해당 인덱스에 따라서 화면에 보여주는 함수
-  console.log('show!',index)
+  console.log($adv[index].childNodes[1])
 }

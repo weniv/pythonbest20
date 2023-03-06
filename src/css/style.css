@@ -724,6 +724,9 @@ nav ol li a:not(.active):hover {
     display: flex;
     justify-content: center;
 }
+#kg-carousel #kg-nav #nav-maunal:checked {
+    background-color: red;
+}
 
 /* 모바일 기기에서 페이지네이션 도트 삭제 */
 @media (max-width: 768px) {
