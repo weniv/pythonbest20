@@ -99,6 +99,8 @@ header div {
 }
 
 header h1 {
+    display: flex;
+    align-items: center;
     margin: auto auto auto 0;
     max-width: 15%;
     min-width: 240px;
