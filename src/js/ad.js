@@ -4,7 +4,7 @@ const $nextBtn = document.querySelector("#kg-next");
 const $pageRadio = document.querySelectorAll(".kg-pagination")
 const $adList = document.querySelector("#kg-inner").querySelectorAll("li")
 const $kgImg = document.querySelector('.kg-img');
-const sliderTime = 1000;
+const sliderTime = 3000;
 let cnt = 1;
 let repeat = null;
 
