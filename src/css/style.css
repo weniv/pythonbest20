@@ -67,7 +67,7 @@ header {
     left: 0;
     height: 6rem;
     background: var(--ColorDeep);
-    z-index: 10000000;
+    z-index: 100;
 }
 
 header div {
