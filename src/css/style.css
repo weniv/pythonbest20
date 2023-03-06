@@ -192,11 +192,11 @@ nav {
 }
 
 nav::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 nav::-webkit-scrollbar-thumb {
-    background: var(--ColorMain);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
 
@@ -604,93 +604,68 @@ nav ol li a:not(.active):hover {
     color: var(--ColorNegative);
 }
 
-.editor #ad-carousel {
+.editor #kg-carousel {
+    position: relative;
     overflow: hidden;
     margin-top: 2rem;
 }
 
-.editor #ad-carousel #ad-inner {
+.editor #kg-carousel #kg-inner {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.editor #ad-carousel #ad-inner button {
+.editor #kg-carousel #kg-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.editor #kg-carousel #kg-inner button {
     position: absolute;
     z-index: 999;
     padding: 5px;
 }
 
-.editor #ad-carousel #ad-inner button:first-child {
-    left: 0px;
-}
-
-.editor #ad-carousel #ad-inner button:nth-child(9) {
-    right: 0px;
-}
-
-.editor #ad-carousel #ad-inner input {
+.editor #kg-carousel #kg-wrap input {
     display: none;
 }
 
-.editor #ad-carousel #ad-inner li {
+.editor #kg-carousel #kg-inner li {
     width: 100%;
     height: auto;
     flex-shrink: 0;
 }
 
-.editor #ad-carousel #ad-inner li a {
+.editor #kg-carousel #kg-inner li a {
     width: 100%;
 }
 
-.editor #ad-carousel #ad-inner li a img {
+.editor #kg-carousel #kg-inner li a img {
     width: 100%;
 }
 
-.editor #ad-carousel #ad-inner #radio1:checked~.ad-img {
-    margin-left: 0%;
-}
-
-.editor #ad-carousel #ad-inner #radio2:checked~.ad-img {
-    margin-left: -100%;
-}
-
-.editor #ad-carousel #ad-inner #radio3:checked~.ad-img {
-    margin-left: -200%;
-}
-
-.editor #ad-carousel #ad-inner #radio4:checked~.ad-img {
-    margin-left: -300%;
-}
-
-.editor #ad-carousel #ad-inner #radio5:checked~.ad-img {
-    margin-left: -400%;
-}
-
-.editor #ad-carousel #ad-inner #radio6:checked~.ad-img {
-    margin-left: -500%;
-}
-
-.editor #ad-carousel #ad-inner #radio7:checked~.ad-img {
-    margin-left: -600%;
-}
-
-#ad-carousel #ad-inner #ad-nav {
+#kg-carousel #kg-wrap #kg-nav {
     position: absolute;
     width: 100%;
     bottom: 30px;
 
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto {
+#kg-carousel #kg-wrap #kg-nav #nav-auto {
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto div {
+#kg-carousel #kg-wrap #kg-nav #nav-auto div {
   border: 1.5px solid var(--ColorLight);
   padding: 1px;
   border-radius: 50%;
@@ -700,24 +675,20 @@ nav ol li a:not(.active):hover {
 
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-auto div:not(:last-child),
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:not(:last-child) {
+#kg-carousel #kg-wrap #kg-nav #nav-auto div:not(:last-child),
+#kg-carousel #kg-wrap #kg-nav #nav-maunal .manual-btn:not(:last-child) {
     margin-right: 10px;
 }
 
-#ad-carousel #ad-inner #radio1:checked~#ad-nav #nav-auto .auto-btn1,
-#ad-carousel #ad-inner #radio2:checked~#ad-nav #nav-auto .auto-btn2,
-#ad-carousel #ad-inner #radio3:checked~#ad-nav #nav-auto .auto-btn3,
-#ad-carousel #ad-inner #radio4:checked~#ad-nav #nav-auto .auto-btn4,
-#ad-carousel #ad-inner #radio5:checked~#ad-nav #nav-auto .auto-btn5,
-#ad-carousel #ad-inner #radio6:checked~#ad-nav #nav-auto .auto-btn6,
-#ad-carousel #ad-inner #radio7:checked~#ad-nav #nav-auto .auto-btn7,
-#ad-carousel #ad-inner #ad-nav #nav-maunal .manual-btn:hover {
+#kg-carousel #kg-wrap #radio1:checked~#kg-nav #nav-auto .auto-btn1,
+#kg-carousel #kg-wrap #radio2:checked~#kg-nav #nav-auto .auto-btn2,
+#kg-carousel #kg-wrap #radio3:checked~#kg-nav #nav-auto .auto-btn3,
+#kg-carousel #kg-wrap #kg-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
     ;
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal {
+#kg-carousel #kg-wrap #kg-nav #nav-maunal {
     position: absolute;
     width: 100%;
     display: flex;
@@ -726,13 +697,13 @@ nav ol li a:not(.active):hover {
 
 /* 모바일 기기에서 페이지네이션 도트 삭제 */
 @media (max-width: 768px) {
-    #ad-inner #ad-before,
-    #ad-inner #ad-next {
+    #kg-wrap #kg-before,
+    #kg-wrap #kg-next {
         height: 100%;
     }
 }
 
-#ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+#kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
   border: 1.5px solid var(--ColorLight);;
   padding: 1px;
   border-radius: 50%;
@@ -742,59 +713,59 @@ nav ol li a:not(.active):hover {
   transition: all .1s ease-in-out;
 }
 
-#ad-inner #ad-before,
-#ad-inner #ad-next {
+#kg-wrap #kg-before,
+#kg-wrap #kg-next {
     width: 6%;
     max-width: 40px;
 }
 
 @media (max-width: 768px) {
-    #ad-carousel #ad-inner #ad-nav #nav-auto {
+    #kg-carousel #kg-wrap #kg-nav #nav-auto {
         display: none;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal {
+    #kg-carousel #kg-wrap #kg-nav #nav-maunal {
         display: none;
     }
 }
 
-#ad-inner #ad-before {
+#kg-wrap #kg-before {
     margin-left: -2px;
 }
 
-#ad-inner #ad-next {
+#kg-wrap #kg-next {
+    position: absolute;
     margin-right: -2px;
     right: 0;
 }
 
-#ad-inner #ad-before:hover,
-#ad-inner #ad-next:hover {
+#kg-wrap #kg-before:hover,
+#kg-wrap #kg-next:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 550px){
-    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+    #kg-carousel #kg-wrap #kg-nav #nav-auto div {
         width: 1px;
         height: 1px;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
         width: 1px;
         height: 1px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1580px) {
-    #ad-carousel #ad-inner #ad-nav #nav-auto div {
+    #kg-carousel #kg-wrap #kg-nav #nav-auto div {
         width: 2px;
         height: 2px;
     }
 
-    #ad-carousel #ad-inner #ad-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
         width: 2px;
         height: 2px;
     }
-
 }
 
 .editor #py-internal-0 {
