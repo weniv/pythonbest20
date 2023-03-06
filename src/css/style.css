@@ -527,6 +527,7 @@ nav ol li a:not(.active):hover {
 }
 
 .description table th {
+    white-space: nowrap;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.3);
 }
