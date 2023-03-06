@@ -413,7 +413,7 @@ nav ol li a:not(.active):hover {
 .description>ul.que-list:first-child {
     margin-bottom: 2em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 1px -1px rgba(255, 255, 255, 0.1);
     padding-bottom: 1em;
 }
 
