@@ -606,34 +606,28 @@ nav ol li a:not(.active):hover {
 
 .editor #kg-carousel {
     position: relative;
+    display: flex;
+    width: 100%;
     overflow: hidden;
     margin-top: 2rem;
+    align-items: center;
 }
 
 .editor #kg-carousel #kg-inner {
     position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.editor #kg-carousel #kg-wrap {
-    position: absolute;
-    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    top: 0;
-    left: 0;
 }
+
 
 .editor #kg-carousel #kg-inner button {
     position: absolute;
-    z-index: 999;
     padding: 5px;
 }
 
-.editor #kg-carousel #kg-wrap input {
+.editor #kg-carousel input {
     display: none;
 }
 
@@ -651,21 +645,21 @@ nav ol li a:not(.active):hover {
     width: 100%;
 }
 
-#kg-carousel #kg-wrap #kg-nav {
+#kg-carousel #kg-nav {
     position: absolute;
     width: 100%;
     bottom: 30px;
 
 }
 
-#kg-carousel #kg-wrap #kg-nav #nav-auto {
+#kg-carousel #kg-nav #nav-auto {
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-#kg-carousel #kg-wrap #kg-nav #nav-auto div {
+#kg-carousel #kg-nav #nav-auto div {
   border: 1.5px solid var(--ColorLight);
   padding: 1px;
   border-radius: 50%;
@@ -675,20 +669,20 @@ nav ol li a:not(.active):hover {
 
 }
 
-#kg-carousel #kg-wrap #kg-nav #nav-auto div:not(:last-child),
-#kg-carousel #kg-wrap #kg-nav #nav-maunal .manual-btn:not(:last-child) {
+#kg-carousel #kg-nav #nav-auto div:not(:last-child),
+#kg-carousel #kg-nav #nav-maunal .manual-btn:not(:last-child) {
     margin-right: 10px;
 }
 
-#kg-carousel #kg-wrap #radio1:checked~#kg-nav #nav-auto .auto-btn1,
-#kg-carousel #kg-wrap #radio2:checked~#kg-nav #nav-auto .auto-btn2,
-#kg-carousel #kg-wrap #radio3:checked~#kg-nav #nav-auto .auto-btn3,
-#kg-carousel #kg-wrap #kg-nav #nav-maunal .manual-btn:hover {
+#kg-carousel #radio1:checked~#kg-nav #nav-auto .auto-btn1,
+#kg-carousel #radio2:checked~#kg-nav #nav-auto .auto-btn2,
+#kg-carousel #radio3:checked~#kg-nav #nav-auto .auto-btn3,
+#kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
     ;
 }
 
-#kg-carousel #kg-wrap #kg-nav #nav-maunal {
+#kg-carousel #kg-nav #nav-maunal {
     position: absolute;
     width: 100%;
     display: flex;
@@ -697,13 +691,13 @@ nav ol li a:not(.active):hover {
 
 /* 모바일 기기에서 페이지네이션 도트 삭제 */
 @media (max-width: 768px) {
-    #kg-wrap #kg-before,
-    #kg-wrap #kg-next {
+    #kg-carousel #kg-before,
+    #kg-carousel #kg-next {
         height: 100%;
     }
 }
 
-#kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
+#kg-carousel #kg-nav #nav-maunal > .manual-btn {
   border: 1.5px solid var(--ColorLight);;
   padding: 1px;
   border-radius: 50%;
@@ -713,56 +707,59 @@ nav ol li a:not(.active):hover {
   transition: all .1s ease-in-out;
 }
 
-#kg-wrap #kg-before,
-#kg-wrap #kg-next {
+#kg-carousel #kg-before,
+#kg-carousel #kg-next {
     width: 6%;
     max-width: 40px;
+    z-index: 999;
 }
 
 @media (max-width: 768px) {
-    #kg-carousel #kg-wrap #kg-nav #nav-auto {
+    #kg-carousel #kg-nav #nav-auto {
         display: none;
     }
 
-    #kg-carousel #kg-wrap #kg-nav #nav-maunal {
+    #kg-carousel #kg-nav #nav-maunal {
         display: none;
     }
 }
 
-#kg-wrap #kg-before {
+#kg-carousel #kg-before {
+    position: absolute;
     margin-left: -2px;
+    left: 0;
 }
 
-#kg-wrap #kg-next {
+#kg-carousel #kg-next {
     position: absolute;
     margin-right: -2px;
     right: 0;
 }
 
-#kg-wrap #kg-before:hover,
-#kg-wrap #kg-next:hover {
+#kg-carousel #kg-before:hover,
+#kg-carousel #kg-next:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 550px){
-    #kg-carousel #kg-wrap #kg-nav #nav-auto div {
+    #kg-carousel #kg-nav #nav-auto div {
         width: 1px;
         height: 1px;
     }
 
-    #kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-nav #nav-maunal > .manual-btn {
         width: 1px;
         height: 1px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1580px) {
-    #kg-carousel #kg-wrap #kg-nav #nav-auto div {
+    #kg-carousel #kg-nav #nav-auto div {
         width: 2px;
         height: 2px;
     }
 
-    #kg-carousel #kg-wrap #kg-nav #nav-maunal > .manual-btn {
+    #kg-carousel #kg-nav #nav-maunal > .manual-btn {
         width: 2px;
         height: 2px;
     }
