@@ -621,12 +621,6 @@ nav ol li a:not(.active):hover {
     align-items: center;
 }
 
-
-.editor #kg-carousel #kg-inner button {
-    position: absolute;
-    padding: 5px;
-}
-
 .editor #kg-carousel input {
     display: none;
 }
@@ -649,7 +643,6 @@ nav ol li a:not(.active):hover {
     position: absolute;
     width: 100%;
     bottom: 30px;
-
 }
 
 #kg-carousel #kg-nav #nav-auto {
@@ -666,7 +659,6 @@ nav ol li a:not(.active):hover {
   height: 3px;
   width: 3px;
   transition: all .1s ease-in-out;
-
 }
 
 #kg-carousel #kg-nav #nav-auto div:not(:last-child),
@@ -679,7 +671,6 @@ nav ol li a:not(.active):hover {
 #kg-carousel #radio3:checked~#kg-nav #nav-auto .auto-btn3,
 #kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
-    ;
 }
 
 #kg-carousel #kg-nav #nav-maunal {
