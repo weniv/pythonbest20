@@ -13,15 +13,14 @@ let hour = 0;
 let minute = 0;
 let second = 0;
 
-// 타이머 시작 버튼
+// 시작 버튼
 $btnStart.addEventListener('click',()=>{
   startTimer = setInterval(timer, 1000);
   $btnStart.style.visibility = 'hidden';
   $btnPause.style.visibility = 'visible';
-
 ;})
 
-// 타이머 종료 버튼
+// 일시정지 버튼 
 $btnPause.addEventListener('click',()=>{
   $btnStart.style.visibility = 'visible';
   $btnPause.style.visibility = 'hidden';
@@ -37,19 +36,14 @@ $btnSubmit.addEventListener('click',()=>{
 
 // 타이머 초기화 버튼
 $btnReset.addEventListener('click',()=>{
-  // 바로 초기화
   clearInterval(startTimer);
-  time = 0;
-  $btnStart.style.visibility = 'visible';
-  $btnPause.style.visibility = 'hidden';
-
   initTime();
 })
 
+// 타이머 시간 출력 함수
 let timer = () => {
   time++;
   
-  // 시간 계산
   hour = parseInt(time/3600);
   minute = parseInt((time%3600)/60)
   second = parseInt((time%60))
@@ -63,11 +57,12 @@ let timer = () => {
 const initTime = ()=> {
   time=0;
 
+  $btnStart.style.visibility = 'visible';
+  $btnPause.style.visibility = 'hidden';
   $hour.textContent = '00';
   $minute.textContent = '00';
   $second.textContent =  '00';
 }
-
 
 // 타이머 초기화
 // 페이지 이동시
