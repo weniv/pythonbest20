@@ -739,7 +739,7 @@ nav ol li a:not(.active):hover {
 #kg-carousel #radio2:checked~#kg-nav #nav-auto .auto-btn2,
 #kg-carousel #radio3:checked~#kg-nav #nav-auto .auto-btn3,
 #kg-carousel #radio4:checked~#kg-nav #nav-auto .auto-btn4,
-#kg-carousel #radio4:checked~#kg-nav #nav-auto .auto-btn5,
+#kg-carousel #radio5:checked~#kg-nav #nav-auto .auto-btn5,
 #kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
     background-color: var(--ColorLight);
 }
