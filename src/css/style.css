@@ -365,6 +365,69 @@ nav ol li a:not(.active):hover {
     }
 }
 
+.editor .timer-container {
+    position:relative;
+    width:fit-content;
+    padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+    margin: 0 0.2rem 0 auto;
+    display:flex;
+    align-items: center;
+    gap:0.6rem;
+    border-radius:10px;
+    background-color: rgba(0,0,0,0.2);
+    
+}
+
+.editor .timer-container .timer-time {
+    /* background-color:rgba(255,255,255,0.2); */
+    /* color:#000; */
+    padding:0.4rem 2rem;
+    margin: 0.2rem;
+    border-radius:5px;
+}
+
+.editor .timer-container button {
+    display:flex;
+    justify-content: center;
+    background-color:rgba(255,255,255,0.2);
+    padding:0.6rem 0.6rem;
+    border-radius:3px;
+    transition: 0.1s ease-in-out;
+
+}
+
+.editor .timer-container button:hover {
+    background-color:rgba(255,255,255,0.4);
+
+}
+
+.editor .timer-container .btn-container {
+    position: relative;
+    width:fit-content;
+    
+}
+
+.editor .timer-container .btn-play {
+    position:relative;
+    top:0;
+    left:0;
+}
+.editor .timer-container .btn-pause {
+    position:absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+    
+}
+
+.editor .timer-container img {
+    width:60%;
+}
+
+.editor .timer-line {
+    margin: 0.4rem 0 1.2rem;
+}
+
 .description {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
