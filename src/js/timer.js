@@ -2,10 +2,11 @@ const $btnStart = document.querySelector('.timer-container .btn-play')
 const $btnPause = document.querySelector('.timer-container .btn-pause')
 const $btnReset = document.querySelector('.timer-container .btn-reset')
 const $btnSubmit = document.querySelector('#btn-run')
-
+const $queLinks = document.querySelectorAll('.contents nav ol li')
 const $hour = document.querySelector('.timer-time .hour')
 const $minute = document.querySelector('.timer-time .minute')
 const $second = document.querySelector('.timer-time .second')
+let startTimer;
 
 let time = 0;
 let hour = 0;
@@ -14,23 +15,36 @@ let second = 0;
 
 // 타이머 시작 버튼
 $btnStart.addEventListener('click',()=>{
-  const startTimer = setInterval(timer, 1000);
+  startTimer = setInterval(timer, 1000);
+  $btnStart.style.visibility = 'hidden';
+  $btnPause.style.visibility = 'visible';
+
 ;})
 
 // 타이머 종료 버튼
 $btnPause.addEventListener('click',()=>{
-  alert('stop');
+  $btnStart.style.visibility = 'visible';
+  $btnPause.style.visibility = 'hidden';
+  clearInterval(startTimer);
 ;})
 
 // 채점 시 타이머 종료
 $btnSubmit.addEventListener('click',()=>{
-  alert('submit')
+  $btnStart.style.visibility = 'visible';
+  $btnPause.style.visibility = 'hidden';
+  clearInterval(startTimer);
 })
 
 // 타이머 초기화 버튼
 $btnReset.addEventListener('click',()=>{
-  alert('reset');
-;})
+  // 바로 초기화
+  clearInterval(startTimer);
+  time = 0;
+  $btnStart.style.visibility = 'visible';
+  $btnPause.style.visibility = 'hidden';
+
+  initTime();
+})
 
 let timer = () => {
   time++;
@@ -45,3 +59,27 @@ let timer = () => {
   $second.textContent = (second.toString().length==2 ? second : '0'+second);
 
 }
+
+const initTime = ()=> {
+  time=0;
+
+  $hour.textContent = '00';
+  $minute.textContent = '00';
+  $second.textContent =  '00';
+}
+
+
+// 타이머 초기화
+// 페이지 이동시
+window.addEventListener('DOMContentLoaded',()=>{
+  clearInterval(startTimer);
+  initTime();
+})
+
+// 문제 이동시
+$queLinks.forEach(el=>{
+  el.addEventListener('click',()=>{
+    clearInterval(startTimer);
+    initTime();
+  })
+})
