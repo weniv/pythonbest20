@@ -66,15 +66,15 @@ const initTime = ()=> {
 
 // 타이머 초기화
 // 페이지 이동시
-window.addEventListener('DOMContentLoaded',()=>{
-  clearInterval(startTimer);
-  initTime();
-})
+// window.addEventListener('DOMContentLoaded',()=>{
+//   clearInterval(startTimer);
+//   initTime();
+// })
 
 // 문제 이동시
-$queLinks.forEach(el=>{
-  el.addEventListener('click',()=>{
-    clearInterval(startTimer);
-    initTime();
-  })
-})
+// $queLinks.forEach(el=>{
+//   el.addEventListener('click',()=>{
+//     clearInterval(startTimer);
+//     initTime();
+//   })
+// })
