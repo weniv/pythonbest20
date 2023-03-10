@@ -106,6 +106,10 @@ header h1 {
     min-width: 240px;
 }
 
+header .logo {
+    height: auto;
+}
+
 
 @media (min-width: 2000px) {
     header .logo {
@@ -142,7 +146,7 @@ header .btn-fold {
     display: block;
     width: 100%;
     height: 100%;
-    background: url(../img/arrow.svg) no-repeat 50% 50%/80%;
+    background: url(../img/arrow.webp) no-repeat 50% 50%/80%;
     position: absolute;
     top: 0;
     left: 0;
@@ -706,6 +710,7 @@ nav ol li a:not(.active):hover {
 
 .editor #kg-carousel #kg-inner li a img {
     width: 100%;
+    height: auto;
 }
 
 #kg-carousel #kg-nav {
