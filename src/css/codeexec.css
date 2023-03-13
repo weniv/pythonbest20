@@ -161,11 +161,3 @@ py-repl:last-child .py-repl-output::after {
   background: rgba(0, 0, 0, 0.3);
   padding: 2rem;
 }
-
-.alert-banner.py-warning {
-  position: absolute;
-  top:0;
-  left:50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
