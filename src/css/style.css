@@ -169,6 +169,8 @@ header .btn-fold {
 .btn-exec {
     padding: 0.5em 1em;
     background: var(--ColorMain);
+    font-weight: bold;
+    border-radius: 3px;
 }
 
 @media (max-width: 446px) {
@@ -646,6 +648,8 @@ nav ol li a:not(.active):hover {
 .editor .btn-contain #btn-run {
     background: var(--ColorMain);
     color: var(--ColorWhite);
+    font-weight: bold;
+    border-radius: 3px;
     height: 4.4rem;
     width: 100%;
 }
