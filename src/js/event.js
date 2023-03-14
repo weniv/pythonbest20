@@ -58,13 +58,19 @@ const downloadFile = async ({ data, fileName, fileType }) => {
 };
 
 $btnDownload.addEventListener("click", (e) => {
-    let localStorageValue = window.localStorage.getItem(PAGE_NAME);
-    localStorageValue = '```python\n' + localStorageValue + '\n```'
-    localStorageValue = `# 문제 ${PAGE_NAME}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${PAGE_NAME}\n\n${localStorageValue}`
-    if (!!localStorageValue) {
-        const name = `solution_${PAGE_NAME}`;
+    let totalData = ''
+    for (let i = 1; i < 21; i++) {
+        let localStorageValue = window.localStorage.getItem(i);
+        if (!!localStorageValue) {
+            localStorageValue = '```python\n' + localStorageValue + '\n```'
+            localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n\n${localStorageValue}\n\n`
+            totalData += localStorageValue
+        }
+    }
+    if (!!totalData) {
+        const name = `solution_total`;
         downloadFile({
-            data: localStorageValue,
+            data: totalData,
             fileName: `${name}.md`,
             fileType: 'text/json',
         });
