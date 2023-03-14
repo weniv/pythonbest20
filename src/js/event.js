@@ -60,7 +60,7 @@ const downloadFile = async ({ data, fileName, fileType }) => {
 $btnDownload.addEventListener("click", (e) => {
     let localStorageValue = window.localStorage.getItem(PAGE_NAME);
     localStorageValue = '```python\n' + localStorageValue + '\n```'
-    localStorageValue = `# 문제 ${PAGE_NAME}번\n\n` + localStorageValue
+    localStorageValue = `# 문제 ${PAGE_NAME}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${PAGE_NAME}\n\n${localStorageValue}`
     if (!!localStorageValue) {
         const name = `solution_${PAGE_NAME}`;
         downloadFile({
