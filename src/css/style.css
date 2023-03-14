@@ -661,6 +661,15 @@ nav ol li a:not(.active):hover {
     background: rgba(0, 0, 0, 0.4);
 }
 
+.editor #result #result_info {
+    padding: 2rem;
+    color: rgba(999, 999, 999, 0.8);
+}
+
+.editor #result #result_info.result-info-none {
+    display: none;
+}
+
 .editor #result #result_desc p {
     padding: 0 2rem;
 }

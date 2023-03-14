@@ -1,5 +1,6 @@
 const $btnQue = document.querySelectorAll('.btn-que');
 const $btnRun = document.querySelector("#btn-run");
+const $resultInfo = document.querySelector("#result_info");
 
 // 문제 로딩
 $btnQue.forEach(element => {
@@ -20,9 +21,11 @@ function loadCode() {
     const localStorageValue = window.localStorage.getItem(PAGE_NAME);
     if (!!localStorageValue) {
         editor.setValue(localStorageValue);
+        $resultInfo.classList.remove("result-info-none");
     } else {
         editor.setValue(`def solution(data):
     return None`);
+        $resultInfo.classList.remove("result-info-none");
     }
 }
 loadCode()
@@ -33,4 +36,5 @@ $btnRun.addEventListener("click", (e) => {
     codeEditor = document.querySelector('#codeeditor');
     window.localStorage.setItem(PAGE_NAME, text);
     codeEditor.textContent = text
+    $resultInfo.classList.add("result-info-none");
 });
