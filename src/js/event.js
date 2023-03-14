@@ -61,9 +61,15 @@ $btnDownload.addEventListener("click", (e) => {
     let totalData = ''
     for (let i = 1; i < 21; i++) {
         let localStorageValue = window.localStorage.getItem(i);
+        let passCheck = window.localStorage.getItem(`${i}_check`);
         if (!!localStorageValue) {
             localStorageValue = '```python\n' + localStorageValue + '\n```'
-            localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n\n${localStorageValue}\n\n`
+            if (!!passCheck) {
+                localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과여부 : Y\n\n${localStorageValue}\n\n`
+            } else {
+                localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과여부 : N\n\n${localStorageValue}\n\n`
+            }
+
             totalData += localStorageValue
         }
     }
