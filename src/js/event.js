@@ -57,30 +57,46 @@ const downloadFile = async ({ data, fileName, fileType }) => {
     link.remove();
 };
 
+const fetchQuestionInfo = async () => {
+    const res = await fetch(
+        `${window.location.origin}/src/py/testcase.py`
+    );
+    if (res.status == 200) {
+        const responseValue = await res.text();
+        return responseValue;
+    } else {
+        const responseValue = ''
+        return responseValue;
+    }
+}
+
 $btnDownload.addEventListener("click", (e) => {
     let totalData = ''
-    for (let i = 1; i < 21; i++) {
-        let localStorageValue = window.localStorage.getItem(i);
-        let passCheck = window.localStorage.getItem(`${i}_check`);
-        if (!!localStorageValue) {
-            localStorageValue = '```python\n' + localStorageValue + '\n```'
-            if (!!passCheck) {
-                localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과여부 : Y\n\n${localStorageValue}\n\n`
-            } else {
-                localStorageValue = `# 문제 ${i}번\n\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과여부 : N\n\n${localStorageValue}\n\n`
+    const res = fetchQuestionInfo()
+    res.then((response) => {
+        const questionInfo = JSON.parse(response.split('=')[1].slice(1))
+        for (let i = 1; i < 21; i++) {
+            let localStorageValue = window.localStorage.getItem(i);
+            let passCheck = window.localStorage.getItem(`${i}_check`);
+            if (!!localStorageValue) {
+                localStorageValue = '```python\n' + localStorageValue + '\n```'
+                if (!!passCheck) {
+                    localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]['lv']}\n* 문제 종류 : ${questionInfo[i]['kinds']}\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과 여부 : Y\n\n${localStorageValue}\n\n`
+                } else {
+                    localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]['lv']}\n* 문제 종류 : ${questionInfo[i]['kinds']}\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과 여부 : N\n\n${localStorageValue}\n\n`
+                }
+                totalData += localStorageValue
             }
-
-            totalData += localStorageValue
         }
-    }
-    if (!!totalData) {
-        const name = `solution_total`;
-        downloadFile({
-            data: totalData,
-            fileName: `${name}.md`,
-            fileType: 'text/json',
-        });
-    } else {
-        window.alert('다운로드 할 데이터가 없습니다.')
-    }
+        if (!!totalData) {
+            const name = `solution_total`;
+            downloadFile({
+                data: totalData,
+                fileName: `${name}.md`,
+                fileType: 'text/json',
+            });
+        } else {
+            window.alert('다운로드 할 데이터가 없습니다.')
+        }
+    })
 });
