@@ -290,7 +290,7 @@ const fetchMarkdown = async () => {
   if (window.location.pathname.split('/')[1] === '' || window.location.pathname.split('/')[1] === 'index.html') {
     // 로컬 테스트 및 실제 배포
     const res = await fetch(
-      `https://pyalgo.co.kr/src/pages/question${PAGE_NAME}.md`
+      `${window.location.origin}/src/pages/question${PAGE_NAME}.md`
     );
 
     if (res.status == 200) {
@@ -304,7 +304,7 @@ const fetchMarkdown = async () => {
   } else {
     // github page url로 배포
     const res = await fetch(
-      `https://pyalgo.co.kr/src/pages/question${PAGE_NAME}.md`
+      `${window.location.origin}/${window.location.pathname.split('/')[1]}/src/pages/question${PAGE_NAME}.md`
     );
 
     if (res.status == 200) {
