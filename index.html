@@ -81,14 +81,36 @@
                         <img class="logo" src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
                     </a>
                 </h1>
-                <button class="btn-download">solution download</button>
-                <a class="btn-exec" href="codeexec.html" target="_blank">Run Python</a>
+                <nav class="menu-nav">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="https://jsalgo.co.kr/">JSalgo 바로가기</a>
+                        </li>
+                        <li class="menu-item">
+                            <button class="btn-download">Solution Download</button>
+                        </li>
+                        <li class="menu-item">
+                            <a class="btn-exec" href="codeexec.html" target="_blank">Run Python</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="hamburger-btn">
+                    <img src="./src/img/hamburger-btn.webp" alt="메뉴 열기">
+                </button>
+
+                <label for="lang-select" class="sr-only">풀이 언어를 선택하세요.</label>
+                <select class="cta-btn lang-selector" name="langs" id="lang-select">
+                    <option selected name="python" value="python">Python</option>
+                    <option name="javascript" value="javascript">JavaScript</option>
+                </select>
+                <button class="cta-btn btn-download">Solution Download</button>
+                <a class="cta-btn btn-exec" href="codeexec.html" target="_blank">Run Python</a>
                 <button class="btn-fold" type="button">접어두기</button>
             </div>
         </header>
 
         <div class="contents">
-            <nav>
+            <nav class="question-nav">
                 <ol>
                     <li><a href="#" id="q1" class="btn-que">Q1. 자격 증명</a></li>
                     <li><a href="#" id="q2" class="btn-que">Q2. 암호문</a></li>

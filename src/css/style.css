@@ -166,22 +166,32 @@ header .btn-fold {
     }
 }
 
-.btn-exec {
+.cta-btn {
     padding: 0.5em 1em;
     background: var(--ColorMain);
+    color: var(--ColorWhite);
     font-weight: bold;
     border-radius: 3px;
 }
 
 .btn-download {
-    padding: 0.5em 1em;
-    background: var(--ColorMain);
-    font-weight: bold;
-    border-radius: 3px;
-    color: white;
     margin-right: 10px;
     display: inline-block;
     line-height: 1.4;
+}
+
+@media (max-width: 820px) {
+    .cta-btn {
+        display: none;
+    }
+}
+
+.lang-selector {
+    background-color: var(--ColorWhite);
+    color: var(--ColorDeep);
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
 }
 
 @media (max-width: 446px) {
@@ -191,9 +201,23 @@ header .btn-fold {
         white-space: nowrap
     }
 
-    .btn-download {
-        display: none;
+    .menu-item {
+        font-size: 1rem;
     }
+
+    .hamburger-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hamburger-btn img.close {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* .btn-download {
+        display: none;
+    } */
 }
 
 @media (max-width: 390px) {
@@ -203,6 +227,48 @@ header .btn-fold {
         right: 0;
         white-space: nowrap
     }
+}
+
+header .menu-nav {
+    display: none;
+}
+
+header .menu-nav.is-active {
+    display: block;
+}
+
+.menu-list {
+    padding: 8px;
+}
+
+.menu-list .menu-item {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.menu-list .menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu-list .menu-item:nth-child(2){
+    margin: 8px 0;
+}
+
+.menu-list .menu-item a,
+.menu-list .menu-item button {
+    display: inline-block;
+    width: 100%;
+    color: #ffffffd9;
+    margin: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}
+
+.menu-list .menu-item a {
+    box-sizing: border-box;
 }
 
 nav {
@@ -263,12 +329,35 @@ nav ol li a:not(.active):hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.menu-on nav {
+.menu-on .question-nav {
     display: block;
 }
 
 .menu-on .btn-fold::after {
     transform: rotate(0deg);
+}
+
+header .menu-nav {
+    display: none;
+    overflow-y: hidden;
+}
+
+.hamburger-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger-btn img.close {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 820px) {
+    .hamburger-btn {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -914,6 +1003,13 @@ footer p {
 
     .container .contents {
         display: block;
+    }
+}
+
+@media (min-width: 820px) {
+    .menu-nav,
+    .menu-list {
+        display: none;
     }
 }
 
