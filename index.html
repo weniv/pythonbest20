@@ -51,11 +51,15 @@
     <script src="./src/js/nav.js" defer></script>
     <script src="./src/js/ad.js" defer></script>
     <script src="./src/js/timer.js" defer></script>
+    <script src="./src/js/chat.js" defer></script>
 
     <!-- codemirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css" />
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- pyscript -->
     <link rel="stylesheet" href="src/pyscript/pyscript.css">
@@ -184,6 +188,30 @@
                         <div id="result_info">결과가 이 곳에 표시됩니다.</div>
                         <div id="result_desc"></div>
                     </div>
+
+                    <img class="chat-info" src="./src/img/chat-ai.webp" alt="">
+                    <button class="btn-chatOpen">
+                        <img src="./src/img/fi-rr-comment-alt.webp" alt="인공지능과의 채팅 열기">
+                    </button>
+
+                    <!-- chat -->
+                    <article class="cont-chat close">
+                        <h4 class="sr-only">인공지능에게 질문하기</h4>
+                        <div class="chatroom">
+                            <ul class="chat-list">
+                                <li class="info"> 💡 복잡한 로직의 답변은 20초 이상의 시간이 걸릴 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <form class="inp-chat" method="post">
+                            <div>
+                                <textarea></textarea>
+                                <button type="submit">전송</button>
+                            </div>
+                        </form>
+                        <button class="chat-close">
+                            <img src="./src/img/close-wh.webp" alt="채팅방 닫기 ">
+                        </button>
+                    </article>
 
                     <div id="kg-carousel">
                         <!-- ad image -->
