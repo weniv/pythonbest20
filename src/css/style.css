@@ -196,7 +196,6 @@ header .btn-fold {
 
 @media (max-width: 446px) {
     .btn-exec {
-        font-size: 1rem;
         padding: 1em 1em;
         white-space: nowrap
     }
@@ -214,10 +213,6 @@ header .btn-fold {
         width: 15px;
         height: 15px;
     }
-
-    /* .btn-download {
-        display: none;
-    } */
 }
 
 @media (max-width: 390px) {
@@ -545,6 +540,167 @@ header .menu-nav {
 .editor .timer-line {
     margin: 0.4rem 0 1.2rem;
 }
+
+.editor .chat-info {
+    width: 70px;
+    position: fixed;
+    right: 2rem;
+    bottom: 12rem;
+    z-index: 10000;
+}
+
+.editor .chat-info.close {
+    display: none;
+}
+
+.editor .btn-chatOpen {
+    display: block;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 5.5rem;
+    z-index: 10000;
+    border-radius: 50%;
+    background-color: var(--ColorMain);
+    padding: 2rem;
+    box-shadow: 10px 10px 6px rgba(0,0,0,0.3);
+}
+
+.editor .btn-chatOpen.close {
+    display: none;
+}
+
+.editor #kg-carousel.close {
+    display: none;
+}
+
+
+.editor .cont-chat.open {
+    display: block;
+}
+
+.editor .cont-chat .chatroom {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    overflow: auto;
+}
+
+.chatroom .chat-list {
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-end;
+    margin: 0 10px 10px;
+}
+
+.cont-chat .chatroom::-webkit-scrollbar {
+    display: none;
+}
+
+.chatroom .chat-list li {
+    width: 75%;
+    max-width: 619px;
+    color: var(--ColorDark);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.chatroom .chat-list li.info {
+    font-size: 90%;
+    background: #3b4e7ed7;
+    color: var(--ColorWhite);
+    width: auto;
+    max-width: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+
+.chatroom .chat-list li.user {
+    background-color: #E0E0E0;
+    align-self: flex-end;
+}
+
+.chatroom .chat-list li.chat-bot {
+    background-color: #dde8ff;
+}
+
+.editor .cont-chat .inp-chat {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cont-chat .inp-chat div {
+    width: 100%;
+    margin: 0 10px 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #E0E0E0;
+    display: flex;
+    align-items: center;
+}
+
+.cont-chat .inp-chat textarea {
+    resize: none;
+    width: calc(100% - 40px);
+    outline: none;
+    border: none;
+    word-wrap: break-word;
+}
+
+.cont-chat .inp-chat button {
+    color: var(--ColorWhite);
+    background-color: var(--ColorMain);
+    font-weight: bold; 
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
+
+.cont-chat .chat-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    padding: 5px;
+    background-color: var(--ColorMain);
+    border-radius: 3px;
+}
+
+.cont-chat .inp-chat button:hover, .cont-chat .chat-close:hover {
+    background-color: var(--ColorMainLight);
+    color: var(--ColorWhite);
+}
+
+.editor .cont-chat {
+    position: relative;
+    right: 3rem;
+    bottom: -2rem;
+    width: 100%;
+    margin-left: 3rem;
+    overflow: hidden;
+    background-color: var(--ColorWhite);
+    border-radius: 15px;
+    z-index:1000;
+    box-shadow: 10px 10px 6px rgba(0,0,0,0.3);
+    padding-top: 40px;
+}
+
+.editor .cont-chat.close {
+    display: none;
+}
+
+@media (min-width:2000px) {
+    .editor .chat-info, .editor .btn-chatOpen {
+        right : Calc(17.5% - 3rem);
+    }
+
+    .editor .cont-chat {
+        right: 3rem;
+    }
+}
+
 
 .description {
     line-height: 1.6;
