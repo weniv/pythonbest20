@@ -2,7 +2,8 @@ const $btnQue = document.querySelectorAll('.btn-que');
 const $btnRun = document.querySelector("#btn-run");
 const $resultInfo = document.querySelector("#result_info");
 const $btnDownload = document.querySelector(".btn-download");
-
+const $languageSelector = document.querySelector(".lang-selector");
+let lang;
 
 // 문제 로딩
 $btnQue.forEach(element => {
@@ -100,3 +101,20 @@ $btnDownload.addEventListener("click", (e) => {
         }
     })
 });
+
+
+$languageSelector.addEventListener('change', (e) => {
+    lang = e.target.value;
+
+    if (lang === 'javascript'){
+        window.location = 'https://jsalgo.co.kr/';
+    } else {
+        return;
+    }
+})
+
+window.onload = function(){
+    const options = $languageSelector.querySelectorAll('option');
+    lang = 'python';
+    options[0].selected = true;
+}
