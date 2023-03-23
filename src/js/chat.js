@@ -38,13 +38,17 @@ const scrollToBottom = () => {
 }
 
 // 버튼 누르면 채팅창 활성화시키는 함수
-$chatBtn.addEventListener("click", () => {
+const handleOpenChat = () => {
   $chatRoom.classList.add('open');
   $chatInfo.classList.add("close");
   $chatBtn.classList.add("close");
   $adCarousel.classList.add("close");
   $chatContainer.classList.add("open");
   $chatContainer.classList.remove("close");
+}
+
+$chatBtn.addEventListener("click", () => {
+  handleOpenChat()
   scrollToBottom()
 });
 
@@ -117,7 +121,6 @@ const apiPost = async(config) => {
     let result = await axios(config)
         .then((res) => {
             const answer = res.data.choices[0].message.content;
-            // console.log(answer);
             printAnswer(answer);
         })
         .catch((err) => {
