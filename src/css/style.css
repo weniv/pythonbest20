@@ -197,6 +197,10 @@ header .btn-fold {
     background: #fff url(../img/select.svg) no-repeat calc(100% - 0.5em) 50% /
         0.8em;
 }
+  
+.menu-nav.is-active .btn-exec {
+    background: none;
+}
 
 @media (max-width: 446px) {
     .btn-exec {
