@@ -57,16 +57,16 @@ $btnChatOpen.addEventListener("click", async (e) => {
 });
 
 // 스크롤 최하단 이동
-const scrollToBottom = () => {
-  // 너비가 1200px 이하이고 navBar가 열려있을 경우
-  if (window.innerWidth <= 1200 && $container.classList.contains("menu-on")) {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  }
-  // 너비가 1024px 이하일 경우
-  else if (window.innerWidth <= 1024) {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  }
-};
+// const scrollToBottom = () => {
+//   // 너비가 1200px 이하이고 navBar가 열려있을 경우
+//   if(window.innerWidth <= 1200 && $container.classList.contains('menu-on')) {
+//     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+//   }
+//   // 너비가 1024px 이하일 경우
+//   else if (window.innerWidth <= 1024) {
+//     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+//   }
+// }
 
 // 버튼 누르면 채팅창 활성화시키는 함수
 const handleOpenChat = () => {
@@ -79,8 +79,7 @@ const handleOpenChat = () => {
 };
 
 $chatBtn.addEventListener("click", () => {
-  handleOpenChat();
-  scrollToBottom();
+  handleOpenChat()
 });
 
 // 채팅 창 닫기 버튼 이벤트
@@ -96,6 +95,19 @@ const handleCloseChat = () => {
 $chatCloseBtn.addEventListener("click", () => {
   handleCloseChat();
 });
+
+// 마크다운으로 변경해주는 함수
+function convertMarkdown(message) {
+  const codeBlockRegex = /(```(\w+)[ \t]*\r?\n)([\s\S]*?)(\r?\n[ \t]*```)/g;
+
+  const wrappedCode = message.replace(codeBlockRegex, (match, start, language, code, end) => {
+    const escapedCode = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const langClass = `language-${language}`;
+    return `<pre class="codeblock" style="background: #F5F2F0;"><code class="${langClass}" >${escapedCode.trim()}</code></pre>`;
+  });
+
+  return wrappedCode;
+}
 
 // 유저 질문 받아오는 함수
 $chatInput.addEventListener("input", (e) => {
@@ -125,12 +137,13 @@ const printQuestion = async () => {
     let li = document.createElement("li");
     li.classList.add("user");
     questionData.map((el) => {
-      li.innerText = el.content;
+      li.innerHTML = convertMarkdown(el.content);
     });
     $chatList.appendChild(li);
     questionData = [];
     question = false;
   }
+  Prism.highlightAll();
 };
 
 // 채팅 UI 삭제해주는 함수
@@ -144,7 +157,7 @@ $btnQue.forEach((element) => {
 const printAnswer = async (answer) => {
   let li = document.createElement("li");
   li.classList.add("chat-bot");
-  li.innerText = answer;
+  li.innerHTML = convertMarkdown(answer);
   $chatList.appendChild(li);
 };
 
@@ -155,17 +168,19 @@ const focusOnTextarea = () => {
 };
 
 // API 통신 관련 함수
-const apiPost = async (config) => {
+const apiPost = async(config) => {
   let result = await axios(config)
-    .then((res) => {
-      const answer = res.data.choices[0].message.content;
-      printAnswer(answer);
-    })
-    .catch((err) => {
-      alert("답변 로딩시간을 초과하였습니다. 새로운 질문을 입력해주세요😢");
-      console.log(err);
-    });
+      .then((res) => {
+          const answer = res.data.choices[0].message.content;
+          printAnswer(answer);
+          Prism.highlightAll()
+      })
+      .catch((err) => {
+        alert("답변 로딩시간을 초과하였습니다. 새로운 질문을 입력해주세요😢");
+        console.log(err)
+      })
 };
+
 
 // req 보내주는 함수
 const sendReq = (test) => {
