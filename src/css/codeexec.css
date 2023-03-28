@@ -19,10 +19,14 @@ header {
 .btn-exec {
   height:fit-content;
   margin: auto 0;
+  padding: 0.8rem 1.3rem;
+  background: var(--ColorMain);
+  color: var(--ColorWhite);
+  font-weight: bold;
+  border-radius: 3px;
 }
 
 @media (max-width:390px) {
-
   header img {
     width:80%;
   }
@@ -45,7 +49,7 @@ header {
   }
   
   footer {
-    width:100vw;
+    width: 100%;
   }
 }
 
@@ -60,7 +64,9 @@ main .info {
   padding: 0.4rem 1rem;
   border-radius:10px;
 }
+
 footer {
+  box-sizing: border-box;
   order: 3;
 }
 

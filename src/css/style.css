@@ -190,8 +190,16 @@ header .btn-fold {
     background-color: var(--ColorWhite);
     color: var(--ColorDeep);
     margin-right: 10px;
-    outline: none;
     cursor: pointer;
+    appearance: none;
+    padding-right: 40px;
+    position: relative;
+    background: #fff url(../img/select.svg) no-repeat calc(100% - 0.5em) 50% /
+        0.8em;
+}
+  
+.menu-nav.is-active .btn-exec {
+    background: none;
 }
 
 @media (max-width: 446px) {
@@ -592,9 +600,15 @@ header .menu-nav {
     justify-content: flex-end;
     margin: 0 10px 10px;
 }
-
-.cont-chat .chatroom::-webkit-scrollbar {
-    display: none;
+.cont-chat .info {
+    font-size: 90%;
+    background: #3b4e7ed7;
+    color: var(--ColorWhite);
+    width: auto;
+    max-width: none;
+    margin: 10px;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
 }
 
 .chatroom .chat-list li {
@@ -607,15 +621,7 @@ header .menu-nav {
     word-wrap: break-word;
 }
 
-.chatroom .chat-list li.info {
-    font-size: 90%;
-    background: #3b4e7ed7;
-    color: var(--ColorWhite);
-    width: auto;
-    max-width: none;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-}
+
 
 .chatroom .chat-list li.user {
     background-color: #E0E0E0;
@@ -629,6 +635,8 @@ header .menu-nav {
 .editor .cont-chat .inp-chat {
     display: flex;
     justify-content: space-around;
+    box-shadow: 0 -15px 15px 0 white;
+    position: relative;
 }
 
 .cont-chat .inp-chat div {
@@ -660,12 +668,12 @@ header .menu-nav {
 
 .cont-chat .chat-close {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     width: 30px;
-    padding: 5px;
+    padding: 9px;
     background-color: var(--ColorMain);
-    border-radius: 3px;
+    border-radius: 20px;
 }
 
 .cont-chat .inp-chat button:hover, .cont-chat .chat-close:hover {
@@ -674,17 +682,18 @@ header .menu-nav {
 }
 
 .editor .cont-chat {
-    position: relative;
+    position: fixed;
     right: 3rem;
-    bottom: -2rem;
-    width: 100%;
+    bottom: 3rem;
+    width: 600px;
+    max-width: 80%;
     margin-left: 3rem;
     overflow: hidden;
     background-color: var(--ColorWhite);
     border-radius: 15px;
     z-index:1000;
-    box-shadow: 10px 10px 6px rgba(0,0,0,0.3);
-    padding-top: 40px;
+    box-shadow:-2px -2px 6px 0  rgba(0, 0, 0, 0.2), 10px 10px 6px rgba(0, 0, 0, 0.3);
+    padding: 40px 5px 5px 5px;
 }
 
 .editor .cont-chat.close {
@@ -697,7 +706,7 @@ header .menu-nav {
     }
 
     .editor .cont-chat {
-        right: 3rem;
+        right: calc(17.5% - 3rem);
     }
 }
 
