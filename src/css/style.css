@@ -171,6 +171,10 @@ header .cta-btn {
 	box-sizing: border-box;
 	height: 40px;
 }
+a.cta-btn {
+	display: flex;
+	align-items: center;
+}
 
 nav {
 	flex: 0 0 28rem;
