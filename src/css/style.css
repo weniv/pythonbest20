@@ -388,7 +388,7 @@ header .menu-nav.is-active {
 
 @media (min-width: 1026px) and (max-width: 1200px) {
 	.editor .CodeMirror {
-		max-width: min(845px, 100vw - 28rem - (3rem * 2));
+		max-width: calc(100vw - 28rem - (3rem * 2));
 	}
 
 	.menu-off-CodeMirror {
