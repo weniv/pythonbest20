@@ -1,17 +1,17 @@
 :root {
-    --borderRadius: 0.4rem;
+	--borderRadius: 0.4rem;
 
-    /* color */
-    --ColorWhite: #fff;
-    --ColorBg: #3b4e7e;
-    --ColorDark: #000;
-    --ColorDeep: #242f4d;
-    --ColorLight: #8C8D96;
-    --ColorMain: #376fde;
-    --ColorMainLight: #5c83ef;
-    --ColorNegative: #ff537b;
+	/* color */
+	--ColorWhite: #fff;
+	--ColorBg: #3b4e7e;
+	--ColorDark: #000;
+	--ColorDeep: #242f4d;
+	--ColorLight: #8c8d96;
+	--ColorMain: #376fde;
+	--ColorMainLight: #5c83ef;
+	--ColorNegative: #ff537b;
 
-    --codeText: #ffd700;
-    --codeSyntex: #569cd6;
-    --codeBuiltinfunction: #a76dff;
+	--codeText: #ffd700;
+	--codeSyntex: #569cd6;
+	--codeBuiltinfunction: #a76dff;
 }

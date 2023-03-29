@@ -1,0 +1,42 @@
+/* 개별 */
+nav ol li a.active {
+	color: var(--ColorMainLight);
+}
+.cta-btn {
+	color: var(--ColorWhite);
+}
+.chatroom .chat-list li.chat-bot {
+	background-color: #dde8ff;
+}
+.cont-chat .inp-chat button {
+	color: var(--ColorWhite);
+}
+.description a {
+	color: var(--ColorMainLight);
+}
+.editor .btn-contain #btn-run {
+	color: var(--ColorWhite);
+}
+
+#kg-carousel #kg-nav #nav-auto div {
+	border: 1.5px solid var(--ColorLight);
+}
+
+#kg-carousel #radio1:checked ~ #kg-nav #nav-auto .auto-btn1,
+#kg-carousel #radio2:checked ~ #kg-nav #nav-auto .auto-btn2,
+#kg-carousel #radio3:checked ~ #kg-nav #nav-auto .auto-btn3,
+#kg-carousel #radio4:checked ~ #kg-nav #nav-auto .auto-btn4,
+#kg-carousel #radio5:checked ~ #kg-nav #nav-auto .auto-btn5,
+#kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
+	background-color: var(--ColorLight);
+}
+#kg-carousel #kg-nav #nav-maunal > .manual-btn {
+	border: 1.5px solid var(--ColorLight);
+}
+.menu-list .menu-item a,
+.menu-list .menu-item button {
+	color: #ffffff;
+}
+.lang-selector {
+	color: var(--ColorDeep);
+}
