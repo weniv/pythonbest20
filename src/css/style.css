@@ -541,14 +541,6 @@ header .menu-nav.is-active {
 	margin: 0.4rem 0 29px;
 }
 
-.editor .chat-info {
-	width: 70px;
-	position: fixed;
-	right: 2.8rem;
-	bottom: 9.5rem;
-	z-index: 10000;
-}
-
 .editor .chat-info.close {
 	display: none;
 }
@@ -558,11 +550,30 @@ header .menu-nav.is-active {
 	position: fixed;
 	right: 3rem;
 	bottom: 3rem;
+	width: 6.4rem;
+	height: 6.4rem;
 	z-index: 10000;
 	border-radius: 50%;
 	background-color: var(--ColorMain);
-	padding: 2rem;
-	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
+	padding: 1.3rem;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.editor .btn-chatOpen img {
+	width: 100%;
+}
+
+.editor .chat-info {
+	width: 7.4rem;
+	position: fixed;
+	right: 2.5rem;
+	bottom: 9.3rem;
+	z-index: 10000;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.editor .btn-chatOpen:hover + img {
+	opacity: 1;
 }
 
 .editor .btn-chatOpen.close {
@@ -584,7 +595,7 @@ header .menu-nav.is-active {
 	background-color: var(--ColorWhite);
 	border-radius: 15px;
 	z-index: 1000;
-	box-shadow: -1px -1px 5px 0 rgba(0, 0, 0, 0.01), 5px 5px 15px rgba(0, 0, 0, 0.25);
+	box-shadow: -1px -1px 5px 0 rgba(0, 0, 0, 0.03), 5px 5px 15px rgba(0, 0, 0, 0.1);
 	padding: 40px 5px 5px 5px;
 }
 
@@ -693,7 +704,9 @@ header .menu-nav.is-active {
 }
 
 @media (min-width: 2000px) {
-	.editor .chat-info,
+	.editor .chat-info {
+		right: calc(17.5% - 0.5rem);
+	}
 	.editor .btn-chatOpen {
 		right: calc(17.5%);
 	}
