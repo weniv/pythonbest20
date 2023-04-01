@@ -31,7 +31,11 @@
 
     <!-- pyscript -->
     <link rel="stylesheet" href="src/pyscript/pyscript.css">
-    <script defer src="src/pyscript/pyscript.js"></script>
+    <!-- <script defer src="src/pyscript/pyscript.js"></script> -->
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <!-- download notebook -->
+    <script src="./src/js/downloadNotebook.js"></script>
 
     <py-config>
         packages = [
@@ -52,6 +56,7 @@
                 <img src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
             </a>
         </h1>
+        <a class="btn-download" onclick="downloadNotebook()">Download Notebook</a>
         <a class="btn-exec" href="index.html">메인으로</a>
     </header>
     <main>

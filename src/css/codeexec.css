@@ -26,12 +26,34 @@ header {
 	border-radius: 3px;
 }
 
+.btn-download {
+	height: fit-content;
+	margin: auto 0;
+	margin-right: 10px;
+	padding: 0.8rem 1.3rem;
+	background: var(--ColorMain);
+	color: var(--ColorWhite);
+	font-weight: bold;
+	border-radius: 3px;
+}
+
 @media (max-width: 390px) {
 	header img {
 		width: 80%;
 	}
+
 	.btn-exec {
 		margin: auto 20px;
+	}
+
+	.btn-download {
+		display: none;
+	}
+}
+
+@media (max-width: 690px) {
+	.btn-download {
+		display: none;
 	}
 }
 
@@ -51,6 +73,10 @@ header {
 
 	footer {
 		width: 100%;
+	}
+
+	.btn-download {
+		display: none;
 	}
 }
 
