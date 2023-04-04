@@ -330,6 +330,8 @@
                                 js.document.querySelector('#result_desc').innerHTML = resultString
                                 if all(result_save_localstorage):
                                     js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
+                                else:
+                                    js.window.localStorage.removeItem(f'{PAGE_NAME}_check')
                                 render()
                             except Exception as e:
                                 result = f"&lt;p class='que-result-error'&gt;에러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;에러명 : {e}&lt;&#47;p&gt;"
