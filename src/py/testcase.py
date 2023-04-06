@@ -151,6 +151,7 @@ testcase_and_result = [{
         [["Maine Coon", "Korean short hair", "British short hair", "Norwegian Forest", "Norwegian Forest", "Korean short hair", "Korean short hair"], [8, 32, 15, 17, 12, 13, 31]]
     ],
     "result": [["Maine Coon", "Korean short hair",  "Norwegian Forest", "British short hair", "Bengal"], ["Bengal", "British short hair", "Sphynx", "Maine Coon"], ["Korean short hair", "Norwegian Forest", "British short hair", "Maine Coon"]]
+
 }, {
     "que_number": 19,
     "lv" : 1,
