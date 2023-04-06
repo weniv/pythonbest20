@@ -1,82 +1,82 @@
 - info
     - lv3
-    - 트리 | 링크드리스트 | 트라이
+    - Tree | LinkedList | Trie
 
-# 라떼를 엎은 헤오니다
-![뮤라의 노트에 라떼를 엎은 헤오니](./11_1.webp)
+# Heoni spilled the latte
+![Heoni spilled the latte](./11_1.webp)
 
-## 문제 설명
-노트에 혁명 구성팀을 정리하고 있던 책사 뮤라! 집사 헤오니는 뮤라에게 평소에 그녀가 즐겨 마시던 라떼를 드리던 중 뮤라의 노트에 그대로 엎어버렸습니다.
+## Problem Description
+Problem Description Mura, a bookkeeper, was organizing the revolutionary team in the notebook! Housemaid Heoni spilled the latte she was serving to Mura, which fell directly onto Mura's notebook.
 
-전체 구조를 적어놓은 부분을 날려버렸지만 꼼꼼한 뮤라는 대략적인 카테고리 접근 예시를 노트에 다음과 같이 적어놓았습니다.
-
-```py
-["참모총장-참모차장-비서실", "참모총장-참모차장", "참모차장-기획관리참모부", "참모차장-인사참모부", "참모차장-정보작전참모부", "참모총장-참모차장-군수참모부", "정보작전참모부-특전사", "정보작전참모부-교육사"]
-```
-
-명석한 뮤라는 몇 가지의 단서만으로도 카테고리를 복구할 수 있었습니다. 예시를 통해 다음과 같이 구성할 수 있도록 도와주세요!
+Although the section that had written the entire structure was destroyed, the meticulous Mura had written a rough category access example in the book as follows.
 
 ```py
-참모총장
-  ├ 군수참모부
-  ├ 기획관리참모부
-  ├ 비서실
-  ├ 인사참모부
-  ├ 정보작전참모부
-  │   ├ 교육사
-  │   └ 특전사
-  └ 참모차장
+["Chief of Staff-Chief of Staff-Joint Chiefs of Staff", "Chief of Staff-Chief of Staff", "Joint Chiefs of Staff-Planning and Management Staff", "Joint Chiefs of Staff-Personnel Staff", "Joint Chiefs of Staff-Information and Operations Staff", "Chief of Staff-Chief of Staff-Logistics Staff", "Information and operations staff-Special Forces", "Information and operations staff-Instructor"]
+```
+
+Clever Mura could reconstruct the category with only a few clues. Help her to configure it as follows based on these examples!
+
+```text
+Chief of Staff
+  ├ Logistics Staff 
+  ├ Planning and Management Staff 
+  ├ Secretary 
+  ├ Personnel Staff 
+  ├ Information and Operations Staff 
+  │   ├ Instructor 
+  │   └ Special Forces 
+  └ Chief of Staff
 ```
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 입력은 배열로 주어집니다.
-- 출력은 줄바꿈과 띄어쓰기, 3개의 특수문자(├, │, └)로 이루어집니다.
-- 하위 디렉토리는 `띄어쓰기 2개 + 특수문자 + 띄어쓰기 1개`로 구분됩니다.
-- 하위 디렉토리에 하위 디렉토리가 더 있으면 상위 디렉토리 문자 시작에 맞춰 `띄어쓰기 2개 + 특수문자 + 띄어쓰기 1개`로 구분됩니다.
-- 출력은 각 카테고리별로 오름차순 정렬 해주세요.
-- 입력은 모두 한글입니다.
-- 입력의 각 카테고리는 "-"으로 구분됩니다.
-- 새로운 카테고리가 시작되면 공백으로 구분됩니다.
-- 실제 출력에서 엔터는 이스케이프 문자 `\n`으로 표시합니다.
+- Input is given as an array. 
+- Output consists of line breaks, spaces, and three special characters (├,│,└). 
+- Subdirectories are separated by "double space + special character + single space." 
+- If there are sub-directories in sub-directories, they should be separated by "double space + special character + single space" according to the starting character of the parent directory. 
+- Please sort each category in ascending order in the output. 
+- All inputs are in Korean. 
+- Each category in the input is separated by "-". 
+- If a new category starts, it is separated by a space. 
+- The output has to use the escape character `\ n` for line feeds.
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-**입력**
+**Input**
 
 ```jsx
-["의류-남성의류-상의-티셔츠-브랜드", "의류-남성의류", "의류-여성의류-상의-티셔츠", "남성의류-상의-정장", "동물-고양이-장난감"]
+["Clothing-Men Clothing-Tops-T-Shirts-Brand", "Clothing-Men Clothing", "Clothing-Women Clothing-Tops-T-Shirts", "Men Clothing-Tops-Suit", "Animal-Cat-Toy"]
 ```
 
-**출력**
+**Output**
 
 ```jsx
 
-동물
-  └ 고양이
-      └ 장난감
-
-의류
-  ├ 남성의류
-  │   └ 상의
-  │       ├ 정장
-  │       └ 티셔츠
-  │           └ 브랜드
-  └ 여성의류
-      └ 상의
-          └ 티셔츠
+Animal 
+  └ Cat
+    └ Toy 
+    
+Clothing 
+  ├ Men Clothing 
+  │   └ Tops 
+  │       ├ Suit 
+  │       └ T-Shirts 
+  │           └ Brand 
+  └ Women Clothing 
+      └ Tops 
+          └ T-Shirts 
 ```
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-동물은 이어지는 카테고리가 1개씩 밖에 없기 때문에 모두 ‘└’로 연결됩니다. 동물 텍스트 시작에서 띄어쓰기 2번 한 곳에 ‘└’가 입력되고 그 아래 고양이가 들어오게 됩니다.
+For the animal category, there is only one category connected, so all are connected with "└". An "└" is entered where there are two spaces after the animal text starts, and then "Cat" comes below.
 
-의류 아래에는 2개의 자식이 존재하게 됩니다. 남성의류와 여성의류입니다. 이는 입력값에 상관 없이 오름차순 정렬되어야 합니다. 따라서 여성의류가 위로 올라갈 수는 없습니다.
+Two children exist under Clothing. Men Clothing and Women Clothing. This must be sorted in ascending order regardless of the input value. Therefore, Women Clothing cannot be placed above.
 
-남성의류 아래에 여성의류가 있기 때문에 남성의류 자손 카테고리들이 이어질 때는 맨 앞에 띄어쓰기 2번에 ‘│’가 있어야 합니다.
+Since there is Women Clothing below Men Clothing, there must be a "│" at the front where the descendant categories of Men Clothing are connected when they are continuous.
 
-실제 출력에서 엔터는 이스케이프 문자로 `\n`표시합니다.
+The line feed is expressed as the escape character in the actual output, `\n`.

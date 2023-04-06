@@ -90,27 +90,27 @@ testcase_and_result = [{
 }, {
     "que_number": 11,
     "lv" : 3,
-    "kinds": "트리, 링크드리스트, 트라이",
+    "kinds": "Tree, LinkedList, Trie",
     "testcase": [
-        ["하늘", "땅", "바다"],
-        ["하나-둘", "둘-셋", "셋-넷", "하나-다섯", "여섯-일곱"],
-        ["제주-코딩-베이스캠프", "코딩-캠프"]
+        ["sky", "ground", "sea"],
+        ["one-two", "two-three", "three-four", "one-five", "six-seven"],
+        ["jeju-coding-basecamp", "coding-camp"]
     ],
     "result": [
-        "하늘\n\n땅\n\n바다\n\n",
-        "여섯\n  └ 일곱\n\n하나\n  ├ 다섯\n  └ 둘\n      └ 셋\n          └ 넷",
-        "제주\n  └ 코딩\n      ├ 캠프\n      └ 베이스캠프"
+        "sky\n\nground\n\nsea\n\n",
+        "six\n  └ seven\n\none\n  ├ five\n  └ two\n      └ three\n          └ four",
+        "jeju\n  └ coding\n      ├ camp\n      └ basecamp"
     ]
 }, {
     "que_number": 12,
     "lv" : 3,
-    "kinds": "순열, 완전탐색",
+    "kinds": "Permutations, Brute-force",
     "testcase": [[10, 20], [30, 40], [50, 60]],
     "result": [30, 70, 110]
 }, {
     "que_number": 13,
     "lv" : 1,
-    "kinds": "힙",
+    "kinds": "Heap",
     "testcase": [[[46, 26, 37, 32, 10], 30], [[22, 45, 1, 7, 5], 15], [[7, 36, 25, 12, 22], 47]],
     "result": [4, 2, 2]
 }, {
@@ -122,19 +122,19 @@ testcase_and_result = [{
 }, {
     "que_number": 15,
     "lv" : 2,
-    "kinds": "행렬",
+    "kinds": "matrix",
     "testcase": [[10, 20], [30, 40], [50, 60]],
     "result": [30, 70, 110]
 }, {
     "que_number": 16,
     "lv" : 1,
-    "kinds": "요구사항 구현",
+    "kinds": "Implementation",
     "testcase": [[10, 20], [30, 40], [50, 60]],
     "result": [30, 70, 110]
 }, {
     "que_number": 17,
     "lv" : 1,
-    "kinds": "이진트리",
+    "kinds": "binary tree",
     "testcase": [
         [[2, 4, 1, 7, 9, 8, 12],[2, 4, 8, 3, 6]],
         [[3, 6, 9, 1, 8, 7], [3, 8]],
@@ -144,31 +144,32 @@ testcase_and_result = [{
 }, {
     "que_number": 18,
     "lv" : 1,
-    "kinds": "요구사항 구현",
+    "kinds": "Implementation",
     "testcase": [
-	    [["코리안숏헤어", "코리안숏헤어", "메인쿤", "벵갈", "메인쿤", "브리티시숏헤어", "노르웨이숲" ], [30, 15, 13, 4, 45, 9, 21]], 
-	    [["스핑크스", "브리티시숏헤어", "스핑크스", "스핑크스", "벵갈", "메인쿤"], [3, 16, 1, 9, 25, 5]], 
-	    [["메인쿤", "코리안숏헤어", "브리티시숏헤어", "노르웨이숲", "노르웨이숲", "코리안숏헤어", "코리안숏헤어"], [8, 32, 15, 17, 12, 13, 31]]
+        [["Korean short hair", "Korean short hair", "Maine Coon", "Bengal", "Maine Coon", "British short hair", "Norwegian Forest" ], [30, 15, 13, 4, 45, 9, 21]], 
+        [["Sphynx", "British short hair", "Sphynx", "Sphynx", "Bengal", "Maine Coon"], [3, 16, 1, 9, 25, 5]], 
+        [["Maine Coon", "Korean short hair", "British short hair", "Norwegian Forest", "Norwegian Forest", "Korean short hair", "Korean short hair"], [8, 32, 15, 17, 12, 13, 31]]
     ],
-    "result": [["메인쿤", "코리안숏헤어",  "노르웨이숲", "브리티시숏헤어", "벵갈"], ["벵갈", "브리티시숏헤어", "스핑크스", "메인쿤"], ["코리안숏헤어", "노르웨이숲", "브리티시숏헤어", "메인쿤"]]
+    "result": [["Maine Coon", "Korean short hair",  "Norwegian Forest", "British short hair", "Bengal"], ["Bengal", "British short hair", "Sphynx", "Maine Coon"], ["Korean short hair", "Norwegian Forest", "British short hair", "Maine Coon"]]
+
 }, {
     "que_number": 19,
     "lv" : 1,
-    "kinds": "그리디",
+    "kinds": "Greedy",
     "testcase": [[[45, 5, 3, 15],100], [[6, 2, 4, 8, 32], 50], [[7, 2, 14, 28], 74]],
     "result": [4, 4, 5]
 }, {
     "que_number": 20,
     "lv" : 2,
-    "kinds": "정렬",
+    "kinds": "sorting",
     "testcase": [
-        [[["딸기", "생크림", "밀가루", "버터"], [15, 8, 4, 20], [4, 3, 2, 1]], 40], 
-		[[["우유", "계란", "버터", "초콜릿시나몬", "파인애플", "생크림"], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]], 10], 
-		[[["딸기", "우유", "버터", "초콜릿시나몬", "청포도", "생크림"], [120, 150, 130, 118, 126, 130], [6, 5, 4, 3, 2, 1]], 100]
+        [[["strawberry", "cream", "flour", "butter"], [15, 8, 4, 20], [4, 3, 2, 1]], 40], 
+		[[["milk", "egg", "butter", "chocolate cinnamon", "pineapple", "cream"], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]], 10], 
+		[[["strawberry", "milk", "butter", "chocolate cinnamon", "grapefruit", "cream"], [120, 150, 130, 118, 126, 130], [6, 5, 4, 3, 2, 1]], 100]
     ],
     "result": [
-        ["버터", "밀가루", "생크림"],
-		["우유"],
+        ["butter", "flour", "cream"],
+		["milk"],
 		[]
     ]
 }]

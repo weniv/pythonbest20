@@ -1,34 +1,32 @@
 - info
     - lv1
-    - 이진 트리
+    - binary tree
 
-# 로봇캣 점검의 날
-![(주)캣네생선 회의실](./17_1.webp)
+# Robot-cat Maintenance Day
+![[Licat's fish] Conference Room](./17_1.webp)
 
-## 문제 설명
-라이캣은 거대해진 (주)캣네생선 회사를 운영하기 위한 대리인 하위 버전인 로봇을 만들기로 했습니다. 그렇게 탄생한 로봇은 바로 로봇캣! 라이캣은 로봇캣을 관리하기 쉽도록 로봇캣에게 고유한 일련번호를 부여했습니다. 그렇게 로봇캣들은 위니브 월드 곳곳으로 떠났습니다.
+## Problem Description
+Licat, a delegate version of [Licat's fish], a company that has become a giant, decided to create a robot, a Robot-Cat, in order to operate the company. So, Robot-Cat was born! Licat assigned a unique identification number to Robot-Cat to make it easy to manage Robot-Cat. Then, Robot-Cats flew all over Weniv World.
 
-그리고 한 달에 한 번 로봇캣 점검이 있는 날, 대부분의 로봇캣은 회사로 돌아왔지만 멀리 떠나 돌아오지 못한 로봇캣도 있었습니다. 점검이 필요한 로봇캣 중 출석하지 않은 로봇캣들에게는 알람을 보내야 합니다.
+And on the day of Robot-Cat maintenance, most of Robot-Cats returned to the company, but there were also some Robot-Cats that couldn't return because they were too far away. For the Robot-Cats that need maintenance among those who did not attend the maintenance, an alarm should be sent.
 
-" 삐빅- 로봇캣 1103, 점검이 필요합니다- 빠른 복귀 요망
 
-출석한 로봇캣의 일련번호와 점검이 필요한 로봇캣의 일련번호가 주어질 때, 알람을 보내야 하는 로봇캣의 일련번호를 반환하는 solution 함수를 작성해주세요.
-
----
-
-## 제한 사항
-
-- 1 ≤ 출석한 로봇캣 수  ≤ 1000
-- 1 ≤ 수리가 필요한 로봇캣 수 ≤ 1000
-- 로봇캣의 일련번호는 중복되지 않습니다.
-- 결과는 오름차순으로 정렬합니다.
-- 해당 문제는 2진 트리를 활용하여 풀어야 합니다.
+Write a function solution that returns the identification number of the Robot-Cat that needs an alarm to be sent based on the identification numbers of the Robot-Cats that attended and those that need maintenance.
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 입력                                  | 출력  |
+- 1 ≤ the number of Robot-Cats that attended ≤ 1000 
+- 1 ≤ the number of Robot-Cats that need maintenance ≤ 1000 
+- The identification numbers of the Robot-Cats are not duplicated. 
+- Sort the result in ascending order. This problem should be solved using a binary tree.
+
+---
+
+## Input and Output Examples
+
+| Input                                  | Output  |
 | ------------------------------------ | ------- |
 | [[2, 4, 1, 7, 9, 8, 12], [2, 4, 8, 3, 6]] | [3, 6] |
 | [[3, 6, 9, 1, 8, 7], [3, 8]] | [] |
@@ -36,8 +34,8 @@
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-- 출석한 로봇캣의 일련번호 리스트와 점검이 필요한 로봇캣의 일련번호 리스트가 주어집니다.
-- 알람을 보내야 하는 로봇캣의 일련번호 리스트를 구합니다. 단, 오름차순으로 정렬합니다.
-- 알람을 보내야 하는 로봇캣이 없다면 빈 배열을 반환합니다.
+- The identification numbers for the Robot-Cats that attended, and the identification numbers for the Robot-Cats that need maintenance, are given. 
+- Determine the identification number of the Robot-Cats that require an alarm. Sort in ascending order. 
+- If there are no Robot-Cats that require an alarm, return an empty list.
