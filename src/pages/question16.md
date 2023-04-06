@@ -1,18 +1,18 @@
 - info
     - lv1
-    - 요구사항 구현
+    - Implementation
 
-# 2인자 선발
-![(주)캣네생선](./16_1.webp)
+# 2nd Agent Selection
+![Licat's fish Co](./16_1.webp)
 
-## 문제 설명
-(주)캣네생선을 이끌어야 할 대리인 No.1이 라이캣의 비밀 명령지를 받아 자리를 비운 후 (주)캣네생선은 명령을 내려줄 사람이 없어 업무가 마비된 상태에 이르게 됩니다. 이를 안 대리인 No.1은 대리인 No.2를 뽑기 위해 아래와 같은 문제를 출제합니다. 이 문제를 푼 사람이 앞으로 캣네생선을 운영하게 됩니다. 다음은 대리인 No.1의 문제입니다.
+## Problem Description
+[Licat's fish] had an unexpected situation where the leader, No.1, had to leave for a personal mission. [Licat's fish] was left without anyone in charge, and business operations were suspended. In order to select a new leader, No.1 set the following problem. The one who solves this problem will become the new leader of [Licat's fish].
 
-아스키코드로 이루어진 배열(arr)을 받으면 이에 해당하는 알파벳(로마 기호)으로 치환한 뒤, 이 요소들을 활용해 문자로 조합 가능한 경우의 수를 모두 도출합니다. 그 결괏값 중에서 최댓값 M을 반환하는 solution 함수를 작성해주세요.
+Here is the problem: Your task is to create a function called "solution(arr)" to take an array "arr" consisting of ASCII codes as input.
 
-로마 기호는 숫자로 나타낼 때 다음과 같이 매칭됩니다.
+The function should convert the input array to a list of Roman numerals using the following table.
 
-| 로마 숫자 기호 | 값 |
+| Roman Numera | Value |
 | --- | --- |
 | I | 1 |
 | V | 5 |
@@ -22,21 +22,21 @@
 | D | 500 |
 | M | 1000 |
 
-로마 숫자는 감산 표기법을 적용할 수 있습니다. 감산 표기법이란, 두 문자를 조합하여 하나의 숫자를 나타낼 때 큰 수 앞에 작은 수를 놓아 큰 수에서 작은 수를 뺀 값을 표기하는 방식입니다. 예를 들어, 4는 Ⅴ - Ⅰ = Ⅳ 로 표시할 수 있습니다.
+Roman numerals can be written in subtractive notation, meaning that a smaller numeral can be placed before a larger numeral to represent the difference, e.g. IV represents 4 (5-1). Your function should compute all possible combinations of these Roman numerals and return the maximum value M.
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 입력받은 배열 내에는 중복되는 요소가 없습니다.
-- 1 ≤ 배열의 길이 ≤ 5
-- 1 ≤ 최댓값 ≤ 1660
+- The input array "arr" will not contain duplicated elements. 
+- 1 ≤ len(arr) ≤ 5 
+- 1 ≤ M ≤ 1660
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-| 숫자 리스트 | 결괏값 |
+| Input List of ASCII Codes | Output |
 | --- | --- |
 | [73, 88, 86] | 16 |
 | [67, 86, 77, 76] | 1155 |
@@ -44,10 +44,10 @@
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-- 아스키코드(숫자)의 배열을 입력받습니다.
-- 나올 수 있는 결괏값 중 최대 숫자를 반환합니다.
-- [73, 88, 86]을 로마 문자로 치환하면 [I, X, V]입니다.
-- 가장 큰 수인 X가 arr[0]에 와야 하며 [X, I, V]와 [X, V, I] 두 가지 경우로 조합할 수 있습니다.
-- 배열을 문자로 바꿨을 때 전자는 14, 후자는 16을 나타내므로 최댓값인 결과는 16입니다.
+- The input array "arr" contains ASCII codes. 
+- Your function should compute all possible combinations of Roman numerals that can be made from these ASCII codes, and return the maximum value M that can be formed. 
+- The Roman numerals for [73, 88, 86] are [I, X, V]. 
+- X is the largest numeral and it must come first (at position arr[0]). Therefore, there are two possible combinations: [X, I, V] and [X, V, I]. 
+- The first combination gives 14 and the second 16 so the maximum value M is 16.

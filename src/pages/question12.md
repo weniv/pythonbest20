@@ -1,34 +1,34 @@
 - info
     - lv3
-    - 순열 | 완전탐색
+    - Permutations | Brute-force
 
-# 마라탕 많이 먹기
-![소울곰이 흠모하는 마라탕](./12_1.webp)
+# Eat More Spicy Hot Pot
+![Soul Bear's favorite food: Spicy Hot Pot](./12_1.webp)
 
-## 문제 설명
-NPC 소울곰은 영혼을 가지면서 인간이 먹는 음식을 먹을 수 있게 되었습니다. 소울곰은 평소에 흠모하던 마라탕 가게에 방문하려 합니다. 소울곰은 얼마나 먹어야 하는지 모르고, 광산에서 자주 나올 수도 없기 때문에 최대한 많은 양의 재료를 먹고 싶습니다. 하지만 마라탕 가게의 재료는 정해진 개수로만 고를 수 있습니다.
+## Problem Description
+NPC Soul Bear gained a soul and can now eat human food. He wants to visit his favorite Spicy Hot Pot restaurant. However, he doesn't know how much he should eat, and he may not be able to visit the mine frequently, so he wants to eat as much ingredient as possible.
 
-마라탕의 재료는 아래와 같으며, 재료당 넣을 수 있는 재료의 개수 배열이 주어집니다.
+The ingredients for Spicy Hot Pot are given below, and the number of ingredients that can be added per each ingredient is given in an array.
 
 ```text
-[두부, 버섯, 당면, 숙주, 청경채, 배추, 감자, 고기]
+[Tofu, Mushrooms, Vermicelli, Bean Sprouts, Chinese Chives, Cabbage, Potatoes, Meat]
 ```
 
-인접한 재료끼리는 상성이 좋지 않아 함께 넣을 수 없습니다. 소울곰이 최대한 많이 담을 수 있는 재료의 양을 출력하세요.
+Adjacent ingredients cannot be put together because they don't complement each other. Print out the maximum amount of ingredients that Soul Bear can take.
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 재료 배열은 항상 8개로 고정입니다.
-- 각 재료의 최대로 가져갈 수 있는 개수는 배열 안에 숫자로 표시됩니다. `[1, 2, 3, 4, 10, 20, 30, 40]`이라면 두부는 1개, 버섯은 2개, 당면은 3개, 숙주는 4개 청경채는 10개, 배추는 20개, 감자는 30개, 고기는 40개입니다.
-- 마라탕에 넣을 수 있는 재료는 1개 이상 1,000,000개 이하의 정수입니다.
+ - The array of ingredients is always fixed at 8. 
+ - The maximum number of ingredients that can be taken for each type of ingredient is displayed as a number in an array. For example, `[1, 2, 3, 4, 10, 20, 30, 40]` means that 1 block of tofu, 2 mushrooms, 3 servings of vermicelli, 4 servings of bean sprouts, 10 Chinese chives, 20 cabbage leaves, 30 potato slices, and 40 pieces of meat can be taken. 
+ - The number of ingredients that can be put into the Spicy Hot Pot is an integer between 1 and 1,000,000.
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-| 입력 | 출력 |
+| Input | Output |
 | --- | --- |
 | [2, 4, 1, 3, 5, 8, 8, 6] | 21 |
 | [10, 2, 5, 2, 7, 9, 3, 5] | 29 |
@@ -36,10 +36,10 @@ NPC 소울곰은 영혼을 가지면서 인간이 먹는 음식을 먹을 수 �
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-마라탕 재료의 개수가 담긴 배열 `[2, 4, 1, 3, 5, 8, 8, 6]`을 입력받습니다.
+An array of the number of Spicy Hot Pot ingredients, `[2, 4, 1, 3, 5, 8, 8, 6]`, is given as input.
 
-재료 두부 2개를 담았다고 했을 때 인접한 4는 재료로 넣을 수 없습니다. 한 칸을 건너뛰고 1을 더합니다. 여기서 1을 더하는 것이 좋을지, 그다음 숫자인 3을 더하는 것이 좋을지, 5를 더하는 것이 좋을지는 더해진 수의 최댓값으로 비교해야 합니다.
+If you take 2 blocks of Tofu, it cannot be followed by an adjacent 4, which is another Tofu. Therefore, skip one and add 1 to the next number. This process should be repeated and the maximum value obtained should be compared to get the maximum sum of the ingredients.
 
-2로 시작했을 때 최대로 출력할 수 있는 값은 19(2+3+8+6)입니다. 그런데 처음에 4로 시작하면 21(4+3+8+6)을 얻을 수 있습니다. 따라서 답은 21이 됩니다.
+The maximum value that can be obtained when starting with 2 is 19 (2+3+8+6). However, if you start with 4, you can get 21 (4+3+8+6). Therefore, the answer is 21.

@@ -1,46 +1,47 @@
 - info
     - lv1
-    - 요구사항 구현
+    - Implementation
 
-# 냥이족 종류를 정리하라냥
-![혁명의 일 대책회의하는 냥이족](./18_1.webp)
+# Organize Cat Breeds meow
+![Meeting of the Cat Tribe](./18_1.webp)
 
-## 문제 설명
-혁명의 일이 다가옴에 따라 라이캣은 동족의 역할을 정하기 위해 동족의 종류를 정리하려고 합니다. 지역별로 고양이 종을 취합한 데이터를 한데 모아 가장 많은 수의 종부터 내림차순으로 정리하려 합니다.
+## Problem Description
+Organize the Types of Feline Species As the revolution approaches, Laikat is trying to organize types of feline species to determine the roles of fellow creatures. He wants to collect data of cat breeds by region and sort them in descending order by the most number of types. 
 
-냥이족 종은 다음과 같습니다.
+The feline species are as follows.
 
 ```text
-코리안숏헤어, 브리티시숏헤어, 메인쿤, 스핑크스, 벵갈, 노르웨이숲
+Korean short hair, British short hair, Maine Coon, Sphynx, Bengal, Norwegian Forest
 ```
 
-지역별 데이터를 취합한 고양이의 종을 나타내는 문자열 배열과 그 수를 나타내는 정수 배열이 주어질 때, 가장 많은 수의 종부터 순서대로 출력하세요.
----
-
-## 제한 사항
-
-- 종을 나타내는 배열과, 수를 나타내는 배열의 길이는 같습니다.
-- 두 배열 모두 길이가 1 이상 10,000 이하입니다.
-- 같은 수의 종이 있다면 알파벳 순으로 정리합니다.
+Given a string array representing cat breeds collected by region and an integer array representing the numbers, print them in order from the most number of types in descending order.
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 종 배열 | 수 배열 | 출력 |
+- The length of the array representing the breed and the array for the number should be the same. 
+- Both arrays have a length between 1 and 10,000. 
+- If there are multiple breeds with the same number, they are sorted in alphabetical order.
+
+---
+
+## Input and Output Examples
+
+| breed array | number array | Output |
 | --- | --- | --- |
-| [”코리안숏헤어”, “코리안숏헤어”, “메인쿤”, “벵갈”, “메인쿤”, “브리티시숏헤어”, “노르웨이숲” ] | [30, 15, 13, 4, 45, 9, 21] | ["메인쿤", "코리안숏헤어",  "노르웨이숲", "브리티시숏헤어", "벵갈"] |
-| [”스핑크스”, “브리티시숏헤어”, “스핑크스”, “스핑크스”, “벵갈”, “메인쿤”] | [3, 16, 1, 9, 25, 5] | ["벵갈", "브리티시숏헤어", "스핑크스", "메인쿤"] |
-| [”메인쿤”, “코리안숏헤어”, “브리티시숏헤어”, “노르웨이숲”, “노르웨이숲”, “코리안숏헤어”, “코리안숏헤어”] | [8, 32, 15, 17, 12, 13, 31] | ["코리안숏헤어", "노르웨이숲", "브리티시숏헤어", "메인쿤"] |
+| [“Korean short hair“, “Korean short hair“, “Maine Coon”, “Bengal”, “Maine Coon”, “British short hair“, “Norwegian Forest” ] | [30, 15, 13, 4, 45, 9, 21] | ["Maine Coon", "Korean short hair",  "Norwegian Forest", "British short hair", "Bengal"] |
+| [”Sphynx”, “British short hair“, “Sphynx”, “Sphynx”, “Bengal”, “Maine Coon”] | [3, 16, 1, 9, 25, 5] | ["Bengal", "British short hair", "Sphynx", "Maine Coon"] |
+| [”Maine Coon”, “Korean short hair“, “British short hair”, “Norwegian Forest”, “Norwegian Forest”, “Korean short hair“, “Korean short hair“] | [8, 32, 15, 17, 12, 13, 31] | ["Korean short hair", "Norwegian Forest", "British short hair", "Maine Coon"] |
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-고양이의 종이 담긴 문자열 배열과 종류별 수가 담긴 숫자형 배열을 입력받습니다. 모든 정보를 취합했을 때 가장 많은 수를 가진 종부터 순서대로 출력합니다.
+Given arrays of strings representing cat breeds and arrays of numbers representing the number of breeds are input. Print them in order from the most number of types in descending order.
 
-1. `['스핑크스', '브리티시숏헤어', '스핑크스', '스핑크스', '벵갈', '메인쿤']`종배열과  `[3, 16, 1, 9, 25, 5]`수 배열이 입력됩니다.
-2. 수 배열 중에 가장 큰 수는 25로 이는 ‘벵갈’에 매핑됩니다. 따라서 가장 먼저 벵갈이 앞으로 오게 됩니다. 
-3. 그다음 큰 수는 16이며 이는 ‘브리티시숏헤어’에 매핑됩니다. 따라서 벵갈 다음에는 ‘브리티시숏헤어’가 옵니다. 
-4. 스핑크스는 3개 입력이 되었습니다. 3과 1과 9입니다. 이 숫자를 다 더하면 13으로 브리티시숏헤어의 16보다 숫자가 작습니다. 따라서 현재까지 `[’벵갈’, ‘브리티시숏페어’, ‘스핑크스’]`입니다. 
-5. 마지막으로 메인쿤은 5로 가장 뒤로 갑니다.
+1. Input the breed array ['Sphinx', 'British Short Hair', 'Sphinx', 'Sphinx', 'Bengal', 'Maine Coon'] and the number array [3, 16, 1, 9, 25, 5]. 
+2. The largest number in the number array is 25, which is mapped to 'Bengal'. Therefore, Bengal is first in order. 
+3. The second largest number is 16, which is mapped to 'British Short Hair'. Therefore, next after Bengal is 'British Short Hair'. 
+4. Sphinx has 3 entries. 3, 1, and 9 are the numbers for them. The sum of these numbers is 13, which is smaller than the 16 for British Short Hair. Therefore, currently, ['Bengal', 'British Short Hair', 'Sphinx']. 
+5. Last but not least, Maine Coon goes last since it is 5.

@@ -1,42 +1,42 @@
 - info
     - lv1
-    - 그리디
+    - Greedy
 
-# (라이캣의 꿈-2) 리치를 무찌르자!
-![해골왕 리치와 결투를 벌이는 캣](./19_1.webp)
+# (Licat's Dream-2) Defeat the Lich!
+![Licat battling the Lich](./19_1.webp)
 
-## 문제 설명
-해골섬 주변에서 물고기를 잡던 캣은 거친 비바람을 만났습니다.
+## Problem Description
+While catching fish near Skeleton Island, a cat encounters a fierce storm.
 
-" 비바람이 너무 세서 집에 갈 수가 없다냥….
+" The storm is too strong to go home, meow...
 
-캣은 해골섬 해변에 배를 정박하고 하룻밤을 묵을 장소를 찾기 위해 해골섬 이곳저곳을 탐험하기 시작합니다. 해골섬에는 특이하게 여러 조각상이 널브러져 있었습니다. 그때 어디선가 스산한 목소리가 들려왔습니다.
+The cat anchors the ship on Skeleton Island beach and begins to explore the island in search of a place to stay for the night. There were various statues scattered around Skeleton Island. Then, a muffled voice was heard from somewhere.
 
-" 누구냐, 산 자가 도달할 수 없는 곳에 도달한 자는…? 흥미롭구나, 꿈으로부터 도달하다니.
+" Who are you? The one who came to a place where a visitor cannot reach...? Interesting, coming from a dream.
 
-안갯속에서 망토를 입은 해골 한 마리가 둥둥 떠 다가왔습니다. 캣은 전설 하나가 기억났습니다. 오래전에, 신에 저주받은 리치가 해골섬에 갇혀있으며 자신에 영역을 침범하는 고양이를 산 채로 돌로 만들어버린다는 전설이었습니다. 
+A skull with a cloak floated up from the water. The cat remembered a legend. Long ago, a cursed Lich was trapped on Skeleton Island and turned any cat that trespassed on his territory into stone. 
 
-" 산자가 들어올 수 없는 이곳에 들어온 욕심쟁이에게 욕심쟁이 문제를 내마. 이것을 풀면 저주이자 선물을 내리겠노라.
+" I'll give you a greed problem since you've come to a place where visitors cannot enter. If you solve this, it will be a curse and a gift.
  
-리치는 알 수 없는 소리를 하며 주문을 외웠습니다.
+The Lich uttered an unknown spell.
 
-" 너의 물고기 주머니에 마법을 걸었으니 이제 그 속에서 무한정 물고기를 꺼낼 수 있다. 나는 무게 K를 제시할 테니, 무게 K를 정확히 만족하는 최소 물고기 수를 답하라
+" I put a spell on your fish bag, so you can endlessly pull out fish from it. I'll give you an exact weight K. Tell me the minimum number of fish that can meet the weight K.
 
-물고기들의 무게를 담은 배열이 주어질 때, 이를 조합하여 K를 만들 수 있는 최소의 물고기의 수를 구하세요.
-
----
-
-## 제한 사항
-
-- 배열 안에 들어있는 숫자는 1 이상 100 이하입니다.
-- 1 < K < 1000
-- 물고기는 중복이 가능합니다.
+Given an array containing the weights of the fish, find the minimum number of fish that can be combined to create the weight K.
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 무게                                  | K | 출력  |
+- The numbers in the array are between 1 and 100. 
+- 1 < K < 1000 
+- Fish can be duplicated.
+
+---
+
+## Input and Output Examples
+
+| Weight                                  | K | Output  |
 | ---------------------------------------- | ------- | ------- |
 | [45, 5, 3, 15] | 100 | 4 |
 | [6, 2, 4, 8, 32] | 50 | 4 |
@@ -44,6 +44,6 @@
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-물고기의 무게가 담긴 배열을 입력받습니다. `[45, 5, 3, 15]`을 입력받는다면 100을 만족하는 무게는 45, 45, 5, 5로 최소의 물고기는 4마리입니다.
+Given an array of fish weights, if we have [45, 5, 3, 15] and K is 100, the minimum number of fish required to meet the weight is 4 with 45, 45, 5, and 5.

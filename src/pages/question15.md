@@ -1,22 +1,22 @@
 - info
     - lv2
-    - 행렬
+    - matrix
 
-# 귤 판매하기
-![알리의 귤농장](./15-1.webp)
+# Sell Oranges
+![Ali's Orange Farm](./15-1.webp)
 
-## 문제 설명
-데이터 분석가 알리는 평화가 찾아온 개굴 마을에 귤을 나눠주기 위해 귤 농장도 가꿨습니다. 첫 수확에 시기가 찾아왔고 기쁜 마음으로 귤을 따게 되었습니다.
+## Problem Description
+Data analyst Ali has turned his orange farm into a citrus farm to give away oranges to the peaceful frog town. The time for the first harvest has come and the oranges are picked with joy.
 
-딴 귤은 주문 일자가 되기 전까지 한 박스에 모아서 보관하는데, 익은 귤은 성장호르몬을 내뿜어 인접한 귤에 영향을 주어 익게 만들거나 썩게 만듭니다. 
+The gathered oranges are kept in one box until the order date. Ripe oranges emit growth hormone that makes adjacent oranges ripe or rotten.
 
-" 알리는 귤을 몇 개나 팔 수 있을까?
+" How many oranges can Ali sell?
 
-인접한 귤은 위, 아래, 양옆 네 방향을 의미하며, 대각선 방향의 귤에는 영향을 주지 않습니다. 인접한 귤이 익지 않은 귤 일 경우 익게 만들고, 익은 귤일 경우 두 귤 모두 썩게 만듭니다. 이때, 걸리는 시간은 두 경우 모두 하루입니다.
+Adjacent oranges mean the top, bottom, left, and right directions, and the diagonal oranges do not affect adjacent oranges. If an adjacent orange is not ripe, it will become ripe, and if it is ripe, both oranges will rot. In this case, it takes a day in both cases.
 
-익은 귤만 판매할 수 있다고 할 때, k일 후에, 상자에 판매할 수 있는 귤의 총합을 구하세요. 판매할 수 있는 귤이 없다면 -1을 출력하세요.
+Suppose that only ripe oranges can be sold, find the total number of oranges that can be sold in k days from the harvest day. If no oranges can be sold, print -1.
 
-아래 표가 귤 상자이며 각 칸은 귤의 상태를 나타낸다고 했을 때, 1은 익은 귤, 0은 익지 않은 귤, -1은 썩은 귤을 뜻합니다. 귤 주문 일자는 3일 후입니다.
+The orange box below represents the orange status. 1 means ripe oranges, 0 means unripe oranges, and -1 means rotten oranges. The order date for oranges is three days away.
 
 |  | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
@@ -26,7 +26,7 @@
 | 4 | 0 | 0 | 0 | 0 | 0 |
 | 5 | 0 | 0 | 0 | 0 | 0 |
 
-1일 후 익은 귤 [1, 1] 귤과 맞닿아 있던 익지 않은 귤 [1, 2]와 [2, 1] 귤이 익은 귤로 변했습니다.
+One day later, the unripe oranges [1, 2] and [2, 1] associated with the oranges that ripened [1, 1] became ripe oranges as shown below.
 
 |  | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@
 | 4 | 0 | 0 | 0 | 0 | 0 |
 | 5 | 0 | 0 | 0 | 0 | 0 |
 
-2일 후 익은 귤과 맞닿아 있던, 익은 귤 [1, 1], [1, 2], [2, 1] 귤이 썩은 귤로 변하고, 익지 않은 귤 [1, 3], [2, 2], [3, 1] 귤이 익은 귤로 변했습니다.
+On the second day, the ripened oranges [1, 1], [1, 2], and [2, 1] died, and the unripened oranges [1, 3], [2, 2], [3, 1] turned into ripe oranges.
 
 |  | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
@@ -46,7 +46,7 @@
 | 4 | 0 | 0 | 0 | 0 | 0 |
 | 5 | 0 | 0 | 0 | 0 | 0 |
 
-3일 후 익은 귤과 맞닿아 있던 [1, 4], [2, 3], [3, 2], [4, 1] 귤이 익은 귤로 변해 알리가 판매할 수 있는 귤의 개수는 7개가 되었습니다.
+The oranges [1, 4], [2, 3], [3, 2], and [4, 1] that were adjacent to the ripe oranges turned into ripe oranges three days later, and the number of oranges that Ali can sell is increased to 7.
 
 |  | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
@@ -58,20 +58,20 @@
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 1 ≤ n, m(상자의 크기 가로, 세로) ≤ 100
-- 1 ≤ k(일) ≤ 10
-- 귤 상자는 2차원 배열로 주어집니다.
-- 대각선 방향의 귤은 영향을 끼치지 않습니다.
-- 0은 익지 않은 귤, 1은 익은 귤, -1은 썩은 귤을 뜻합니다.
-- 이미 썩은 귤은 다른 귤에 아무 영향을 주지 않습니다.
+- 1 ≤ n, m (the size of the box in width, height) ≤ 100 
+- 1 ≤ k(days) ≤ 10 
+- The orange box is given as a two-dimensional array. 
+- The oranges in the diagonal direction do not interfere. 
+- 0 means unripe oranges, 1 means ripe oranges, and -1 means rotten oranges. 
+- Rotten oranges have no effect on other oranges.
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-| n, m, k | 귤 상태 | 출력 |
+| n, m, k | Status of the oranges | Output |
 | --- | --- | --- |
 | 5, 5, 3 | [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] | 7 |
 | 7, 5, 4 | [[0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] | 2 |
@@ -79,13 +79,13 @@
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-상자의 크기를 나타내는 두 정수 n, m, 귤을 보관하는 일수인 k와 귤의 상태를 나타내는 2차원 배열이 입력됩니다. n * m의 귤을 k일 후에 판매할 때, 판매할 수 있는 귤의 총합을 출력합니다.
+n, m, k orange status output Explanations for Input and Output Two integers n and m, a number k indicating the duration of orange preservation, and a two-dimensional array indicating orange status are entered. When n * m oranges are sold after k days, the total number of oranges that can be sold is output.
 
-예를 들어 [4, 3, 2]가 입력되었다고 했을 때 변화는 아래와 같이 일어나게 됩니다.
+For example, if [4, 3, 2] is input, the changes are as follows.
 
-0일차
+Day 0
 
 |  | 1 | 2 | 3 | 4 |
 | --- | --- | --- | --- | --- |
@@ -93,7 +93,7 @@
 | 2 | 0 | 1 | 0 | 0 |
 | 3 | 0 | 0 | 0 | 0 |
 
-1일차
+Day 1
 
 |  | 1 | 2 | 3 | 4 |
 | --- | --- | --- | --- | --- |
@@ -101,7 +101,7 @@
 | 2 | 1 | 1 | 1 | 0 |
 | 3 | 0 | 1 | 0 | 0 |
 
-2일차
+Day 2
 
 |  | 1 | 2 | 3 | 4 |
 | --- | --- | --- | --- | --- |
@@ -109,4 +109,4 @@
 | 2 | -1 | -1 | -1 | 1 |
 | 3 | 1 | -1 | 1 | 0 |
 
-2일 차 익은 귤(1)의 총합은 5입니다.
+The total number of ripe oranges (1) on the second day is 5.

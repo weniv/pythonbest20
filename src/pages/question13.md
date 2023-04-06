@@ -1,30 +1,30 @@
 - info
     - lv1
-    - 힙
+    - Heap
 
-# 비행정 탑승
-![몸무게 측정 중인 라이캣](./13_1.webp)
+# Boarding the Flight
+![Measuring the weight of a Licat](./13_1.webp)
 
-## 문제 설명
-라이켓은 출정 명령을 내립니다. 각 지역에서 세력을 모았던 라이켓의 동료들은 각 지역에서 비행정을 타고 라이언 타운으로 향합니다. 이 비행정은 최소 무게 제한 K가 존재합니다.
+## Problem Description
+Licat has given the order to embark. Licat's colleagues, who gathered their strengths in each region, are heading to Lyon Town through each region. This flight has a minimum weight limit K.
 
-동료가 K 이상의 몸무게를 가졌다면 비행정에는 혼자 탑승해야 합니다. 체중이 K 이하인 친구들은 서로의 몸무게를 모두 더하여 K 이상이 되면 인원에 상관없이 1개의 비행정에 탑승할 수 있습니다.
+If a colleague weighs over K, they must ride alone on the flight. If their weight is K or less, they can board a flight together if their total weight is K or more, regardless of the number of people.
 
-라이캣은 동료들이 보다 넉넉한 공간에서 쉼을 취하며 올라오기를 원했어요. 동료의 몸무게를 담은 배열이 주어질 때, 모든 사람이 비행정에 탑승하기 위해 필요한 최대 비행정 개수를 구하세요.
-
----
-
-## 제한 사항
-
-- 친구들의 몸무게는 1 이상 100 이하의 정수입니다.
-- K는 0 이상 50 이하의 정수입니다.
-- 만약 아무도 비행정에 탑승할 수 없다면 -1을 출력하세요.
+Licat wanted his colleagues to rest in a more spacious place and then come up. Given an array containing the weight of his colleagues, find the maximum number of flights needed for everyone to board the flight.
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 몸무게                                  | K | 출력 |
+- The weight of colleagues is an integer between 1 and 100, inclusive. 
+- K is an integer between 0 and 50, inclusive. 
+- If no one can board the flight, print -1.
+
+---
+
+## Input and Output Examples
+
+| Weight                                  | K | Output |
 | ---------------------------------------- | ------- |
 | [46, 26, 37, 32, 10] | 30 | 4 |
 | [22, 45, 1, 7, 5] | 15 | 2 |
@@ -32,6 +32,6 @@
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-`[46, 26, 37, 32, 10]`의 배열이 주어지고 K가 30이기에 46, 37, 32는 혼자 탈 수 있습니다. 남은 10과 26을 더했을 때 30이 넘기 때문에 둘이 함께 탈 수 있습니다. 만약 두 개를 더했을 때 30이 넘지 않으면 다른 분과 함께 비행정에 탑승해야 합니다.
+`[46, 26, 37, 32, 10]` and K = 30, 46, 37, and 32 can ride alone on a flight. Since 10 and 26 sum up to more than 30, they can ride together on a flight. If the sum of two weights is less than 30, they must ride with another colleague.

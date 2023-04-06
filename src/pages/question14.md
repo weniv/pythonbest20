@@ -2,32 +2,32 @@
     - lv1
     - DFS/BFS
 
-# (라이캣의 꿈-1) 출항 준비!
-![해골섬으로 출항하는 캣](./14_1.webp)
+# (Licat's Dream-1) Get ready to sail!
+![Licat Sailing to Skull Island](./14_1.webp)
 
-## 문제 설명
-라이캣은 과거 사자탈을 쓰기 이전 해골섬 출항 꿈을 꾸었습니다.
+## Problem Description
+Licat had a dream of sailing to Skull Island before he wore his lion disguise.
 
-캣은 매일 물고기를 잡기 위해 해골섬으로 향합니다. 해골섬은 위니브 월드에서 가장 물고기가 많이 잡히는 곳이지만, 그만큼 암초도 많고 안개도 자욱해서 위험한 곳으로 알려져 있습니다. 매일 아침 위니브 뉴스에서 안개가 걷히는 지역에 대한 정보를 전달하고 있습니다. 캣은 매일 아침 뉴스를 통해 지도를 확인하고 물고기를 잡기 위한 계획을 세웁니다.
+Every day, he sails to Skull Island to catch fish. Skull Island is known to be the place with the most fish caught in Weniv World, but there are many reefs and fog, making it a dangerous place. Every morning, Weniv News provides information on areas where the fog is lifting. Licat checks the map through the news and makes a plan to catch fish.
 
-" “오늘은 얼마나 잡힐까냥?”
+" “How many fish will I catch today?”
 
-해골섬의 지도는 n x m 크기로 1 x 1 크기의 격자로 이뤄져 있습니다. 지도의 바깥은 안개가 자욱하기 때문에 나갈 수 없으며, 상하좌우 인접한 칸으로만 이동할 수 있습니다. 각 칸에는 숫자와 ‘#’이 표시됩니다. 숫자는 해당 칸에서 잡을 수 있는 물고기의 수를 나타내며, 캣이 자유롭게 이동할 수 있습니다. ‘#’으로 표시된 곳은 암초가 있어서 지나갈 수 없습니다. 
+Skull Island's map is a grid with a size of n x m, with a grid size of 1 x 1. The outside of the map cannot be accessed because of the dense fog, and only adjacent squares can be moved in up, down, left, and right directions. Each square displays a number and a '#'. The number represents the number of fish that can be caught in that square, and Lei Cat can move freely. '#' indicates a reef and cannot be passed. 
 
-캣은 (1, 1)에서 출발하여 (n, m)의 출구로 이동하며 최대한 많은 수의 물고기를 잡으려고 합니다. 지도 정보가 주어질 때, 캣이 이동하며 잡을 수 있는 모든 생선의 수를 반환하는 함수를 작성해주세요. 만약 (1, 1)에서 (n, m)까지 경로가 없는 경우에는 -1을 반환합니다.
+Licat starts from (1,1) and moves to the exit of (n,m), trying to catch as many fish as possible. Given the map information, please write a function that returns the total number of fish Lei Cat can catch as he moves. If there is no path from (1,1) to (n,m), return -1.
 
 ---
 
-## 제한 사항
-- 지도는 n x m 크기의 2차원 배열로, ‘#’ 또는 0 이상의 정수로 이뤄져 있습니다.
-  - ‘#’은 암초로 지나갈 수 없습니다.
-  - 0 이상의 정수는 이동할 수 있는 바다를 뜻하며, 잡을 수 있는 물고기의 수를 의미합니다. 
+## Constraints
+- The map is a 2D array of n x m, consisting of '#' or an integer greater than or equal to 0. 
+  - '#' indicates a reef and cannot be passed. 
+  - An integer greater than or equal to 0 represents a sea that can be moved, representing the number of fish that can be caught. 
 - 2 ≤ n, m ≤ 1,000
 
 ---
 
-## 입출력 예
-| 입력 | 출력 |
+## Input and Output Examples
+| Input | Output |
 | --- | --- |
 | [[1, 3, ‘#’], [0, ‘#’, 2], [0, 1, 1]] | 8 |
 | [[0, ‘#’, 1, 0], [2, 1, 1, 2], [’#’, 3, 0, 1], [1, ‘#’, ‘#’, 3], [0, 2, ‘#’, 1]] | 15 |
@@ -35,6 +35,6 @@
 
 ---
 
-## 입출력 설명
-- 방문할 수 있는 경로 내에 있는 모든 물고기 수의 합을 구합니다.
-- (1, 1)부터 (n, m)까지 경로가 없는 경우에는 -1을 반환합니다.
+## Explanation for Input and Output
+- Find the sum of all fish that can be caught in the path that can be visited. 
+- If there is no path from (1,1) to (n,m), return -1.
