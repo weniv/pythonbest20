@@ -1,44 +1,44 @@
 - info
     - lv2
-    - 정렬
+    - sorting
 
-# 빙키의 당근 케이크
-![당근 케이크를 든 빙키](./20_1.webp)
+# Binky's Carrot Cake
+![Binky with Carrot Cake](./20_1.webp)
 
-## 문제 설명
-열심히 밭에서 상한 당근을 골라낸 빙키는 고생한 동료들을 위해 맛있는 당근 케이크를 만들려고 합니다. 
+## Problem Description
+Binky has selected some carrots that are no longer fresh and wants to create a delicious carrot cake for his hard-working colleagues.
 
-1. 재료별 이름, 가격, 우선순위를 담고 있는 배열과 빙키가 가지고 있는 돈이 주어집니다. 
-2. 예산 내에서 우선순위대로 구매해야 합니다. 
+1. An array is given that contains the name, price, and priority of each ingredient. 
+2. Binky's budget is also given. Within budget, the ingredients must be purchased in order of priority.
 
-예산 내에서 구매할 수 있는 재료를 출력하는 solution 함수를 작성하세요.
-
----
-
-## 제한 사항
-
-- 1 ≤ 재료의 개수 ≤ 10
-- 1 ≤ 재료의 가격 ≤ 10000
-- 1 ≤ 우선순위 ≤ 10
-- 우선순위는 중복되지 않습니다.
-- 재료는 중복되지 않습니다.
+Please write a function `solution` which prints the ingredients that can be purchased within budget.
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 재료 정보 | 예산 | 출력  |
+- 1 ≤ number of ingredients ≤ 10 
+- 1 ≤ price of each ingredient ≤ 10000 
+- 1 ≤ priority ≤ 10 
+- Priorities will not be duplicated. 
+- Ingredients will not be duplicated.
+
+---
+
+## Input and Output Examples
+
+| Information for Ingredients | Budget | Output  |
 |-------------------- |---- | ----- |
-| [['딸기', '생크림', '밀가루', '버터'], [15, 8, 4, 20], [4, 3, 2, 1]] | 40 | ['버터', '밀가루', '생크림'] |
-| [['우유', '계란', '버터', '초콜릿 시나몬', '파인애플', '생크림'], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]] | 10 | ['우유'] |
-| [['딸기', '우유', '버터', '초콜릿 시나몬', '청포도', '생크림'], [120, 150, 130, 118, 126, 130], [6, 5, 4, 3, 2, 1]] | 100 | [] |
+| [['strawberry', 'cream', 'flour', 'butter'], [15, 8, 4, 20], [4, 3, 2, 1]] | 40 | ['butter', 'flour', 'cream'] |
+| [['milk', 'egg', 'butter', 'chocolate cinnamon', 'pineapple', 'cream'], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]] | 10 | ['milk'] |
+| [['strawberry', 'milk', 'butter', 'chocolate cinnamon', 'grapefruit', 'cream'], [120, 150, 130, 118, 126, 130], [6, 5, 4, 3, 2, 1]] | 100 | [] |
 
 ---
 
-## 입출력 설명
+## Explanation for Input and Output
 
-각 재료의 이름, 가격, 우선순위를 순서대로 담고 있는 2차원 배열과 예산 n을 입력받습니다.
+The function takes two inputs: 1. A 2D array that contains the name, price, and priority of ingredients. 2. The budget that Binky has to spend.
 
-예산 내에서 우선순위대로 구매 가능한 재료를 배열로 반환합니다.
+The function should return an array of ingredients that can be purchased in order of priority.
 
-예를 들어, `[['우유', '계란', '버터', '초콜릿 시나몬', '파인애플', '생크림'], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]]`과 예산 10이 주어졌다고 해보겠습니다. 재료를 우선순위대로 나열하면 `['우유', '버터', '계란', '초콜릿 시나몬', '파인애플', '생크림']`입니다. 주어진 예산 10 내에서는 가격 10의 우유밖에 사지 못하므로 결괏값으로 `['우유']`를 출력하게 됩니다.
+For example, let's say the following inputs are given: [['milk', 'egg', 'butter', 'chocolate cinnamon', 'pineapple', 'cream'], [10, 5, 5, 18, 6, 3], [1, 3, 2, 4, 5, 6]] and 10. If we arrange the ingredients in order of priority, we get ['milk', 'butter', 'egg', 'chocolate cinnamon', 'pineapple', 'cream']. Since only milk, which costs 10, can be purchased within the given budget of 10, the function should print ['milk'].
