@@ -1,63 +1,55 @@
 - info
     - lv0
-    - 요구사항 구현
+    - Implementation
 
-# 자격 증명
-![제왕의 문](./1_1.webp)
+# Proof of Qualification
+![The King's Gate](./1_1.webp)
 
-## 문제 설명
-" 왕좌에 앉으려는 자! 자격을 증명하라!
+## Problem Description
+" Those who seek to sit on the throne! Prove your qualification!
 
-알고리즘 왕좌에 앉으려는 자는 자격을 증명해야 합니다. 만약 이 테스트를 '스스로' 통과하지 못한다면, 기본 문법을 다시 공부하고 와야 합니다. 앞으로 이보다 쉬운 문제는 없으니까요.
+Those who want to sit on the throne of algorithms must prove their qualification. If you cannot pass this test 'on your own,' you must review basic syntax and come back. There will be no easier problem than this one in the future.
 
-파이와 썬은 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 세계 어딘가에 숨겨두었다 공표하였습니다. 험난한 시련을 딛고 일어선 자만 이 시험을 통과할 수 있도록 설계되었습니다. 그가 남긴 문자는 아래와 같습니다.
+Pie and Sun have hidden the algorithm 7 stones that can decipher any algorithm somewhere in the world, and have announced it. It is designed so that only those who have overcome the harsh trials can pass this test. The text he left behind is as follows.
 
 ```py
-자격을 얻으려는 자! 이곳으로 향하라!
+Those who seek to qualify! Head this way!
 
 "  + +-+ -+-  "
 "  ++ -- +-+  "
 "  ++-+ -+ -  "
 "  + ++-+ -+  "
 
-해(1)와 달(0),
-Code의 세상 안으로! (En-Coding)
+Sun(1) and Moon(0),
+Into the world of Code! (En-Coding)
 ```
 
-![코딩의 제왕 파이와 썬](./1_2.webp)
+![The King of Coding, Pie and Sun](./1_2.webp)
 
-주어진 문자열을 1과 0으로 바꾸고 아스키 코드표 안에 문자로 바꾸세요.
-
----
-
-## 제한 사항
-
-- 65 ≤ 주어진 숫자 ≤ 122
-- 문자열은 `+`, `-`, `공백` 외에는 주어지지 않습니다.
-- 각각의 문자열은 1차원 리스트로 주어집니다.
-- 공백은 주어질 수도 있고, 주어지지 않을 수도 있습니다.
+Convert the given string to 1s and 0s and convert them into characters within the ASCII code table.
 
 ---
 
-## 입출력 예
+## Constraints
 
-|   입력    | 출력 |
+- 65 ≤ the given number ≤ 122
+- The string will not contain anything other than `+`, `-`, and `space`.
+- Each string will be given as a one-dimensional list.
+- The space may or may not be given.
+
+---
+
+## Input and Output Examples
+
+|  Input	|  Output  |
 | --------- | ------ |
-| ['  + - - + - + -  ', '  + + + - + - +  ', '  + + - + + + -  '] | 'Jun'    |
-| ['  + + + - - + +  ', '  + + + - + - -  ', '++----+', '+++ --+ -', '+++-+ - -'] | 'start'    |
-| ['  + + - - - - +  ', '  + + - + + - -  ', '+ +-- +++  ', '  ++- ++++'] | 'algo'    |
+| [' + - - + - + - ', ' + + + - + - + ', ' + + - + + + - ']	| 'Jun' |
+| [' + + + - - + + ', ' + + + - + - - ', '++----+', '+++ --+ -', '+++-+ - -']	| 'start' |
+| [' + + - - - - + ', ' + + - + + - - ', '+ +-- +++ ', ' ++- ++++']	| 'algo' |
 
 ---
 
-## 입출력 설명
-  `+`는 `1`로, `-`는 `0`으로 변경되어 ' + - - + - + - '는 1001010이 됩니다. 이 숫자는 10진수로 74로 아스키코드로 바뀌었을 때 74로 아스키 코드표로 보면 대문자 J가 됩니다. 이와 같은 원리로 나머지 2개를 문자로 바꿔 조합하면 'Jun'이 됩니다.
+## Explanation
+The `+` becomes `1`, and the `-` becomes `0`, so ' + - - + - + - ' becomes 1001010. When this number is converted to decimal, it becomes 74. In the ASCII code table, 74 represents the uppercase letter J. By converting the other two strings in the same way and combining them, we get 'Jun.'
 
 ---
-
-## 스토리북 및 강의 소개
-
-"위니브 월드 : 새로운 시대" 스토리는 python 부트캠프, 눈떠보니 코딩테스트 전날, PyQt, Pygame, Save the Weniv World with Phaser로 이어지는 강의 스토리를 엮은 대서사시입니다. Notion 링크 [스토리 북](https://paullabworkspace.notion.site/08e6e80957d94459adeff743cbde9659)에서 읽어보실 수 있습니다. 
-
-- 해당 문제를 손코딩으로 2~3번 풀어보시길 권해드립니다.
-- 문제 해설 강의는 인프런에 런칭 예정입니다.
-- 문제집은 전자책과 PDF로 무료 배포 예정입니다.

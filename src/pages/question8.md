@@ -1,27 +1,27 @@
 - info
     - lv0
-    - 수학
+    - Math
 
-# 무기 생산
-![대장간에서 무기를 사려는 개리](./8_1.webp)
+# Weapon Production
+![Gary buying weapons in the forge](./8_1.webp)
 
-## 문제 설명
-개리는 북극에 소울곰의 보석을 받아 돈으로 환전하여 무기를 준비하는 일을 하고 있습니다. 개리가 의뢰하는 대장간은 검 1자루에 3000원, 날카롭게 날을 세우면 300원이 추가됩니다. 단골이라 검 10자루당 날이 서지 않은 검 1자루, 100자루당 날이 선 검 1자루가 제공됩니다.
+## Problem Description
+Gary is preparing to buy weapons by exchanging the jewels of the soul bears he received in the Arctic for money. The blacksmith Gary is requesting offers swords for 3000 won per piece, and if he sharpens the blade, an additional 300 won is added. As a regular customer, one unsheathed sword is provided for every 10 swords, and one sharpened sword is provided for every 100 swords.
 
-무기 구매 예산이 주어졌을 때 개리가 구할 수 있는 날이 선 검은 몇 자루일까요?
-
----
-
-## 제한 사항
-
-- 무기 구매 예산은 항상 양수이며 100원 단위로 주어집니다.
-- 100 ≤ 무기 구매 예산 ≤ 1000000
+If the budget for buying weapons is given, how many sharpened swords can Gary buy?
 
 ---
 
-## 입출력 예
+## Constraints
 
-| 입력                                  | 출력  |
+- The budget for buying weapons is always a positive integer and given in multiples of 100.
+- 100 ≤ Budget  ≤ 1000000
+
+---
+
+## Input and Output Examples
+
+| Input                                  | Output  |
 | ---------------------------------------- | ------- |
 | 100 | 0 |
 | 36000 | 12 |
@@ -29,8 +29,8 @@
 
 ---
 
-## 입출력 설명
+## Explanation
 
-- 예산이 100원이면 검을 0자루 구매할 수 있습니다.
-- 예산이 36000원이면 3300원 * 11자루 + (서비스*1자루 + 300) = 33300원으로 날이 선 검 12자루 구매할 수 있습니다.
-- 예산이 66600원이면 3300 * 22자루 + (서비스*2자루 + 300*2) = 66600원으로 24자루 구매할 수 있습니다.
+- If the budget is 100 won, Gary can buy 0 swords.
+- If the budget is 36000 won, Gary can buy 12 sharpened swords with 11 unsheathed swords for 3300 won each plus one sharpened sword as a service and an additional 300 won.
+- If the budget is 66600 won, Gary can buy 24 sharpened swords with 22 unsheathed swords for 3300 won each plus two sharpened swords as a service and an additional 600 won.
