@@ -12,7 +12,7 @@ The gathered oranges are kept in one box until the order date. Ripe oranges emit
 
 " How many oranges can Ali sell?
 
-Adjacent oranges mean the top, bottom, left, and right directions, and the diagonal oranges do not affect adjacent oranges. If an adjacent orange is not ripe, it will become ripe, and if it is ripe, both oranges will rot. In this case, it takes a day in both cases.
+Adjacent oranges mean the top, bottom, left, and right directions, and diagonal oranges do not affect adjacent oranges. If an adjacent orange is not ripe, it will become ripe, and if it is ripe, both oranges will rot. In this case, it takes a day in both cases.
 
 Suppose that only ripe oranges can be sold, find the total number of oranges that can be sold in k days from the harvest day. If no oranges can be sold, print -1.
 
@@ -65,7 +65,7 @@ The oranges [1, 4], [2, 3], [3, 2], and [4, 1] that were adjacent to the ripe or
 - The orange box is given as a two-dimensional array. 
 - The oranges in the diagonal direction do not interfere. 
 - 0 means unripe oranges, 1 means ripe oranges, and -1 means rotten oranges. 
-- Rotten oranges have no effect on other oranges.
+- Rotten oranges do not affect on other oranges.
 
 ---
 

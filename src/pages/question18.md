@@ -6,7 +6,7 @@
 ![Meeting of the Cat Tribe](./18_1.webp)
 
 ## Problem Description
-Organize the Types of Feline Species As the revolution approaches, Laikat is trying to organize types of feline species to determine the roles of fellow creatures. He wants to collect data of cat breeds by region and sort them in descending order by the most number of types. 
+Organize the Types of Feline Species As the revolution approaches, Laikat is trying to organize types of feline species to determine the roles of fellow creatures. He wants to collect data on cat breeds by region and sort them in descending order by the most number of types. 
 
 The feline species are as follows.
 
@@ -43,5 +43,5 @@ Given arrays of strings representing cat breeds and arrays of numbers representi
 1. Input the breed array ['Sphinx', 'British Short Hair', 'Sphinx', 'Sphinx', 'Bengal', 'Maine Coon'] and the number array [3, 16, 1, 9, 25, 5]. 
 2. The largest number in the number array is 25, which is mapped to 'Bengal'. Therefore, Bengal is first in order. 
 3. The second largest number is 16, which is mapped to 'British Short Hair'. Therefore, next after Bengal is 'British Short Hair'. 
-4. Sphinx has 3 entries. 3, 1, and 9 are the numbers for them. The sum of these numbers is 13, which is smaller than the 16 for British Short Hair. Therefore, currently, ['Bengal', 'British Short Hair', 'Sphinx']. 
+4. Sphinx has 3 entries. 3, 1, and 9 are the numbers for them. The sum of these numbers is 13, which is smaller than 16 for British Short Hair. Therefore, currently, ['Bengal', 'British Short Hair', 'Sphinx']. 
 5. Last but not least, Maine Coon goes last since it is 5.

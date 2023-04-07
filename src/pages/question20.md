@@ -11,7 +11,7 @@ Binky has selected some carrots that are no longer fresh and wants to create a d
 1. An array is given that contains the name, price, and priority of each ingredient. 
 2. Binky's budget is also given. Within budget, the ingredients must be purchased in order of priority.
 
-Please write a function `solution` which prints the ingredients that can be purchased within budget.
+Please write a function `solution` that prints the ingredients that can be purchased within budget.
 
 ---
 

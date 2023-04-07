@@ -6,26 +6,26 @@
 ![Heoni spilled the latte](./11_1.webp)
 
 ## Problem Description
-Problem Description Mura, a bookkeeper, was organizing the revolutionary team in the notebook! Housemaid Heoni spilled the latte she was serving to Mura, which fell directly onto Mura's notebook.
+Mura, the bookkeeper, was forming a revolutionary team on her notebook! Butler Heoni spilled the latte she was serving to Mura, which fell directly onto Mura's notebook.
 
-Although the section that had written the entire structure was destroyed, the meticulous Mura had written a rough category access example in the book as follows.
+The part where the entire structure was written was destroyed, but meticulous mura wrote an example of a rough category approach in the book.
 
 ```py
-["Chief of Staff-Chief of Staff-Joint Chiefs of Staff", "Chief of Staff-Chief of Staff", "Joint Chiefs of Staff-Planning and Management Staff", "Joint Chiefs of Staff-Personnel Staff", "Joint Chiefs of Staff-Information and Operations Staff", "Chief of Staff-Chief of Staff-Logistics Staff", "Information and operations staff-Special Forces", "Information and operations staff-Instructor"]
+["Chief of Staff-Deputy Chief of Staff-Secretary's Office", "Chief of Staff-Deputy Chief of Staff", "Deputy Chief of Staff-Planning and Management Staff", "Deputy Chief of Staff-Personnel Staff", "Deputy Chief of Staff-Intelligence Operations Staff", "Chief of Staff-Deputy Chief of Staff-Military Staff", "Intelligence Operations Staff-Special Forces", "Intelligence Operations Staff-Educational Staff"]
 ```
 
 Clever Mura could reconstruct the category with only a few clues. Help her to configure it as follows based on these examples!
 
-```text
+```txt
 Chief of Staff
-  ├ Logistics Staff 
-  ├ Planning and Management Staff 
-  ├ Secretary 
-  ├ Personnel Staff 
-  ├ Information and Operations Staff 
-  │   ├ Instructor 
-  │   └ Special Forces 
-  └ Chief of Staff
+  └ Deputy Chief of Staff
+      ├ Secretary's Office
+      ├ Planning and Management Staff
+      ├ Personnel Staff
+      ├ Intelligence Operations Staff
+      │   ├ Special Forces
+      │   └ Educational Staff
+      └ Military Staff
 ```
 
 ---
@@ -33,7 +33,7 @@ Chief of Staff
 ## Constraints
 
 - Input is given as an array. 
-- Output consists of line breaks, spaces, and three special characters (├,│,└). 
+- The output consists of line breaks, spaces, and three special characters (├,│,└). 
 - Subdirectories are separated by "double space + special character + single space." 
 - If there are sub-directories in sub-directories, they should be separated by "double space + special character + single space" according to the starting character of the parent directory. 
 - Please sort each category in ascending order in the output. 
