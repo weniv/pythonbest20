@@ -1,50 +1,54 @@
 - info
     - lv1
-    - 정렬
+    - Sorting
 
-# 출정인원 선발
-![연설하는 자바독](./3_1.webp)
+# Selecting Personnel for Expedition
+![Javadog giving a speech](./3_1.webp)
 
-## 문제 설명
-자바독은 마을로 돌아왔습니다. 마을은 일할 수 있는 청장년들이 모두 차출되어 어린이와 청소년만 남아있는 기이한 풍경이었습니다. 자바독은 각 부족에 전서를 보내 라이언에게 충성하며 각종 험난한 SI 작업에 끌려다녀 수십 년간 제대로 된 식사 한 번 못 했던 특급 기술자들을 불러 모읍니다. 그리고 묵묵히 정성스레 저녁 식사를 대접합니다. 횟수가 반복될수록 특급기술자들의 마음이 열리게 되었습니다.
+## Problem Description
+Javadog has returned to the village. The village looks strange with only children and teenagers remaining, as all the capable young men have been called away to various SI tasks and cannot be spared. Javadog brings in the special engineers who have never had a decent meal for decades, being dragged around by various hazardous SI tasks, to prepare a lavish dinner for them. As the number of dinners increases, the hearts of the special engineers open up.
 
-자바독이 가진 스톤은 마인드 스톤! 자바독은 마인드 스톤을 통해 혁명이 일어난 후 30년, 50년 후 그들의 노후를 보여줬어요. 그리고 다음 자녀들의 미래를요.
+Javadog's stone is the Mind Stone! Through the Mind Stone, Javadog showed the aging of those who had undergone a revolution 30 to 50 years ago, and the future of their next generation.
 
-" 우리의 미래가 아니라, 우리 자녀들의 미래를 위해서!
+" Not for our future, but the future of our children!
 
-자바독은 능력자를 선별했습니다. 이미 고도로 단련된 특급 기술자! 그러나 희생을 최소화하기 위해 시험을 보기로 했습니다. 시험을 본 인원에 상위 30%만 전투에 참가하기로 결정했어요.
+Javadog selected talented individuals. Already highly trained special engineers! However, to minimize sacrifices, they decided to take an exam. Only the top 30% of those who took the exam would be selected for the expedition.
 
-" 아무도 나오지 않는다면, 아무도 출정하지 않는다독!
+
+" If no one comes out, no one will go out!
 
 ```py
 army = [['A', 25, 24, 11, 12], ['B', 13, 22, 16, 14]]
 ```
 
-각 입력값은 `이름, 체력, 정신력, 기술력, 방어력`으로 주어집니다. 위와 같이 만약 2명만 지원한다면 30%를 선발할 수 없기에 아무도 출정하지 않습니다. 만약 4명이 지원을 하였고 모두가 점수가 다르다면 단 한 명만 출정할 수 있어요. 30%에 해당하는 기술자의 이름을 return하는 solution 함수를 완성하세요. 
+Each input value is given in the form of `name, health, mentality, skill, defense`. If only two people apply as shown above, 30% cannot be selected, so no one will go out. If four people apply and all have different scores, only one person can go out. Complete the solution function to return the name of the technician corresponding to the 30% selection criteria.
+
+
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 0 ≤ 체력, 정신력, 기술력, 방어력 ≤ 25
-- 1 ≤ 기술자 수 ≤ 10
-- 기술자 배열은 2차원 배열로 주어집니다.
-- 기술자 이름은 중복되지 않습니다.
-- 동점자가 여러명 있을 경우 한 명으로 취급합니다.
+- 0 ≤ health, mentality, skill, defense ≤ 25
+- 1 ≤ number of technicians ≤ 10
+- The technician array is given as a two-dimensional array.
+- Technician names are not duplicated.
+- In case of a tie, only one person is considered.
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-|          입력         |  출력 |
+|          Input         |  Output |
 | ------------------------ | ------- |
 | [['A', 25, 24, 11, 12], ['B', 13, 22, 16, 14]] | [] |
 | [['A', 25, 25, 25, 25], ['B', 10, 12, 13, 11], ['C', 24, 22, 23, 21], ['D', 13, 22, 16, 14]] | ['A'] |
 
 ---
 
-## 입출력 설명
-- 기술자의 이름, 체력, 정신력, 기술력, 방어력이 담긴 배열을 입력받습니다.
-- 체력, 정신력, 기술력, 방어력의 총합을 구했을 때 상위 30%의 지원자만 전투에 참가할 수 있습니다.
-- 기술자의 이름은 점수의 내림차순으로 출력합니다.
-- 동일한 점수의 기술자가 있을 경우 알파벳의 역순으로 출력합니다.
+## Explanation
+
+- An array containing the names, health, mentality, skill, and defense of the technicians is given as input.
+- Only the top 30% of applicants can participate in the expedition when the sum of health, mentality, skill, and defense is calculated.
+- The names of the technicians are sorted in descending order of score.
+- If there are technicians with the same score, they are sorted in reverse alphabetical order.

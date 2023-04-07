@@ -1,21 +1,21 @@
 - info
     - lv1
-    - 투포인터 | 슬라이딩 윈도우
+    - Two Pointers | Sliding Window
 
-# 최대 손실액
-![그래프 차트](./9_2.webp)
+# Maximum Loss Amount
+![Graph Chart](./9_2.webp)
 
-## 문제 설명
-‘캣네 생선’ 대표인 대리인 No.1 는 지난 1년간의 그래프 변동을 보고 Risk 관리를 위해 발생할 수 있는 최악의 손실액을 구하고 싶었습니다. 그래프 차트가 주어졌을 때 발생할 수 있는 `최악의 손실액`을 구해봅니다.
+## Problem Description
+Representative No. 1 of "Catfish Inc." wanted to calculate the worst possible loss amount that could occur for risk management after looking at the graph changes for the past year. Let's find out the `worst possible loss amount` that can occur when given a graph chart.
 
-위 그래프에서 최고가(61,100)에 사서 최저가(52,700)에 팔면 최대 손실이 발생할 것 같지만 최고가 입장에서 최저가는 이미 지난 시간이기 때문에 팔 수 없는 지난 가격이 됩니다. 
+In the above graph, buying at the highest price (61,100) and selling at the lowest price (52,700) seems to incur the maximum loss. However, from the perspective of the highest price, the lowest price is already in the past, so it becomes a meaningless past price that cannot be sold.
 
 <br/>
 
-입력값이 58000, 58700, 55300, 54200, 53600, 52700, 57700, 61100 순서대로 들어온다고 생각해보겠습니다. 시간 순서에 따라 각 구간의 최대 손실을 계산해보겠습니다. 
+Let's assume that input values are entered in the order of 58,000, 58,700, 55,300, 54,200, 53,600, 52,700, 57,700, 61,100. Let's calculate the maximum loss of each interval according to the time order.
 
 
-| Day | 입력 | 최고가 | 최저가 | 최대손실액 |
+| Day | Input | Highest Price | Lowest Price | Maximum Loss |
 | --- | --- | --- | --- | --- |
 | 1 | 58000 | 58000 | 58000 | 0 |
 | 2 | 58700 | 58700 | 58700 | 0  |
@@ -26,29 +26,29 @@
 | 7 | 57700 | 58700 | 52700 | 6000 |
 | 8 | 61100 | 58700 | 52700 | 6000 |
 
-- Day2: 최악의 손실 기록을 위해 매수점을 Day2로 지정하는 경우, 매수점 이전의 시점인 Day1의 값은 무의미해집니다.
-- Day8: 최고가를 경신했지만 더 이상 팔 기회가 없으므로 최고가를 갱신하지 않습니다.
+- Day2: If we designate Day2 as the buying point for the worst possible loss record, the value of Day1, which is the previous point before the buying point, becomes meaningless.
+- Day8: Even though it reached the highest price, it is not updated since there is no more opportunity to sell.
 
-따라서 이 그래프에서의 최대 손실액은 6000원이 됩니다. 이처럼 입력값에 따른 최대의 손실 금액을 구하는 solution 함수를 작성해 봅시다.
-
----
-
-
-## 제한 사항
-
-- 0 < 주식 가격 < 1000000
+Therefore, the maximum loss amount for this graph is 6,000 won. Let's write a function to calculate the maximum loss amount according to the input value like this.
 
 ---
 
-## 입출력 예
 
-| 입력                                  | 출력  |
+## Constraints
+
+- 0 < stock price < 1000000
+
+---
+
+## Input and Output Examples
+
+| Input                                  | Output  |
 | ---------------------------------------- | ------- |
 | [58000, 58700, 55300, 54200, 53600, 52700, 57700, 61100] | 6000 |
 | [80000, 58000, 52700, 57700, 61100] | 27300 |
 
 ---
 
-## 입출력 설명
+## Explanation
 
-일자별 주식 가격을 입력받고 입력한 주식가격 안에서 실현할 수 있는 최대 손실액을 출력합니다.
+It takes daily stock prices as input and outputs the maximum loss amount that can be realized within the input stock prices.

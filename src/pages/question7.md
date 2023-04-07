@@ -1,39 +1,37 @@
 - info
     - lv1
-    - 투포인터 | 슬라이딩 윈도우
+    - Two Pointers | Sliding Window
 
-# 두 수의 합 찾기
-![북극의 광산을 찾아온 소울곰](./7_1.webp)
+# Sum of Two Numbers
+![SoulGom visits a mine in the Arctic](./7_1.webp)
 
-## 문제 설명
-소울곰은 고향이 있지 않았어요. 그는 파이와 썬이 만든 NPC였기 때문이죠! 하지만 소울 스톤을 받음으로써 그에게도 영혼이 생겼습니다. 더불어 큰 지혜와 영혼 세계를 볼 수 있게 되었죠.
+## Problem Description
+SoulGom had no hometown. He was an NPC created by Pye and Sun! But by receiving a soul stone, he gained a soul, as well as great wisdom and the ability to see the world of souls.
 
-소울곰은 생각했어요.
+SoulGom thought to himself, 
 
-" 지금 내가 어떤 도움을?
+" What can I do to help?
 
-소울곰은 소울 스톤을 통해 알게 된 지혜로 곧 막대한 전쟁자금이 필요할 것이라는 것을 예측할 수 있었어요. 
-소울곰은 북극으로 향했습니다. 생명체는 살아남을 수 없는 극한의 냉기. 그의 몸은 생명체가 아니었기에 자유롭게 움직일 수 있었어요. 더 깊은 곳으로 향했습니다. 누구의 손길도 닿지 않은 그곳, 태고의 보물이 있는 곳으로요. 
+Through the wisdom he gained from the soul stone, SoulGom was able to predict that he would soon need a huge amount of war funds. He headed for the Arctic. It is a place where no living creatures can survive due to extreme cold. Because his body was not that of a living creature, he could move around freely. He went deeper into the area, to the place where the ancient treasure was hidden, untouched by anyone's hand.
 
-그곳에는 어마어마한 양의 보석들이 숨겨져 있었어요. 세상의 모든 보화를 합친 것보다 많은 보화가요. 전쟁이 나면 화폐가치는 한없이 떨어질 것이고, 초인플레이션이 위니브 월드를 덮을 것이며, 그렇기에 보석의 가치는 더욱 빛나겠다고 생각했어요. 보석을 본 소울곰은 희미하게 웃었습니다. 
+There were a tremendous amount of jewels hidden there, more than all the world's wealth combined. SoulGom thought that if war broke out, the value of money would plummet infinitely, hyperinflation would engulf Winnieb World, and so the value of jewels would shine even more brightly. As he looked at the jewels, SoulGom smiled faintly.
 
-믿음, 보람, 역할, 존재의 이유, 혁신과 혁명, 카르텔 등 소울곰은 곡괭이를 휘두르면서도 그동안 단순한 단어로만 머리에 저장되어 있던 세상에 많은 지식들을 곱씹고, 지혜와 영혼으로 승화시켰어요.
+Faith, worth, role, reason for existence, innovation and revolution, cartels, and more. As he swung his pickaxe, SoulGom mulled over many pieces of knowledge that had only been stored in his head as simple words until now, and transformed them into wisdom and soul.
 
-소울곰은 광차를 만들어 더욱 많은 양의 보석을 움직일 수 있게 되었습니다. 광차에는 실을 수 있는 중량이 있고, 최대 2개밖에 나르지 못합니다.
-보석들의 중량이 주어졌을 때 특정 보석 2개를 합쳐 광차 중량을 맞출 수 있는 보석을 찾아주세요.
+SoulGom made a mining cart and was able to move even more jewels. The mining cart has a weight capacity and can only carry up to two items at a time. Please find the two jewels that can be combined to match the weight of the mining cart, given the weight of each jewel.
 
 ---
 
-## 제한 사항
+## Constraints
 
-- 2 ≤ 리스트 길이 ≤ 99
-- 정답은 오로지 하나만 존재합니다.
+- 2 ≤ length of list ≤ 99
+- There is only one correct answer.
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-| 보석 중량 리스트                          | 광차 중량  |  출력  |
+| Weight of Jewels List                        | Weight of Mining Cart  |  Output  |
 | ---------------------------------------- | ------- |------- |
 | [4, 9, 11, 2] | 6 | [0, 3] |
 | [2, 2] | 4 | [0, 1] |
@@ -42,7 +40,8 @@
 
 ---
 
-## 입출력 설명
-- 정답이 없는 경우는 없습니다.
-- 숫자로 된 보석 중량 리스트 중 항상 2개를 더하여 광차 중량에 맞춰야 합니다.
-- 2개 보석의 인덱스 값을 결괏값으로 출력합니다.
+## Explanation
+
+- There are no cases where there is no answer.
+- When adding up two jewel weights from the list of weights that are numeric, it must always match the weight of the mining cart.
+- The index values of the two jewels should be output as the result.

@@ -8,19 +8,19 @@ testcase_and_result = [{
 }, {
     "que_number": 1,
     "lv" : 0,
-    "kinds": "요구사항 구현",
+    "kinds": "Implementation",
     "testcase": [["  + + - + -+-", "  ++--+-+  ", "++ -+ -+-", "+++- +-+"], ["++-- -++", "++-- --+", "+++- +--"], ["++-++--", "++-+--+", "++-++++", "++-+++-"]],
     "result": ["jeju", "cat", "lion"]
 }, {
     "que_number": 2,
     "lv" : 1,
-    "kinds": "정규표현식",
+    "kinds": "Regular Expression",
     "testcase": ["adr10bb1d9ia10e33b7u88k3j1a3v11v9", "r1rr2rrr3rrrrr4rrrrrre5", "12345r12345e90v90r90"],
-    "result": ["2월 3일", "1월 5일", "2월 8일"]
+    "result": ["02.03", "01.05", "02.08"]
 }, {
     "que_number": 3,
     "lv" : 1,
-    "kinds": "정렬",
+    "kinds": "Sorting",
     "testcase": [
         [["A", 25, 24, 11, 12], ["B", 13, 22, 16, 14], ["C", 12, 22, 16, 14], ["D", 13, 22, 16, 14], ["E", 12, 25, 16, 19], [
             "F", 23, 15, 16, 14], ["G", 13, 14, 3, 5], ["H", 25, 22, 11, 14], ["I", 13, 12, 14, 23], ["J", 13, 22, 15, 14]],
@@ -33,19 +33,26 @@ testcase_and_result = [{
 }, {
     "que_number": 4,
     "lv" : 1,
-    "kinds": "정규표현식",
+    "kinds": "Regular Expression",
     "testcase": [["10 - A. 20 - B. 30 - A.", "1 - A. 1 - A. 1 - A. 1 - A. 2 - B. 1 - A. 1 - B"], ["10 a. 10 a. 10 a. 20 b. 30 c.", "c -- 100, c -- 100, c -- 100"], ["100만큼 a를 훈련. 200만큼 b를 훈련. 300만큼 c를 훈련. ", "100만큼 d를 훈련, 200만큼 e를 훈련"]],
-    "result": ["최종 꿈의 설계는 원래 미래 260, 바뀐 미래 14760입니다. 이 수치대로 Vision을 만듭니다.", "최종 꿈의 설계는 원래 미래 9000, 바뀐 미래 52000입니다. 이 수치대로 Vision을 만듭니다.", "미래가 보이지 않습니다."]
+    "result": [
+    "The final design for the dream is original future 260, changed future 37840. We create Vision according to these numbers.",
+    "The final design for the dream is original future 9000, changed future 52000. We create Vision according to these numbers.",
+    "The future is not visible."]
 }, {
     "que_number": 5,
     "lv" : 1,
-    "kinds": "행렬",
-    "testcase": [[10, 20], [30, 40], [50, 60]],
-    "result": [30, 70, 110]
+    "kinds": "Matrix",
+    "testcase": [
+        [[0, '#'], [0, 0]],
+        [[0, 0, '#', '#'], ['#', '#', 0, '#'], [0, '#', '#', 0]],
+        [['#', 0, 0, 0, '#'], [0, '#', '#', 0, 0], ['#', '#', '#', 0, '#'], ['#', 0, 0, '#', '#']]    
+    ],
+    "result": [[1, 3], [7, 16], [11, 29]]
 }, {
     "que_number": 6,
     "lv" : 1,
-    "kinds": "스택, 큐",
+    "kinds": "Stack, Queue",
     "testcase": [
         [1, 2, 3, 4, 1, 1, 2, 3, 4],
         [1, 1, 1, 2, 3, 4, 2, 3, 4, 1],
@@ -55,7 +62,7 @@ testcase_and_result = [{
 }, {
     "que_number": 7,
     "lv" : 1,
-    "kinds": "투포인터, 슬라이딩 윈도우",
+    "kinds": "Two Pointers, Sliding Window",
     "testcase": [
         [[4, 9, 11, 2], 6],
         [[2, 2], 4],
@@ -69,23 +76,22 @@ testcase_and_result = [{
 }, {
     "que_number": 8,
     "lv" : 0,
-    "kinds": "수학",
+    "kinds": "Math",
     "testcase": [100, 36000, 66600],
     "result": [0, 12, 24]
 }, {
     "que_number": 9,
     "lv" : 1,
-    "kinds": "투포인터, 슬라이딩 윈도우",
+    "kinds": "Two Pointers, Sliding Window",
     "testcase": [[58000, 58700, 55300, 54200, 53600, 52700, 57700, 61100], [80000, 58000, 52700, 57700, 61100], [100, 2000, 30000, 400000]],
     "result": [6000, 27300, 0]
 }, {
     "que_number": 10,
     "lv" : 1,
-    "kinds": "조합",
-    "testcase": [[0, ""], [2, "연어"], [3, ""]],
-    "result": ["기본 포케가 제공됩니다.", [["연어", "참치"], ["연어", "닭가슴살"], ["연어", "베이컨"], ["연어", "버섯"]],
-               [["연어", "참치", "닭가슴살"], ["연어", "참치", "베이컨"], ["연어", "참치", "버섯"], ["연어", "닭가슴살", "베이컨"], [
-                   "연어", "닭가슴살", "버섯"], ["연어", "베이컨", "버섯"], ["참치", "닭가슴살", "베이컨"], ["참치", "닭가슴살", "버섯"], ["닭고기", "베이컨", "버섯"]]
+    "kinds": "Combination",
+    "testcase": [[0, ""], [2, "salmon"], [3, ""]],
+    "result": ["Basic Poke will be provided.", [["salmon", "tuna"], ["salmon", "chicken"], ["salmon", "bacon"], ["salmon", "mushroom"]],
+               [["salmon", "tuna", "chicken"], ["salmon", "tuna", "bacon"], ["salmon", "tuna", "mushroom"], ["salmon", "chicken", "bacon"], ["salmon", "chicken", "mushroom"], ["salmon", "bacon", "mushroom"], ["tuna", "chicken", "bacon"], ["tuna", "chicken", "mushroom"], ["chicken", "bacon", "mushroom"]]
                ]
 }, {
     "que_number": 11,

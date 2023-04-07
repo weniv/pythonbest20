@@ -1,25 +1,25 @@
 - info
     - lv1
-    - 행렬
+    - Matrix
 
-# 상한 당근 찾기
-![빙키의 당근밭](./5_1.webp)
+# Finding a Rotten Carrot
+![Binky's carrot farm](./5_1.webp)
 
-## 문제 설명
-빙키의 능력으로 무엇을 할 수 있는지 희망을 본 사람들에게 실제로 바꿀 수 있는 고향의 모습을 보여주었습니다. 이제는 더 이상 Vision의 영역이 아니었습니다. Action의 영역이었죠!
+## Problem Description
+Binky showed people the appearance of their hometowns that could be changed by his power. It was no longer just a Vision, it was an Action!
 
-고향은 많이 변해있었습니다. 산업화가 닥친 마을은 동산이 모두 없어지고, 온통 높은 건물들뿐이었어요. 사람들은 평안을 잃었고, 어디서나 놀고 잘 수 있었던 마을은 사라졌습니다. 이제 돈 없이는 무엇도 마음대로 먹을 수 없었죠. 그리하여 나누지도 않게 되었습니다.
+The hometown has changed a lot. The town that faced industrialization had no orchards left, only tall buildings. People lost their peace and the village where they could play and rest anywhere disappeared. Without money, they could not eat what they wanted. So they became divided.
 
-빙키는 밭부터 일구기로 합니다. 가장 기초적인 의식주 회복으로 평안을 회복하고자 합니다.
+Binky starts with the field. He wants to restore peace through the most basic food recovery.
 
-" 내가 변화시킬 수 있는 일부터! 우리가 변화시킬 수 있는 일부터!
+" From what I can change! From what we can change!
 
-1. 당근밭은 N X M개의 칸으로 이루어져 있습니다. (N: 행, M: 열) 
-2. 상한 당근은 `#`으로 표현되어 있습니다.
-3. 현재 당근밭에는 상한 당근만 남아있으며, 일부 칸은 비어있습니다. 빙키는 인력의 효율적인 배치를 위해 `상한 당근의 개수`와 `인접 상한 당근의 통계`를 내기로 했습니다. 반환 값은 `상한 당근`의 개수와 `비어있는 칸과 맞닿은 둘레에 위치한 상한 당근의 개수 총합`을 작성해야 합니다.
-4. 맞닿은 둘레에 위치한 칸은 최대 8개로, 상, 하, 좌, 우, 4개의 대각선 칸을 말합니다.
+1. The carrot field consists of N x M cells. (N: rows, M: columns)
+2. Spoiled carrots are represented by `#`.
+3. There are only spoiled carrots left in the carrot field, and some cells are empty. Binky decided to give the `number of spoiled carrots` and the `number of adjacent spoiled carrots` on the empty cell for efficient placement of labor. You need to write the total number of spoiled carrots and the number of spoiled carrots located on the empty cell and adjacent to the edge.
+4.Cells located on the edge have a maximum of 8 adjacent cells, which refer to cells in four directions, up, down, left, and right, and four diagonal cells.
 
-아래 표를 당근밭이라고 했을 때, A2의 둘레에 위치한 칸은 A1, B1, B2, B3, A3이며, A2에 작성해야 할 상한 당근의 개수는 2가 됩니다. 여기서 #은 상한 당근이 위치했음을 나타냅니다.
+If you say the table below is a carrot field, the cells around A2 are A1, B1, B2, B3, A3, and the number of spoiled carrots to be written in A2 is 2. Here, `#` indicates that the spoiled carrot is located.
 
 <br />
 
@@ -39,7 +39,7 @@
 
 <br />
 
-모든 비어있는 칸에 상한 당근의 개수를 작성하면 아래와 같으며, 개수를 모두 합한 결괏값은 10이 나옵니다.
+If you write the number of spoiled carrots in all empty cells, the result is as follows, and the sum of the number is 10.
 
 <br />
 
@@ -51,17 +51,17 @@
 
 ---
 
-## 제한 사항
+## Constraints
 
 - 1 ≤ N, M ≤ 100
-- 당근밭은 2차원 배열로 주어집니다.
-- 0은 비어있는 칸을, ‘#’은 상한 당근을 뜻합니다.
+- The carrot field is given as a two-dimensional array.
+- 0 indicates an empty cell, and `#` indicates a spoiled carrot.
 
 ---
 
-## 입출력 예
+## Input and Output Examples
 
-| 입력 | 출력 |
+| Input | Output |
 | --- | --- |
 | [[0, ‘#’], [0, 0]] | [1, 3] |
 | [[0, 0, ‘#’, ‘#’], [’#’, ‘#’, 0, ‘#’], [0, ‘#’, ‘#’, 0]] | [7, 16] |
@@ -69,7 +69,8 @@
 
 ---
 
-## 입출력 설명
-- 2차원 배열로 이루어진 당근밭이 입력됩니다. 상한 당근의 개수와 비어있는 값을 둘레에 위치한 상한 당근의 개수로 모두 채운 후 개수의 모든 합을 결과로 출력합니다.
-- 예를 들어, `[[0, ‘#’], [0, 0]]`이 입력되었을 경우 상한 당근의 개수가 입력되어야 할 비어있는 칸은 (0, 0), (1, 0), (1, 1)입니다. 
-- 여기서 각 둘레에 위치한 상한 당근의 개수는 1개로 동일합니다. 개수가 입력된 배열은 `[[1, ‘#’], [1, 1]]`이며, 총합은 3이 출력됩니다. 따라서 반환값은 `[1, 3]`이 됩니다.
+## Explanation
+
+- A carrot field consisting of a two-dimensional array is input. After filling in the maximum number of spoiled carrots and empty values with the number of spoiled carrots located on the perimeter, the sum of all numbers is output as the result.
+- For example, if `[[0, ‘#’], [0, 0]]` is input, the empty spaces where the maximum number of spoiled carrots should be entered are (0, 0), (1, 0), and (1, 1).
+- Here, the number of spoiled carrots located on each perimeter is the same, with one each. The array with the numbers entered is `[[1, ‘#’], [1, 1]]`, and the total sum is 3. Therefore, the return value is `[1, 3]`.
