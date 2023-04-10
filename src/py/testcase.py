@@ -16,7 +16,7 @@ testcase_and_result = [{
     "lv" : 1,
     "kinds": "Regular Expression",
     "testcase": ["adr10bb1d9ia10e33b7u88k3j1a3v11v9", "r1rr2rrr3rrrrr4rrrrrre5", "12345r12345e90v90r90"],
-    "result": ["02.03", "01.05", "02.08"]
+    "result": ["Feb 3", "Jan 5", "Feb 8"]
 }, {
     "que_number": 3,
     "lv" : 1,
