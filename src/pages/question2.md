@@ -13,8 +13,10 @@ Licat obtains 7 stones on the mysterious island of Jeju. Licat shares the 7 ston
 The colleagues who received the stones head back to their respective villages. They exchange letters with Licat, who has returned to the cat village, using a cipher. Among various cipher texts, the final revolutionary date can be deciphered by the month and day. Please prepare for the expedition by finding out the date of the revolution in the letter according to the following rules:
 
 - The content of the letter is given as a string.
-- The date of the revolution is determined by considering the number obtained by adding the values after r, e, and v in the string. The digit before the tens place is considered the `month` and the digit in the ones place is considered the `day`.
-- The numbers after r, e, and v are between 1 and 10. If a number greater than 10 appears, only the digit in the ones place is considered.
+- The date of the revolution is determined by considering the number obtained by adding the values after r, e, and v in the string. The digit in the tens place is considered the `month` and the digit in the ones place is considered the `day`.
+- The `month` should be converted into an abbreviated form as in Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, and Sep.
+- The `day` should be given in numeral form(1), not an ordinal number(1st).
+- The numbers after r, e, and v are between 1 and 10. If a number greater than 10 appears, only the single digit right after r, e, and v is considered.
 
 
 ---
@@ -30,7 +32,7 @@ The colleagues who received the stones head back to their respective villages. T
 
 | Input                                  | Output  |
 | ---------------------------------------- | ------- |
-| 'a10b9r1ce33uab8wc918v2cv11v9'          | ['1월 6일'] |
+| 'a10b9r1ce33uab8wc918v2cv11v9'          | 'Jan 6' |
 
 ---
 
@@ -42,4 +44,4 @@ The extracted values from the string according to the pattern are as follows. e3
 ['r1', 'e3', 'v2', 'v1', 'v9']
 ```
 
-When all these numbers are added together, the result is `16`, which means the digit before the tens place is the month and the digit in the ones place is the day. Therefore, the date of the revolution is `January 6th`.
+When all these numbers are added together, the result is `16`, which means the digit in the tens place is the month and the digit in the ones place is the day. Then `1` is converted into `Jan`. Therefore, the date of the revolution is `Jan 6`.
