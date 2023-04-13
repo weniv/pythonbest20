@@ -34,10 +34,14 @@ testcase_and_result = [{
     "que_number": 4,
     "lv" : 1,
     "kinds": "Regular Expression",
-    "testcase": [["10 - A. 20 - B. 30 - A.", "1 - A. 1 - A. 1 - A. 1 - A. 2 - B. 1 - A. 1 - B"], ["10 a. 10 a. 10 a. 20 b. 30 c.", "c -- 100, c -- 100, c -- 100"], ["100만큼 a를 훈련. 200만큼 b를 훈련. 300만큼 c를 훈련. ", "100만큼 d를 훈련, 200만큼 e를 훈련"]],
+    "testcase": [
+        ["10 - A. 20 - B. 30 - A.", "1 - A. 1 - A. 1 - A. 1 - A. 2 - B. 1 - A. 1 - B"],
+        ["10 a. 10 a. 10 a. 20 b. 30 c.", "c -- 100, c -- 100, c -- 100"],
+        ["Trained 100 for A. Trained 200 for B. Trained 300 for C", "Trained 100 for D. Trained 200 for E"],
+    ],
     "result": [
-    "The final design for the dream is original future 260, changed future 37840. We create Vision according to these numbers.",
-    "The final design for the dream is original future 9000, changed future 52000. We create Vision according to these numbers.",
+    "The final design of the dream was originally 260 but changed to 37840. We create Vision based on these numbers.",
+    "The final design of the dream was originally 9000 but changed to 52000. We create Vision based on these numbers.",
     "The future is not visible."]
 }, {
     "que_number": 5,

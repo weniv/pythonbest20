@@ -38,7 +38,7 @@ The colleagues who received the stones head back to their respective villages. T
 
 ## Explanation
 
-The extracted values from the string according to the pattern are as follows. e33 should be recognized as e3, and only 3 should be extracted.
+The extracted values from the string according to the pattern are as follows. e33 should be recognized as e3, so only 3 should be extracted.
 
 ```py
 ['r1', 'e3', 'v2', 'v1', 'v9']

@@ -10,7 +10,7 @@
 
 Those who want to sit on the throne of algorithms must prove their qualification. If you cannot pass this test 'on your own,' you must review basic syntax and come back. There will be no easier problem than this one in the future.
 
-Pie and Sun have hidden the algorithm 7 stones that can decipher any algorithm somewhere in the world, and have announced it. It is designed so that only those who have overcome the harsh trials can pass this test. The text he left behind is as follows.
+Pie and Sun have hidden the 7 algorithm stones that can decipher any algorithm somewhere in the world, and have announced it. It is designed so that only those who have overcome the harsh trials can pass this test. The text he left behind is as follows.
 
 ```py
 Those who seek to qualify! Head this way!
