@@ -6,17 +6,17 @@
 ![SoulGom visits a mine in the Arctic](./7_1.webp)
 
 ## Problem Description
-SoulGom had no hometown. He was an NPC created by Pye and Sun! But by receiving a soul stone, he gained a soul, as well as great wisdom and the ability to see the world of souls.
+SoulGom had no hometown. She was an NPC created by Pie and Sun! But by receiving a Soul Stone, she gained a soul as well as great wisdom and the ability to see the world of souls.
 
-SoulGom thought to himself, 
+SoulGom thought to herself, 
 
 " What can I do to help?
 
-Through the wisdom he gained from the soul stone, SoulGom was able to predict that he would soon need a huge amount of war funds. He headed for the Arctic. It is a place where no living creatures can survive due to extreme cold. Because his body was not that of a living creature, he could move around freely. He went deeper into the area, to the place where the ancient treasure was hidden, untouched by anyone's hand.
+Through the wisdom she gained from the Soul Stone, SoulGom was able to predict that she would soon need a huge amount of war funds. She headed for the Arctic. It is a place where no living creatures can survive due to extreme cold. Because her body was not that of a living creature, she could move around freely. She went deeper into the area to the place where the ancient treasure was hidden untouched by anyone's hand.
 
-There were a tremendous amount of jewels hidden there, more than all the world's wealth combined. SoulGom thought that if war broke out, the value of money would plummet infinitely, hyperinflation would engulf Winnieb World, and so the value of jewels would shine even more brightly. As he looked at the jewels, SoulGom smiled faintly.
+There were a tremendous amount of jewels hidden there, more than all the world's wealth combined. SoulGom thought that if war broke out, the value of money would plummet infinitely, hyperinflation would engulf Weniv World, and so the value of jewels would shine even more brightly. As she looked at the jewels, SoulGom smiled faintly.
 
-Faith, worth, role, reason for existence, innovation and revolution, cartels, and more. As he swung his pickaxe, SoulGom mulled over many pieces of knowledge that had only been stored in his head as simple words until now, and transformed them into wisdom and soul.
+Faith, worth, role, reason for existence, innovation and revolution, cartels, and more. As she swung her pickaxe, SoulGom mulled over many pieces of knowledge that had only been stored in her head as simple words until now, and transformed them into wisdom and soul.
 
 SoulGom made a mining cart and was able to move even more jewels. The mining cart has a weight capacity and can only carry up to two items at a time. Please find the two jewels that can be combined to match the weight of the mining cart, given the weight of each jewel.
 
