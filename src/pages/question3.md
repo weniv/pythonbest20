@@ -6,9 +6,9 @@
 ![Javadog giving a speech](./3_1.webp)
 
 ## Problem Description
-Javadog has returned to the village. The village looks strange with only children and teenagers remaining, as all the capable young men have been called away to various SI tasks and cannot be spared. Javadog brings in the special engineers who have never had a decent meal for decades, being dragged around by various hazardous SI tasks, to prepare a lavish dinner for them. As the number of dinners increases, the hearts of the special engineers open up.
+Javadog has returned to the village. The village looked strange with only children and teenagers remaining, as all the capable young men have been called away to various SI tasks. Javadog brought in the special engineers who have never had a decent meal for decades since being dragged around by various hazardous SI tasks, to prepare a lavish dinner for them. The more they gather, the more the special engineers started to open up to him.
 
-Javadog's stone is the Mind Stone! Through the Mind Stone, Javadog showed the aging of those who had undergone a revolution 30 to 50 years ago, and the future of their next generation.
+Javadog's stone is the Mind Stone! With the Mind Stone, Javadog showed them the next 30 and 50 years after a revolution and the future of the next generation.
 
 " Not for our future, but the future of our children!
 
@@ -21,7 +21,7 @@ Javadog selected talented individuals. Already highly trained special engineers!
 army = [['A', 25, 24, 11, 12], ['B', 13, 22, 16, 14]]
 ```
 
-Each input value is given in the form of `name, health, mentality, skill, defense`. If only two people apply as shown above, 30% cannot be selected, so no one will go out. If four people apply and all have different scores, only one person can go out. Complete the solution function to return the name of the technician corresponding to the 30% selection criteria.
+Each input value is given in the form of `name, health, mentality, skill, defense`. If only two people apply as shown above, 30% cannot be selected, so no one will go out. If four people apply and all have different scores, only one person can go out. Complete the solution function that returns the name of the technician corresponding to the 30% selection criteria.
 
 
 

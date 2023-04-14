@@ -29,7 +29,7 @@ Let's assume that input values are entered in the order of 58,000, 58,700, 55,30
 - Day2: If we designate Day2 as the buying point for the worst possible loss record, the value of Day1, which is the previous point before the buying point, becomes meaningless.
 - Day8: Even though it reached the highest price, it is not updated since there is no more opportunity to sell.
 
-Therefore, the maximum loss amount for this graph is 6,000 won. Let's write a function to calculate the maximum loss amount according to the input value like this.
+Therefore, the maximum loss amount for this graph is 6000 won. Complete a function to calculate the maximum loss amount according to the input value like this.
 
 ---
 
@@ -51,4 +51,4 @@ Therefore, the maximum loss amount for this graph is 6,000 won. Let's write a fu
 
 ## Explanation
 
-It takes daily stock prices as input and outputs the maximum loss amount that can be realized within the input stock prices.
+It takes daily stock prices as input and outputs the maximum loss amount that can be realized within the stock prices.
