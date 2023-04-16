@@ -317,6 +317,7 @@
                             testCase = testcase_and_result[int(PAGE_NAME)]['testcase']
 
                             code += f'\n[solution(i) for i in {str(testCase)}]'
+                            
                             try:
                                 result = multiline_eval(code)
                                 result = ast.literal_eval(result)
@@ -330,6 +331,7 @@
                                 js.document.querySelector('#result_desc').innerHTML = resultString
                                 if all(result_save_localstorage):
                                     js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
+                                    js.document.getElementById(f'q{PAGE_NAME}').classList.add('success')
                                 else:
                                     js.window.localStorage.removeItem(f'{PAGE_NAME}_check')
                                 render()
