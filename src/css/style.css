@@ -732,6 +732,10 @@ header .menu-nav.is-active {
 	color: var(--ColorWhite);
 }
 
+.description .code-syntex {
+	color: inherit
+}
+
 /* 제목 */
 .que-tit1 {
 	font-size: 1.3em;
