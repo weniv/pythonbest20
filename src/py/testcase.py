@@ -156,11 +156,11 @@ testcase_and_result = [{
     "lv" : 1,
     "kinds": "Implementation",
     "testcase": [
-        [["Korean short hair", "Korean short hair", "Maine Coon", "Bengal", "Maine Coon", "British short hair", "Norwegian Forest" ], [30, 15, 13, 4, 45, 9, 21]], 
-        [["Sphynx", "British short hair", "Sphynx", "Sphynx", "Bengal", "Maine Coon"], [3, 16, 1, 9, 25, 5]], 
-        [["Maine Coon", "Korean short hair", "British short hair", "Norwegian Forest", "Norwegian Forest", "Korean short hair", "Korean short hair"], [8, 32, 15, 17, 12, 13, 31]]
+        [["Korean Shorthair", "Korean Shorthair", "Maine Coon", "Bengal", "Maine Coon", "British Shorthair", "Norwegian Forest" ], [30, 15, 13, 4, 45, 9, 21]], 
+        [["Sphynx", "British Shorthair", "Sphynx", "Sphynx", "Bengal", "Maine Coon"], [3, 16, 1, 9, 25, 5]], 
+        [["Maine Coon", "Korean Shorthair", "British Shorthair", "Norwegian Forest", "Norwegian Forest", "Korean Shorthair", "Korean Shorthair"], [8, 32, 15, 17, 12, 13, 31]]
     ],
-    "result": [["Maine Coon", "Korean short hair",  "Norwegian Forest", "British short hair", "Bengal"], ["Bengal", "British short hair", "Sphynx", "Maine Coon"], ["Korean short hair", "Norwegian Forest", "British short hair", "Maine Coon"]]
+    "result": [["Maine Coon", "Korean Shorthair",  "Norwegian Forest", "British Shorthair", "Bengal"], ["Bengal", "British Shorthair", "Sphynx", "Maine Coon"], ["Korean Shorthair", "Norwegian Forest", "British Shorthair", "Maine Coon"]]
 
 }, {
     "que_number": 19,

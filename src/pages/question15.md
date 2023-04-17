@@ -71,7 +71,7 @@ The oranges [1, 4], [2, 3], [3, 2], and [4, 1] that were adjacent to the ripe or
 
 ## Input and Output Examples
 
-| n, m, k | Status of the oranges | Output |
+| n, m, k | Condition of Oranges | Output |
 | --- | --- | --- |
 | 5, 5, 3 | [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] | 7 |
 | 7, 5, 4 | [[0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] | 2 |

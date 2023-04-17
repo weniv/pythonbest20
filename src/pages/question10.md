@@ -11,7 +11,7 @@ After Gary used the Space Stone to saved people from slavery using the Space Sto
 The toppings that can be put in Poke are as follows:
 
 ```text
-Salmon, Tuna, Chicken, Bacon, Mushroom
+salmon, tuna, chicken, bacon, mushroom
 ```
 
 Customers can choose up to 5 toppings, including toppings that must be included. Ali must guide the combination of Poke that matches the order.
