@@ -28,7 +28,7 @@ Given a string array representing cat breeds collected by region and an integer 
 
 ## Input and Output Examples
 
-| breed array | number array | Output |
+| Breed array | Number array | Output |
 | --- | --- | --- |
 | [“Korean short hair“, “Korean short hair“, “Maine Coon”, “Bengal”, “Maine Coon”, “British short hair“, “Norwegian Forest” ] | [30, 15, 13, 4, 45, 9, 21] | ["Maine Coon", "Korean short hair",  "Norwegian Forest", "British short hair", "Bengal"] |
 | [”Sphynx”, “British short hair“, “Sphynx”, “Sphynx”, “Bengal”, “Maine Coon”] | [3, 16, 1, 9, 25, 5] | ["Bengal", "British short hair", "Sphynx", "Maine Coon"] |
