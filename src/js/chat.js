@@ -2,7 +2,6 @@ const $chatContainer = document.querySelector(".cont-chat");
 const $chatRoom = document.querySelector(".chatroom");
 const $chatInfo = document.querySelector(".chat-info");
 const $chatBtn = document.querySelector(".btn-chatOpen");
-const $adCarousel = document.querySelector("#kg-carousel");
 const $chatCloseBtn = document.querySelector(".chat-close");
 const $chatList = document.querySelector(".chat-list");
 const $chatInput = document.querySelector(".inp-chat textarea");
@@ -61,7 +60,6 @@ const handleOpenChat = () => {
   $chatRoom.classList.add("open");
   $chatInfo.classList.add("close");
   $chatBtn.classList.add("close");
-  $adCarousel.classList.add("close");
   $chatContainer.classList.add("open");
   $chatContainer.classList.remove("close");
 };
@@ -75,7 +73,6 @@ const handleCloseChat = () => {
   $chatRoom.classList.remove("open");
   $chatInfo.classList.remove("close");
   $chatBtn.classList.remove("close");
-  $adCarousel.classList.remove("close");
   $chatContainer.classList.remove("open");
   $chatContainer.classList.add("close");
 };
