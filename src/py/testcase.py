@@ -74,8 +74,8 @@ testcase_and_result = [{
     "que_number": 8,
     "lv" : 0,
     "kinds": "수학",
-    "testcase": [100, 36000, 66600],
-    "result": [0, 12, 24]
+    "testcase": [100, 36600, 66600],
+    "result": [0, 12, 22]
 }, {
     "que_number": 9,
     "lv" : 1,
