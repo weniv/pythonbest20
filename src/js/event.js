@@ -81,9 +81,9 @@ $btnDownload.forEach((btn) => {
         if (!!localStorageValue) {
           localStorageValue = "```javascript\n" + localStorageValue + "\n```";
           if (!!passCheck) {
-            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://jsalgo.co.kr/?page=${i}\n* 통과 여부 : Y\n\n${localStorageValue}\n\n`;
+            localStorageValue = `# Question no.${i}\n\n* Level : ${questionInfo[i]["lv"]}\n* Topic : ${questionInfo[i]["kinds"]}\n* Link : https://jsalgo.co.kr/?page=${i}\n* P/F : P\n\n${localStorageValue}\n\n`;
           } else {
-            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://jsalgo.co.kr/?page=${i}\n* 통과 여부 : N\n\n${localStorageValue}\n\n`;
+            localStorageValue = `# Question no.${i}\n\n* Level : ${questionInfo[i]["lv"]}\n* Topic : ${questionInfo[i]["kinds"]}\n* Link : https://jsalgo.co.kr/?page=${i}\n* P/F : F\n\n${localStorageValue}\n\n`;
           }
           totalData += localStorageValue;
         }
@@ -96,7 +96,7 @@ $btnDownload.forEach((btn) => {
           fileType: "text/json",
         });
       } else {
-        window.alert("다운로드 할 데이터가 없습니다.");
+        window.alert("There is no data to download.");
       }
     });
   });

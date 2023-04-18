@@ -168,7 +168,7 @@ const apiPost = async (config) => {
       Prism.highlightAll();
     })
     .catch((err) => {
-      alert("답변 로딩시간을 초과하였습니다. 새로운 질문을 입력해주세요😢");
+      alert("Loading time has exceeded. Please enter a new question 😢");
       console.log(err);
     });
 };

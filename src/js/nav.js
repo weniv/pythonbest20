@@ -11,7 +11,7 @@ let isMobile = null;
 
 const handleCloseQuestions = () => {
   $container.classList.remove("menu-on");
-  $btnFold.innerText = "메뉴 펼치기";
+  $btnFold.innerText = "Show question list";
   $codeMirror.classList.remove("menu-on-CodeMirror");
   $codeMirror.classList.add("menu-off-CodeMirror");
 }
@@ -22,7 +22,7 @@ const handleOpenQuestions = () => {
   }
 
   $container.classList.add("menu-on");
-  $btnFold.innerText = "메뉴 접기";
+  $btnFold.innerText = "Hide question list";
   $codeMirror.classList.add("menu-on-CodeMirror");
   $codeMirror.classList.remove("menu-off-CodeMirror");
 }
@@ -40,7 +40,7 @@ const handleToggleMenu = () => {
 
   $menuContainer.classList.toggle('is-active');
   $icon.src = isActive ? 'src/img/hamburger-btn.webp' : 'src/img/close.webp';
-  $icon.alt = isActive ? '메뉴 열기' : '메뉴 닫기';
+  $icon.alt = isActive ? 'Open menu' : 'Close menu';
 
   if(isActive) {
     $icon.classList.remove('close');
