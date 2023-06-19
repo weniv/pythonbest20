@@ -170,7 +170,6 @@ header select,
 header .cta-btn {
     box-sizing: border-box;
     height: 40px;
-    margin-left: 10px;
 }
 
 nav {
@@ -289,6 +288,7 @@ header .menu-nav {
     padding-right: 40px;
     position: relative;
     background: #fff url(../img/select.svg) no-repeat calc(100% - 0.5em) 50% / 0.8em;
+    margin-left: 0;
 }
 
 .btn-algoview {
