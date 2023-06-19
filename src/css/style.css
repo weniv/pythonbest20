@@ -170,6 +170,7 @@ header select,
 header .cta-btn {
     box-sizing: border-box;
     height: 40px;
+    margin-left: 10px;
 }
 
 nav {
@@ -270,7 +271,6 @@ header .menu-nav {
 }
 
 .btn-download {
-    margin-right: 10px;
     display: inline-block;
     line-height: 1.4;
 }
@@ -283,7 +283,6 @@ header .menu-nav {
 
 .lang-selector {
     background-color: var(--ColorWhite);
-    margin-right: 10px;
     cursor: pointer;
     appearance: none;
     padding-right: 40px;
@@ -347,7 +346,8 @@ header .menu-nav.is-active {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.menu-list .menu-item:nth-child(2) {
+.menu-list .menu-item:nth-child(2),
+.menu-item:nth-child(3) {
     margin: 8px 0;
 }
 
