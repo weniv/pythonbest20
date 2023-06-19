@@ -255,7 +255,7 @@ header .menu-nav {
     margin: 0 auto;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 900px) {
     .hamburger-btn {
         display: inline-block;
     }
@@ -268,6 +268,7 @@ header .menu-nav {
     border-radius: 3px;
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .btn-download {
@@ -275,7 +276,7 @@ header .menu-nav {
     line-height: 1.4;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 900px) {
     .cta-btn {
         display: none;
     }
@@ -288,6 +289,25 @@ header .menu-nav {
     padding-right: 40px;
     position: relative;
     background: #fff url(../img/select.svg) no-repeat calc(100% - 0.5em) 50% / 0.8em;
+}
+
+.btn-algoview {
+    position: relative;
+}
+
+.btn-algoview:hover::after {
+    content: '💡 Algoview는 알고리즘 문제 분석 오픈소스 프로젝트입니다.';
+    display: block;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 300px;
+    font-size: 12px;
+    color: var(--ColorBg);
+    background-color: var(--ColorWhite);
+    border-radius: 3px;
+    padding: 3px;
+    pointer-events: none;
 }
 
 .menu-nav.is-active .btn-exec {
@@ -340,15 +360,19 @@ header .menu-nav.is-active {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
+    margin: 0;
 }
 
 .menu-list .menu-item:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.menu-list .menu-item:nth-child(2),
-.menu-item:nth-child(3) {
-    margin: 8px 0;
+.menu-list .menu-item {
+    margin-bottom: 8px;
+}
+
+.menu-list .menu-item:last-child {
+    margin-bottom: 0;
 }
 
 .menu-list .menu-item a,
@@ -387,16 +411,11 @@ header .menu-nav.is-active {
 }
 
 @media (min-width: 1026px) and (max-width: 1200px) {
-    <<<<<<< Updated upstream .editor .CodeMirror {
+    .editor .CodeMirror {
         max-width: calc(100vw - 28rem - (3rem * 2));
     }
-    =======
-	/* .CodeMirror {
-		max-width: min(845px, 100vw - 360px);
-	} */
->>>>>>> Stashed changes
 
-	.menu-off-CodeMirror {
+    .menu-off-CodeMirror {
         max-width: 563px;
     }
 
@@ -1191,7 +1210,6 @@ footer p {
         top: 6rem;
         left: 0;
         width: 100%;
-        z-index: 100;
         max-height: 40rem;
         overflow-y: scroll;
         background: var(--ColorBg);
@@ -1206,7 +1224,7 @@ footer p {
     }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 900px) {
     .menu-nav,
     .menu-list {
         display: none;

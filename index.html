@@ -1,332 +1,379 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-        <meta
-            name="description"
-            content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!"
-        />
-        <meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 알고리즘, 파이썬, 위니브" />
-        <meta name="image" content="https://pyalgo.co.kr/src/img/meta.webp" />
-        <meta name="url" content="https://pyalgo.co.kr" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-        <meta name="og:title" property="og:title" content="Python Algorithm Best20 | WENIV" />
-        <meta
-            name="og:description"
-            property="og:description"
-            content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!"
-        />
-        <meta name="og:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp" />
-        <meta name="og:url" property="og:url" content="https://pyalgo.co.kr" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="파이알고" />
-        <meta property="og:locale" content="ko_KR" />
+    <meta name="description"
+        content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!">
+    <meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 알고리즘, 파이썬, 위니브">
+    <meta name="image" content="https://pyalgo.co.kr/src/img/meta.webp">
+    <meta name="url" content="https://pyalgo.co.kr">
 
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" property="og:title" content="Python Algorithm Best20 | WENIV" />
-        <meta
-            name="twitter:description"
-            property="og:description"
-            content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!"
-        />
-        <meta name="twitter:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp" />
-        <meta name="twitter:url" property="og:url" content="https://pyalgo.co.kr" />
+    <meta name="og:title" property="og:title" content="Python Algorithm Best20 | WENIV">
+    <meta name="og:description" property="og:description"
+        content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!">
+    <meta name="og:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp">
+    <meta name="og:url" property="og:url" content="https://pyalgo.co.kr">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="파이알고">
+    <meta property="og:locale" content="ko_KR">
 
-        <title>Pyalgo20</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" property="og:title" content="Python Algorithm Best20 | WENIV">
+    <meta name="twitter:description" property="og:description"
+        content="왕좌에 앉으려는 자! 자격을 증명하라! 알고리즘 문제 풀이를 통해 파이와 썬이 숨겨둔 모든 알고리즘을 해독할 수 있는 알고리즘 7원석을 얻고, 알고리즘 왕좌를 쟁취해 보세요!">
+    <meta name="twitter:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp">
+    <meta name="twitter:url" property="og:url" content="https://pyalgo.co.kr">
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4R0WC3TYQ"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    <title>Pyalgo20</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4R0WC3TYQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-            gtag("config", "G-J4R0WC3TYQ");
-        </script>
+      gtag('config', 'G-J4R0WC3TYQ');
+    </script>
 
-        <!-- 환경파일 -->
-        <script src="./src/env.js" defer></script>
+    <!-- 환경파일 -->
+    <script src="./src/env.js" defer></script>
 
-        <!-- JavaScript -->
-        <script src="./src/js/editor.js" defer></script>
-        <script src="./src/js/parser.js" defer></script>
-        <script src="./src/js/event.js" defer></script>
-        <script src="./src/js/nav.js" defer></script>
-        <script src="./src/js/ad.js" defer></script>
-        <script src="./src/js/timer.js" defer></script>
-        <script src="./src/js/chat.js" defer></script>
+    <!-- JavaScript -->
+    <script src="./src/js/editor.js" defer></script>
+    <script src="./src/js/parser.js" defer></script>
+    <script src="./src/js/event.js" defer></script>
+    <script src="./src/js/nav.js" defer></script>
+    <script src="./src/js/ad.js" defer></script>
+    <script src="./src/js/timer.js" defer></script>
+    <script src="./src/js/chat.js" defer></script>
 
-        <!-- markdown -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/toolbar/prism-toolbar.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+     <!-- markdown -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css">
+     <link href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/toolbar/prism-toolbar.min.css'
+     rel='stylesheet' />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/toolbar/prism-toolbar.min.js'></script>
+     <script
+     src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'></script>
+ 
+    <!-- codemirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css" />
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
 
-        <!-- codemirror -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css" />
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-        <!-- axios -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- pyscript -->
+    <link rel="stylesheet" href="src/pyscript/pyscript.css">
+    <script defer src="src/pyscript/pyscript.js"></script>
 
-        <!-- pyscript -->
-        <link rel="stylesheet" href="src/pyscript/pyscript.css" />
-        <script defer src="src/pyscript/pyscript.js"></script>
+    <py-config>
+        terminal = false
+        [[fetch]]
+        from = "./src/py/"
+        files = ["testcase.py"]
+    </py-config>
 
-        <py-config> terminal = false [[fetch]] from = "./src/py/" files = ["testcase.py"] </py-config>
+    <!-- css -->
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
 
-        <!-- css -->
-        <link rel="stylesheet" href="./src/css/style.css" />
-    </head>
-
-    <body>
-        <div class="container menu-on">
-            <header>
-                <div>
-                    <h1>
-                        <a href="index.html">
-                            <img class="logo" src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제" />
-                        </a>
-                    </h1>
-                    <nav class="menu-nav">
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <a href="https://jsalgo.co.kr/">JSalgo 바로가기</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="https://algoview.co.kr/" target="_blank">Algoview 바로가기</a>
-                            </li>
-                            <li class="menu-item">
-                                <button class="btn-download">Solution Download</button>
-                            </li>
-                            <li class="menu-item">
-                                <a class="btn-exec" href="codeexec.html" target="_blank">Run Python</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <button class="hamburger-btn">
-                        <img src="./src/img/hamburger-btn.webp" alt="메뉴 열기" />
-                    </button>
-
-                    <label for="lang-select" class="sr-only">풀이 언어를 선택하세요.</label>
-                    <select class="cta-btn lang-selector" name="langs" id="lang-select">
-                        <option selected name="python" value="python">Python</option>
-                        <option name="javascript" value="javascript">JavaScript</option>
-                    </select>
-                    <a class="cta-btn" href="https://algoview.co.kr/" target="_blank">algoview</a>
-                    <button class="cta-btn btn-download">Solution Download</button>
-                    <a class="cta-btn btn-exec" href="codeexec.html" target="_blank">Run Python</a>
-                    <button class="btn-fold" type="button">접어두기</button>
-                </div>
-            </header>
-
-            <div class="contents">
-                <nav class="question-nav">
-                    <ol>
-                        <li><a href="#" id="q1" class="btn-que">Q1. 자격 증명</a></li>
-                        <li><a href="#" id="q2" class="btn-que">Q2. 암호문</a></li>
-                        <li><a href="#" id="q3" class="btn-que">Q3. 출정인원 선발</a></li>
-                        <li><a href="#" id="q4" class="btn-que">Q4. 꿈의 설계</a></li>
-                        <li><a href="#" id="q5" class="btn-que">Q5. 상한 당근 찾기</a></li>
-                        <li><a href="#" id="q6" class="btn-que">Q6. 샌드위치 포장</a></li>
-                        <li><a href="#" id="q7" class="btn-que">Q7. 두 수의 합 찾기</a></li>
-                        <li><a href="#" id="q8" class="btn-que">Q8. 무기 생산</a></li>
-                        <li><a href="#" id="q9" class="btn-que">Q9. 최대 손실액</a></li>
-                        <li><a href="#" id="q10" class="btn-que">Q10. 알리는 포케가 좋아</a></li>
-                        <li><a href="#" id="q11" class="btn-que">Q11. 라떼를 엎은 헤오니다</a></li>
-                        <li><a href="#" id="q12" class="btn-que">Q12. 마라탕 많이 먹기</a></li>
-                        <li><a href="#" id="q13" class="btn-que">Q13. 비행정 탑승</a></li>
-                        <li><a href="#" id="q14" class="btn-que">Q14. (꿈-1) 출항 준비!</a></li>
-                        <li><a href="#" id="q15" class="btn-que">Q15. 귤 판매하기</a></li>
-                        <li><a href="#" id="q16" class="btn-que">Q16. 2인자 선발</a></li>
-                        <li><a href="#" id="q17" class="btn-que">Q17. 로봇캣 점검의 날</a></li>
-                        <li><a href="#" id="q18" class="btn-que">Q18. 냥이족 종류를 정리하라냥</a></li>
-                        <li><a href="#" id="q19" class="btn-que">Q19. (꿈-2) 리치를 무찌르자!</a></li>
-                        <li><a href="#" id="q20" class="btn-que">Q20. 빙키의 당근 케이크</a></li>
-                    </ol>
+<body>
+    <div class="container menu-on">
+        <header>
+            <div>
+                <h1>
+                    <a href="index.html">
+                        <img class="logo" src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
+                    </a>
+                </h1>
+                <nav class="menu-nav">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="https://jsalgo.co.kr/">JSalgo 바로가기</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://algoview.co.kr/" target="_blank">Algoview</a>
+                        </li>
+                        <li class="menu-item">
+                            <button class="btn-download">Solution Download</button>
+                        </li>
+                        <li class="menu-item">
+                            <a class="btn-exec" href="codeexec.html" target="_blank">Run Python</a>
+                        </li>
+                    </ul>
                 </nav>
-                <main>
-                    <section class="description"></section>
-                    <section class="editor">
-                        <div class="timer-container">
-                            <p class="timer-time"><span class="hour">00</span> : <span class="minute">00</span> : <span class="second">00</span></p>
-                            <div class="btn-container">
-                                <button class="btn-play">
-                                    <img src="./src/img/fi-rr-play.webp" alt="타이머 시작" />
-                                </button>
-                                <button class="btn-pause">
-                                    <img src="./src/img/fi-rr-pause.webp" alt="타이머 일시정지" />
-                                </button>
-                            </div>
-                            <button class="btn-reset">
-                                <img src="./src/img/fi-rr-refresh.webp" alt="타이머 초기화" />
+                <button class="hamburger-btn">
+                    <img src="./src/img/hamburger-btn.webp" alt="메뉴 열기">
+                </button>
+
+                <label for="lang-select" class="sr-only">풀이 언어를 선택하세요.</label>
+                <select class="cta-btn lang-selector" name="langs" id="lang-select">
+                    <option selected name="python" value="python">Python</option>
+                    <option name="javascript" value="javascript">JavaScript</option>
+                </select>
+                <a class="cta-btn btn-algoview" href="https://algoview.co.kr/" target="_blank">Algoview</a>
+                <button class="cta-btn btn-download">Solution Download</button>
+                <a class="cta-btn btn-exec" href="codeexec.html" target="_blank">Run Python</a>
+                <button class="btn-fold" type="button">접어두기</button>
+            </div>
+        </header>
+
+        <div class="contents">
+            <nav class="question-nav">
+                <ol>
+                    <li><a href="#" id="q1" class="btn-que">Q1. 자격 증명</a></li>
+                    <li><a href="#" id="q2" class="btn-que">Q2. 암호문</a></li>
+                    <li><a href="#" id="q3" class="btn-que">Q3. 출정인원 선발</a></li>
+                    <li><a href="#" id="q4" class="btn-que">Q4. 꿈의 설계</a></li>
+                    <li><a href="#" id="q5" class="btn-que">Q5. 상한 당근 찾기</a></li>
+                    <li><a href="#" id="q6" class="btn-que">Q6. 샌드위치 포장</a></li>
+                    <li><a href="#" id="q7" class="btn-que">Q7. 두 수의 합 찾기</a></li>
+                    <li><a href="#" id="q8" class="btn-que">Q8. 무기 생산</a></li>
+                    <li><a href="#" id="q9" class="btn-que">Q9. 최대 손실액</a></li>
+                    <li><a href="#" id="q10" class="btn-que">Q10. 알리는 포케가 좋아</a></li>
+                    <li><a href="#" id="q11" class="btn-que">Q11. 라떼를 엎은 헤오니다</a></li>
+                    <li><a href="#" id="q12" class="btn-que">Q12. 마라탕 많이 먹기</a></li>
+                    <li><a href="#" id="q13" class="btn-que">Q13. 비행정 탑승</a></li>
+                    <li><a href="#" id="q14" class="btn-que">Q14. (꿈-1) 출항 준비!</a></li>
+                    <li><a href="#" id="q15" class="btn-que">Q15. 귤 판매하기</a></li>
+                    <li><a href="#" id="q16" class="btn-que">Q16. 2인자 선발</a></li>
+                    <li><a href="#" id="q17" class="btn-que">Q17. 로봇캣 점검의 날</a></li>
+                    <li><a href="#" id="q18" class="btn-que">Q18. 냥이족 종류를 정리하라냥</a></li>
+                    <li><a href="#" id="q19" class="btn-que">Q19. (꿈-2) 리치를 무찌르자!</a></li>
+                    <li><a href="#" id="q20" class="btn-que">Q20. 빙키의 당근 케이크</a></li>
+                </ol>
+            </nav>
+            <main>
+                <section class="description">
+                </section>
+                <section class="editor">
+                    <div class="timer-container">
+                        <p class="timer-time"><span class="hour">00</span> : <span class="minute">00</span> : <span class="second">00</span></p>
+                        <div class="btn-container">
+                            <button class="btn-play">
+                                <img src="./src/img/fi-rr-play.webp" alt="타이머 시작">
+                            </button>
+                            <button class="btn-pause">
+                                <img src="./src/img/fi-rr-pause.webp" alt="타이머 일시정지">
                             </button>
                         </div>
-                        <hr class="timer-line" />
-                        <h2 class="que-tit1">Solution</h2>
-                        <form>
-                            <div class="state-area">
-                                <div class="editor">
-                                    <label for="codeeditor" class="sr-only">코드에디터</label>
-                                    <textarea id="codeeditor"></textarea>
-                                </div>
+                        <button class="btn-reset">
+                            <img src="./src/img/fi-rr-refresh.webp" alt="타이머 초기화">
+                        </button>
+                    </div>
+                    <hr class="timer-line">
+                    <h2 class="que-tit1">Solution</h2>
+                    <form>
+                        <div class="state-area">
+                            <div class="editor">
+                                <label for="codeeditor" class="sr-only">코드에디터</label>
+                                <textarea id="codeeditor"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="test-case">
+                        <div>
+                            <label for="testcase1">testcase1</label>
+                            <input disabled id="testcase1" />
+                        </div>
+                        <div>
+                            <label for="testcase1">testcase2</label>
+                            <input disabled id="testcase2" />
+                        </div>
+                        <div>
+                            <label for="testcase1">testcase3</label>
+                            <input disabled id="testcase3" />
+                        </div>
+                    </div>
+                    <div class="btn-contain">
+                        <button id="btn-run" type="submit">채점하기</button>
+                    </div>
+
+                    <div id="result">
+                        <h3>Result</h3>
+                        <div id="result_info">결과가 이 곳에 표시됩니다.</div>
+                        <div id="result_desc"></div>
+                    </div>
+                    
+                    <button class="btn-chatOpen">
+                        <img src="./src/img/icon-chatting.webp" alt="인공지능과의 채팅 열기">
+                    </button>
+                    <img class="chat-info" src="./src/img/chat-ai.webp" alt="">
+
+                    <!-- chat -->
+                    <article class="cont-chat close">
+                        <h4 class="sr-only">인공지능에게 질문하기</h4>
+                        <p class="info"> 💡 복잡한 로직의 답변은 20초 이상의 시간이 걸릴 수 있습니다.</p>
+                        <div class="chatroom">
+                            <ul class="chat-list">
+                            </ul>
+                        </div>
+                        <form class="inp-chat" method="post">
+                            <div>
+                                <textarea></textarea>
+                                <button type="submit">전송</button>
                             </div>
                         </form>
-                        <div class="test-case">
-                            <div>
-                                <label for="testcase1">testcase1</label>
-                                <input disabled id="testcase1" />
-                            </div>
-                            <div>
-                                <label for="testcase1">testcase2</label>
-                                <input disabled id="testcase2" />
-                            </div>
-                            <div>
-                                <label for="testcase1">testcase3</label>
-                                <input disabled id="testcase3" />
-                            </div>
-                        </div>
-                        <div class="btn-contain">
-                            <button id="btn-run" type="submit">채점하기</button>
-                        </div>
-
-                        <div id="result">
-                            <h3>Result</h3>
-                            <div id="result_info">결과가 이 곳에 표시됩니다.</div>
-                            <div id="result_desc"></div>
-                        </div>
-
-                        <button class="btn-chatOpen">
-                            <img src="./src/img/icon-chatting.webp" alt="인공지능과의 채팅 열기" />
+                        <button class="chat-close">
+                            <img src="./src/img/close-wh.webp" alt="채팅방 닫기 ">
                         </button>
-                        <img class="chat-info" src="./src/img/chat-ai.webp" alt="" />
+                    </article>
 
-                        <!-- chat -->
-                        <article class="cont-chat close">
-                            <h4 class="sr-only">인공지능에게 질문하기</h4>
-                            <p class="info">💡 복잡한 로직의 답변은 20초 이상의 시간이 걸릴 수 있습니다.</p>
-                            <div class="chatroom">
-                                <ul class="chat-list"></ul>
+                    <div id="kg-carousel">
+                        <!-- ad image -->
+                        <ul id="kg-inner">
+                            <li class="kg-img">
+                                <a href="https://inf.run/MMwU" target="_blank">
+                                    <img src="./src/img/kg0.webp" loading="lazy" alt="Python 알고리즘 베스트 10 강의 바로가기" />
+                                </a>
+                            </li>
+                            <li class="kg-img">
+                                <a href="https://scholarship.weniv.co.kr/" target="_blank">
+                                    <img src="./src/img/kg1.webp" loading="lazy" alt="위니브 청년 ICT 부스트 장학금 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
+                                    <img src="./src/img/kg2.webp" loading="lazy" alt="테킷 프론트엔드스쿨 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
+                                    <img src="./src/img/kg3.webp" loading="lazy" alt="테킷 데이터분석스쿨 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84" target="_blank">
+                                    <img src="./src/img/kg4.webp" loading="lazy" alt="파이썬 부트캠프 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://inf.run/RCuz" target="_blank">
+                                    <img src="./src/img/kg5.webp" loading="lazy" alt="눈떠보니 코딩테스트 전날 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://estfamily.career.greetinghr.com/kdtest" target="_blank">
+                                    <img src="./src/img/kg6.webp" loading="lazy" alt="이스트소프트 오르미 1기 백엔드 개발자 부트캠프 바로가기">
+                                </a>
+                            </li>
+                            <!-- 배너 추가 삭제시 아래 radio 및 py.css 수정 필요 -->
+                        </ul>
+
+                        <!-- pagination -->
+                        <button id="kg-before">
+                            <img src="./src/img/chevron-prev.webp" alt="광고 뒤로가기"/>
+                        </button>
+                        <input type="radio" checked class="kg-pagination" name="radio-btn" id="radio1">
+                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio2">
+                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio3">
+                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio4">
+                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio5">
+                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio6">
+                        <button id="kg-next">
+                        <img src="./src/img/chevron-next.webp" alt="광고 넘어가기"/>
+                        </button>
+
+                        <div id="kg-nav">
+                            <div id="nav-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                                <div class="auto-btn5"></div>
+                                <div class="auto-btn6"></div>
                             </div>
-                            <form class="inp-chat" method="post">
-                                <div>
-                                    <textarea></textarea>
-                                    <button type="submit">전송</button>
-                                </div>
-                            </form>
-                            <button class="chat-close">
-                                <img src="./src/img/close-wh.webp" alt="채팅방 닫기 " />
-                            </button>
-                        </article>
 
-                        <div id="kg-carousel">
-                            <!-- ad image -->
-                            <ul id="kg-inner">
-                                <li class="kg-img">
-                                    <a href="https://inf.run/MMwU" target="_blank">
-                                        <img src="./src/img/kg0.webp" loading="lazy" alt="Python 알고리즘 베스트 10 강의 바로가기" />
-                                    </a>
-                                </li>
-                                <li class="kg-img">
-                                    <a href="https://scholarship.weniv.co.kr/" target="_blank">
-                                        <img src="./src/img/kg1.webp" loading="lazy" alt="위니브 청년 ICT 부스트 장학금 바로가기" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://techit.education/school/kdt-frontend-5th" target="_blank">
-                                        <img src="./src/img/kg2.webp" loading="lazy" alt="테킷 프론트엔드스쿨 바로가기" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://techit.education/school/kdt-dataanalysis-1st" target="_blank">
-                                        <img src="./src/img/kg3.webp" loading="lazy" alt="테킷 데이터분석스쿨 바로가기" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84" target="_blank">
-                                        <img src="./src/img/kg4.webp" loading="lazy" alt="파이썬 부트캠프 바로가기" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://inf.run/RCuz" target="_blank">
-                                        <img src="./src/img/kg5.webp" loading="lazy" alt="눈떠보니 코딩테스트 전날 바로가기" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://estfamily.career.greetinghr.com/kdtest" target="_blank">
-                                        <img src="./src/img/kg6.webp" loading="lazy" alt="이스트소프트 오르미 1기 백엔드 개발자 부트캠프 바로가기" />
-                                    </a>
-                                </li>
-                                <!-- 배너 추가 삭제시 아래 radio 및 py.css 수정 필요 -->
-                            </ul>
-
-                            <!-- pagination -->
-                            <button id="kg-before">
-                                <img src="./src/img/chevron-prev.webp" alt="광고 뒤로가기" />
-                            </button>
-                            <input type="radio" checked class="kg-pagination" name="radio-btn" id="radio1" />
-                            <input type="radio" class="kg-pagination" name="radio-btn" id="radio2" />
-                            <input type="radio" class="kg-pagination" name="radio-btn" id="radio3" />
-                            <input type="radio" class="kg-pagination" name="radio-btn" id="radio4" />
-                            <input type="radio" class="kg-pagination" name="radio-btn" id="radio5" />
-                            <input type="radio" class="kg-pagination" name="radio-btn" id="radio6" />
-                            <button id="kg-next">
-                                <img src="./src/img/chevron-next.webp" alt="광고 넘어가기" />
-                            </button>
-
-                            <div id="kg-nav">
-                                <div id="nav-auto">
-                                    <div class="auto-btn1"></div>
-                                    <div class="auto-btn2"></div>
-                                    <div class="auto-btn3"></div>
-                                    <div class="auto-btn4"></div>
-                                    <div class="auto-btn5"></div>
-                                    <div class="auto-btn6"></div>
-                                </div>
-
-                                <div id="nav-maunal">
-                                    <label for="radio1" class="manual-btn"></label>
-                                    <label for="radio2" class="manual-btn"></label>
-                                    <label for="radio3" class="manual-btn"></label>
-                                    <label for="radio4" class="manual-btn"></label>
-                                    <label for="radio5" class="manual-btn"></label>
-                                    <label for="radio6" class="manual-btn"></label>
-                                </div>
+                            <div id="nav-maunal">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                                <label for="radio3" class="manual-btn"></label>
+                                <label for="radio4" class="manual-btn"></label>
+                                <label for="radio5" class="manual-btn"></label>
+                                <label for="radio6" class="manual-btn"></label>
                             </div>
                         </div>
+                    </div>
 
-                        <py-script>
-                            import ast #from testCaseAndResult import test from testcase import testcase_and_result PAGE_NAME = js.document.querySelector('.active').id[1:] def render(*ags): PAGE_NAME
-                            = js.document.querySelector('.active').id[1:] for i in range(3): js.document.querySelector(f'#testcase{i+1}').value =
-                            str(testcase_and_result[int(PAGE_NAME)]['testcase'][i]) render() def result(*ags, **kws): code = Element("codeeditor").element.innerText PAGE_NAME =
-                            js.document.querySelector('.active').id[1:] answer = testcase_and_result[int(PAGE_NAME)]['result'] testCase = testcase_and_result[int(PAGE_NAME)]['testcase'] code +=
-                            f'\n[solution(i) for i in {str(testCase)}]' try: result = multiline_eval(code) result = ast.literal_eval(result) resultString = "&lt;p class='que-result'&gt;테스트 케이스
-                            번호 : 통과 여부 (실행값 == 정답값) &lt;&#47;p&gt;" passing = "&lt;span class='result-pass'&gt; 통과 &lt;&#47;span&gt;" fail = "&lt;span class='result-fail'&gt; 실패
-                            &lt;&#47;span&gt;" result_save_localstorage = [] for i in range(3): resultString += f"&lt;p class='que-result-{i} checkPass'&gt;test{i+1} : {passing if result[i] ==
-                            answer[i] else fail}&lt;span class='result-compare'&gt;({result[i]} == {answer[i]})&lt;&#47;span&gt;&lt;&#47;p&gt;" result_save_localstorage.append(result[i] == answer[i])
-                            js.document.querySelector('#result_desc').innerHTML = resultString if all(result_save_localstorage): js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
-                            js.document.getElementById(f'q{PAGE_NAME}').classList.add('success') else: js.window.localStorage.removeItem(f'{PAGE_NAME}_check') render() except Exception as e: result =
-                            f"&lt;p class='que-result-error'&gt;에러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;에러명 : {e}&lt;&#47;p&gt;"
-                            js.document.querySelector('#result_desc').innerHTML = result def multiline_eval(expr, ctx={}): results = [] for node in ast.parse(expr).body: if isinstance(node, ast.Expr):
-                            result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx) results.append(result) else: module = ast.Module([node], type_ignores=[])
-                            results.append(exec(compile(module, 'string', 'exec'), ctx)) return '\n'.join(map(str, results))[5:] button_run = Element("btn-run") button_run.element.onclick = result for
-                            i in range(1, 31): button_render = Element(f'q{i}') # button_render.element.onclick = render
+                    <py-script>
+                        import ast
+                        #from testCaseAndResult import test
+                        from testcase import testcase_and_result
+
+                        PAGE_NAME = js.document.querySelector('.active').id[1:]
+
+                        def render(*ags):
+                            PAGE_NAME = js.document.querySelector('.active').id[1:]
+                            for i in range(3):
+                                js.document.querySelector(f'#testcase{i+1}').value = str(testcase_and_result[int(PAGE_NAME)]['testcase'][i])
+                        render()
+
+                        def result(*ags, **kws):
+                            code = Element("codeeditor").element.innerText
+
+                            PAGE_NAME = js.document.querySelector('.active').id[1:]
+
+                            answer = testcase_and_result[int(PAGE_NAME)]['result']
+                            testCase = testcase_and_result[int(PAGE_NAME)]['testcase']
+
+                            code += f'\n[solution(i) for i in {str(testCase)}]'
+                            
+                            try:
+                                result = multiline_eval(code)
+                                result = ast.literal_eval(result)
+                                resultString = "&lt;p class='que-result'&gt;테스트 케이스 번호 : 통과 여부 (실행값 == 정답값) &lt;&#47;p&gt;"
+                                passing = "&lt;span class='result-pass'&gt; 통과 &lt;&#47;span&gt;"
+                                fail = "&lt;span class='result-fail'&gt; 실패 &lt;&#47;span&gt;"
+                                result_save_localstorage = []
+                                for i in range(3):
+                                    resultString += f"&lt;p class='que-result-{i} checkPass'&gt;test{i+1} : {passing if result[i] == answer[i] else fail}&lt;span class='result-compare'&gt;({result[i]} == {answer[i]})&lt;&#47;span&gt;&lt;&#47;p&gt;"
+                                    result_save_localstorage.append(result[i] == answer[i])
+                                js.document.querySelector('#result_desc').innerHTML = resultString
+                                if all(result_save_localstorage):
+                                    js.window.localStorage.setItem(f'{PAGE_NAME}_check', '통과')
+                                    js.document.getElementById(f'q{PAGE_NAME}').classList.add('success')
+                                else:
+                                    js.window.localStorage.removeItem(f'{PAGE_NAME}_check')
+                                render()
+                            except Exception as e:
+                                result = f"&lt;p class='que-result-error'&gt;에러입니다. 문제를 다시 풀어주세요.&lt;&#47;p&gt; &lt;p class='que-result-errorname'&gt;에러명 : {e}&lt;&#47;p&gt;"
+                                js.document.querySelector('#result_desc').innerHTML = result
+
+
+                        def multiline_eval(expr, ctx={}):
+                            results = []
+                            for node in ast.parse(expr).body:
+                                if isinstance(node, ast.Expr):
+                                    result = eval(compile(ast.Expression(node.value), 'string', 'eval'), ctx)
+                                    results.append(result)            
+                                else:
+                                    module = ast.Module([node], type_ignores=[])
+                                    results.append(exec(compile(module, 'string', 'exec'), ctx))
+                            return '\n'.join(map(str, results))[5:]
+
+                        button_run = Element("btn-run")
+                        button_run.element.onclick = result
+
+                        for i in range(1, 31):
+                            button_render = Element(f'q{i}')
+                            # button_render.element.onclick = render
                         </py-script>
-                    </section>
-                </main>
-            </div>
+                </section>
+            </main>
         </div>
-        <footer>
-            <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
-        </footer>
-    </body>
+    </div>
+    <footer>
+        <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
+    </footer>
+</body>
+
 </html>
