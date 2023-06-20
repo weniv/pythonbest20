@@ -28,6 +28,7 @@ nav ol li a.active {
 #kg-carousel #radio4:checked ~ #kg-nav #nav-auto .auto-btn4,
 #kg-carousel #radio5:checked ~ #kg-nav #nav-auto .auto-btn5,
 #kg-carousel #radio6:checked ~ #kg-nav #nav-auto .auto-btn6,
+/* #kg-carousel #radio7:checked ~ #kg-nav #nav-auto .auto-btn7, */
 #kg-carousel #kg-nav #nav-maunal .manual-btn:hover {
 	background-color: var(--ColorLight);
 }
