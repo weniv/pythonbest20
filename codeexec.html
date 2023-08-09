@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description"
-    content="파이알고 | Python 실행환경">
-    <meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 알고리즘, 파이썬, 위니브">
-    <meta name="image" content="https://pyalgo.co.kr/src/img/meta.webp">
-    <meta name="url" content="https://pyalgo.co.kr/codeexec.html">
+    <meta name="description" content="파이알고 | Python 실행환경" />
+    <meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 알고리즘, 파이썬, 위니브" />
+    <meta name="image" content="https://pyalgo.co.kr/src/img/meta.webp" />
+    <meta name="url" content="https://pyalgo.co.kr/codeexec.html" />
 
-    <meta name="og:title" property="og:title" content="Python Algorithm Best20 | WENIV">
-    <meta name="og:description" property="og:description"
-        content="파이알고 | Python 실행환경">
-    <meta name="og:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp">
-    <meta name="og:url" property="og:url" content="https://pyalgo.co.kr/codeexec.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="파이알고">
-    <meta property="og:locale" content="ko_KR">
+    <meta name="og:title" property="og:title" content="Python Algorithm Best20 | WENIV" />
+    <meta name="og:description" property="og:description" content="파이알고 | Python 실행환경" />
+    <meta name="og:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp" />
+    <meta name="og:url" property="og:url" content="https://pyalgo.co.kr/codeexec.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="파이알고" />
+    <meta property="og:locale" content="ko_KR" />
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" property="og:title" content="Python Algorithm Best20 | WENIV">
-    <meta name="twitter:description" property="og:description"
-        content="파이알고 | Python 실행환경">
-    <meta name="twitter:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp">
-    <meta name="twitter:url" property="og:url" content="https://pyalgo.co.kr/codeexec.html">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" property="og:title" content="Python Algorithm Best20 | WENIV" />
+    <meta name="twitter:description" property="og:description" content="파이알고 | Python 실행환경" />
+    <meta name="twitter:image" property="og:image" content="https://pyalgo.co.kr/src/img/meta.webp" />
+    <meta name="twitter:url" property="og:url" content="https://pyalgo.co.kr/codeexec.html" />
 
     <title>Run Python - pyalgo</title>
 
     <!-- pyscript -->
-    <link rel="stylesheet" href="src/pyscript/pyscript.css">
-    <!-- <script defer src="src/pyscript/pyscript.js"></script> -->
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="src/pyscript/pyscript.css" />
+    <script defer src="src/pyscript/pyscript.js"></script>
+    <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
 
     <!-- download notebook -->
     <script src="./src/js/codeexecEventPython.js"></script>
 
     <py-config>
-        packages = [
-        "matplotlib", "pandas", "numpy"
-        ]
-        [[fetch]]
-        files = ["./src/py/antigravity.py"]
+      # packages = ["matplotlib", "pandas", "numpy"] [[fetch]] 
+      from = "./src/py/"
+        files = ["antigravity.py"]
     </py-config>
 
     <!-- css -->
-    <link rel="stylesheet" href="./src/css/codeexec.css">
-</head>
+    <link rel="stylesheet" href="./src/css/codeexec.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>
-            <a href="index.html">
-                <img src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
-            </a>
-        </h1>
-        <a class="btn-download" onclick="downloadNotebook()">Download Notebook</a>
-        <a class="btn-exec" href="index.html">메인으로</a>
+      <h1>
+        <a href="index.html">
+          <img src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제" />
+        </a>
+      </h1>
+      <a class="btn-download" onclick="downloadNotebook()">Download Notebook</a>
+      <a class="btn-exec" href="index.html">메인으로</a>
     </header>
     <main>
-        <p class="info">💡 Shift-ENTER 또는 오른쪽 플레이 버튼을 누르면 실행됩니다. matplotlib은 plt.show대신 display(fig)를 사용하세요.</p>
-        <py-repl id="my-repl" auto-generate="true"></py-repl>
+      <p class="info">
+        💡 Shift-ENTER 또는 오른쪽 플레이 버튼을 누르면 실행됩니다. matplotlib은 plt.show대신 display(fig)를 사용하세요.
+      </p>
+      <py-repl id="my-repl" auto-generate="true"></py-repl>
     </main>
     <footer>
-        <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
+      <p>Copyright 2023. <strong>WENIV</strong> All rights reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>
