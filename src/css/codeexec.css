@@ -4,193 +4,202 @@
 
 /* layout */
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 header {
-	padding: 0 2rem;
-	display: flex;
-	align-items: center;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .btn-exec {
-	height: fit-content;
-	margin: auto 0;
-	padding: 0.8rem 1.3rem;
-	background: var(--ColorMain);
-	color: var(--ColorWhite);
-	font-weight: bold;
-	border-radius: 3px;
+  height: fit-content;
+  margin: auto 0;
+  padding: 0.8rem 1.3rem;
+  background: var(--ColorMain);
+  color: var(--ColorWhite);
+  font-weight: bold;
+  border-radius: 3px;
 }
 
 .btn-download {
-	height: fit-content;
-	margin: auto 0;
-	margin-right: 10px;
-	padding: 0.8rem 1.3rem;
-	background: var(--ColorMain);
-	color: var(--ColorWhite);
-	font-weight: bold;
-	border-radius: 3px;
-	cursor: pointer;
+  height: fit-content;
+  margin: auto 0;
+  margin-right: 10px;
+  padding: 0.8rem 1.3rem;
+  background: var(--ColorMain);
+  color: var(--ColorWhite);
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 @media (max-width: 390px) {
-	header img {
-		width: 80%;
-	}
+  header img {
+    width: 80%;
+  }
 
-	.btn-exec {
-		margin: auto 20px;
-	}
+  .btn-exec {
+    margin: auto 20px;
+  }
 
-	.btn-download {
-		display: none;
-	}
+  .btn-download {
+    display: none;
+  }
 }
 
 @media (max-width: 690px) {
-	.btn-download {
-		display: none;
-	}
+  .btn-download {
+    display: none;
+  }
 }
 
 @media (min-width: 2000px) {
-	body {
-		align-items: center;
-	}
+  body {
+    align-items: center;
+  }
 
-	main,
-	py-terminal {
-		width: 65%;
-	}
+  main,
+  py-terminal {
+    width: 65%;
+  }
 
-	header {
-		padding: 0 17%;
-	}
+  header {
+    padding: 0 17%;
+  }
 
-	footer {
-		width: 100%;
-	}
+  footer {
+    width: 100%;
+  }
 
-	.btn-download {
-		display: none;
-	}
+  .btn-download {
+    display: none;
+  }
 }
 
 main {
-	padding: 3rem;
-	margin: 60px 0 auto;
+  padding: 3rem;
+  margin: 60px 0 auto;
 }
 
 main .info {
-	background: rgba(0, 0, 0, 0.2);
-	width: fit-content;
-	padding: 0.4rem 1rem;
-	border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
 }
 
 footer {
-	box-sizing: border-box;
-	order: 3;
+  box-sizing: border-box;
+  order: 3;
 }
 
 py-terminal {
-	flex-grow: 1;
-	margin: 0 2rem 2rem;
+  flex-grow: 1;
+  margin: 0 2rem 2rem;
 }
 
 /* design */
 .py-error {
-	background: none;
-	color: var(--ColorNegative);
-	border: none;
+  background: none;
+  color: var(--ColorNegative);
+  border: none;
 }
 
 .py-repl-run-button {
-	cursor: pointer;
-	opacity: 0.5;
-	transition: all 0.3s;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
 }
 
 .py-repl-run-button svg {
-	transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .py-repl-run-button path {
-	fill: var(--ColorWhite);
+  fill: var(--ColorWhite);
 }
 
 .info {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cm-editor {
-	border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cm-editor.cm-focused {
-	border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .py-repl-editor {
-	border: none;
+  border: none;
 }
 
-.py-repl-editor .cm-gutters {
-	background: rgba(255, 255, 255, 0.1);
-	color: var(--ColorWhite);
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
+.py-repl-editor .cm-gutter {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ColorWhite);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .py-repl-editor .cm-activeLineGutter {
-	background: rgba(255, 255, 255, 0.4);
-	color: var(--ColorDark);
+  background: rgba(255, 255, 255, 0.4);
+  color: var(--ColorDark);
 }
 
 .py-repl-editor .cm-activeLine {
-	background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .py-repl-output {
-	margin: 1rem 0 4rem 0;
-	padding: 2rem;
-	background: rgba(0, 0, 0, 0.2);
+  margin: 1rem 0 4rem 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .py-repl-output:empty::after {
-	content: "> 터미널을 확인하세요";
-	color: rgba(255, 255, 255, 0.5);
+  content: "> 터미널을 확인하세요";
+  color: rgba(255, 255, 255, 0.5);
 }
 
 py-repl:last-child .py-repl-output {
-	padding: 0;
+  padding: 0;
 }
 
 py-repl:last-child .py-repl-output::after {
-	content: none;
+  content: none;
 }
 
 .ͼb {
-	color: var(--codeBuiltinfunction);
+  color: var(--codeBuiltinfunction);
 }
 
 .ͼd {
-	color: var(--codeText);
+  color: var(--codeText);
 }
 
 .ͼe {
-	color: var(--codeText);
+  color: var(--codeText);
 }
 
 .ͼg {
-	color: var(--codeText);
+  color: var(--codeText);
 }
 
 .py-terminal {
-	background: rgba(0, 0, 0, 0.3);
-	padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.cm-gutters {
+  background: rgba(245, 245, 245, 0.2) !important;
+	border:none !important;
+}
+
+.cm-gutter.cm-lineNumbers {
+	border:none;
 }
