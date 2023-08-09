@@ -132,10 +132,14 @@ py-terminal {
   border: none;
 }
 
+
+.py-repl-editor .cm-gutters {
+  padding:0;
+  border:none;
+}
 .py-repl-editor .cm-gutter {
   background: rgba(255, 255, 255, 0.1);
   color: var(--ColorWhite);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .py-repl-editor .cm-activeLineGutter {
@@ -153,8 +157,7 @@ py-terminal {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.py-repl-output:empty::after {
-  content: "> 터미널을 확인하세요";
+.py-repl-output:empty {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -166,6 +169,9 @@ py-repl:last-child .py-repl-output::after {
   content: none;
 }
 
+.cm-line {
+  color:white !important;
+}
 .ͼb {
   color: var(--codeBuiltinfunction);
 }
@@ -184,13 +190,4 @@ py-repl:last-child .py-repl-output::after {
 
 .py-terminal {
   display:none;
-}
-
-.cm-gutters {
-  background: rgba(245, 245, 245, 0.2) !important;
-	border:none !important;
-}
-
-.cm-gutter.cm-lineNumbers {
-	border:none;
 }

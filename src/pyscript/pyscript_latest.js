@@ -13931,7 +13931,8 @@ ${mountName} = Element("${el.id}")`;
     "&dark .cm-content": { caretColor: "white" },
     ".cm-line": {
       display: "block",
-      padding: "0 2px 0 6px"
+      padding: "0 2px 0 6px",
+      color: "white"
     },
     ".cm-layer": {
       position: "absolute",
@@ -13995,12 +13996,16 @@ ${mountName} = Element("${el.id}")`;
       zIndex: 200
     },
     "&light .cm-gutters": {
-      backgroundColor: "#f5f5f5",
-      color: "#6c6c6c",
-      borderRight: "1px solid #ddd"
+      // 변경
+      // backgroundColor: "#f5f5f5",
+      // color: "#6c6c6c",
+      // borderRight: "1px solid #ddd"
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      color:"white",
+      borderRight: "1px solid rgba(255,255,255,0.1)"
     },
     "&dark .cm-gutters": {
-      backgroundColor: "#333338",
+      // backgroundColor: "#333338",
       color: "#ccc"
     },
     ".cm-gutter": {
@@ -14021,10 +14026,12 @@ ${mountName} = Element("${el.id}")`;
       whiteSpace: "nowrap"
     },
     "&light .cm-activeLineGutter": {
-      backgroundColor: "#e2f2ff"
+      backgroundColor: "#e2f2ff",
+      // 변경
+      color:"black"
     },
     "&dark .cm-activeLineGutter": {
-      backgroundColor: "#222227"
+      backgroundColor: "#222227",
     },
     ".cm-panels": {
       boxSizing: "border-box",
@@ -20707,10 +20714,12 @@ ${mountName} = Element("${el.id}")`;
   var treeHighlighter = /* @__PURE__ */ Prec.high(/* @__PURE__ */ ViewPlugin.fromClass(TreeHighlighter, {
     decorations: (v) => v.decorations
   }));
+  /* 색상 태그 변경 */
   var defaultHighlightStyle = /* @__PURE__ */ HighlightStyle.define([
     {
       tag: tags.meta,
-      color: "#404740"
+      /* color: "#404740" */
+      color: "#404740",
     },
     {
       tag: tags.link,
@@ -27646,7 +27655,9 @@ ${mountName} = Element("${el.id}")`;
         const pySrc = htmlDecode(this.innerHTML).trim();
         this.innerHTML = "";
         const boxDiv = this.makeBoxDiv();
-        const shadowRoot = $(".py-repl-editor > div", boxDiv).attachShadow({ mode: "open" });
+        // [변경]스타일 적용을 위한 shadowRoot 속성 제거
+        // const shadowRoot = $(".py-repl-editor > div", boxDiv).attachShadow({ mode: "open" });
+        const shadowRoot = $(".py-repl-editor > div", boxDiv)
         shadowRoot.innerHTML = `<style> :host { all: initial; }</style>`;
         this.appendChild(boxDiv);
         this.editor = this.makeEditor(pySrc, shadowRoot);
