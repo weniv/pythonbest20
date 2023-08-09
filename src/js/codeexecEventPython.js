@@ -32,7 +32,7 @@ for (let i = 0; i < cells.length; i++) {
         "execution_count": null,
         "metadata": {},
         "outputs": [],
-        "source": cells[i].childNodes[0].shadowRoot.querySelector('.cm-content').innerText
+        "source": cells[i].childNodes[0].querySelector('.cm-content').innerText
     });
 }
 const notebookJson = JSON.stringify(notebook, null, 2);
