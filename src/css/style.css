@@ -1204,9 +1204,12 @@ footer p {
   transition: all 0.2s;
   cursor: pointer;
   pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & img {
-    width: 40px;
+    width: 100%;
     display: block;
     transition: all 0.5s;
 
