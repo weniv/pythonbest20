@@ -96,7 +96,7 @@
                     <a href="index.html">
                         <img class="logo" src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
                     </a>
-                </h1>
+                </h1>l
                 <nav class="menu-nav">
                     <ul class="menu-list">
                         <li class="menu-item">
@@ -230,75 +230,19 @@
                         </button>
                     </article>
 
-                    <div id="kg-carousel">
-                        <!-- ad image -->
-                        <ul id="kg-inner">
-                            <li class="kg-img">
-                                <a href="https://inf.run/hCg5" target="_blank">
-                                    <img src="./src/img/kg0.webp" loading="lazy" alt="Python 알고리즘 베스트 10 강의 바로가기" />
-                                </a>
-                            </li>
-                            <li class="kg-img">
-                                <a href="https://scholarship.weniv.co.kr/" target="_blank">
-                                    <img src="./src/img/kg1.webp" loading="lazy" alt="위니브 청년 ICT 부스트 장학금 바로가기">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84" target="_blank">
-                                    <img src="./src/img/kg4.webp" loading="lazy" alt="파이썬 부트캠프 바로가기">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://inf.run/RCuz" target="_blank">
-                                    <img src="./src/img/kg5.webp" loading="lazy" alt="눈떠보니 코딩테스트 전날 바로가기">
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="https://estfamily.career.greetinghr.com/kdtest" target="_blank">
-                                    <img src="./src/img/kg6.webp" loading="lazy" alt="이스트소프트 오르미 1기 백엔드 개발자 부트캠프 바로가기">
-                                </a>
-                            </li> -->
-                            <!-- 배너 추가 삭제시 아래 radio 및 py.css 수정 필요 -->
-                        </ul>
-
-                        <!-- pagination -->
-                        <button id="kg-before">
-                            <img src="./src/img/chevron-prev.webp" alt="광고 뒤로가기"/>
-                        </button>
-                        <input type="radio" checked class="kg-pagination" name="radio-btn" id="radio1">
-                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio2">
-                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio3">
-                        <input type="radio" class="kg-pagination" name="radio-btn" id="radio4">
-                        <!-- <input type="radio" class="kg-pagination" name="radio-btn" id="radio5"> -->
-                        <!-- <input type="radio" class="kg-pagination" name="radio-btn" id="radio6"> -->
-                        <!-- <input type="radio" class="kg-pagination" name="radio-btn" id="radio7"> -->
-                        <button id="kg-next">
-                        <img src="./src/img/chevron-next.webp" alt="광고 넘어가기"/>
-                        </button>
-
-                        <div id="kg-nav">
-                            <div id="nav-auto">
-                                <div class="auto-btn1"></div>
-                                <div class="auto-btn2"></div>
-                                <div class="auto-btn3"></div>
-                                <div class="auto-btn4"></div>
-                                <!-- <div class="auto-btn5"></div> -->
-                                <!-- <div class="auto-btn6"></div> -->
-                                <!-- <div class="auto-btn7"></div> -->
-                            </div>
-
-                            <div id="nav-maunal">
-                                <label for="radio1" class="manual-btn"></label>
-                                <label for="radio2" class="manual-btn"></label>
-                                <label for="radio3" class="manual-btn"></label>
-                                <label for="radio4" class="manual-btn"></label>
-                                <!-- <label for="radio5" class="manual-btn"></label> -->
-                                <!-- <label for="radio6" class="manual-btn"></label> -->
-                                <!-- <label for="radio7" class="manual-btn"></label> -->
-                            </div>
+                    <div class="kg-carousel">
+                        <ul class="kg-list"></ul>
+                        <div class="btn-cont">
+                            <button class="prev-btn">
+                                <img src="./src/img/chevron-prev.webp" alt="광고 뒤로가기"/>
+                            </button>
+                            <button class="next-btn">
+                                <img src="./src/img/chevron-next.webp" alt="광고 넘어가기"/>
+                            </button>
                         </div>
+                        <ul class="page-list">
+                        </ul>
                     </div>
-
                     <py-script>
                         import ast
                         #from testCaseAndResult import test
