@@ -6,6 +6,11 @@ const kgData = [
     content: "Python 알고리즘 베스트 10 강의",
   },
   {
+    img: "./src/img/kg/weniv-world.png",
+    link: "https://world.weniv.co.kr/",
+    content: "파이썬 교육 플랫폼, 위니브 월드",
+  },
+  {
     img: "./src/img/kg/weniv-scholar.webp",
     link: "https://scholarship.weniv.co.kr/",
     content: "위니브 청년 ICT 부스트 장학금",
@@ -19,11 +24,6 @@ const kgData = [
     img: "./src/img/kg/inflearn-cote.webp",
     link: "https://inf.run/RCuz",
     content: "눈떠보니 코딩테스트 전날",
-  },
-  {
-    img: "./src/img/kg/weniv-world.png",
-    link: "https://world.weniv.co.kr/",
-    content: "파이썬 교육 플랫폼, 위니브 월드",
   },
 ];
 
