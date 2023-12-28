@@ -35,10 +35,6 @@ nav ol li a.active {
 #kg-carousel #kg-nav #nav-maunal > .manual-btn {
 	border: 1.5px solid var(--ColorLight);
 }
-.menu-list .menu-item a,
-.menu-list .menu-item button {
-	color: #ffffff;
-}
 .lang-selector {
 	color: var(--ColorDeep);
 }
