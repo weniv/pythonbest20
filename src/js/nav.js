@@ -1,104 +1,119 @@
-const $container = document.querySelector(".container");
-const $main = $container.querySelector('.contents');
-const $btnFold = document.querySelector(".btn-fold");
-const $nav = $main.querySelector(".question-nav");
-const $codeMirror = document.querySelector(".CodeMirror");
-const $btnMenu = $container.querySelector('.hamburger-btn');
-const $icon = $btnMenu.querySelector("img");
-const $menuContainer = $container.querySelector('.menu-nav');
-let isMobile = null;
+const elements = {
+  container: document.querySelector(".container"),
+  main: document.querySelector(".contents"),
+  btnFold: document.querySelector(".btn-fold"),
+  nav: document.querySelector(".question-nav"),
+  codeMirror: document.querySelector(".CodeMirror"),
+  btnMenu: document.querySelector(".hamburger-btn"),
+  icon: document.querySelector(".hamburger-btn img"),
+  menuContainer: document.querySelector(".menu-list"),
+};
 
+const state = {
+  isMobile: null,
+  isActive: elements.btnMenu.classList.contains("is-active"),
+};
+
+const toggleActiveState = () => {
+  state.isActive = !state.isActive;
+  const imgSrc = state.isActive ? "src/img/close.webp" : "src/img/hamburger-btn.webp";
+  const imgAlt = state.isActive ? "메뉴 닫기" : "메뉴 열기";
+
+  elements.icon.src = imgSrc;
+  elements.icon.alt = imgAlt;
+};
 
 const handleCloseQuestions = () => {
-  $container.classList.remove("menu-on");
-  $btnFold.innerText = "메뉴 펼치기";
-  $codeMirror.classList.remove("menu-on-CodeMirror");
-  $codeMirror.classList.add("menu-off-CodeMirror");
-}
+  elements.container.classList.remove("menu-on");
+  elements.btnFold.innerText = "메뉴 펼치기";
+  elements.codeMirror.classList.remove("menu-on-CodeMirror");
+  elements.codeMirror.classList.add("menu-off-CodeMirror");
+};
 
 const handleOpenQuestions = () => {
-  if($menuContainer.classList.contains('is-active')){
-    handleCloseMenu();
+  if (elements.menuContainer.classList.contains("active")) {
+      handleCloseMenu();
   }
 
-  $container.classList.add("menu-on");
-  $btnFold.innerText = "메뉴 접기";
-  $codeMirror.classList.add("menu-on-CodeMirror");
-  $codeMirror.classList.remove("menu-off-CodeMirror");
-}
+  elements.container.classList.add("menu-on");
+  elements.btnFold.innerText = "메뉴 접기";
+  elements.codeMirror.classList.add("menu-on-CodeMirror");
+  elements.codeMirror.classList.remove("menu-off-CodeMirror");
+};
 
 const handleToggleQuestions = () => {
-  if ($container.classList.contains("menu-on")) {
-    handleCloseQuestions();
+  if (elements.container.classList.contains("menu-on")) {
+      handleCloseQuestions();
   } else {
-    handleOpenQuestions();
+      handleOpenQuestions();
   }
 };
 
 const handleToggleMenu = () => {
-  let isActive = $menuContainer.classList.contains('is-active');
+  elements.btnMenu.classList.toggle("is-active");
+  toggleActiveState();
 
-  $menuContainer.classList.toggle('is-active');
-  $icon.src = isActive ? 'src/img/hamburger-btn.webp' : 'src/img/close.webp';
-  $icon.alt = isActive ? '메뉴 열기' : '메뉴 닫기';
-
-  if(isActive) {
-    $icon.classList.remove('close');
+  if (state.isActive) {
+      elements.icon.classList.add("close");
+      elements.menuContainer.classList.add("active");
   } else {
-    $icon.classList.add('close');
+      elements.icon.classList.remove("close");
+      elements.menuContainer.classList.remove("active");
   }
 
-  if($menuContainer.classList.contains('is-active')){
-    handleCloseQuestions();
+  if (elements.menuContainer.classList.contains("active") && state.isMobile) {
+      handleCloseQuestions();
   }
 };
 
 const handleCloseMenu = () => {
-  $menuContainer.classList.remove('is-active');
-  $icon.classList.remove('close');
-  $icon.src = 'src/img/hamburger-btn.webp';
-}
+  elements.menuContainer.classList.remove("active");
+  elements.icon.classList.remove("close");
+  elements.icon.src = "src/img/hamburger-btn.webp";
+  state.isActive = false;
+};
 
 const checkMobile = () => {
   const winWidth = window.innerWidth;
 
   if (winWidth > 1024) {
-    isMobile = false;
-    $menuContainer.classList.remove('is-active');
+      state.isMobile = false;
+      elements.menuContainer.classList.remove("is-active");
   } else if (winWidth >= 900) {
-    handleCloseMenu();
-    isMobile = true;
+      handleCloseMenu();
+      state.isMobile = true;
   } else {
-    handleCloseQuestions();
-    isMobile = true;
+      handleCloseQuestions();
+      state.isMobile = true;
   }
-}
+};
 
-const handleResizeWidth = () =>{
+const handleResizeWidth = () => {
   let timer = null;
   clearTimeout(timer);
-  timer = setTimeout(function(){
-    checkMobile();
-  },300)
-}
+  timer = setTimeout(() => {
+      checkMobile();
+  }, 300);
+};
 
-const handleCloseMobileQuestions = (e) =>{
-  const check = Boolean(e.target.closest('nav')) || Boolean(e.target.closest('header'));
-  if(isMobile && $container.classList.contains("menu-on") && !check){
-    handleCloseQuestions();
+const handleCloseMobileQuestions = (e) => {
+  const check =
+      Boolean(e.target.closest("nav")) || Boolean(e.target.closest("header"));
+  if (state.isMobile && elements.container.classList.contains("menu-on") && !check) {
+      handleCloseQuestions();
   }
-}
+};
 
 const handleClickOutside = (e) => {
-  if($main.contains(e.target)){
-    handleCloseMenu();
+  if (!elements.menuContainer.contains(e.target)) {
+      handleCloseMenu();
   }
-}
+};
 
 checkMobile();
-$btnFold.addEventListener("click", handleToggleQuestions);
-$container.addEventListener("click", handleCloseMobileQuestions);
+elements.btnFold.addEventListener("click", handleToggleQuestions);
+elements.container.addEventListener("click", handleCloseMobileQuestions);
 window.addEventListener("resize", handleResizeWidth);
 
-$btnMenu.addEventListener('click', handleToggleMenu);
-$main.addEventListener('click', handleClickOutside);
+elements.btnMenu.addEventListener("click", handleToggleMenu);
+elements.main.addEventListener("click", handleClickOutside);
