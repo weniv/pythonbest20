@@ -79,11 +79,11 @@ $btnDownload.forEach((btn) => {
         let localStorageValue = window.localStorage.getItem(i);
         let passCheck = window.localStorage.getItem(`${i}_check`);
         if (!!localStorageValue) {
-          localStorageValue = "```javascript\n" + localStorageValue + "\n```";
+          localStorageValue = "```python\n" + localStorageValue + "\n```";
           if (!!passCheck) {
-            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://jsalgo.co.kr/?page=${i}\n* 통과 여부 : Y\n\n${localStorageValue}\n\n`;
+            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과 여부 : Y\n\n${localStorageValue}\n\n`;
           } else {
-            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://jsalgo.co.kr/?page=${i}\n* 통과 여부 : N\n\n${localStorageValue}\n\n`;
+            localStorageValue = `# 문제 ${i}번\n\n* 문제 레벨 : ${questionInfo[i]["lv"]}\n* 문제 종류 : ${questionInfo[i]["kinds"]}\n* 문제 링크 : https://pyalgo.co.kr/?page=${i}\n* 통과 여부 : N\n\n${localStorageValue}\n\n`;
           }
           totalData += localStorageValue;
         }
