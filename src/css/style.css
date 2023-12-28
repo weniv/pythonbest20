@@ -231,6 +231,7 @@ nav ol li a:not(.active):hover {
 
 .menu-on .question-nav {
   display: block;
+  z-index:100;
 }
 
 .menu-on .btn-fold::after {
