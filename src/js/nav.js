@@ -128,8 +128,8 @@ window.addEventListener("click", (e) => {
   }
 
   if ($certifModal.classList.contains("active")) {
-    if(state.isMobile){
-    document.querySelector(".container").classList.remove("menu-on");
+    if (state.isMobile) {
+      document.querySelector(".container").classList.remove("menu-on");
     }
     document.querySelector(".menu-list").classList.remove("active");
     checkCertif();
@@ -196,7 +196,7 @@ checkCertif();
 function createCertifImg() {
   console.log("createCertifImg");
   const img = new Image();
-  img.src = `src/img/certif-background.jpg`; // 이미지 변경 필요
+  img.src = `src/img/certif-pyalgo.png`; // 이미지 변경 필요
   img.onload = () => {
     const canvas = document.createElement("canvas");
     canvas.width = img.width;
