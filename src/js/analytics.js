@@ -1,4 +1,4 @@
-// const BASE_URL = "https://www.analytics.weniv.co.kr";
+// const BASE_URL = "https://dev.wenivops.co.kr/api/weniv_analytics";
 
 //------------------------------------------------------------
 // @post /collect/pageview
@@ -7,7 +7,7 @@ function collectPageView() {
     let session_id = sessionStorage.getItem("session_id");
 
     if (!session_id) {
-        fetch("https://www.analytics.weniv.co.kr/collect/pageview", {
+        fetch("https://dev.wenivops.co.kr/api/weniv_analytics/collect/pageview", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ async function collectAnchorClick(event, text) {
     const target_tar = ANCHOR.target || "_self";
 
     try {
-        const response = await fetch(`https://www.analytics.weniv.co.kr/collect/anchor-click`, {
+        const response = await fetch(`https://dev.wenivops.co.kr/api/weniv_analytics/collect/anchor-click`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
